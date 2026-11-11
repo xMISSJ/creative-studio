@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "适合安静夜晚的填色书",
+    "homeTitle": "{name}",
     "homeDescription": "{name} 是一间温馨工作室小店，提供经典、自然、奇幻和季节主题的手绘填色书。",
     "shopTitle": "商店",
     "shopDescription": "在 {name} 选择填色书、周边或数字艺术。主题与书册都在里面等你。",
@@ -53,7 +53,8 @@
     "point1": "手绘页面",
     "point2": "为放松而作",
     "point3": "特意使用柔彩",
-    "badge": "丁香时刻"
+    "badge": "丁香时刻",
+    "scroll": "慢慢走进来"
   },
   "home": {
     "collectionsEyebrow": "从哪里开始",

@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
+import { formatPageTitle } from '~~/site.config'
 
 const props = defineProps<{ error: NuxtError }>()
 const { t } = useShopI18n()
 const localePath = useLocalePath()
 const missing = computed(() => props.error.statusCode === 404)
+const pageTitle = computed(() => (missing.value ? t('error.title') : t('error.genericTitle')))
 
 useSeoMeta({
-  title: () => (missing.value ? t('error.title') : t('error.genericTitle')),
+  title: () => pageTitle.value,
+  ogTitle: () => formatPageTitle(pageTitle.value),
   description: () => (missing.value ? t('error.body') : t('error.genericBody')),
   robots: 'noindex',
 })

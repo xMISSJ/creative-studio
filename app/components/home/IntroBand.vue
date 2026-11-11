@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { t, brand } = useShopI18n()
+const { t } = useShopI18n()
 </script>
 
 <template>
-  <section class="container-page py-14 text-center sm:py-16">
-    <h2 class="font-logo text-4xl text-ink sm:text-5xl" translate="no">{{ brand.name }}</h2>
+  <section id="home-studio" class="container-page scroll-mt-8 py-14 text-center sm:py-16">
+    <h2 class="font-display text-3xl text-ink sm:text-4xl">{{ t('home.noteTitle') }}</h2>
     <p class="mx-auto mt-5 max-w-2xl text-muted">
       {{ t('home.togetherBody') }}
     </p>

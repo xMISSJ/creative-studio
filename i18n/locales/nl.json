@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "Kleurboeken voor stille avonden",
+    "homeTitle": "{name}",
     "homeDescription": "{name} is een gezellige studiowinkel voor handgetekende kleurboeken in klassieke, natuur-, fantasy- en seizoensthemas.",
     "shopTitle": "Winkel",
     "shopDescription": "Kies kleurboeken, merchandise of digitale kunst van {name}. Themas en boeken wachten binnen.",
@@ -53,7 +53,8 @@
     "point1": "Handgetekende paginas",
     "point2": "Gemaakt om tot rust te komen",
     "point3": "Met opzet pastel",
-    "badge": "Lila uur"
+    "badge": "Lila uur",
+    "scroll": "Kom binnen"
   },
   "home": {
     "collectionsEyebrow": "Waar te beginnen",

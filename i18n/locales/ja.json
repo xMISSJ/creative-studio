@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "静かな夜のための塗り絵本",
+    "homeTitle": "{name}",
     "homeDescription": "{name} はクラシック、自然、ファンタジー、季節テーマの手描き塗り絵本の居心地よいスタジオショップです。",
     "shopTitle": "ショップ",
     "shopDescription": "{name} の塗り絵本、グッズ、デジタルアートから選ぼう。テーマと本は中で待っています。",
@@ -53,7 +53,8 @@
     "point1": "手描きのページ",
     "point2": "リラックスのために",
     "point3": "わざとパステル",
-    "badge": "ライラックの時間"
+    "badge": "ライラックの時間",
+    "scroll": "そっと入る"
   },
   "home": {
     "collectionsEyebrow": "どこから始めるか",

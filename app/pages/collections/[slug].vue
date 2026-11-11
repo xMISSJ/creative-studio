@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { collections } from '#shared/catalog'
+import { formatPageTitle } from '~~/site.config'
 
 const route = useRoute()
 const localePath = useLocalePath()
@@ -16,6 +17,7 @@ if (known.value) {
 
 useSeoMeta({
   title: () => t('collections.missingTitle'),
+  ogTitle: () => formatPageTitle(t('collections.missingTitle')),
   description: () => t('collections.missingBody'),
   robots: 'noindex',
 })

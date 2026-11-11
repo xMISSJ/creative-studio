@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "Coloring books for quiet evenings",
+    "homeTitle": "{name}",
     "homeDescription": "{name} is a cozy studio shop for hand-drawn coloring books across classic, nature, fantasy, and seasonal themes.",
     "shopTitle": "Shop",
     "shopDescription": "Choose coloring books, merchandise, or digital art from {name}. Themes and books wait inside.",
@@ -53,7 +53,8 @@
     "point1": "Hand-drawn pages",
     "point2": "Made for relaxation",
     "point3": "Pastel on purpose",
-    "badge": "Lilac hour"
+    "badge": "Lilac hour",
+    "scroll": "Wander in"
   },
   "home": {
     "collectionsEyebrow": "Where to begin",

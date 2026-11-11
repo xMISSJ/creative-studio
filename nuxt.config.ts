@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
-import { siteConfig } from './site.config'
+import { formatPageTitle, siteConfig } from './site.config'
 
 const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: siteConfig.name,
-      titleTemplate: `%s · ${siteConfig.name}`,
+      titleTemplate: (title) => formatPageTitle(title),
       meta: [{ name: 'theme-color', content: '#faf9fc' }],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     },

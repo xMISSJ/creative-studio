@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatPageTitle } from '~~/site.config'
+
 const route = useRoute()
 const { t, tm, text, locale, brand } = useShopI18n()
 const format = useFormatPrice()
@@ -49,9 +51,11 @@ const feedback = computed(() => {
   return cart.notice.value.type === 'added' ? t('product.added') : t('product.limit')
 })
 
+const pageTitle = computed(() => (item.value ? t(`products.${item.value.slug}.title`) : t('product.missingTitle')))
+
 useSeoMeta({
-  title: () => (item.value ? t(`products.${item.value.slug}.title`) : t('product.missingTitle')),
-  ogTitle: () => (item.value ? t(`products.${item.value.slug}.title`) : t('product.missingTitle')),
+  title: () => pageTitle.value,
+  ogTitle: () => formatPageTitle(pageTitle.value),
   description: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
   ogDescription: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
   robots: () => (item.value ? undefined : 'noindex'),

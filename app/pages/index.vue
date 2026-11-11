@@ -10,12 +10,11 @@ const arrivals = computed(() => {
   if (fresh.length >= 4) return fresh.slice(0, 4)
   return [...items.value].sort((a, b) => b.sort - a.sort).slice(0, 4)
 })
-const heroItem = computed(() => featured.value[0] ?? items.value[0])
 </script>
 
 <template>
   <div>
-    <HeroBanner :item="heroItem" />
+    <HeroBanner />
 
     <IntroBand />
 

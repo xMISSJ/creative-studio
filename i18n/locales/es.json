@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "Libros para colorear para noches tranquilas",
+    "homeTitle": "{name}",
     "homeDescription": "{name} es una tienda de estudio cozy con libros para colorear dibujados a mano en temas clasico, naturaleza, fantasia y temporada.",
     "shopTitle": "Tienda",
     "shopDescription": "Elige libros para colorear, merchandise o arte digital de {name}. Los temas y libros esperan dentro.",
@@ -53,7 +53,8 @@
     "point1": "Paginas dibujadas a mano",
     "point2": "Hechos para relajarse",
     "point3": "Pastel a proposito",
-    "badge": "Hora lila"
+    "badge": "Hora lila",
+    "scroll": "Entra despacio"
   },
   "home": {
     "collectionsEyebrow": "Por donde empezar",

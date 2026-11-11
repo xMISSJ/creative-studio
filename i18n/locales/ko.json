@@ -1,6 +1,6 @@
 {
   "meta": {
-    "homeTitle": "고요한 저녁을 위한 컬러링북",
+    "homeTitle": "{name}",
     "homeDescription": "{name}는 클래식, 자연, 판타지, 시즌 테마의 손그림 컬러링북을 담은 포근한 스튜디오 샵입니다.",
     "shopTitle": "샵",
     "shopDescription": "{name}에서 컬러링북, 머천다이즈, 디지털 아트 중 고르세요. 테마와 책들이 안에서 기다려요.",
@@ -53,7 +53,8 @@
     "point1": "손그림 페이지",
     "point2": "휴식을 위해 만듦",
     "point3": "일부러 파스텔",
-    "badge": "라일락 시간"
+    "badge": "라일락 시간",
+    "scroll": "천천히 들어오기"
   },
   "home": {
     "collectionsEyebrow": "어디서 시작할까",

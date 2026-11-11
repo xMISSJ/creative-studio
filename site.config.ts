@@ -10,3 +10,10 @@ export const siteConfig = {
   supportEmail: 'hello@everlune.studio',
   lowStockAt: 5,
 } as const
+
+/** Browser / social title: `Everlune` on home, `Everlune • Page` elsewhere. */
+export function formatPageTitle(page?: string | null) {
+  const name = siteConfig.name
+  if (!page || page === name) return name
+  return `${name} • ${page}`
+}

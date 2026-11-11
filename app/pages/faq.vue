@@ -8,20 +8,22 @@ const items = useFaqItems()
   <article>
     <section class="bg-lilac-mist text-on-soft">
       <div class="container-page py-12 sm:py-16">
-        <PageIntro
-          :eyebrow="t('faq.eyebrow')"
-          :title="t('faq.title')"
-          :lead="t('faq.lead')"
-        />
+        <div class="rise">
+          <PageIntro
+            :eyebrow="t('faq.eyebrow')"
+            :title="t('faq.title')"
+            :lead="t('faq.lead')"
+          />
+        </div>
       </div>
     </section>
 
     <section class="container-page py-12 sm:py-16" :aria-label="t('faq.title')">
-      <div class="faq-panel mx-auto max-w-2xl rounded-[1.75rem] border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
+      <div class="faq-panel rise delay-1 mx-auto max-w-2xl rounded-[1.75rem] border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
         <FaqAccordion :items="items" />
       </div>
 
-      <aside class="mx-auto mt-10 max-w-2xl overflow-hidden rounded-[1.75rem] bg-lilac-soft p-7 text-on-soft sm:mt-12 sm:p-9">
+      <aside class="rise delay-2 mx-auto mt-10 max-w-2xl overflow-hidden rounded-[1.75rem] bg-lilac-soft p-7 text-on-soft sm:mt-12 sm:p-9">
         <p class="text-xs font-bold tracking-[0.08em] uppercase opacity-80">{{ t('faq.stillEyebrow') }}</p>
         <h2 class="mt-3 font-display text-2xl leading-tight font-bold sm:text-3xl">
           {{ t('faq.stillTitle') }}

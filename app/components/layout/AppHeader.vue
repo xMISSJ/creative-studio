@@ -31,13 +31,6 @@ function isCurrent(match: (path: string) => boolean) {
           >
             <AppIcon name="menu" />
           </button>
-          <NuxtLinkLocale
-            to="/shop"
-            class="icon-btn hidden text-muted lg:inline-grid"
-            :aria-label="t('shop.searchLabel')"
-          >
-            <AppIcon name="search" />
-          </NuxtLinkLocale>
           <LocaleSwitcher variant="header" />
         </div>
 
