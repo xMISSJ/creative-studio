@@ -21,7 +21,6 @@ export const digitalArtCategories = [
 /** Groups inside the character-art category. Files live under public/art/character-art/<group>/. */
 export const digitalArtCharacterGroups = [
   { slug: 'chibi' },
-  { slug: 'original' },
 ] as const
 
 /** Avatar / character image lists are scanned from public/art at request time. */

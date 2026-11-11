@@ -178,17 +178,7 @@
       },
       "character-art": {
         "title": "角色画",
-        "summary": "工作室的 Q 版与原创角色插画。"
-      }
-    },
-    "characterGroups": {
-      "chibi": {
-        "title": "Q 版",
-        "summary": "小小软软、很有魅力的角色作品。"
-      },
-      "original": {
-        "title": "原创",
-        "summary": "从工作室桌面走出来的原创角色画。"
+        "summary": "工作室的 Q 版角色插画。"
       }
     }
   },

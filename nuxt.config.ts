@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     head: {
       title: siteConfig.name,
       titleTemplate: `%s · ${siteConfig.name}`,
-      meta: [{ name: 'theme-color', content: '#f8f7f4' }],
+      meta: [{ name: 'theme-color', content: '#faf9fc' }],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     },
     pageTransition: { name: 'page', mode: 'out-in' },

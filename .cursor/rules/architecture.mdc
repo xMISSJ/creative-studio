@@ -15,5 +15,5 @@ alwaysApply: true
 
 ```ts
 // server/data/catalog.ts
-{ slug: 'new-book', price: 999, type: 'coloring-books', collection: 'classic', image: '/art/new_book.png', featured: false, stock: 20, sort: 11 }
+{ slug: 'new-book', price: 999, type: 'coloring-books', collection: 'classic', image: '/art/new-book.png', featured: false, stock: 20, sort: 11 }
 ```

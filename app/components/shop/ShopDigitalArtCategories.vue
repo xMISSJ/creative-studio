@@ -10,9 +10,9 @@ const activeIndex = computed(() =>
 </script>
 
 <template>
-  <nav :aria-label="t('shop.digitalArt.categoriesTitle')">
+  <nav class="flex justify-center" :aria-label="t('shop.digitalArt.categoriesTitle')">
     <div
-      class="digital-art-tabs relative grid grid-cols-2 gap-1 rounded-[1rem] border border-line bg-paper p-1"
+      class="digital-art-tabs relative grid w-full max-w-md grid-cols-2 gap-1 rounded-full border border-line bg-paper p-1 shadow-[0_12px_28px_-22px_rgba(58,51,72,0.45)]"
       role="list"
       :style="{ '--tab-index': activeIndex }"
     >
@@ -22,9 +22,9 @@ const activeIndex = computed(() =>
         :key="category.slug"
         :to="digitalCategoryLink(category.slug)"
         role="listitem"
-        class="digital-art-tab relative z-10 flex min-h-11 items-center justify-center rounded-[0.75rem] px-3 text-center text-sm font-bold sm:text-base"
+        class="digital-art-tab relative z-10 flex min-h-11 items-center justify-center rounded-full px-3 text-center text-sm font-bold sm:text-base"
         :class="activeDigitalCategory === category.slug
-          ? 'text-white'
+          ? 'text-[var(--on-button)]'
           : 'text-muted hover:text-ink'"
         :aria-current="activeDigitalCategory === category.slug ? 'true' : undefined"
       >

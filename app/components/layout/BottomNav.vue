@@ -37,7 +37,7 @@ const onAccount = computed(() => /\/(account|login|register)/.test(route.path))
       >
         <AppIcon name="cart" />
         <span
-          class="absolute top-2 end-1/2 translate-x-3 grid min-w-5 place-items-center rounded-full bg-accent px-1 text-[0.65rem] font-bold text-white"
+          class="absolute top-2 end-1/2 translate-x-3 grid min-w-5 place-items-center rounded-full bg-[var(--button)] px-1 text-[0.65rem] font-bold text-[var(--on-button)]"
           aria-hidden="true"
         >
           {{ count }}

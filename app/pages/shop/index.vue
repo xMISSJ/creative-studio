@@ -105,36 +105,36 @@ function onSort(event: Event) {
 <template>
   <div>
     <template v-if="showingDigitalArt">
-      <section class="bg-lilac text-on-soft">
-        <div class="container-page grid items-center gap-10 py-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div class="rise">
-            <PageIntro :eyebrow="t('nav.shop')" :title="pageTitle" :lead="pageLead" />
-            <div class="mt-8 flex flex-wrap gap-3">
-              <NuxtLinkLocale class="btn btn-primary" :to="shopLink({ type: 'coloring-books' })">
-                {{ t('shop.digitalArt.cta') }}
-              </NuxtLinkLocale>
-              <NuxtLinkLocale class="btn btn-ghost border-on-soft/25 text-on-soft" :to="shopHomeLink()">
-                {{ t('shop.back') }}
-              </NuxtLinkLocale>
+      <div class="relative">
+        <section class="relative bg-lilac text-on-soft">
+          <div class="container-page relative z-10 pt-12 pb-28 sm:pt-14 sm:pb-32 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10 lg:py-16 lg:pb-20">
+            <div class="rise max-w-xl lg:max-w-lg">
+              <PageIntro :eyebrow="t('nav.shop')" :title="pageTitle" :lead="pageLead" />
+              <div class="mt-8 flex flex-wrap gap-3">
+                <NuxtLinkLocale class="btn btn-primary" :to="shopLink({ type: 'coloring-books' })">
+                  {{ t('shop.digitalArt.cta') }}
+                </NuxtLinkLocale>
+                <NuxtLinkLocale class="btn btn-ghost border-on-soft/25 text-on-soft" :to="shopHomeLink()">
+                  {{ t('shop.back') }}
+                </NuxtLinkLocale>
+              </div>
             </div>
           </div>
-          <div class="rise delay-1 flex items-end justify-center self-end">
-            <img
-              src="/art/shiba_alpaca.png"
-              :alt="t('shop.digitalArt.bannerAlt')"
-              width="1177"
-              height="713"
-              class="w-full max-w-xl origin-bottom object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)]"
-              fetchpriority="high"
-              decoding="async"
-            >
-          </div>
-        </div>
-      </section>
+          <img
+            src="/art/shiba-alpaca.png"
+            :alt="t('shop.digitalArt.bannerAlt')"
+            width="1774"
+            height="887"
+            class="pointer-events-none absolute -bottom-20 end-[-6%] z-20 w-[min(34rem,88%)] max-w-none select-none object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)] sm:-bottom-24 sm:end-[-2%] sm:w-[min(40rem,70%)] lg:-bottom-28 lg:end-[max(0px,calc((100%-72rem)/2))] lg:w-[min(46rem,52%)]"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </section>
 
-      <section class="container-page py-12">
-        <ShopDigitalArt />
-      </section>
+        <section class="container-page relative z-0 py-12 pt-24 sm:pt-28">
+          <ShopDigitalArt />
+        </section>
+      </div>
     </template>
 
     <section v-else class="container-page py-12">

@@ -178,17 +178,7 @@
       },
       "character-art": {
         "title": "캐릭터 아트",
-        "summary": "스튜디오의 치비와 오리지널 캐릭터 일러스트."
-      }
-    },
-    "characterGroups": {
-      "chibi": {
-        "title": "치비",
-        "summary": "작고 부드러운, 매력 가득한 캐릭터 작품."
-      },
-      "original": {
-        "title": "오리지널",
-        "summary": "스튜디오 책상에서 나온 오리지널 캐릭터 아트."
+        "summary": "스튜디오의 치비 캐릭터 일러스트."
       }
     }
   },

@@ -178,17 +178,7 @@
       },
       "character-art": {
         "title": "Arte de personajes",
-        "summary": "Ilustraciones chibi y originales del estudio."
-      }
-    },
-    "characterGroups": {
-      "chibi": {
-        "title": "Chibi",
-        "summary": "Piezas pequenas y suaves con mucho encanto."
-      },
-      "original": {
-        "title": "Original",
-        "summary": "Arte de personajes originales del escritorio del estudio."
+        "summary": "Ilustraciones chibi del estudio."
       }
     }
   },

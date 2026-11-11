@@ -113,13 +113,6 @@ for (const slug of digitalArtCategorySlugs) {
   }
 }
 
-for (const slug of digitalArtCharacterGroupSlugs) {
-  for (const key of ['title', 'summary']) {
-    const path = `digitalArt.characterGroups.${slug}.${key}`
-    if (!baseKeys.has(path)) problems.push(`Digital art character group "${slug}" needs ${path} in every locale`)
-  }
-}
-
 for (const badge of badges) {
   const path = `badges.${badge}`
   if (!baseKeys.has(path)) problems.push(`Badge "${badge}" needs ${path} in every locale`)
@@ -139,7 +132,6 @@ const dynamicPatterns = [
   /^collections\.\$\{[^}]+\}\.(title|summary|body)$/,
   /^productTypes\.\$\{[^}]+\}\.(title|summary)$/,
   /^digitalArt\.categories\.\$\{[^}]+\}\.(title|summary)$/,
-  /^digitalArt\.characterGroups\.\$\{[^}]+\}\.(title|summary)$/,
   /^badges\.\$\{[^}]+\}$/,
 ]
 

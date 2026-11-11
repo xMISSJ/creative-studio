@@ -178,17 +178,7 @@
       },
       "character-art": {
         "title": "Character Art",
-        "summary": "Chibi and original character illustrations from the studio."
-      }
-    },
-    "characterGroups": {
-      "chibi": {
-        "title": "Chibi",
-        "summary": "Small, soft character pieces with big charm."
-      },
-      "original": {
-        "title": "Original",
-        "summary": "Original character art from the studio desk."
+        "summary": "Chibi character illustrations from the studio."
       }
     }
   },

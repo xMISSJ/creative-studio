@@ -178,17 +178,7 @@
       },
       "character-art": {
         "title": "Character Art",
-        "summary": "Chibi- en originele characterillustraties uit de studio."
-      }
-    },
-    "characterGroups": {
-      "chibi": {
-        "title": "Chibi",
-        "summary": "Kleine, zachte characterstukken met veel charme."
-      },
-      "original": {
-        "title": "Origineel",
-        "summary": "Originele characterkunst van de studiotafel."
+        "summary": "Chibi-characterillustraties uit de studio."
       }
     }
   },
