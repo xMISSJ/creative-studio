@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "homeTitle": "Coloring books for quiet evenings",
+    "homeDescription": "{name} is a cozy studio shop for hand-drawn coloring books, bold-easy pages, and little extras.",
+    "shopTitle": "Shop",
+    "shopDescription": "Cozy coloring books, bold-easy pages, seasonal titles, and pocket extras from {name}.",
+    "aboutTitle": "About me",
+    "aboutDescription": "The story behind {name}: one artist, hand-drawn coloring books, and pages made for quiet.",
+    "cartTitle": "Cart",
+    "cartDescription": "Books set aside from {name}.",
+    "checkoutTitle": "Checkout",
+    "checkoutDescription": "Checkout at {name} is being wrapped up.",
+    "loginTitle": "Log in",
+    "loginDescription": "Account sign-in for {name} opens later.",
+    "registerTitle": "Create an account",
+    "registerDescription": "Accounts at {name} open later.",
+    "accountTitle": "Your account",
+    "accountDescription": "A quiet home for future orders at {name}."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "primary": "Primary",
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About me",
+    "cart": "Cart",
+    "account": "Account",
+    "login": "Log in",
+    "register": "Create account",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "breadcrumb": "Breadcrumb",
+    "mobile": "Quick links",
+    "wishlist": "Wishlist"
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme",
+    "toSystem": "Use the system theme"
+  },
+  "locale": {
+    "label": "Language"
+  },
+  "hero": {
+    "eyebrow": "A cozy coloring studio",
+    "title": "Let the cuties out!",
+    "lead": "Hand-drawn coloring books for soft evenings, bold lines, and everyday joy.",
+    "shop": "Available now",
+    "about": "About me",
+    "point1": "Hand-drawn pages",
+    "point2": "Made for relaxation",
+    "point3": "Pastel on purpose",
+    "badge": "Lilac hour"
+  },
+  "home": {
+    "collectionsEyebrow": "Where to begin",
+    "collectionsTitle": "Find a soft place to color",
+    "collectionsLead": "Full books for long evenings, bold-easy pages for beginners, seasonal titles, and pocket extras for the bag.",
+    "shelfEyebrow": "On the desk",
+    "shelfTitle": "A few books I keep close",
+    "shelfLead": "The titles that feel most like the studio right now.",
+    "shelfAll": "See the whole shop",
+    "easelEyebrow": "Fresh from the desk",
+    "noteEyebrow": "A note from the desk",
+    "noteTitle": "Drawn for the moment you sit down",
+    "noteBody": "I draw when the room turns lilac and the day finally puts its bag down. {name} is that hour, kept in a coloring book.",
+    "noteLink": "Read my story",
+    "quote": "Soft lines, slow evenings, and a little comfort on every page.",
+    "togetherTitle": "Together, we are",
+    "togetherBody": "What started with a love for coloring and cozy moments is growing into {name} - a creative world of hand-drawn books made for relaxation, gentle self-connection, and everyday joy.",
+    "togetherCta": "About me",
+    "bestsellerTitle": "best seller",
+    "arrivalsTitle": "new arrivals",
+    "themeTitle": "theme",
+    "shopNow": "Shop now",
+    "faq": {
+      "title": "FAQs",
+      "lead": "You have questions? We are here to help.",
+      "items": [
+        {
+          "q": "Where can I buy {name} coloring books?",
+          "a": "Right here in the shop. Checkout is still being wrapped, so you can browse and save books to your cart for now."
+        },
+        {
+          "q": "Are {name} books beginner-friendly?",
+          "a": "Yes. Many titles use bold, open shapes that are gentle for beginners and still fun for experienced colorists."
+        },
+        {
+          "q": "How do I get free coloring pages?",
+          "a": "Free pages will arrive with the newsletter and future freebies. The list is not open yet, so nothing is saved."
+        },
+        {
+          "q": "How do I share finished coloring pages?",
+          "a": "Tag the studio when social links go live. Until then, keep coloring and enjoy the quiet."
+        },
+        {
+          "q": "How can I contact {name} for help?",
+          "a": "Reach out at {email}. Support opens more fully with checkout."
+        }
+      ]
+    },
+    "values": [
+      {
+        "title": "great for all skill",
+        "body": "Both beginners and experts can enjoy the books."
+      },
+      {
+        "title": "made for relaxation",
+        "body": "Bring peace and everyday wellness to your mind."
+      },
+      {
+        "title": "100% human-created",
+        "body": "Every design is created by skilled human artists."
+      },
+      {
+        "title": "happy customers",
+        "body": "Trusted and loved by coloring fans worldwide."
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Studio notes",
+    "title": "Join our email list",
+    "body": "Enter your email to get special gifts later. Nothing you type is saved or sent yet.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name...",
+    "emailLabel": "Email address",
+    "placeholder": "Your email...",
+    "submit": "Subscribe",
+    "thanks": "Thank you. The list is not open yet, so this address was not saved."
+  },
+  "shop": {
+    "lead": "Everything currently in the studio shop. Filter by corner, or search by title.",
+    "searchLabel": "Search the shop",
+    "searchPlaceholder": "Try cafe, garden, mini, spooky",
+    "sortLabel": "Sort",
+    "sortFeatured": "Studio order",
+    "sortPriceAsc": "Price, low to high",
+    "sortPriceDesc": "Price, high to low",
+    "sortTitle": "Name",
+    "all": "All books",
+    "resultCount": "Showing {count}",
+    "empty": "Nothing matches that search yet. Try another word, or look through all books.",
+    "loadError": "The shop could not be opened just now.",
+    "retry": "Try again",
+    "loading": "Opening the shop"
+  },
+  "product": {
+    "shipping": "Shipping and payment open together, a little later. You can still set books aside in your cart.",
+    "add": "Add to cart",
+    "soldOut": "This one has found a home",
+    "lowStock": "Only {count} left in the studio",
+    "inStock": "Ready to pack",
+    "inCart": "The last of these is already in your cart",
+    "added": "Saved in your cart.",
+    "limit": "That is all of this book for now.",
+    "quantity": "Quantity for {title}",
+    "increase": "Increase quantity of {title}",
+    "decrease": "Decrease quantity of {title}",
+    "related": "You may also like",
+    "details": "About this book",
+    "missingTitle": "This book has left the shop",
+    "missingBody": "It may have been renamed or tucked away. The rest of the shop is still here."
+  },
+  "cart": {
+    "lead": "Books you have set aside on this device. They stay in this browser until checkout exists.",
+    "empty": "Your cart is a clear desk. The shop is full of soft books whenever you want them.",
+    "shop": "Return to the shop",
+    "subtotal": "Subtotal",
+    "shippingNote": "Shipping is added later, when checkout opens.",
+    "view": "View cart",
+    "checkout": "Continue to checkout",
+    "close": "Close cart",
+    "open": "Open cart, {count} saved",
+    "remove": "Remove",
+    "missing": "This book is no longer in the shop.",
+    "title": "Your cart"
+  },
+  "checkout": {
+    "eyebrow": "Almost",
+    "title": "Checkout is being wrapped",
+    "body": "Payment is not open yet, so nothing here can be purchased. Your cart stays on this device until then.",
+    "back": "Back to the cart",
+    "empty": "There is nothing to wrap yet."
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "One artist, one shop, pages made for quiet",
+    "lead": "I am an individual artist who always dreamed of having a webshop of my own. Everything here — the site, the books, the little extras — is made and shared by me.",
+    "story": "My main work is creative development: I build apps and websites for clients. Outside of that, I am always making art. I love cute characters, and I do not draw humans. Animals and little creatures feel more like home.",
+    "storyGrief": "In July 2026, my dad passed away. Grief is large and hard to hold, and so many things suddenly felt out of my hands. Somewhere in that season I noticed people coloring on TikTok and Instagram. I tried it myself, bought a 320-piece Ohuhu set, and fell in love. Coloring gave me a small pocket of peace. I chose the colors, the vibe, the mood. For a while, the page was a world I could gently steer.",
+    "storyArt": "Out of that feeling came a quiet idea: what if I made my own coloring books, with my own art? Hidden in the pages are soft moments and memories of my dad — creatures and scenes that nod to time we shared, without needing to say everything out loud.",
+    "storyMore": "That is how {name} began. The name may still shift. The heart of it will not: hand-drawn books from one person, made for anyone who needs a soft place to sit with color.",
+    "alt": "A cozy desk with markers, a candle, and an open coloring book",
+    "processTitle": "How a book comes to be",
+    "steps": [
+      { "title": "Sketch", "body": "A pencil drawing, usually at night, of creatures and soft scenes that hold a memory." },
+      { "title": "Ink", "body": "Bold, friendly lines that stay easy to color, even on a tired evening." },
+      { "title": "Page", "body": "Single-sided sheets, soft details, and enough space to breathe." },
+      { "title": "Bind", "body": "A square book you can keep by the sofa, or a mini one that fits in a bag." }
+    ],
+    "materialsTitle": "What you are looking at",
+    "materials": [
+      "Full books are planned around 40 to 46 hand-drawn pages.",
+      "Bold and easy titles use larger shapes and thicker outlines.",
+      "Seasonal books follow holidays and soft weather moods.",
+      "Extras include mini books and pocket-friendly packs for short coloring breaks."
+    ],
+    "shop": "See the books"
+  },
+  "auth": {
+    "loginEyebrow": "Welcome back, soon",
+    "loginTitle": "Log in",
+    "loginLead": "Accounts are not open yet. This form is a placeholder, and nothing you type is sent.",
+    "registerEyebrow": "A key for later",
+    "registerTitle": "Create an account",
+    "registerLead": "Registration waits with checkout. You can look around the form. Nothing is saved.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submitLogin": "Log in",
+    "submitRegister": "Create account",
+    "switchToRegister": "Need an account later?",
+    "switchToLogin": "Already planning to come back?",
+    "notice": "These details stay in the form only. They are not stored or sent anywhere.",
+    "thanks": "Saved nowhere, on purpose. Accounts open a little later.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Your corner",
+    "title": "Account",
+    "lead": "When accounts open, this is where orders, details, and addresses will live. Nothing is signed in yet.",
+    "login": "Log in",
+    "register": "Create account",
+    "sections": {
+      "orders": {
+        "title": "Orders",
+        "body": "Past parcels will gather here after checkout exists."
+      },
+      "profile": {
+        "title": "Profile",
+        "body": "Your name and email will be editable once accounts open."
+      },
+      "addresses": {
+        "title": "Addresses",
+        "body": "Shipping details will sit here, ready for the next parcel."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Visit",
+    "studio": "Studio",
+    "account": "Account",
+    "note": "The studio inbox opens with checkout. Until then, {email} is only a placeholder.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "This path wandered off",
+    "genericTitle": "Something stumbled",
+    "body": "That page is not in the shop. The rest of it is still here.",
+    "genericBody": "The page could not be opened. You can return home and try another door.",
+    "home": "Back home",
+    "shop": "Browse the books"
+  },
+  "collections": {
+    "books": {
+      "title": "Coloring books",
+      "summary": "Full cozy books for long, quiet evenings.",
+      "body": "Hand-drawn coloring books with soft rooms, friendly scenes, and pages meant for markers or pencils."
+    },
+    "bold-easy": {
+      "title": "Bold and easy",
+      "summary": "Large shapes and thick lines, gentle for beginners.",
+      "body": "Open designs with clear outlines, made for a relaxed pace and a soft sofa."
+    },
+    "seasonal": {
+      "title": "Seasonal",
+      "summary": "Holiday moods and weather-soft titles.",
+      "body": "Books for cocoa nights, spooky cuteness, and the months that ask for a blanket."
+    },
+    "extras": {
+      "title": "Extras",
+      "summary": "Mini books and pocket packs for short breaks.",
+      "body": "Small formats and travel-friendly titles for desks, bags, and five calm minutes."
+    },
+    "missingTitle": "That corner is not in the shop",
+    "missingBody": "Try one of the collections that are open, or wander the full shop."
+  },
+  "badges": {
+    "new": "New",
+    "limited": "Limited",
+    "bestseller": "Well loved"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "A soft cafe full of warm drinks and quiet corners.",
+      "description": "Settle into bunny cafes, treehouse seats, and book nooks waiting for your colors. A cozy full book for evenings that need a soft landing.",
+      "alt": "Temporary cover for Lilac Cafe, a cozy cafe coloring book",
+      "details": ["Coloring book", "About 45 hand-drawn pages", "Around 8 × 8 in", "Bold, easy-to-color lines"]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "Everyday softness: journaling, friends, and gentle rooms.",
+      "description": "Heartwarming scenes of calm hobbies and small joys. Soft lines and relatable details for people who color to slow down.",
+      "alt": "Temporary cover for Quiet Moments, an everyday cozy coloring book",
+      "details": ["Coloring book", "About 40 hand-drawn pages", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "Capybara comfort on every page.",
+      "description": "Round friends, soft weather, and scenes that feel like a deep exhale. Made for large markers and a very unhurried mood.",
+      "alt": "Temporary cover for Puddle Friends, a cozy animal coloring book",
+      "details": ["Coloring book", "About 45 hand-drawn pages", "Around 8 × 8 in", "Bold, easy-to-color lines"]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "A garden of soft paths, blooms, and secret corners.",
+      "description": "Nature scenes drawn for slow wandering with a pencil. Leaves, gates, and little treasures tucked between the plants.",
+      "alt": "Temporary cover for Hidden Patch, a garden coloring book",
+      "details": ["Coloring book", "About 40 hand-drawn pages", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "Home objects with personalities and cozy chores.",
+      "description": "Brooms, sponges, spice jars, and watering cans living their softest lives. Bold outlines for a playful, easy coloring session.",
+      "alt": "Temporary cover for Kitchen Cuties, a bold and easy home coloring book",
+      "details": ["Bold and easy coloring book", "About 46 illustrations", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "Quiet mornings, hobbies, and evenings kept soft.",
+      "description": "Everyday rituals drawn with clear shapes and cozy details. A gentle book for coloring without rushing.",
+      "alt": "Temporary cover for Comfort Days, a cozy daily-life coloring book",
+      "details": ["Bold and easy coloring book", "About 46 illustrations", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "Cocoa weather, blankets, and winter-warm rooms.",
+      "description": "Snuggly animals, fireside scenes, and cafe treats for the colder months. A seasonal book that feels like a blanket.",
+      "alt": "Temporary cover for Soft Season, a winter cozy coloring book",
+      "details": ["Seasonal coloring book", "About 45 hand-drawn pages", "Around 8 × 8 in", "Bold, easy-to-color lines"]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "Spooky, but mostly comfy.",
+      "description": "Mystical little creatures with quirky vibes and soft edges. Perfect when you want a playful night without the scare.",
+      "alt": "Temporary cover for Moonlit Cuties, a spooky-cute coloring book",
+      "details": ["Seasonal coloring book", "About 40 hand-drawn pages", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "A tiny pattern book for short coloring breaks.",
+      "description": "Comfy patterns in a pocket size for desks, trains, and waiting rooms. Small enough for a bag, soft enough for a pause.",
+      "alt": "Temporary cover for Pocket Patterns, a mini coloring book",
+      "details": ["Mini coloring book", "About 45 pattern pages", "Around 3 × 3.5 in", "Lay-flat binding"]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "Cute trips, landmarks, and snack stops to color.",
+      "description": "Friendly animals exploring cities, streets, and sunny stops. A travel-minded book for coloring between destinations.",
+      "alt": "Temporary cover for Travel Pockets, a travel cuties coloring book",
+      "details": ["Coloring book", "About 46 illustrations", "Around 8.5 × 8.5 in", "Single-sided pages"]
+    }
+  }
+}

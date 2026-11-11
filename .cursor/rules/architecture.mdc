@@ -1,0 +1,19 @@
+---
+description: How to extend the Everlune shop without hardcoding the name
+alwaysApply: true
+---
+
+# Shop structure
+
+`site.config.ts` is the only place that sets the visible name, currency, support address, and storage prefix. Renaming the shop does not require a translation rewrite. Leave `storagePrefix` unchanged so carts and theme choices survive.
+
+- Catalog facts (price in cents, stock, image, collection) live in `server/data/catalog.ts` and are served from `server/api/catalog`.
+- Collection slugs and their pastel classes live in `shared/catalog.ts`.
+- The cart is local to the browser in `useCart()`. Replace that composable when accounts exist. Do not invent a payment call.
+- Login, registration, account, newsletter, and checkout are honest placeholders. They must not store or send what people type.
+- A new feature gets a page or component, a composable if it has state, an API route if it needs data, and copy in every locale.
+
+```ts
+// server/data/catalog.ts
+{ slug: 'new-book', price: 999, collection: 'books', image: '/art/new-book.png', featured: false, stock: 20, sort: 11 }
+```

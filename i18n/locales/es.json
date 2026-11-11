@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "homeTitle": "Libros para colorear para noches tranquilas",
+    "homeDescription": "{name} es una tienda de estudio cozy con libros para colorear dibujados a mano, paginas bold-easy y pequenos extras.",
+    "shopTitle": "Tienda",
+    "shopDescription": "Libros para colorear cozy, paginas bold-easy, titulos de temporada y extras de bolsillo de {name}.",
+    "aboutTitle": "Sobre mi",
+    "aboutDescription": "La historia detras de {name}: una artista, libros para colorear dibujados a mano y paginas hechas para la calma.",
+    "cartTitle": "Carrito",
+    "cartDescription": "Libros aparte de {name}.",
+    "checkoutTitle": "Pago",
+    "checkoutDescription": "El pago en {name} todavia se esta preparando.",
+    "loginTitle": "Iniciar sesion",
+    "loginDescription": "El acceso a la cuenta de {name} abre mas tarde.",
+    "registerTitle": "Crear una cuenta",
+    "registerDescription": "Las cuentas en {name} abren mas tarde.",
+    "accountTitle": "Tu cuenta",
+    "accountDescription": "Un rincon tranquilo para futuros pedidos en {name}."
+  },
+  "nav": {
+    "skip": "Saltar al contenido",
+    "primary": "Principal",
+    "home": "Inicio",
+    "shop": "Tienda",
+    "about": "Sobre mi",
+    "cart": "Carrito",
+    "account": "Cuenta",
+    "login": "Iniciar sesion",
+    "register": "Crear cuenta",
+    "menu": "Abrir menu",
+    "close": "Cerrar menu",
+    "breadcrumb": "Ruta",
+    "mobile": "Enlaces rapidos",
+    "wishlist": "Lista de deseos"
+  },
+  "theme": {
+    "toLight": "Cambiar al tema claro",
+    "toDark": "Cambiar al tema oscuro",
+    "toSystem": "Usar el tema del sistema"
+  },
+  "locale": {
+    "label": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Un estudio cozy para colorear",
+    "title": "Deja salir a los cuties!",
+    "lead": "Libros para colorear dibujados a mano para noches suaves, lineas firmes y alegria diaria.",
+    "shop": "Disponible ahora",
+    "about": "Sobre mi",
+    "point1": "Paginas dibujadas a mano",
+    "point2": "Hechos para relajarse",
+    "point3": "Pastel a proposito",
+    "badge": "Hora lila"
+  },
+  "home": {
+    "collectionsEyebrow": "Por donde empezar",
+    "collectionsTitle": "Encuentra un lugar suave para colorear",
+    "collectionsLead": "Libros completos para noches largas, paginas bold-easy para principiantes, titulos de temporada y extras de bolsillo.",
+    "shelfEyebrow": "En el escritorio",
+    "shelfTitle": "Algunos libros que guardo cerca",
+    "shelfLead": "Los titulos que ahora mas se sienten como el estudio.",
+    "shelfAll": "Ver toda la tienda",
+    "easelEyebrow": "Fresco del escritorio",
+    "noteEyebrow": "Una nota del escritorio",
+    "noteTitle": "Dibujado para el momento en que te sientas",
+    "noteBody": "Dibujo cuando la habitacion se pone lila y el dia por fin deja la bolsa. {name} es esa hora, guardada en un libro para colorear.",
+    "noteLink": "Leer mi historia",
+    "quote": "Lineas suaves, noches lentas y un poco de confort en cada pagina.",
+    "togetherTitle": "Juntos somos",
+    "togetherBody": "Lo que empezo con amor por colorear y momentos cozy crece en {name} - un mundo creativo de libros dibujados a mano para relajacion, suave conexion personal y alegria diaria.",
+    "togetherCta": "Sobre mi",
+    "bestsellerTitle": "mas vendidos",
+    "arrivalsTitle": "novedades",
+    "themeTitle": "tema",
+    "shopNow": "Comprar ahora",
+    "faq": {
+      "title": "Preguntas",
+      "lead": "Tienes preguntas? Estamos aqui para ayudar.",
+      "items": [
+        {
+          "q": "Donde puedo comprar libros para colorear de {name}?",
+          "a": "Aqui mismo en la tienda. El pago todavia se prepara, asi que puedes mirar y guardar libros en el carrito por ahora."
+        },
+        {
+          "q": "Los libros de {name} son faciles para principiantes?",
+          "a": "Si. Muchos titulos usan formas abiertas y lineas firmes, suaves para principiantes y divertidos tambien para quienes ya colorearon mucho."
+        },
+        {
+          "q": "Como consigo paginas para colorear gratis?",
+          "a": "Las paginas gratis llegaran con el boletin y futuros regalos. La lista todavia no esta abierta, asi que no se guarda nada."
+        },
+        {
+          "q": "Como comparto paginas ya coloreadas?",
+          "a": "Etiqueta al estudio cuando los enlaces sociales esten listos. Hasta entonces, sigue coloreando y disfruta la calma."
+        },
+        {
+          "q": "Como puedo contactar a {name} para pedir ayuda?",
+          "a": "Escribe a {email}. El soporte se abre mas completo junto con el pago."
+        }
+      ]
+    },
+    "values": [
+      {
+        "title": "para todo nivel",
+        "body": "Principiantes y expertos pueden disfrutar los libros."
+      },
+      {
+        "title": "hechos para relajarse",
+        "body": "Trae paz y bienestar diario a tu mente."
+      },
+      {
+        "title": "100% creado por humanos",
+        "body": "Cada diseno lo crean artistas humanos con oficio."
+      },
+      {
+        "title": "fans felices",
+        "body": "Confiado y querido por fans del coloreado en todo el mundo."
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Notas del estudio",
+    "title": "Unete a nuestra lista de correo",
+    "body": "Deja tu email para regalos especiales mas adelante. Nada de lo que escribes se guarda ni se envia todavia.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre...",
+    "emailLabel": "Correo electronico",
+    "placeholder": "Tu email...",
+    "submit": "Suscribirme",
+    "thanks": "Gracias. La lista todavia no esta abierta, asi que esta direccion no se guardo."
+  },
+  "shop": {
+    "lead": "Todo lo que hay ahora en la tienda del estudio. Filtra por rincon o busca por titulo.",
+    "searchLabel": "Buscar en la tienda",
+    "searchPlaceholder": "Prueba cafe, jardin, mini, spooky",
+    "sortLabel": "Ordenar",
+    "sortFeatured": "Orden del estudio",
+    "sortPriceAsc": "Precio, de menor a mayor",
+    "sortPriceDesc": "Precio, de mayor a menor",
+    "sortTitle": "Nombre",
+    "all": "Todos los libros",
+    "resultCount": "Mostrando {count}",
+    "empty": "Nada coincide con esa busqueda. Prueba otra palabra o mira todos los libros.",
+    "loadError": "La tienda no se pudo abrir ahora mismo.",
+    "retry": "Intentar de nuevo",
+    "loading": "Abriendo la tienda"
+  },
+  "product": {
+    "shipping": "El envio y el pago abren juntos, un poco mas tarde. Aun puedes guardar libros en tu carrito.",
+    "add": "Anadir al carrito",
+    "soldOut": "Este ya encontro hogar",
+    "lowStock": "Solo quedan {count} en el estudio",
+    "inStock": "Listo para empacar",
+    "inCart": "El ultimo de estos ya esta en tu carrito",
+    "added": "Guardado en tu carrito.",
+    "limit": "Eso es todo de este libro por ahora.",
+    "quantity": "Cantidad para {title}",
+    "increase": "Aumentar cantidad de {title}",
+    "decrease": "Reducir cantidad de {title}",
+    "related": "Tambien te puede gustar",
+    "details": "Sobre este libro",
+    "missingTitle": "Este libro ya no esta en la tienda",
+    "missingBody": "Puede haber cambiado de nombre o haberse guardado. El resto de la tienda sigue aqui."
+  },
+  "cart": {
+    "lead": "Libros que apartaste en este dispositivo. Se quedan en este navegador hasta que exista el pago.",
+    "empty": "Tu carrito es un escritorio limpio. La tienda esta llena de libros suaves cuando quieras.",
+    "shop": "Volver a la tienda",
+    "subtotal": "Subtotal",
+    "shippingNote": "El envio se anade mas tarde, cuando abra el pago.",
+    "view": "Ver carrito",
+    "checkout": "Continuar al pago",
+    "close": "Cerrar carrito",
+    "open": "Abrir carrito, {count} guardados",
+    "remove": "Quitar",
+    "missing": "Este libro ya no esta en la tienda.",
+    "title": "Tu carrito"
+  },
+  "checkout": {
+    "eyebrow": "Casi",
+    "title": "El pago se esta preparando",
+    "body": "El pago todavia no esta abierto, asi que aqui no se puede comprar nada. Tu carrito se queda en este dispositivo hasta entonces.",
+    "back": "Volver al carrito",
+    "empty": "Todavia no hay nada que empacar."
+  },
+  "about": {
+    "eyebrow": "Sobre mi",
+    "title": "Una artista, una tienda, paginas hechas para la calma",
+    "lead": "Soy una artista individual que siempre sono con tener su propia tienda online. Todo lo que hay aqui — el sitio, los libros, los pequenos extras — lo hago y lo comparto yo.",
+    "story": "Mi trabajo principal es el desarrollo creativo: construyo apps y sitios web para clientes. Fuera de eso, siempre estoy haciendo arte. Me encantan los personajes cute, y no dibujo humanos. Los animales y las criaturitas se sienten mas como hogar.",
+    "storyGrief": "En julio de 2026 fallecio mi papa. El duelo es grande y dificil de sostener, y de pronto tantas cosas se sintieron fuera de mi control. En esa temporada vi a gente coloreando en TikTok e Instagram. Lo probe, compre un set Ohuhu de 320 piezas, y me enamore. Colorear me dio un pequeno bolsillo de paz. Yo elegia los colores, la vibra, el animo. Por un rato, la pagina era un mundo que podia guiar con suavidad.",
+    "storyArt": "De ese sentimiento nacio una idea quieta: y si hiciera mis propios libros para colorear, con mi propio arte? Escondidos en las paginas hay momentos suaves y recuerdos de mi papa — criaturas y escenas que apuntan al tiempo que compartimos, sin necesidad de decirlo todo en voz alta.",
+    "storyMore": "Asi nacio {name}. El nombre aun puede cambiar. El corazon no: libros dibujados a mano por una sola persona, para quien necesite un lugar suave donde sentarse con el color.",
+    "alt": "Un escritorio cozy con marcadores, una vela y un libro para colorear abierto",
+    "processTitle": "Como nace un libro",
+    "steps": [
+      { "title": "Boceto", "body": "Un dibujo a lapiz, casi siempre de noche, de criaturas y escenas suaves que guardan un recuerdo." },
+      { "title": "Tinta", "body": "Lineas firmes y amables que siguen faciles de colorear, incluso en una noche cansada." },
+      { "title": "Pagina", "body": "Hojas de una sola cara, detalles suaves y espacio suficiente para respirar." },
+      { "title": "Encuadernar", "body": "Un libro cuadrado para el sofa, o uno mini que cabe en la bolsa." }
+    ],
+    "materialsTitle": "Lo que estas mirando",
+    "materials": [
+      "Los libros completos se planean alrededor de 40 a 46 paginas dibujadas a mano.",
+      "Los titulos bold and easy usan formas mas grandes y contornos mas gruesos.",
+      "Los libros de temporada siguen fiestas y climas suaves.",
+      "Los extras incluyen libros mini y packs de bolsillo para pausas cortas."
+    ],
+    "shop": "Ver los libros"
+  },
+  "auth": {
+    "loginEyebrow": "Bienvenido de nuevo, pronto",
+    "loginTitle": "Iniciar sesion",
+    "loginLead": "Las cuentas todavia no estan abiertas. Este formulario es un marcador y nada de lo que escribes se envia.",
+    "registerEyebrow": "Una llave para despues",
+    "registerTitle": "Crear una cuenta",
+    "registerLead": "El registro espera junto con el pago. Puedes mirar el formulario. No se guarda nada.",
+    "name": "Nombre",
+    "email": "Email",
+    "password": "Contrasena",
+    "submitLogin": "Iniciar sesion",
+    "submitRegister": "Crear cuenta",
+    "switchToRegister": "Necesitas una cuenta mas adelante?",
+    "switchToLogin": "Ya planeas volver?",
+    "notice": "Estos datos se quedan solo en el formulario. No se guardan ni se envian a ningun lado.",
+    "thanks": "No se guardo nada, a proposito. Las cuentas abren un poco mas tarde.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Tu rincon",
+    "title": "Cuenta",
+    "lead": "Cuando abran las cuentas, aqui viviran pedidos, datos y direcciones. Todavia no hay sesion iniciada.",
+    "login": "Iniciar sesion",
+    "register": "Crear cuenta",
+    "sections": {
+      "orders": {
+        "title": "Pedidos",
+        "body": "Los envios pasados se reuniran aqui cuando exista el pago."
+      },
+      "profile": {
+        "title": "Perfil",
+        "body": "Tu nombre y email se podran editar cuando abran las cuentas."
+      },
+      "addresses": {
+        "title": "Direcciones",
+        "body": "Los datos de envio estaran aqui, listos para el siguiente paquete."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Visitar",
+    "studio": "Estudio",
+    "account": "Cuenta",
+    "note": "El buzon del estudio abre con el pago. Hasta entonces, {email} es solo un marcador.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "Este camino se desvio",
+    "genericTitle": "Algo tropezo",
+    "body": "Esa pagina no esta en la tienda. El resto sigue aqui.",
+    "genericBody": "No se pudo abrir la pagina. Puedes volver al inicio e intentar otra puerta.",
+    "home": "Volver al inicio",
+    "shop": "Ver los libros"
+  },
+  "collections": {
+    "books": {
+      "title": "Libros para colorear",
+      "summary": "Libros cozy completos para noches largas y tranquilas.",
+      "body": "Libros para colorear dibujados a mano con habitaciones suaves, escenas amables y paginas pensadas para marcadores o lapices."
+    },
+    "bold-easy": {
+      "title": "Bold and easy",
+      "summary": "Formas grandes y lineas gruesas, suaves para principiantes.",
+      "body": "Disenos abiertos con contornos claros, hechos para un ritmo relajado y un sofa suave."
+    },
+    "seasonal": {
+      "title": "Temporada",
+      "summary": "Ambientes de fiesta y titulos de clima suave.",
+      "body": "Libros para noches de cacao, ternura spooky y meses que piden una manta."
+    },
+    "extras": {
+      "title": "Extras",
+      "summary": "Libros mini y packs de bolsillo para pausas cortas.",
+      "body": "Formatos pequenos y titulos faciles de llevar para escritorios, bolsas y cinco minutos de calma."
+    },
+    "missingTitle": "Ese rincon no esta en la tienda",
+    "missingBody": "Prueba una de las colecciones abiertas, o recorre toda la tienda."
+  },
+  "badges": {
+    "new": "Nuevo",
+    "limited": "Limitado",
+    "bestseller": "Muy querido"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "Un cafe suave lleno de bebidas calientes y rincones quietos.",
+      "description": "Sientate en cafes de conejos, asientos de casa en el arbol y rincones de lectura que esperan tus colores. Un libro completo cozy para noches que necesitan un aterrizaje suave.",
+      "alt": "Portada temporal de Lilac Cafe, un libro para colorear de cafe cozy",
+      "details": ["Libro para colorear", "Unas 45 paginas dibujadas a mano", "Alrededor de 8 × 8 in", "Lineas firmes y faciles de colorear"]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "Suavidad cotidiana: diario, amistades y habitaciones gentiles.",
+      "description": "Escenas calidas de hobbies tranquilos y pequenas alegrias. Lineas suaves y detalles cercanos para quienes colorean para frenar.",
+      "alt": "Portada temporal de Quiet Moments, un libro para colorear de vida cotidiana cozy",
+      "details": ["Libro para colorear", "Unas 40 paginas dibujadas a mano", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "Confort de capibara en cada pagina.",
+      "description": "Amigos redondos, clima suave y escenas que se sienten como un gran suspiro. Hecho para marcadores grandes y un animo muy sin prisa.",
+      "alt": "Portada temporal de Puddle Friends, un libro para colorear de animales cozy",
+      "details": ["Libro para colorear", "Unas 45 paginas dibujadas a mano", "Alrededor de 8 × 8 in", "Lineas firmes y faciles de colorear"]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "Un jardin de caminos suaves, flores y rincones secretos.",
+      "description": "Escenas de naturaleza dibujadas para pasear lento con un lapiz. Hojas, puertas y pequenos tesoros entre las plantas.",
+      "alt": "Portada temporal de Hidden Patch, un libro para colorear de jardin",
+      "details": ["Libro para colorear", "Unas 40 paginas dibujadas a mano", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "Objetos de casa con personalidad y tareas cozy.",
+      "description": "Escobas, esponjas, frascos de especias y regaderas viviendo su vida mas suave. Contornos firmes para una sesion jugosa y facil.",
+      "alt": "Portada temporal de Kitchen Cuties, un libro bold and easy de hogar",
+      "details": ["Libro bold and easy", "Unas 46 ilustraciones", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "Mananas quietas, hobbies y noches mantenidas suaves.",
+      "description": "Rituales cotidianos dibujados con formas claras y detalles cozy. Un libro gentil para colorear sin prisa.",
+      "alt": "Portada temporal de Comfort Days, un libro para colorear de vida diaria cozy",
+      "details": ["Libro bold and easy", "Unas 46 ilustraciones", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "Clima de cacao, mantas y habitaciones de invierno.",
+      "description": "Animales abrigados, escenas junto al fuego y dulces de cafe para los meses frios. Un libro de temporada que se siente como una manta.",
+      "alt": "Portada temporal de Soft Season, un libro para colorear de invierno cozy",
+      "details": ["Libro de temporada", "Unas 45 paginas dibujadas a mano", "Alrededor de 8 × 8 in", "Lineas firmes y faciles de colorear"]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "Spooky, pero sobre todo comfy.",
+      "description": "Criaturas misticas pequenas con vibra rara y bordes suaves. Perfecto cuando quieres una noche jugosa sin el susto.",
+      "alt": "Portada temporal de Moonlit Cuties, un libro para colorear spooky-cute",
+      "details": ["Libro de temporada", "Unas 40 paginas dibujadas a mano", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "Un librito de patrones para pausas cortas de colorear.",
+      "description": "Patrones comfy en tamano de bolsillo para escritorios, trenes y salas de espera. Suficiente pequeno para la bolsa, suficiente suave para una pausa.",
+      "alt": "Portada temporal de Pocket Patterns, un libro mini para colorear",
+      "details": ["Libro mini para colorear", "Unas 45 paginas de patrones", "Alrededor de 3 × 3.5 in", "Encuadernacion que queda plano"]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "Viajes cute, lugares y paradas de snack para colorear.",
+      "description": "Animales amables explorando ciudades, calles y paradas soleadas. Un libro con animo de viaje para colorear entre destinos.",
+      "alt": "Portada temporal de Travel Pockets, un libro para colorear de viajes cute",
+      "details": ["Libro para colorear", "Unas 46 ilustraciones", "Alrededor de 8.5 × 8.5 in", "Paginas de una sola cara"]
+    }
+  }
+}

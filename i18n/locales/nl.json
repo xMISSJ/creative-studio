@@ -1,0 +1,429 @@
+{
+  "meta": {
+    "homeTitle": "Kleurboeken voor stille avonden",
+    "homeDescription": "{name} is een gezellige studiowinkel voor handgetekende kleurboeken, bold-easy paginas en kleine extras.",
+    "shopTitle": "Winkel",
+    "shopDescription": "Gezellige kleurboeken, bold-easy paginas, seizoenstitels en pocketextras van {name}.",
+    "aboutTitle": "Over mij",
+    "aboutDescription": "Het verhaal achter {name}: één kunstenaar, handgetekende kleurboeken, en paginas voor stilte.",
+    "cartTitle": "Winkelwagen",
+    "cartDescription": "Boeken die je apart hebt gezet bij {name}.",
+    "checkoutTitle": "Afrekenen",
+    "checkoutDescription": "Afrekenen bij {name} wordt nog ingepakt.",
+    "loginTitle": "Inloggen",
+    "loginDescription": "Inloggen bij {name} komt later.",
+    "registerTitle": "Account maken",
+    "registerDescription": "Accounts bij {name} openen later.",
+    "accountTitle": "Je account",
+    "accountDescription": "Een stil plekje voor toekomstige bestellingen bij {name}."
+  },
+  "nav": {
+    "skip": "Ga naar de inhoud",
+    "primary": "Hoofdmenu",
+    "home": "Home",
+    "shop": "Winkel",
+    "about": "Over mij",
+    "cart": "Winkelwagen",
+    "account": "Account",
+    "login": "Inloggen",
+    "register": "Account maken",
+    "menu": "Menu openen",
+    "close": "Menu sluiten",
+    "breadcrumb": "Kruimelpad",
+    "mobile": "Snelle links",
+    "wishlist": "Verlanglijst"
+  },
+  "theme": {
+    "toLight": "Schakel naar het lichte thema",
+    "toDark": "Schakel naar het donkere thema",
+    "toSystem": "Gebruik het thema van je apparaat"
+  },
+  "locale": {
+    "label": "Taal"
+  },
+  "hero": {
+    "eyebrow": "Een gezellige kleurstudio",
+    "title": "Laat de cuties los!",
+    "lead": "Handgetekende kleurboeken voor zachte avonden, dikke lijnen en dagelijkse vreugde.",
+    "shop": "Nu beschikbaar",
+    "about": "Over mij",
+    "point1": "Handgetekende paginas",
+    "point2": "Gemaakt om tot rust te komen",
+    "point3": "Met opzet pastel",
+    "badge": "Lila uur"
+  },
+  "home": {
+    "collectionsEyebrow": "Waar te beginnen",
+    "collectionsTitle": "Zoek een zacht plekje om te kleuren",
+    "collectionsLead": "Volle boeken voor lange avonden, bold-easy paginas voor beginners, seizoenstitels en pocketextras voor onderweg.",
+    "shelfEyebrow": "Op het bureau",
+    "shelfTitle": "Een paar boeken die ik dichtbij hou",
+    "shelfLead": "De titels die nu het meest als de studio voelen.",
+    "shelfAll": "De hele winkel",
+    "easelEyebrow": "Vers van het bureau",
+    "noteEyebrow": "Een briefje van het bureau",
+    "noteTitle": "Getekend voor het moment dat je gaat zitten",
+    "noteBody": "Ik teken als de kamer lila kleurt en de dag eindelijk haar tas neerzet. {name} is dat uur, bewaard in een kleurboek.",
+    "noteLink": "Lees mijn verhaal",
+    "quote": "Zachte lijnen, trage avonden, en een beetje comfort op elke pagina.",
+    "togetherTitle": "Samen zijn we",
+    "togetherBody": "Wat begon met liefde voor kleuren en knusse momenten groeit uit tot {name} - een creatieve wereld van handgetekende boeken voor ontspanning, zachte zelfzorg en dagelijkse vreugde.",
+    "togetherCta": "Over mij",
+    "bestsellerTitle": "bestseller",
+    "arrivalsTitle": "nieuw binnen",
+    "themeTitle": "thema",
+    "shopNow": "Shop nu",
+    "faq": {
+      "title": "FAQs",
+      "lead": "Heb je vragen? Wij helpen je graag.",
+      "items": [
+        {
+          "q": "Waar kan ik kleurboeken van {name} kopen?",
+          "a": "Hier in de winkel. Afrekenen wordt nog ingepakt, dus je kunt nu al bladeren en boeken in je winkelwagen zetten."
+        },
+        {
+          "q": "Zijn de boeken van {name} geschikt voor beginners?",
+          "a": "Ja. Veel titels hebben dikke, open vormen die fijn zijn voor beginners en nog steeds leuk voor geoefende kleurders."
+        },
+        {
+          "q": "Hoe krijg ik gratis kleurpaginas?",
+          "a": "Gratis paginas komen later via de nieuwsbrief en freebies. De lijst is nog niet open, dus er wordt niets bewaard."
+        },
+        {
+          "q": "Hoe deel ik afgewerkte kleurpaginas?",
+          "a": "Tag de studio wanneer de socials live gaan. Tot die tijd: blijf kleuren en geniet van de rust."
+        },
+        {
+          "q": "Hoe bereik ik {name} voor hulp?",
+          "a": "Mail naar {email}. Support opent verder samen met afrekenen."
+        }
+      ]
+    },
+    "values": [
+      {
+        "title": "voor elk niveau",
+        "body": "Zowel beginners als gevorderden kunnen van de boeken genieten."
+      },
+      {
+        "title": "gemaakt om te ontspannen",
+        "body": "Breng rust en lichte wellness in je hoofd."
+      },
+      {
+        "title": "100% door mensen gemaakt",
+        "body": "Elk ontwerp komt van vaardige menselijke kunstenaars."
+      },
+      {
+        "title": "blije fans",
+        "body": "Vertrouwd en geliefd bij kleurfans wereldwijd."
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Studiobriefjes",
+    "title": "Schrijf je in voor de mail",
+    "body": "Laat je e-mail achter voor latere cadeautjes. Wat je typt, wordt nog nergens bewaard of verstuurd.",
+    "nameLabel": "Naam",
+    "namePlaceholder": "Je naam...",
+    "emailLabel": "E-mailadres",
+    "placeholder": "Je e-mail...",
+    "submit": "Abonneren",
+    "thanks": "Dank je. De lijst is nog niet open, dus dit adres is niet bewaard."
+  },
+  "shop": {
+    "lead": "Alles wat nu in de studiowinkel ligt. Filter op een hoekje, of zoek op titel.",
+    "searchLabel": "Zoek in de winkel",
+    "searchPlaceholder": "Probeer cafe, tuin, mini, spooky",
+    "sortLabel": "Sorteer",
+    "sortFeatured": "Studio-volgorde",
+    "sortPriceAsc": "Prijs, laag naar hoog",
+    "sortPriceDesc": "Prijs, hoog naar laag",
+    "sortTitle": "Naam",
+    "all": "Alle boeken",
+    "resultCount": "Toont {count}",
+    "empty": "Nog niets bij die zoekopdracht. Probeer een ander woord, of bekijk alle boeken.",
+    "loadError": "De winkel kon net niet geopend worden.",
+    "retry": "Probeer opnieuw",
+    "loading": "De winkel opent"
+  },
+  "product": {
+    "shipping": "Verzending en betaling openen samen, iets later. Je kunt boeken alvast in je winkelwagen zetten.",
+    "add": "In winkelwagen",
+    "soldOut": "Deze heeft al een thuis",
+    "lowStock": "Nog maar {count} in de studio",
+    "inStock": "Klaar om in te pakken",
+    "inCart": "De laatste zit al in je winkelwagen",
+    "added": "Bewaard in je winkelwagen.",
+    "limit": "Dat is alles van dit boek voor nu.",
+    "quantity": "Aantal voor {title}",
+    "increase": "Verhoog aantal van {title}",
+    "decrease": "Verlaag aantal van {title}",
+    "related": "Misschien ook leuk",
+    "details": "Over dit boek",
+    "missingTitle": "Dit boek is uit de winkel",
+    "missingBody": "Het is misschien hernoemd of weggelegd. De rest van de winkel is er nog."
+  },
+  "cart": {
+    "lead": "Boeken die je op dit apparaat apart hebt gezet. Ze blijven in deze browser tot afrekenen bestaat.",
+    "empty": "Je winkelwagen is een leeg bureau. De winkel staat vol zachte boeken wanneer je wilt.",
+    "shop": "Terug naar de winkel",
+    "subtotal": "Subtotaal",
+    "shippingNote": "Verzendkosten komen later, als afrekenen opent.",
+    "view": "Bekijk winkelwagen",
+    "checkout": "Verder naar afrekenen",
+    "close": "Sluit winkelwagen",
+    "open": "Winkelwagen openen, {count} bewaard",
+    "remove": "Verwijderen",
+    "missing": "Dit boek zit niet meer in de winkel.",
+    "title": "Je winkelwagen"
+  },
+  "checkout": {
+    "eyebrow": "Bijna",
+    "title": "Afrekenen wordt nog ingepakt",
+    "body": "Betalen is nog niet open, dus hier kun je niets kopen. Je winkelwagen blijft tot die tijd op dit apparaat.",
+    "back": "Terug naar de winkelwagen",
+    "empty": "Er is nog niets om in te pakken."
+  },
+  "about": {
+    "eyebrow": "Over mij",
+    "title": "Eén kunstenaar, één winkel, paginas voor stilte",
+    "lead": "Ik ben een individuele kunstenaar die altijd al droomde van een eigen webshop. Alles hier — de site, de boeken, de kleine extras — maak en deel ik zelf.",
+    "story": "Mijn hoofdwerk is creative development: ik bouw apps en websites voor klanten. Daarnaast maak ik altijd kunst. Ik houd van schattige personages, en ik teken geen mensen. Dieren en kleine wezentjes voelen meer als thuis.",
+    "storyGrief": "In juli 2026 is mijn papa overleden. Rouw is groot en moeilijk vast te houden, en zoveel dingen voelden ineens buiten mijn handen. Ergens in die periode zag ik mensen kleuren op TikTok en Instagram. Ik probeerde het zelf, kocht een Ohuhu-set van 320 stuks, en werd verliefd. Kleuren gaf me een klein zakje rust. Ik koos de kleuren, de vibe, de sfeer. Even was de pagina een wereld die ik zachtjes kon sturen.",
+    "storyArt": "Uit dat gevoel kwam een stil idee: wat als ik mijn eigen kleurboeken maak, met mijn eigen kunst? Verborgen in de paginas zitten zachte momenten en herinneringen aan mijn papa — wezentjes en scenes die knikken naar tijd die we deelden, zonder alles hardop te hoeven zeggen.",
+    "storyMore": "Zo is {name} geboren. De naam mag nog verschuiven. Het hart niet: handgetekende boeken van één persoon, voor iedereen die een zacht plekje zoekt om bij kleur te zitten.",
+    "alt": "Een gezellig bureau met markers, een kaars en een open kleurboek",
+    "processTitle": "Hoe een boek ontstaat",
+    "steps": [
+      {
+        "title": "Schets",
+        "body": "Een potloodtekening, meestal in de avond, van wezentjes en zachte scenes die een herinnering vasthouden."
+      },
+      {
+        "title": "Inkt",
+        "body": "Dikke, vriendelijke lijnen die makkelijk blijven in te kleuren, ook op een vermoeide avond."
+      },
+      {
+        "title": "Pagina",
+        "body": "Enkelzijdige vellen, zachte details en genoeg ruimte om te ademen."
+      },
+      {
+        "title": "Inbinden",
+        "body": "Een vierkant boek voor de bank, of een mini dat in een tas past."
+      }
+    ],
+    "materialsTitle": "Wat je ziet",
+    "materials": [
+      "Volle boeken krijgen ongeveer 40 tot 46 handgetekende paginas.",
+      "Bold-and-easy titels gebruiken grotere vormen en dikkere contouren.",
+      "Seizoensboeken volgen feestdagen en zacht weer.",
+      "Extras zijn minibooks en pocketpacks voor korte kleurmomenten."
+    ],
+    "shop": "Bekijk de boeken"
+  },
+  "auth": {
+    "loginEyebrow": "Welkom terug, straks",
+    "loginTitle": "Inloggen",
+    "loginLead": "Accounts zijn nog niet open. Dit formulier is een placeholder, en wat je typt wordt niet verstuurd.",
+    "registerEyebrow": "Een sleutel voor later",
+    "registerTitle": "Account maken",
+    "registerLead": "Registreren wacht op afrekenen. Je mag het formulier bekijken. Er wordt niets bewaard.",
+    "name": "Naam",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "submitLogin": "Inloggen",
+    "submitRegister": "Account maken",
+    "switchToRegister": "Later een account nodig?",
+    "switchToLogin": "Al van plan terug te komen?",
+    "notice": "Deze gegevens blijven alleen in het formulier. Ze worden nergens opgeslagen of naartoe gestuurd.",
+    "thanks": "Met opzet nergens bewaard. Accounts komen iets later.",
+    "namePlaceholder": "Je naam",
+    "emailPlaceholder": "jij{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Jouw hoekje",
+    "title": "Account",
+    "lead": "Als accounts openen, wonen bestellingen, gegevens en adressen hier. Er is nog niemand ingelogd.",
+    "login": "Inloggen",
+    "register": "Account maken",
+    "sections": {
+      "orders": {
+        "title": "Bestellingen",
+        "body": "Eerdere pakketjes komen hier als afrekenen bestaat."
+      },
+      "profile": {
+        "title": "Profiel",
+        "body": "Je naam en e-mail worden bewerkbaar als accounts openen."
+      },
+      "addresses": {
+        "title": "Adressen",
+        "body": "Verzendgegevens komen hier, klaar voor het volgende pakketje."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Bezoeken",
+    "studio": "Studio",
+    "account": "Account",
+    "note": "De studio-inbox opent samen met afrekenen. Tot die tijd is {email} alleen een placeholder.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "Dit pad is verdwaald",
+    "genericTitle": "Er ging iets mis",
+    "body": "Die pagina zit niet in de winkel. De rest is er nog.",
+    "genericBody": "De pagina kon niet geopend worden. Je kunt naar huis en een andere deur proberen.",
+    "home": "Terug naar huis",
+    "shop": "Bekijk de boeken"
+  },
+  "collections": {
+    "books": {
+      "title": "Kleurboeken",
+      "summary": "Volle, gezellige boeken voor lange, stille avonden.",
+      "body": "Handgetekende kleurboeken met zachte kamers, vriendelijke scènes en paginas voor markers of potlood."
+    },
+    "bold-easy": {
+      "title": "Bold and easy",
+      "summary": "Grote vormen en dikke lijnen, zacht voor beginners.",
+      "body": "Open ontwerpen met duidelijke contouren, gemaakt voor een rustig tempo en een zachte bank."
+    },
+    "seasonal": {
+      "title": "Seizoen",
+      "summary": "Feestdagstemming en zacht-weer titels.",
+      "body": "Boeken voor cacaonachten, knusse spookjes en maanden die om een deken vragen."
+    },
+    "extras": {
+      "title": "Extras",
+      "summary": "Miniboeken en pocketpacks voor korte pauzes.",
+      "body": "Kleine formaten en reistitels voor bureaus, tassen en vijf kalme minuten."
+    },
+    "missingTitle": "Dat hoekje zit niet in de winkel",
+    "missingBody": "Probeer een collectie die open is, of wandel door de hele winkel."
+  },
+  "badges": {
+    "new": "Nieuw",
+    "limited": "Beperkt",
+    "bestseller": "Geliefd"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lila Café",
+      "summary": "Een zacht café vol warme drankjes en stille hoekjes.",
+      "description": "Ga zitten in bunnycafes, boomhuiszitjes en boekennookjes die op jouw kleuren wachten. Een knus vol boek voor avonden die een zachte landing nodig hebben.",
+      "alt": "Tijdelijke cover voor Lila Café, een gezellig cafékleurboek",
+      "details": [
+        "Kleurboek",
+        "Ongeveer 45 handgetekende paginas",
+        "Rond 8 × 8 inch",
+        "Dikke, makkelijk in te kleuren lijnen"
+      ]
+    },
+    "quiet-moments": {
+      "title": "Stille momenten",
+      "summary": "Alledaagse zachtheid: journalen, vriendjes en rustige kamers.",
+      "description": "Hartverwarmende scènes van kalme hobbies en kleine geneugtes. Zachte lijnen en herkenbare details voor wie kleurt om tot rust te komen.",
+      "alt": "Tijdelijke cover voor Stille momenten, een alledaags cozy kleurboek",
+      "details": [
+        "Kleurboek",
+        "Ongeveer 40 handgetekende paginas",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    },
+    "puddle-friends": {
+      "title": "Plassenvriendjes",
+      "summary": "Capybara-comfort op elke pagina.",
+      "description": "Ronde vriendjes, zacht weer en scènes die voelen als een diepe zucht. Gemaakt voor grote markers en een heel onhaastig humeur.",
+      "alt": "Tijdelijke cover voor Plassenvriendjes, een cozy dierenkleurboek",
+      "details": [
+        "Kleurboek",
+        "Ongeveer 45 handgetekende paginas",
+        "Rond 8 × 8 inch",
+        "Dikke, makkelijk in te kleuren lijnen"
+      ]
+    },
+    "hidden-patch": {
+      "title": "Verborgen tuintje",
+      "summary": "Een tuin met zachte paden, bloemen en geheime hoekjes.",
+      "description": "Natuurscènes om met potlood in te wandelen. Bladeren, poortjes en kleine schatten tussen de planten.",
+      "alt": "Tijdelijke cover voor Verborgen tuintje, een tuinkleurboek",
+      "details": [
+        "Kleurboek",
+        "Ongeveer 40 handgetekende paginas",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    },
+    "kitchen-cuties": {
+      "title": "Keukenknuffels",
+      "summary": "Huishoudelijke dingetjes met een eigen karakter.",
+      "description": "Bezems, sponzen, kruidenpotjes en gieter die hun zachtste leven leiden. Dikke contouren voor een speelse, makkelijke kleursessie.",
+      "alt": "Tijdelijke cover voor Keukenknuffels, een bold-and-easy huiselijk kleurboek",
+      "details": [
+        "Bold-and-easy kleurboek",
+        "Ongeveer 46 illustraties",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    },
+    "comfort-days": {
+      "title": "Comfort dagen",
+      "summary": "Stille ochtenden, hobbies en zachte avonden.",
+      "description": "Dagelijkse rituelen met duidelijke vormen en knusse details. Een mild boek om zonder haast in te kleuren.",
+      "alt": "Tijdelijke cover voor Comfort dagen, een cozy dagelijks-leven kleurboek",
+      "details": [
+        "Bold-and-easy kleurboek",
+        "Ongeveer 46 illustraties",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    },
+    "soft-season": {
+      "title": "Zacht seizoen",
+      "summary": "Cacaoweer, dekens en winterwarme kamers.",
+      "description": "Knusse dieren, haardscènes en cafétreats voor de koudere maanden. Een seizoensboek dat voelt als een deken.",
+      "alt": "Tijdelijke cover voor Zacht seizoen, een wintercozy kleurboek",
+      "details": [
+        "Seizoenskleurboek",
+        "Ongeveer 45 handgetekende paginas",
+        "Rond 8 × 8 inch",
+        "Dikke, makkelijk in te kleuren lijnen"
+      ]
+    },
+    "moonlit-cuties": {
+      "title": "Maanlichtknuffels",
+      "summary": "Een beetje spooky, vooral knus.",
+      "description": "Mystieke figuurtjes met quirky vibes en zachte randen. Perfect als je een speelse nacht wilt zonder schrik.",
+      "alt": "Tijdelijke cover voor Maanlichtknuffels, een spooky-cute kleurboek",
+      "details": [
+        "Seizoenskleurboek",
+        "Ongeveer 40 handgetekende paginas",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    },
+    "pocket-patterns": {
+      "title": "Pocketpatronen",
+      "summary": "Een mini patroonboek voor korte kleurpauzes.",
+      "description": "Gezellige patronen op zakformaat voor bureaus, treinen en wachtkamers. Klein genoeg voor een tas, zacht genoeg voor een pauze.",
+      "alt": "Tijdelijke cover voor Pocketpatronen, een minikleurboek",
+      "details": [
+        "Minikleurboek",
+        "Ongeveer 45 patroonpaginas",
+        "Rond 3 × 3,5 inch",
+        "Platliggend bindwerk"
+      ]
+    },
+    "travel-pockets": {
+      "title": "Reiszakjes",
+      "summary": "Lieve tripjes, landmarks en snackstops om in te kleuren.",
+      "description": "Vriendelijke dieren die steden, straatjes en zonnige stops verkennen. Een reisboek om tussen bestemmingen in te kleuren.",
+      "alt": "Tijdelijke cover voor Reiszakjes, een travel-cuties kleurboek",
+      "details": [
+        "Kleurboek",
+        "Ongeveer 46 illustraties",
+        "Rond 8,5 × 8,5 inch",
+        "Enkelzijdige paginas"
+      ]
+    }
+  }
+}

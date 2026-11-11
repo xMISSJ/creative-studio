@@ -1,0 +1,15 @@
+---
+description: Accessibility, motion, and color contrast for the shop
+alwaysApply: true
+---
+
+# Access and motion
+
+- Keep one `h1` per page. Use landmarks that already exist: header, main, footer, nav.
+- Label every control. Use `aria-expanded`, dialogs, and the focus trap for the cart and mobile menu.
+- Do not remove the skip link or the route announcer.
+- Text sits on `ink`, `muted`, or `on-soft`. Pastel fills use `text-on-soft`. Buttons use the cream-on-coral pair.
+- Interactive targets stay at least 44px. Inputs stay at 16px or larger.
+- Motion is hover, a short page fade, and a slow hero drift. New animation goes inside `prefers-reduced-motion: no-preference`.
+- Do not start an animation at `opacity: 0` outside that media query.
+- Images that repeat a nearby title use an empty alt. The product page uses `products.<slug>.alt`.

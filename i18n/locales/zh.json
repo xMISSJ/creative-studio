@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "homeTitle": "适合安静夜晚的填色书",
+    "homeDescription": "{name} 是一家温馨工作室店，提供手绘填色书、粗线易填页面和小巧周边。",
+    "shopTitle": "商店",
+    "shopDescription": "来自 {name} 的温馨填色书、粗线易填页面、季节主题和小巧周边。",
+    "aboutTitle": "关于我",
+    "aboutDescription": "{name} 背后的故事：一位艺术家、手绘填色书，以及为安静时刻而画的页面。",
+    "cartTitle": "购物车",
+    "cartDescription": "你在 {name} 暂存的书。",
+    "checkoutTitle": "结账",
+    "checkoutDescription": "{name} 的结账功能还在准备中。",
+    "loginTitle": "登录",
+    "loginDescription": "{name} 的账户登录稍后开放。",
+    "registerTitle": "创建账户",
+    "registerDescription": "{name} 的账户稍后开放。",
+    "accountTitle": "你的账户",
+    "accountDescription": "未来在 {name} 查看订单的安静角落。"
+  },
+  "nav": {
+    "skip": "跳到内容",
+    "primary": "主导航",
+    "home": "首页",
+    "shop": "商店",
+    "about": "关于我",
+    "cart": "购物车",
+    "account": "账户",
+    "login": "登录",
+    "register": "创建账户",
+    "menu": "打开菜单",
+    "close": "关闭菜单",
+    "breadcrumb": "面包屑",
+    "mobile": "快捷链接",
+    "wishlist": "心愿单"
+  },
+  "theme": {
+    "toLight": "切换到浅色主题",
+    "toDark": "切换到深色主题",
+    "toSystem": "使用系统主题"
+  },
+  "locale": {
+    "label": "语言"
+  },
+  "hero": {
+    "eyebrow": "温馨填色工作室",
+    "title": "把可爱们放出来！",
+    "lead": "手绘填色书，适合柔软的夜晚、清晰的线条和日常的小确幸。",
+    "shop": "现已上架",
+    "about": "关于我",
+    "point1": "手绘页面",
+    "point2": "为放松而作",
+    "point3": "特意使用柔彩",
+    "badge": "丁香时刻"
+  },
+  "home": {
+    "collectionsEyebrow": "从哪里开始",
+    "collectionsTitle": "找一个柔软的地方开始填色",
+    "collectionsLead": "适合长夜的完整书册、适合初学者的粗线易填、季节主题，以及方便随身带的周边。",
+    "shelfEyebrow": "书桌上",
+    "shelfTitle": "我常放在身边的几本书",
+    "shelfLead": "此刻最像工作室气质的几本。",
+    "shelfAll": "查看整间商店",
+    "easelEyebrow": "刚从书桌完成",
+    "noteEyebrow": "书桌留言",
+    "noteTitle": "画给坐下那一刻的你",
+    "noteBody": "当房间染上淡紫、这一天终于放下包袱时，我才开始画画。{name} 就是那个时刻，收进一本填色书里。",
+    "noteLink": "读我的故事",
+    "quote": "柔软的线条、缓慢的夜晚，以及每一页上的一点安慰。",
+    "togetherTitle": "我们一起是",
+    "togetherBody": "从对填色和温馨时刻的热爱开始，慢慢长成 {name}——一个手绘书的创意世界，为放松、温柔的自我联结和日常喜悦而作。",
+    "togetherCta": "关于我",
+    "bestsellerTitle": "畅销",
+    "arrivalsTitle": "新品",
+    "themeTitle": "主题",
+    "shopNow": "去选购",
+    "faq": {
+      "title": "常见问题",
+      "lead": "有问题吗？我们在这里帮你。",
+      "items": [
+        {
+          "q": "在哪里可以买到 {name} 的填色书？",
+          "a": "就在这家商店里。结账还在准备中，所以你现在可以先浏览，并把书放进购物车。"
+        },
+        {
+          "q": "{name} 的书适合初学者吗？",
+          "a": "适合。很多作品使用粗一些的开放形状，对初学者很友好，对有经验的填色爱好者也依然有趣。"
+        },
+        {
+          "q": "如何获得免费填色页？",
+          "a": "免费页面会随电子报和未来赠品到来。名单尚未开放，所以现在不会保存任何内容。"
+        },
+        {
+          "q": "如何分享已经填好的页面？",
+          "a": "等社交链接上线后，记得标记工作室。在那之前，继续填色，享受安静就好。"
+        },
+        {
+          "q": "如何联系 {name} 寻求帮助？",
+          "a": "请写信到 {email}。支持服务会在结账开放后更完整。"
+        }
+      ]
+    },
+    "values": [
+      {
+        "title": "适合各种程度",
+        "body": "初学者和熟练爱好者都能享受这些书。"
+      },
+      {
+        "title": "为放松而作",
+        "body": "把平静与日常舒缓带进心里。"
+      },
+      {
+        "title": "100% 人工创作",
+        "body": "每幅设计都由有经验的人类艺术家完成。"
+      },
+      {
+        "title": "快乐的读者",
+        "body": "被世界各地的填色爱好者信任和喜爱。"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "工作室短信",
+    "title": "加入我们的邮件名单",
+    "body": "留下邮箱，之后会有特别礼物。你输入的内容现在不会被保存或发送。",
+    "nameLabel": "姓名",
+    "namePlaceholder": "你的名字...",
+    "emailLabel": "电子邮箱",
+    "placeholder": "你的邮箱...",
+    "submit": "订阅",
+    "thanks": "谢谢。名单尚未开放，所以这个地址没有被保存。"
+  },
+  "shop": {
+    "lead": "工作室店里现在有的全部内容。可按分类筛选，或按书名搜索。",
+    "searchLabel": "搜索商店",
+    "searchPlaceholder": "试试 cafe、花园、mini、spooky",
+    "sortLabel": "排序",
+    "sortFeatured": "工作室顺序",
+    "sortPriceAsc": "价格从低到高",
+    "sortPriceDesc": "价格从高到低",
+    "sortTitle": "名称",
+    "all": "全部书籍",
+    "resultCount": "显示 {count} 件",
+    "empty": "还没有匹配的结果。换个词试试，或浏览全部书籍。",
+    "loadError": "商店暂时打不开。",
+    "retry": "再试一次",
+    "loading": "正在打开商店"
+  },
+  "product": {
+    "shipping": "配送和付款稍后一起开放。你仍然可以把书放进购物车。",
+    "add": "加入购物车",
+    "soldOut": "这一本已经找到家了",
+    "lowStock": "工作室里只剩 {count} 本",
+    "inStock": "可以打包",
+    "inCart": "最后一本已经在你的购物车里",
+    "added": "已保存在购物车。",
+    "limit": "这本书目前就这些了。",
+    "quantity": "{title} 的数量",
+    "increase": "增加 {title} 的数量",
+    "decrease": "减少 {title} 的数量",
+    "related": "你可能也会喜欢",
+    "details": "关于这本书",
+    "missingTitle": "这本书已离开商店",
+    "missingBody": "它可能改名了，或被收起来了。商店其余部分还在。"
+  },
+  "cart": {
+    "lead": "你在这台设备上暂存的书。在结账出现之前，它们会留在这个浏览器里。",
+    "empty": "购物车像一张干净的书桌。商店里随时都有柔软的书等你。",
+    "shop": "返回商店",
+    "subtotal": "小计",
+    "shippingNote": "运费会在结账开放后加入。",
+    "view": "查看购物车",
+    "checkout": "继续结账",
+    "close": "关闭购物车",
+    "open": "打开购物车，已存 {count} 件",
+    "remove": "移除",
+    "missing": "这本书已不在商店中。",
+    "title": "你的购物车"
+  },
+  "checkout": {
+    "eyebrow": "快好了",
+    "title": "结账还在打包中",
+    "body": "付款尚未开放，所以这里什么也买不了。在那之前，购物车会留在这台设备上。",
+    "back": "返回购物车",
+    "empty": "还没有东西可以打包。"
+  },
+  "about": {
+    "eyebrow": "关于我",
+    "title": "一位艺术家，一家小店，为安静而画的页面",
+    "lead": "我是一位独立艺术家，一直梦想拥有自己的网店。这里的一切——网站、书籍、小周边——都由我一人制作与分享。",
+    "story": "我的本职工作是创意开发：为客户做应用和网站。除此之外，我一直在创作。我喜欢可爱的角色，也不画人类。动物和小生物更像家的感觉。",
+    "storyGrief": "2026 年 7 月，我的爸爸去世了。哀悼很大、很难握住，忽然间有太多事不在自己手里。在那段日子里，我在 TikTok 和 Instagram 上看到有人在填色。我也试了试，买了一套 320 色的 Ohuhu，从此爱上了。填色给了我一小口袋的平静。颜色、氛围、情绪都由我选择。有一阵子，那一页纸就是我能轻轻掌舵的世界。",
+    "storyArt": "从那种感觉里，生出一个安静的念头：如果我用自己的画来做填色书呢？页面里藏着关于爸爸的柔软瞬间与记忆——那些小生物与场景轻轻指向我们共度过的时光，却不必把一切说出口。",
+    "storyMore": "{name} 就这样诞生了。名字或许还会改。心不会：来自一个人的手绘书，给任何需要柔软角落、想和颜色坐一会儿的人。",
+    "alt": "一张温馨书桌，上面有马克笔、蜡烛和一本打开的填色书",
+    "processTitle": "一本书是怎么诞生的",
+    "steps": [
+      { "title": "素描", "body": "通常在夜里用铅笔勾出带着记忆的小生物与柔软场景。" },
+      { "title": "上墨", "body": "清晰友好的线条，哪怕在疲惫的夜晚也容易填色。" },
+      { "title": "成页", "body": "单面印刷、柔和细节，以及足够呼吸的空间。" },
+      { "title": "装订", "body": "可以放在沙发边的方书，或能放进包里的迷你本。" }
+    ],
+    "materialsTitle": "你正在看的是什么",
+    "materials": [
+      "完整书册大约规划为 40 到 46 页手绘页面。",
+      "粗线易填作品使用更大的形状和更粗的轮廓。",
+      "季节书跟随节日与柔和天气的情绪。",
+      "周边包括迷你书和便于口袋携带的小套装，适合短暂填色休息。"
+    ],
+    "shop": "看看这些书"
+  },
+  "auth": {
+    "loginEyebrow": "很快就能欢迎回来",
+    "loginTitle": "登录",
+    "loginLead": "账户尚未开放。这个表单只是占位，你输入的内容不会被发送。",
+    "registerEyebrow": "留给以后的一把钥匙",
+    "registerTitle": "创建账户",
+    "registerLead": "注册会和结账一起等待。你可以先看看表单。什么都不会保存。",
+    "name": "姓名",
+    "email": "邮箱",
+    "password": "密码",
+    "submitLogin": "登录",
+    "submitRegister": "创建账户",
+    "switchToRegister": "之后需要账户吗？",
+    "switchToLogin": "已经打算回来了吗？",
+    "notice": "这些信息只留在表单里。不会被存储，也不会发送到任何地方。",
+    "thanks": "特意哪里都没保存。账户稍后再开放。",
+    "namePlaceholder": "你的名字",
+    "emailPlaceholder": "you{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "你的角落",
+    "title": "账户",
+    "lead": "账户开放后，订单、资料和地址会住在这里。现在还没有登录。",
+    "login": "登录",
+    "register": "创建账户",
+    "sections": {
+      "orders": {
+        "title": "订单",
+        "body": "结账出现后，过去的包裹会汇集到这里。"
+      },
+      "profile": {
+        "title": "资料",
+        "body": "账户开放后，你可以编辑姓名和邮箱。"
+      },
+      "addresses": {
+        "title": "地址",
+        "body": "收货信息会放在这里，方便下一份包裹。"
+      }
+    }
+  },
+  "footer": {
+    "visit": "逛逛",
+    "studio": "工作室",
+    "account": "账户",
+    "note": "工作室收件箱会随结账一起开放。在那之前，{email} 只是占位。",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "这条路走偏了",
+    "genericTitle": "有点不顺利",
+    "body": "那一页不在商店里。其余部分还在。",
+    "genericBody": "页面打不开。你可以回家，再试另一扇门。",
+    "home": "回到首页",
+    "shop": "浏览书籍"
+  },
+  "collections": {
+    "books": {
+      "title": "填色书",
+      "summary": "适合漫长安静夜晚的完整温馨书册。",
+      "body": "手绘填色书，有柔软的房间、友好的场景，以及适合马克笔或彩色铅笔的页面。"
+    },
+    "bold-easy": {
+      "title": "粗线易填",
+      "summary": "大形状和粗线条，对初学者很温柔。",
+      "body": "轮廓清晰的开放设计，适合放松的节奏和柔软的沙发。"
+    },
+    "seasonal": {
+      "title": "季节",
+      "summary": "节日情绪与天气柔软的主题。",
+      "body": "适合可可夜晚、可爱惊悚，以及需要毯子的月份。"
+    },
+    "extras": {
+      "title": "周边",
+      "summary": "迷你书和口袋套装，适合短暂休息。",
+      "body": "小尺寸、方便旅行携带的主题，适合书桌、包包和五分钟的安静。"
+    },
+    "missingTitle": "那个角落不在商店里",
+    "missingBody": "试试已开放的分类，或逛逛整间商店。"
+  },
+  "badges": {
+    "new": "新品",
+    "limited": "限量",
+    "bestseller": "深受喜爱"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "一家柔软的咖啡馆，装满热饮和安静角落。",
+      "description": "坐进兔子咖啡馆、树屋座位和等待你上色的阅读角。一本适合需要柔软着陆的夜晚的完整温馨书。",
+      "alt": "Lilac Cafe 的临时封面，一本温馨咖啡馆填色书",
+      "details": ["填色书", "约 45 页手绘", "约 8 × 8 英寸", "清晰易填的线条"]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "日常的柔软：写日记、朋友和温柔房间。",
+      "description": "平静爱好与小小喜悦的暖心场景。柔软线条和贴近生活的细节，适合想靠填色慢下来的人。",
+      "alt": "Quiet Moments 的临时封面，一本日常温馨填色书",
+      "details": ["填色书", "约 40 页手绘", "约 8.5 × 8.5 英寸", "单面印刷"]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "每一页都是水豚式的安慰。",
+      "description": "圆滚滚的朋友、柔软天气，以及像深深呼气一样的场景。适合大马克笔和完全不着急的心情。",
+      "alt": "Puddle Friends 的临时封面，一本温馨动物填色书",
+      "details": ["填色书", "约 45 页手绘", "约 8 × 8 英寸", "清晰易填的线条"]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "一座有柔软小径、花朵和秘密角落的花园。",
+      "description": "为慢慢用铅笔漫游而画的自然场景。叶子、小门，以及藏在植物间的小宝藏。",
+      "alt": "Hidden Patch 的临时封面，一本花园填色书",
+      "details": ["填色书", "约 40 页手绘", "约 8.5 × 8.5 英寸", "单面印刷"]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "有个性的家居物件和温馨家务。",
+      "description": "扫帚、海绵、香料罐和喷壶过着最柔软的生活。粗轮廓适合轻松好玩的填色时光。",
+      "alt": "Kitchen Cuties 的临时封面，一本粗线易填家居填色书",
+      "details": ["粗线易填填色书", "约 46 幅插画", "约 8.5 × 8.5 英寸", "单面印刷"]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "安静早晨、爱好，以及保持柔软的夜晚。",
+      "description": "用清晰形状和温馨细节画出的日常仪式。一本温柔的书，让你慢慢填色。",
+      "alt": "Comfort Days 的临时封面，一本日常温馨填色书",
+      "details": ["粗线易填填色书", "约 46 幅插画", "约 8.5 × 8.5 英寸", "单面印刷"]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "可可天气、毯子和冬日暖屋。",
+      "description": "毛茸茸的动物、炉边场景和咖啡馆小食，适合更冷的月份。一本像毯子一样的季节书。",
+      "alt": "Soft Season 的临时封面，一本冬日温馨填色书",
+      "details": ["季节填色书", "约 45 页手绘", "约 8 × 8 英寸", "清晰易填的线条"]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "有点 spooky，但大多很舒服。",
+      "description": "带着古怪气质和柔软边缘的神秘小生物。适合想要好玩夜晚、却不要惊吓的时候。",
+      "alt": "Moonlit Cuties 的临时封面，一本 spooky-cute 填色书",
+      "details": ["季节填色书", "约 40 页手绘", "约 8.5 × 8.5 英寸", "单面印刷"]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "一本适合短暂填色休息的迷你图案书。",
+      "description": "口袋尺寸的舒适图案，适合书桌、火车和等候室。小到能放进包里，柔到够你暂停一下。",
+      "alt": "Pocket Patterns 的临时封面，一本迷你填色书",
+      "details": ["迷你填色书", "约 45 页图案", "约 3 × 3.5 英寸", "可平摊装订"]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "可爱旅行、地标和零食站，等你来填色。",
+      "description": "友善的动物探索城市、街道和阳光站台。一本带着旅行心情的书，适合在目的地之间填色。",
+      "alt": "Travel Pockets 的临时封面，一本可爱旅行填色书",
+      "details": ["填色书", "约 46 幅插画", "约 8.5 × 8.5 英寸", "单面印刷"]
+    }
+  }
+}
