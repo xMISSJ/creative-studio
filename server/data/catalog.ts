@@ -1,4 +1,4 @@
-import { collections, productTypes, type CatalogItem, type CatalogPayload } from '#shared/catalog'
+import { collections, productTypes, type CatalogItem, type CatalogPayload } from '../../shared/catalog'
 
 // Cover art under public/art is temporary Everlune placeholder illustration.
 export const catalog: CatalogItem[] = [

@@ -9,7 +9,7 @@ const missing = computed(() => props.error.statusCode === 404)
 const pageTitle = computed(() => (missing.value ? t('error.title') : t('error.genericTitle')))
 
 useSeoMeta({
-  title: () => pageTitle.value,
+  title: () => formatPageTitle(pageTitle.value),
   ogTitle: () => formatPageTitle(pageTitle.value),
   description: () => (missing.value ? t('error.body') : t('error.genericBody')),
   robots: 'noindex',

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/check-i18n.mjs && nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "node scripts/check-i18n.mjs && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "check:i18n": "node scripts/check-i18n.mjs"

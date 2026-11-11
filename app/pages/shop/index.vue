@@ -5,6 +5,7 @@ const { t, locale } = useShopI18n()
 usePageMeta('meta.shopTitle', 'meta.shopDescription')
 
 const { data, status, error, refresh } = await useCatalog()
+const digitalArtBanner = usePublicAsset('/art/shiba-alpaca.png')
 const {
   activeType,
   activeTheme,
@@ -121,7 +122,7 @@ function onSort(event: Event) {
             </div>
           </div>
           <img
-            src="/art/shiba-alpaca.png"
+            :src="digitalArtBanner"
             :alt="t('shop.digitalArt.bannerAlt')"
             width="1774"
             height="887"

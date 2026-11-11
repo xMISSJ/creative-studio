@@ -16,7 +16,7 @@ if (known.value) {
 }
 
 useSeoMeta({
-  title: () => t('collections.missingTitle'),
+  title: () => formatPageTitle(t('collections.missingTitle')),
   ogTitle: () => formatPageTitle(t('collections.missingTitle')),
   description: () => t('collections.missingBody'),
   robots: 'noindex',

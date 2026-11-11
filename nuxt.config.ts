@@ -1,7 +1,31 @@
 import tailwindcss from '@tailwindcss/vite'
-import { formatPageTitle, siteConfig } from './site.config'
+import { catalog } from './server/data/catalog'
+import { siteConfig } from './site.config'
 
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+function joinBase(base: string, path: string) {
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`
+  const normalizedPath = path.replace(/^\//, '')
+  return `${normalizedBase}${normalizedPath}`
+}
+
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1]
+const baseURL = process.env.NUXT_APP_BASE_URL
+  || (process.env.GITHUB_ACTIONS && repoName ? `/${repoName}/` : '/')
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL
+  || (process.env.GITHUB_ACTIONS && process.env.GITHUB_REPOSITORY_OWNER && repoName
+    ? `https://${process.env.GITHUB_REPOSITORY_OWNER.toLowerCase()}.github.io/${repoName}`
+    : 'http://localhost:3000')
+
+const localePrefixes = ['', '/nl', '/es', '/zh', '/ko', '/ja']
+const staticPages = ['/', '/shop', '/about', '/faq', '/cart', '/checkout', '/login', '/register', '/account']
+const prerenderRoutes = [
+  ...localePrefixes.flatMap((prefix) => [
+    ...staticPages.map((path) => (path === '/' ? (prefix || '/') : `${prefix}${path}`)),
+    ...catalog.map((item) => `${prefix}/shop/${item.slug}`),
+  ]),
+  '/api/catalog',
+  '/api/digital-art',
+]
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-11-10',
@@ -15,13 +39,20 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   app: {
+    baseURL,
     head: {
       title: siteConfig.name,
-      titleTemplate: (title) => formatPageTitle(title),
       meta: [{ name: 'theme-color', content: '#faf9fc' }],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: joinBase(baseURL, 'favicon.svg') }],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
+  },
+  nitro: {
+    preset: 'github_pages',
+    prerender: {
+      crawlLinks: true,
+      routes: prerenderRoutes,
+    },
   },
   colorMode: {
     classSuffix: '',

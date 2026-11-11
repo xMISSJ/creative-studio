@@ -15,5 +15,6 @@ export const siteConfig = {
 export function formatPageTitle(page?: string | null) {
   const name = siteConfig.name
   if (!page || page === name) return name
+  if (page.startsWith(`${name} • `)) return page
   return `${name} • ${page}`
 }

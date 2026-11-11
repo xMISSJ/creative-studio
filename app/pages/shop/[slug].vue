@@ -54,7 +54,7 @@ const feedback = computed(() => {
 const pageTitle = computed(() => (item.value ? t(`products.${item.value.slug}.title`) : t('product.missingTitle')))
 
 useSeoMeta({
-  title: () => pageTitle.value,
+  title: () => formatPageTitle(pageTitle.value),
   ogTitle: () => formatPageTitle(pageTitle.value),
   description: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
   ogDescription: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
