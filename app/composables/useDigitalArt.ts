@@ -5,15 +5,20 @@ export function useDigitalArt() {
 
   return useFetch<DigitalArtShowcase>('/api/digital-art', {
     key: 'digital-art',
-    transform: (payload) => ({
-      avatars: payload.avatars.map((avatar) => ({
-        ...avatar,
-        image: publicAsset(avatar.image, baseURL),
-      })),
-      characters: payload.characters.map((piece) => ({
-        ...piece,
-        image: publicAsset(piece.image, baseURL),
-      })),
-    }),
+    // GH Pages serves extensionless API files as octet-stream; force JSON.
+    responseType: 'json',
+    transform: (payload) => {
+      const data = parseStaticJson<DigitalArtShowcase>(payload)
+      return {
+        avatars: (data.avatars ?? []).map((avatar) => ({
+          ...avatar,
+          image: publicAsset(avatar.image, baseURL),
+        })),
+        characters: (data.characters ?? []).map((piece) => ({
+          ...piece,
+          image: publicAsset(piece.image, baseURL),
+        })),
+      }
+    },
   })
 }

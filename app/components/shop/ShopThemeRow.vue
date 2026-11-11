@@ -34,7 +34,7 @@ const themes = computed(() =>
       </NuxtLinkLocale>
     </div>
 
-    <ul class="mt-5 grid list-none grid-cols-4 gap-2 sm:gap-4" :aria-label="t('shop.themesTitle')">
+    <ul class="mt-5 grid list-none grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4" :aria-label="t('shop.themesTitle')">
       <li v-for="theme in themes" :key="theme.slug">
         <NuxtLinkLocale
           :to="themeLink(theme.slug)"
@@ -62,7 +62,7 @@ const themes = computed(() =>
             />
           </div>
           <p
-            class="mt-2 text-center text-sm font-bold sm:mt-3 sm:text-base"
+            class="mt-2 text-center text-xs leading-snug font-bold sm:mt-3 sm:text-base"
             :class="activeTheme === theme.slug ? 'text-accent' : 'text-ink'"
           >
             {{ t(`collections.${theme.slug}.title`) }}

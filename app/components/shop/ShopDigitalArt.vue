@@ -41,6 +41,7 @@ const characters = computed(() =>
               height="400"
               class="aspect-square w-full object-contain"
               loading="lazy"
+              decoding="async"
             >
           </div>
         </li>

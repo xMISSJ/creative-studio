@@ -5,12 +5,17 @@ export function useCatalog() {
 
   return useFetch<CatalogPayload>('/api/catalog', {
     key: 'catalog',
-    transform: (payload) => ({
-      ...payload,
-      items: payload.items.map((item) => ({
-        ...item,
-        image: publicAsset(item.image, baseURL),
-      })),
-    }),
+    // GH Pages serves extensionless API files as octet-stream; force JSON.
+    responseType: 'json',
+    transform: (payload) => {
+      const data = parseStaticJson<CatalogPayload>(payload)
+      return {
+        ...data,
+        items: (data.items ?? []).map((item) => ({
+          ...item,
+          image: publicAsset(item.image, baseURL),
+        })),
+      }
+    },
   })
 }

@@ -97,7 +97,7 @@ function add() {
       </div>
       <div>
         <p v-if="item.badge" class="eyebrow">{{ t(`badges.${item.badge}`) }}</p>
-        <h1 class="mt-2 font-display text-5xl leading-tight">{{ t(`products.${item.slug}.title`) }}</h1>
+        <h1 class="mt-2 font-display text-4xl leading-tight sm:text-5xl">{{ t(`products.${item.slug}.title`) }}</h1>
         <p class="mt-3 text-2xl font-extrabold">{{ format(item.price) }}</p>
         <p class="mt-4 text-lg text-muted">{{ t(`products.${item.slug}.description`) }}</p>
         <p class="mt-4">

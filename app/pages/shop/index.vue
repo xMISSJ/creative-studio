@@ -5,6 +5,9 @@ const { t, locale } = useShopI18n()
 usePageMeta('meta.shopTitle', 'meta.shopDescription')
 
 const { data, status, error, refresh } = await useCatalog()
+// Prefetch on the shop page so GH Pages static HTML hydrates with showcase data
+// (ShopDigitalArt only mounts for ?type=digital-art and would otherwise client-fetch).
+await useDigitalArt()
 const digitalArtBanner = usePublicAsset('/art/shiba-alpaca.png')
 const {
   activeType,
@@ -106,12 +109,12 @@ function onSort(event: Event) {
 <template>
   <div>
     <template v-if="showingDigitalArt">
-      <div class="relative">
-        <section class="relative bg-lilac text-on-soft">
-          <div class="container-page relative z-10 pt-12 pb-28 sm:pt-14 sm:pb-32 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10 lg:py-16 lg:pb-20">
+      <div class="overflow-x-clip">
+        <section class="relative overflow-x-clip bg-lilac text-on-soft">
+          <div class="container-page relative z-10 grid gap-5 pt-8 pb-6 sm:gap-8 sm:pt-14 sm:pb-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10 lg:py-16 lg:pb-28">
             <div class="rise max-w-xl lg:max-w-lg">
               <PageIntro :eyebrow="t('nav.shop')" :title="pageTitle" :lead="pageLead" />
-              <div class="mt-8 flex flex-wrap gap-3">
+              <div class="mt-5 flex flex-wrap gap-3 sm:mt-8">
                 <NuxtLinkLocale class="btn btn-primary" :to="shopLink({ type: 'coloring-books' })">
                   {{ t('shop.digitalArt.cta') }}
                 </NuxtLinkLocale>
@@ -120,19 +123,33 @@ function onSort(event: Event) {
                 </NuxtLinkLocale>
               </div>
             </div>
+
+            <!-- In-flow on small screens so the banner never covers the gallery -->
+            <div class="relative mx-auto w-full max-w-[16.5rem] sm:max-w-md lg:hidden">
+              <img
+                :src="digitalArtBanner"
+                :alt="t('shop.digitalArt.bannerAlt')"
+                width="1774"
+                height="887"
+                class="w-full object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)]"
+                fetchpriority="high"
+                decoding="async"
+              >
+            </div>
           </div>
+
           <img
             :src="digitalArtBanner"
-            :alt="t('shop.digitalArt.bannerAlt')"
+            alt=""
             width="1774"
             height="887"
-            class="pointer-events-none absolute -bottom-20 end-[-6%] z-20 w-[min(34rem,88%)] max-w-none select-none object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)] sm:-bottom-24 sm:end-[-2%] sm:w-[min(40rem,70%)] lg:-bottom-28 lg:end-[max(0px,calc((100%-72rem)/2))] lg:w-[min(46rem,52%)]"
-            fetchpriority="high"
+            class="pointer-events-none absolute -bottom-20 end-0 z-0 hidden w-[min(46rem,52%)] max-w-none select-none object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)] lg:block lg:end-[max(0px,calc((100%-72rem)/2))]"
+            aria-hidden="true"
             decoding="async"
           >
         </section>
 
-        <section class="container-page relative z-0 py-12 pt-24 sm:pt-28">
+        <section class="container-page relative z-10 py-8 sm:py-12 lg:pt-24">
           <ShopDigitalArt />
         </section>
       </div>
