@@ -4,6 +4,7 @@ import { join, relative } from 'node:path'
 const root = process.cwd()
 const localeDir = join(root, 'i18n', 'locales')
 const catalogSource = readFileSync(join(root, 'server', 'data', 'catalog.ts'), 'utf8')
+const sharedCatalogSource = readFileSync(join(root, 'shared', 'catalog.ts'), 'utf8')
 
 function flatten(value, prefix = '', out = new Set()) {
   if (Array.isArray(value)) {
@@ -62,6 +63,22 @@ for (const file of localeFiles.slice(1)) {
 
 const slugs = [...catalogSource.matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
 const collections = [...new Set([...catalogSource.matchAll(/collection:\s*'([^']+)'/g)].map((match) => match[1]))]
+const productTypesBlock = sharedCatalogSource.match(/export const productTypes = \[([\s\S]*?)\] as const/)
+const productTypeSlugs = productTypesBlock
+  ? [...productTypesBlock[1].matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
+  : []
+const digitalArtCategoriesBlock = sharedCatalogSource.match(/export const digitalArtCategories = \[([\s\S]*?)\] as const/)
+const digitalArtCategorySlugs = digitalArtCategoriesBlock
+  ? [...digitalArtCategoriesBlock[1].matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
+  : []
+const digitalArtCharacterGroupsBlock = sharedCatalogSource.match(/export const digitalArtCharacterGroups = \[([\s\S]*?)\] as const/)
+const digitalArtCharacterGroupSlugs = digitalArtCharacterGroupsBlock
+  ? [...digitalArtCharacterGroupsBlock[1].matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
+  : []
+
+for (const type of [...new Set([...catalogSource.matchAll(/type:\s*'([^']+)'/g)].map((match) => match[1]))]) {
+  if (!productTypeSlugs.includes(type)) problems.push(`Catalog type "${type}" is missing from shared/catalog.ts productTypes`)
+}
 const badges = [...new Set([...catalogSource.matchAll(/badge:\s*'([^']+)'/g)].map((match) => match[1]))]
 const images = [...catalogSource.matchAll(/image:\s*'([^']+)'/g)].map((match) => match[1])
 
@@ -82,6 +99,27 @@ for (const slug of collections) {
   }
 }
 
+for (const slug of productTypeSlugs) {
+  for (const key of ['title', 'summary']) {
+    const path = `productTypes.${slug}.${key}`
+    if (!baseKeys.has(path)) problems.push(`Product type "${slug}" needs ${path} in every locale`)
+  }
+}
+
+for (const slug of digitalArtCategorySlugs) {
+  for (const key of ['title', 'summary']) {
+    const path = `digitalArt.categories.${slug}.${key}`
+    if (!baseKeys.has(path)) problems.push(`Digital art category "${slug}" needs ${path} in every locale`)
+  }
+}
+
+for (const slug of digitalArtCharacterGroupSlugs) {
+  for (const key of ['title', 'summary']) {
+    const path = `digitalArt.characterGroups.${slug}.${key}`
+    if (!baseKeys.has(path)) problems.push(`Digital art character group "${slug}" needs ${path} in every locale`)
+  }
+}
+
 for (const badge of badges) {
   const path = `badges.${badge}`
   if (!baseKeys.has(path)) problems.push(`Badge "${badge}" needs ${path} in every locale`)
@@ -91,9 +129,17 @@ for (const image of images) {
   if (!existsSync(join(root, 'public', image))) problems.push(`Missing artwork file public${image}`)
 }
 
+for (const slug of digitalArtCharacterGroupSlugs) {
+  const groupDir = join(root, 'public', 'art', 'character-art', slug)
+  if (!existsSync(groupDir)) problems.push(`Digital art character group "${slug}" needs public/art/character-art/${slug}/`)
+}
+
 const dynamicPatterns = [
   /^products\.\$\{[^}]+\}\.(title|summary|description|alt|details)$/,
   /^collections\.\$\{[^}]+\}\.(title|summary|body)$/,
+  /^productTypes\.\$\{[^}]+\}\.(title|summary)$/,
+  /^digitalArt\.categories\.\$\{[^}]+\}\.(title|summary)$/,
+  /^digitalArt\.characterGroups\.\$\{[^}]+\}\.(title|summary)$/,
   /^badges\.\$\{[^}]+\}$/,
 ]
 

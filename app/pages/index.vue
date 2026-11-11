@@ -35,7 +35,10 @@ const heroItem = computed(() => featured.value[0] ?? items.value[0])
         :items="arrivals"
         :shop-label="t('home.shopNow')"
       />
-      <ThemeGrid :items="items" />
+      <section class="container-page py-10 sm:py-12">
+        <h2 class="section-title">{{ t('nav.shop') }}</h2>
+        <ShopTypePicker class="mt-8" />
+      </section>
     </template>
 
     <FaqList />

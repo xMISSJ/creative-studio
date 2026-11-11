@@ -25,12 +25,13 @@ useFocusTrap(menuOpen, panel)
           </button>
         </div>
         <nav class="grid gap-1" :aria-label="t('nav.primary')">
-          <NuxtLinkLocale class="nav-link text-xl font-display" to="/">{{ t('nav.home') }}</NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link text-xl font-display" to="/shop">{{ t('nav.shop') }}</NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link text-xl font-display" to="/about">{{ t('nav.about') }}</NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link text-xl font-display" to="/account">{{ t('nav.account') }}</NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link" to="/login">{{ t('nav.login') }}</NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link" to="/register">{{ t('nav.register') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link text-xl font-display" to="/" @click="closeMenu">{{ t('nav.home') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link text-xl font-display" to="/shop" @click="closeMenu">{{ t('nav.shop') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link text-xl font-display" to="/faq" @click="closeMenu">{{ t('nav.faq') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link text-xl font-display" to="/about" @click="closeMenu">{{ t('nav.about') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link text-xl font-display" to="/account" @click="closeMenu">{{ t('nav.account') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link" to="/login" @click="closeMenu">{{ t('nav.login') }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link" to="/register" @click="closeMenu">{{ t('nav.register') }}</NuxtLinkLocale>
         </nav>
         <LocaleSwitcher variant="menu" />
         <div class="mt-auto">

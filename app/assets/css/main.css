@@ -3,15 +3,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --canvas: #f8f7f4;
+  --canvas: #faf9fc;
   --paper: #ffffff;
   --ink: #3a3a3a;
   --muted: #5b5b5b;
-  --line: #eceae4;
+  --line: #e8e4f0;
   --accent: #b2a4d4;
   --button: #b2a4d4;
   --on-button: #ffffff;
   --lilac: #efeaf7;
+  --lilac-mist: #efeaf7;
+  --lilac-soft: #e4daf3;
+  --lilac-glow: #d5c7ea;
   --blush: #ffd6e5;
   --sage: #e8f0e6;
   --peach: #fff0e0;
@@ -33,6 +36,9 @@
   --button: #b2a4d4;
   --on-button: #ffffff;
   --lilac: #efeaf7;
+  --lilac-mist: #3a3348;
+  --lilac-soft: #463c58;
+  --lilac-glow: #554868;
   --blush: #ffd6e5;
   --sage: #e8f0e6;
   --peach: #fff0e0;
@@ -52,6 +58,9 @@
   --color-line: var(--line);
   --color-accent: var(--accent);
   --color-lilac: var(--lilac);
+  --color-lilac-mist: var(--lilac-mist);
+  --color-lilac-soft: var(--lilac-soft);
+  --color-lilac-glow: var(--lilac-glow);
   --color-blush: var(--blush);
   --color-sage: var(--sage);
   --color-peach: var(--peach);
@@ -88,6 +97,18 @@ body {
 }
 
 @layer components {
+.bg-lilac-mist {
+  background-color: var(--lilac-mist);
+}
+
+.bg-lilac-soft {
+  background-color: var(--lilac-soft);
+}
+
+.bg-lilac-glow {
+  background-color: var(--lilac-glow);
+}
+
 .container-page {
   width: min(72rem, calc(100% - 2rem));
   margin-inline: auto;
@@ -124,7 +145,6 @@ body {
   font-weight: 600;
   line-height: 1.1;
   text-align: center;
-  text-transform: lowercase;
   font-variation-settings: "SOFT" 50, "WONK" 0.5;
 }
 
@@ -345,26 +365,12 @@ body {
   font-weight: 400;
 }
 
-.hero-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 2rem;
-  background:
-    linear-gradient(135deg, #f3ebe2 0%, #efe6dc 45%, #e8dfd4 100%);
-}
-
-.hero-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgb(249 152 189 / 18%), transparent 40%),
-    radial-gradient(circle at 80% 20%, rgb(255 255 255 / 45%), transparent 35%);
-  pointer-events: none;
-}
-
 .faq-item {
   border-bottom: 1px solid var(--line);
+}
+
+.faq-item:last-child {
+  border-bottom: 0;
 }
 
 .faq-item summary {
@@ -385,6 +391,26 @@ body {
 
 .faq-item[open] summary {
   color: var(--accent);
+}
+
+.faq-mark {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.faq-panel .faq-item summary {
+  min-height: 3.5rem;
+  padding-block: 1.05rem;
+  font-size: 1.05rem;
+}
+
+.faq-panel .faq-item p {
+  padding-bottom: 1.15rem;
+  line-height: 1.7;
 }
 
 .value-card {
@@ -455,6 +481,23 @@ body {
   }
 }
 
+.digital-art-tab-pill {
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  z-index: 0;
+  width: calc((100% - 0.5rem - 0.25rem) / 2);
+  border-radius: 0.75rem;
+  background: var(--accent);
+  transform: translateX(calc(var(--tab-index, 0) * (100% + 0.25rem)));
+  pointer-events: none;
+}
+
+.digital-art-tab {
+  transition: color 220ms ease;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 220ms ease, transform 220ms ease;
@@ -507,6 +550,10 @@ body {
     animation: drift 8s ease-in-out infinite;
   }
 
+  .digital-art-tab-pill {
+    transition: transform 420ms cubic-bezier(0.22, 1.1, 0.36, 1);
+  }
+
   .nav-link::after,
   .chip::after {
     transition:
@@ -530,6 +577,14 @@ body {
 
   .group:hover .lift {
     transform: translateY(-3px);
+  }
+
+  .faq-mark {
+    transition: transform 220ms ease;
+  }
+
+  .faq-item[open] .faq-mark {
+    transform: rotate(45deg);
   }
 }
 

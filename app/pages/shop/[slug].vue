@@ -97,7 +97,7 @@ function add() {
         <p class="mt-3 text-2xl font-extrabold">{{ format(item.price) }}</p>
         <p class="mt-4 text-lg text-muted">{{ t(`products.${item.slug}.description`) }}</p>
         <p class="mt-4">
-          <NuxtLinkLocale class="link" :to="`/collections/${item.collection}`">{{ t(`collections.${item.collection}.title`) }}</NuxtLinkLocale>
+          <NuxtLinkLocale class="link" :to="{ path: '/shop', query: { type: 'coloring-books', theme: item.collection } }">{{ t(`collections.${item.collection}.title`) }}</NuxtLinkLocale>
         </p>
         <p class="mt-4 font-bold" :class="item.stock <= brand.lowStockAt ? 'text-warn' : 'text-muted'">{{ stockMessage }}</p>
 

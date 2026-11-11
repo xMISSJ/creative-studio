@@ -18,7 +18,7 @@ const items = computed(() => {
   <section class="container-page py-10 sm:py-12">
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <article v-for="item in items" :key="item.title" class="value-card">
-        <h3 class="font-display text-xl font-bold lowercase text-ink">{{ item.title }}</h3>
+        <h3 class="font-display text-xl font-bold text-ink">{{ item.title }}</h3>
         <p class="mt-2 text-sm text-muted">{{ item.body }}</p>
       </article>
     </div>

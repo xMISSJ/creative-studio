@@ -5,11 +5,9 @@ const { menuOpen, toggleMenu, openCart } = useOverlay()
 const route = useRoute()
 
 const links = computed(() => [
-  { to: '/', label: t('nav.home'), match: (path: string) => path === '/' || /^\/[a-z]{2}$/.test(path) },
-  { to: '/shop', label: t('nav.shop'), match: (path: string) => path.includes('/shop') },
-  { to: '/collections/books', label: t('collections.books.title'), match: (path: string) => path.includes('/collections/books') },
-  { to: '/collections/bold-easy', label: t('collections.bold-easy.title'), match: (path: string) => path.includes('/collections/bold-easy') },
-  { to: '/collections/seasonal', label: t('collections.seasonal.title'), match: (path: string) => path.includes('/collections/seasonal') },
+  { to: '/', label: t('nav.home'), match: (path: string) => path === '/' || /^\/[a-z]{2}\/?$/.test(path) },
+  { to: '/shop', label: t('nav.shop'), match: (path: string) => path.includes('/shop') || path.includes('/collections/') },
+  { to: '/faq', label: t('nav.faq'), match: (path: string) => path.includes('/faq') },
   { to: '/about', label: t('nav.about'), match: (path: string) => path.includes('/about') },
 ])
 
@@ -72,7 +70,7 @@ function isCurrent(match: (path: string) => boolean) {
     :aria-label="t('nav.primary')"
   >
     <ul class="container-page flex flex-wrap items-center justify-center gap-1 py-1.5">
-      <li v-for="link in links" :key="link.to">
+      <li v-for="link in links" :key="link.label">
         <NuxtLinkLocale
           :to="link.to"
           class="nav-link text-[0.95rem]"

@@ -29,7 +29,7 @@ Edit `name` in `site.config.ts`. Sentences use `{name}`, so the locale files do 
 3. Add `products.<slug>` in both `i18n/locales/en.json` and `i18n/locales/nl.json`.
 4. Run `pnpm check:i18n`.
 
-A new collection also needs an entry in `shared/catalog.ts` and a `collections.<slug>` block in both locale files. Collections today are `books`, `bold-easy`, `seasonal`, and `extras`.
+A new theme also needs an entry in `shared/catalog.ts` and a `collections.<slug>` block in every locale file. Coloring-book themes today are `classic`, `nature`, `fantasy`, and `holiday-seasonal`.
 
 ## What is intentionally unfinished
 
