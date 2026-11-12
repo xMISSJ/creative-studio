@@ -22,15 +22,11 @@ const { brand } = useShopI18n()
         {{ brand.name }}
       </span>
       <span
-        class="font-mark -mt-1 text-[1.3rem] leading-none text-ink/80 sm:text-[1.45rem]"
+        class="font-about-mark -mt-1 text-[1.3rem] leading-none text-ink/80 sm:text-[1.45rem]"
         lang="zh-Hans"
       >
         {{ brand.subtitle }}
       </span>
     </span>
-    <span
-      class="pointer-events-none absolute top-0 end-0 size-2.5 translate-x-1 -translate-y-0.5 rounded-full bg-accent"
-      aria-hidden="true"
-    />
   </NuxtLinkLocale>
 </template>

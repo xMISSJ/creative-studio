@@ -14,6 +14,9 @@ const flags: Record<string, string> = {
   zh: '🇨🇳',
   ko: '🇰🇷',
   ja: '🇯🇵',
+  pl: '🇵🇱',
+  de: '🇩🇪',
+  ru: '🇷🇺',
 }
 
 const localeList = computed(() =>

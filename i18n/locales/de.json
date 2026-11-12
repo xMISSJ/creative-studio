@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "homeTitle": "{name}",
+    "homeDescription": "{name} ist ein gemütlicher Studio-Shop für handgezeichnete Malbücher in klassischen, Natur-, Fantasy- und saisonalen Themen.",
+    "shopTitle": "Shop",
+    "shopDescription": "Wähle Malbücher, Merchandise oder digitale Kunst von {name}. Themen und Bücher warten drinnen.",
+    "aboutTitle": "Über uns",
+    "aboutDescription": "Die Geschichte hinter {name}: Ausmalen, niedliche Wesen und Erinnerungen, die auf der Seite bleiben.",
+    "faqTitle": "FAQ",
+    "faqDescription": "Antworten zu den Malbüchern von {name}, zum Versand, zu Freebies und dazu, wie du das Studio erreichst.",
+    "cartTitle": "Warenkorb",
+    "cartDescription": "Bücher, die du bei {name} zur Seite gelegt hast.",
+    "checkoutTitle": "Kasse",
+    "checkoutDescription": "Die Kasse bei {name} wird gerade fertig vorbereitet.",
+    "loginTitle": "Anmelden",
+    "loginDescription": "Die Anmeldung für {name} öffnet später.",
+    "registerTitle": "Konto erstellen",
+    "registerDescription": "Konten bei {name} öffnen später.",
+    "accountTitle": "Dein Konto",
+    "accountDescription": "Ein stilles Zuhause für künftige Bestellungen bei {name}."
+  },
+  "nav": {
+    "skip": "Zum Inhalt springen",
+    "primary": "Hauptnavigation",
+    "home": "Start",
+    "shop": "Shop",
+    "faq": "FAQ",
+    "about": "Über uns",
+    "cart": "Warenkorb",
+    "account": "Konto",
+    "login": "Anmelden",
+    "register": "Konto erstellen",
+    "breadcrumb": "Brotkrumen"
+  },
+  "theme": {
+    "toLight": "Zum hellen Theme wechseln",
+    "toDark": "Zum dunklen Theme wechseln",
+    "toSystem": "System-Theme verwenden"
+  },
+  "locale": {
+    "label": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Ein Kreativstudio",
+    "title": "Handgezeichnete Malbücher",
+    "lead": "Sanfte Malbücher, digitale Kunst und niedliches Merch aus einem kleinen unabhängigen Studio. Andenken an Erinnerungen, die du machst und behalten willst.",
+    "shop": "Shop ansehen",
+    "art": "Digitale Kunst",
+    "about": "Über uns",
+    "point1": "Handgezeichnete Seiten",
+    "point2": "Zum Entspannen gemacht",
+    "point3": "Pastell mit Absicht",
+    "badge": "Fliederstunde",
+    "scroll": "Hereinwandern"
+  },
+  "home": {
+    "collectionsEyebrow": "Wo du anfangen kannst",
+    "collectionsTitle": "Finde einen weichen Ort zum Ausmalen",
+    "collectionsLead": "Klassische Kuschel-Bücher, Naturszenen, Fantasy-Cuties und saisonale Titel für jede Stimmung.",
+    "shelfEyebrow": "Auf dem Schreibtisch",
+    "shelfTitle": "Ein paar Bücher, die ich nah halte",
+    "shelfLead": "Die Titel, die sich gerade am meisten nach dem Studio anfühlen.",
+    "shelfAll": "Den ganzen Shop sehen",
+    "easelEyebrow": "Frisch vom Schreibtisch",
+    "noteEyebrow": "Eine Notiz vom Schreibtisch",
+    "noteTitle": "Gezeichnet zum Hinsetzen",
+    "noteBody": "Ich zeichne, wenn der Raum fliederfarben wird und der Tag endlich die Tasche abstellt. {name} ist diese Stunde, aufbewahrt in einem Malbuch.",
+    "noteLink": "Meine Geschichte lesen",
+    "quote": "Weiche Linien, langsame Abende und ein wenig Trost auf jeder Seite.",
+    "togetherBody": "Was mit Liebe zum Ausmalen und zu kuscheligen Momenten begann, wächst zu {name}: eine kreative Welt handgezeichneter Bücher für Entspannung, sanfte Selbstverbundenheit und Alltagsfreude.",
+    "togetherCta": "Über uns",
+    "bestsellerTitle": "Bestseller",
+    "arrivalsTitle": "Neuheiten",
+    "themeTitle": "Thema",
+    "shopNow": "Jetzt shoppen",
+    "faq": {
+      "title": "FAQ",
+      "lead": "Du hast Fragen? Wir helfen gern.",
+      "more": "Die volle FAQ öffnen",
+      "items": [
+        {
+          "q": "Wo kann ich Malbücher von {name} kaufen?",
+          "a": "Genau hier im Shop. Die Kasse wird noch vorbereitet, deshalb kannst du vorerst stöbern und Bücher im Warenkorb speichern."
+        },
+        {
+          "q": "Sind die Bücher von {name} anfängerfreundlich?",
+          "a": "Ja. Viele Titel nutzen kräftige, offene Formen, die für Anfänger sanft sind und erfahrenen Coloristen trotzdem Freude machen."
+        },
+        {
+          "q": "Wie bekomme ich kostenlose Malseiten?",
+          "a": "Kostenlose Seiten kommen mit dem Newsletter und künftigen Freebies. Die Liste ist noch nicht offen, deshalb wird nichts gespeichert."
+        },
+        {
+          "q": "Wie teile ich fertige Malseiten?",
+          "a": "Markiere das Studio, wenn die Social-Links live gehen. Bis dahin male weiter und genieße die Ruhe."
+        },
+        {
+          "q": "Wie kann ich {name} um Hilfe bitten?",
+          "a": "Schreib an {email}. Der Support wird mit der Kasse vollständiger."
+        }
+      ]
+    }
+  },
+  "newsletter": {
+    "eyebrow": "Studio-Notizen",
+    "title": "Zur E-Mail-Liste kommen",
+    "body": "Gib deine E-Mail ein, um später besondere Geschenke zu bekommen. Was du tippst, wird noch nicht gespeichert oder gesendet.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Dein Name...",
+    "emailLabel": "E-Mail-Adresse",
+    "placeholder": "Deine E-Mail...",
+    "submit": "Abonnieren",
+    "thanks": "Danke. Die Liste ist noch nicht offen, deshalb wurde diese Adresse nicht gespeichert."
+  },
+  "shop": {
+    "lead": "Wähle eine Ecke des Studios. Malbücher sind offen, der Rest wärmt noch auf.",
+    "themesTitle": "Themen",
+    "allThemes": "Alle Themen",
+    "searchLabel": "Shop durchsuchen",
+    "searchPlaceholder": "Versuch cafe, Garten, mini, spooky",
+    "sortLabel": "Sortieren",
+    "sortFeatured": "Studio-Reihenfolge",
+    "sortPriceAsc": "Preis, niedrig bis hoch",
+    "sortPriceDesc": "Preis, hoch bis niedrig",
+    "sortTitle": "Name",
+    "resultCount": "{count} angezeigt",
+    "empty": "Nichts passt noch zu dieser Suche. Versuch ein anderes Wort oder schau dir alles an.",
+    "loadError": "Der Shop konnte gerade nicht geöffnet werden.",
+    "retry": "Nochmal versuchen",
+    "loading": "Shop wird geöffnet",
+    "emptyType": "In dieser Ecke ist noch nichts. Malbücher sind jetzt offen.",
+    "all": "Alle",
+    "back": "Alle Shop-Ecken",
+    "openNow": "Jetzt offen",
+    "comingSoon": "Demnächst",
+    "comingSoonLead": "Diese Ecke wird noch vorbereitet.",
+    "comingSoonTitle": "Noch auf dem Zeichenbrett",
+    "comingSoonBody": "Weiches Merch nimmt noch Form an. Malbücher und digitale Kunst sind offen, während diese Ecke fertig aufwärmt.",
+    "comingSoonCta": "Malbücher ansehen",
+    "coloringLead": "Starte mit einem Thema oder scrolle weiter für jedes Buch.",
+    "allBooksTitle": "Jedes Malbuch",
+    "allBooksLead": "Kein Thema gewählt? Das ist in Ordnung. Das ganze Regal wartet unten.",
+    "digitalArt": {
+      "badge": "Digitale Ecke",
+      "lead": "Stöbere durch fertige Avatare und Character Art aus dem Studio.",
+      "cta": "Malbücher ansehen",
+      "bannerAlt": "Ein schläfriger Shiba Inu, zusammengerollt mit einem weichen Alpaka-Plüsch auf einem Bett mit Herzchenmuster.",
+      "categoriesTitle": "Kategorien digitaler Kunst",
+      "avatarsEmpty": "Noch keine Avatare hier. Mehr Stücke sind unterwegs.",
+      "charactersEmpty": "In dieser Gruppe ist noch nichts. Mehr Stücke sind unterwegs."
+    }
+  },
+  "digitalArt": {
+    "categories": {
+      "avatars": {
+        "title": "Avatare",
+        "summary": "Weiche Chibi-Porträts und Icon-Stücke aus dem Studio."
+      },
+      "character-art": {
+        "title": "Character Art",
+        "summary": "Chibi-Charakterillustrationen aus dem Studio."
+      }
+    }
+  },
+  "productTypes": {
+    "coloring-books": {
+      "title": "Malbücher",
+      "summary": "Handgezeichnete Bücher und Seiten für sanftes Ausmalen."
+    },
+    "merchandise": {
+      "title": "Merchandise",
+      "summary": "Studio-Andenken sind fast bereit, neben den Büchern zu sitzen."
+    },
+    "digital-art": {
+      "title": "Digitale Kunst",
+      "summary": "Avatare und Character Art vom Studio-Schreibtisch."
+    }
+  },
+  "product": {
+    "shipping": "Versand und Zahlung öffnen zusammen, etwas später. Du kannst Bücher trotzdem im Warenkorb zur Seite legen.",
+    "add": "In den Warenkorb",
+    "soldOut": "Dieses Exemplar hat ein Zuhause gefunden",
+    "lowStock": "Nur noch {count} im Studio",
+    "inStock": "Bereit zum Packen",
+    "inCart": "Das letzte davon liegt schon in deinem Warenkorb",
+    "added": "Im Warenkorb gespeichert.",
+    "limit": "Das ist vorerst alles von diesem Buch.",
+    "quantity": "Menge für {title}",
+    "increase": "Menge von {title} erhöhen",
+    "decrease": "Menge von {title} verringern",
+    "related": "Das könnte dir auch gefallen",
+    "details": "Über dieses Buch",
+    "missingTitle": "Dieses Buch hat den Shop verlassen",
+    "missingBody": "Es wurde vielleicht umbenannt oder weggesteckt. Der Rest des Shops ist noch da."
+  },
+  "cart": {
+    "lead": "Bücher, die du auf diesem Gerät zur Seite gelegt hast. Sie bleiben in diesem Browser, bis es eine Kasse gibt.",
+    "empty": "Dein Warenkorb ist ein leerer Schreibtisch. Der Shop ist voller weicher Bücher, wann immer du sie willst.",
+    "shop": "Zurück zum Shop",
+    "subtotal": "Zwischensumme",
+    "shippingNote": "Versand kommt später dazu, wenn die Kasse öffnet.",
+    "view": "Warenkorb ansehen",
+    "checkout": "Weiter zur Kasse",
+    "close": "Warenkorb schließen",
+    "open": "Warenkorb öffnen, {count} gespeichert",
+    "remove": "Entfernen",
+    "missing": "Dieses Buch ist nicht mehr im Shop.",
+    "title": "Dein Warenkorb"
+  },
+  "checkout": {
+    "eyebrow": "Gleich",
+    "title": "Die Kasse wird vorbereitet",
+    "body": "Zahlung ist noch nicht offen, deshalb kann hier nichts gekauft werden. Dein Warenkorb bleibt bis dahin auf diesem Gerät.",
+    "back": "Zurück zum Warenkorb",
+    "empty": "Es gibt noch nichts zum Einpacken."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen",
+    "lead": "Bücher kaufen, Anfängerseiten, Freebies, fertige Kunst teilen und das Studio erreichen: an einem Ort beantwortet.",
+    "stillEyebrow": "Noch neugierig",
+    "stillTitle": "Suchst du noch eine Antwort?",
+    "stillBody": "Stöbere durch die Bücher, lies die Studio-Geschichte oder schreib an {email}. Der Support wächst mit der Kasse.",
+    "shopCta": "Shop ansehen",
+    "aboutCta": "Über uns"
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Über das Studio",
+    "lead": "Ich bin eine Solo-Künstlerin, die endlich den Shop gebaut hat, den ich immer wollte. Jede Seite, jeder Druck und jedes Pixel hier stammt von mir.",
+    "story": "Meine Hauptarbeit ist kreative Entwicklung. Ich baue Anwendungen und Websites. Daneben mache ich immer Kreatives, spiele oder zeichne. Ich liebe niedliche Charaktere.",
+    "storyGrief": "Im Juli 2026 ist mein Papa an Leberkrebs verstorben. Die Trauer war so schwer zu halten, und vieles fühlte sich außerhalb meiner Hände an. Irgendwann um diese Zeit sah ich Menschen auf TikTok und Instagram ausmalen. Ich wollte es selbst versuchen, kaufte ein Ohuhu-Set mit 320 Teilen und verliebte mich. Ausmalen gab mir ein kleines Gefühl von Frieden. Ich konnte die Farben, die Stimmung und den Mood wählen. Eine Weile fühlte sich die Seite wie die Welt an, die ich steuern konnte. Ich entschied das Ergebnis.",
+    "storyArt": "Aus diesem Gefühl kam eine stille, aber entschlossene Idee: was wäre, wenn ich eigene Malbücher mit eigener Kunst mache? Zwischen den Seiten verstecken sich Erinnerungsmomente an meinen Papa, getarnt in Tieren, Wesen und Szenen, die auf die Zeit verweisen, die wir zusammen hatten, ohne es zu offensichtlich zu machen.",
+    "storyName": "Das chinesische Zeichen unter dem englischen Namen ist {subtitle} (Xiǎo Yì). Es wuchs aus {name}: little wird zu {xiao}, und memo neigt sich zu {yi}, Erinnerung. Es ist auch ein kleines Wortspiel. Mein Papa hieß {dadName} (Sūn Yìdòng); {yi} ist nicht dasselbe Zeichen wie sein 义, aber der Klang liegt nah genug, dass der Name ein wenig von ihm behält.",
+    "alt": "Ein gemütlicher Schreibtisch mit Markern, einer Kerze und einem offenen Malbuch",
+    "shop": "Die Bücher ansehen"
+  },
+  "auth": {
+    "loginEyebrow": "Willkommen zurück, bald",
+    "loginTitle": "Anmelden",
+    "loginLead": "Konten sind noch nicht offen. Dieses Formular ist ein Platzhalter, und nichts, was du tippst, wird gesendet.",
+    "registerEyebrow": "Ein Schlüssel für später",
+    "registerTitle": "Konto erstellen",
+    "registerLead": "Die Registrierung wartet zusammen mit der Kasse. Du kannst das Formular ansehen. Nichts wird gespeichert.",
+    "name": "Name",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "submitLogin": "Anmelden",
+    "submitRegister": "Konto erstellen",
+    "switchToRegister": "Brauchst du später ein Konto?",
+    "switchToLogin": "Planst du schon, zurückzukommen?",
+    "notice": "Diese Angaben bleiben nur im Formular. Sie werden nirgends gespeichert oder gesendet.",
+    "thanks": "Absichtlich nirgends gespeichert. Konten öffnen etwas später.",
+    "namePlaceholder": "Dein Name",
+    "emailPlaceholder": "you{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Deine Ecke",
+    "title": "Konto",
+    "lead": "Wenn Konten öffnen, leben hier Bestellungen, Details und Adressen. Noch ist niemand angemeldet.",
+    "login": "Anmelden",
+    "register": "Konto erstellen",
+    "sections": {
+      "orders": {
+        "title": "Bestellungen",
+        "body": "Vergangene Pakete sammeln sich hier, sobald es eine Kasse gibt."
+      },
+      "profile": {
+        "title": "Profil",
+        "body": "Name und E-Mail werden bearbeitbar, sobald Konten öffnen."
+      },
+      "addresses": {
+        "title": "Adressen",
+        "body": "Versanddetails sitzen hier, bereit für das nächste Paket."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Besuchen",
+    "studio": "Studio",
+    "account": "Konto",
+    "note": "Der Studio-Posteingang öffnet mit der Kasse. Bis dahin ist {email} nur ein Platzhalter.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "Dieser Pfad ist abgewichen",
+    "genericTitle": "Etwas ist gestolpert",
+    "body": "Diese Seite ist nicht im Shop. Der Rest ist noch da.",
+    "genericBody": "Die Seite konnte nicht geöffnet werden. Du kannst nach Hause gehen und eine andere Tür versuchen.",
+    "home": "Zurück nach Hause",
+    "shop": "Die Bücher ansehen"
+  },
+  "collections": {
+    "classic": {
+      "title": "Klassik",
+      "summary": "Gemütliche Alltagsszenen, Cafés und ruhige Zimmer.",
+      "body": "Handgezeichnete Malbücher mit weichen Zimmern, freundlichen Aufgaben und Seiten für Marker oder Stifte."
+    },
+    "nature": {
+      "title": "Natur",
+      "summary": "Gärten, Tiere und sanfte Wege im Freien.",
+      "body": "Blätter, Pfade, runde Freunde und freie Luft, gezeichnet für ein langsames Maltempo."
+    },
+    "fantasy": {
+      "title": "Fantasy",
+      "summary": "Mystische Cuties, mondhelle Stimmungen und verspielte Muster.",
+      "body": "Sanfte Magie, skurrile Wesen und ornamentale Seiten für eine verträumte Malsession."
+    },
+    "holiday-seasonal": {
+      "title": "Feiertage und Saison",
+      "summary": "Kakao-Wetter, festliche Stimmung und saisonweiche Titel.",
+      "body": "Bücher für Kakao-Abende, spooky Niedlichkeit und die Monate, die nach einer Decke fragen."
+    },
+    "missingTitle": "Diese Ecke ist nicht im Shop",
+    "missingBody": "Versuch eine offene Sammlung oder wandere durch den ganzen Shop."
+  },
+  "badges": {
+    "new": "Neu",
+    "limited": "Limitiert",
+    "bestseller": "Sehr geliebt"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "Ein weiches Café voller warmer Getränke und ruhiger Ecken.",
+      "description": "Setz dich in Hasen-Cafés, Baumhaus-Sitze und Buchnischen, die auf deine Farben warten. Ein kuscheliges volles Buch für Abende, die eine weiche Landung brauchen.",
+      "alt": "Vorläufiges Cover für Lilac Cafe, ein gemütliches Café-Malbuch",
+      "details": [
+        "Malbuch",
+        "Etwa 45 handgezeichnete Seiten",
+        "Rund 8 × 8 in",
+        "Kräftige, leicht auszumalende Linien"
+      ]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "Alltägliche Sanftheit: Journaling, Freunde und sanfte Zimmer.",
+      "description": "Herzerwärmende Szenen ruhiger Hobbys und kleiner Freuden. Weiche Linien und vertraute Details für Menschen, die malen, um langsamer zu werden.",
+      "alt": "Vorläufiges Cover für Quiet Moments, ein alltägliches Kuschel-Malbuch",
+      "details": [
+        "Malbuch",
+        "Etwa 40 handgezeichnete Seiten",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "Capybara-Komfort auf jeder Seite.",
+      "description": "Runde Freunde, weiches Wetter und Szenen, die sich wie ein tiefes Ausatmen anfühlen. Gemacht für große Marker und eine sehr unhastige Stimmung.",
+      "alt": "Vorläufiges Cover für Puddle Friends, ein gemütliches Tier-Malbuch",
+      "details": [
+        "Malbuch",
+        "Etwa 45 handgezeichnete Seiten",
+        "Rund 8 × 8 in",
+        "Kräftige, leicht auszumalende Linien"
+      ]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "Ein Garten mit weichen Pfaden, Blüten und geheimen Ecken.",
+      "description": "Naturszenen zum langsamen Wandern mit dem Stift. Blätter, Tore und kleine Schätze zwischen den Pflanzen.",
+      "alt": "Vorläufiges Cover für Hidden Patch, ein Garten-Malbuch",
+      "details": [
+        "Malbuch",
+        "Etwa 40 handgezeichnete Seiten",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "Haushaltsdinge mit Persönlichkeit und kuscheligen Aufgaben.",
+      "description": "Besen, Schwämme, Gewürzgläser und Gießkannen, die ihr weichstes Leben leben. Kräftige Umrisse für eine verspielte, leichte Malsession.",
+      "alt": "Vorläufiges Cover für Kitchen Cuties, ein kräftiges und einfaches Haus-Malbuch",
+      "details": [
+        "Kräftiges und einfaches Malbuch",
+        "Etwa 46 Illustrationen",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "Ruhige Morgen, Hobbys und weich gehaltene Abende.",
+      "description": "Alltagsrituale mit klaren Formen und kuscheligen Details. Ein sanftes Buch zum Malen ohne Hetze.",
+      "alt": "Vorläufiges Cover für Comfort Days, ein gemütliches Alltags-Malbuch",
+      "details": [
+        "Kräftiges und einfaches Malbuch",
+        "Etwa 46 Illustrationen",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "Kakao-Wetter, Decken und winterwarme Zimmer.",
+      "description": "Kuschelige Tiere, Kaminecken und Café-Leckereien für die kälteren Monate. Ein saisonales Buch, das sich wie eine Decke anfühlt.",
+      "alt": "Vorläufiges Cover für Soft Season, ein winterliches Kuschel-Malbuch",
+      "details": [
+        "Saisonales Malbuch",
+        "Etwa 45 handgezeichnete Seiten",
+        "Rund 8 × 8 in",
+        "Kräftige, leicht auszumalende Linien"
+      ]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "Spooky, aber vor allem gemütlich.",
+      "description": "Mystische kleine Wesen mit skurriler Stimmung und weichen Rändern. Passend, wenn du eine verspielte Nacht ohne Schrecken willst.",
+      "alt": "Vorläufiges Cover für Moonlit Cuties, ein spooky-niedliches Malbuch",
+      "details": [
+        "Saisonales Malbuch",
+        "Etwa 40 handgezeichnete Seiten",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "Ein winziges Musterbuch für kurze Malpausen.",
+      "description": "Bequeme Muster im Taschenformat für Schreibtisch, Zug und Wartezimmer. Klein genug für die Tasche, weich genug für eine Pause.",
+      "alt": "Vorläufiges Cover für Pocket Patterns, ein Mini-Malbuch",
+      "details": [
+        "Mini-Malbuch",
+        "Etwa 45 Musterseiten",
+        "Rund 3 × 3.5 in",
+        "Flach aufschlagende Bindung"
+      ]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "Süße Reisen, Sehenswürdigkeiten und Snack-Stopps zum Ausmalen.",
+      "description": "Freundliche Tiere erkunden Städte, Straßen und sonnige Stopps. Ein reiselustiges Buch zum Malen zwischen Zielen.",
+      "alt": "Vorläufiges Cover für Travel Pockets, ein Reise-Cuties-Malbuch",
+      "details": [
+        "Malbuch",
+        "Etwa 46 Illustrationen",
+        "Rund 8.5 × 8.5 in",
+        "Einseitig bedruckte Seiten"
+      ]
+    }
+  }
+}

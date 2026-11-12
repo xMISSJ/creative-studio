@@ -71,8 +71,104 @@
   --font-sans: "Nunito Sans", "Segoe UI", sans-serif;
   --font-display: "Dongle", "Segoe UI", sans-serif;
   --font-logo: "Gaegu", "Segoe Print", cursive;
-  --font-mark: "Long Cang", "KaiTi", "STKaiti", cursive;
+  --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+}
+
+html[lang="zh-CN"],
+html[lang="zh"],
+html[lang="zh-Hans"],
+html[data-locale="zh"] {
+  --font-display: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-sans: "ZCOOL KuaiLe", "Microsoft YaHei", "PingFang SC", sans-serif;
+  /* Brand / about Chinese marks stay on Ma Shan Zheng; never inherit locale body font */
+  --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+}
+
+html[lang="zh-CN"] .display-title,
+html[lang="zh-CN"] .section-title,
+html[lang="zh-CN"] .font-display,
+html[lang="zh"] .display-title,
+html[lang="zh"] .section-title,
+html[lang="zh"] .font-display,
+html[lang="zh-Hans"] .display-title,
+html[lang="zh-Hans"] .section-title,
+html[lang="zh-Hans"] .font-display,
+html[data-locale="zh"] .display-title,
+html[data-locale="zh"] .section-title,
+html[data-locale="zh"] .font-display {
+  font-family: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 400;
+}
+
+html[lang="ko"],
+html[lang="ko-KR"],
+html[lang="ko-Kore"],
+html[data-locale="ko"] {
+  --font-display: "Single Day", "Dongle", "Malgun Gothic", sans-serif;
+  /* Latin keeps Nunito Sans; Korean glyphs fall through to Nanum Brush Script */
+  --font-sans: "Nunito Sans", "Nanum Brush Script", "Malgun Gothic", sans-serif;
+  /* Brand / about Chinese marks stay locked */
+  --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+}
+
+html[lang="ko"] body,
+html[lang="ko-KR"] body,
+html[lang="ko-Kore"] body,
+html[data-locale="ko"] body {
+  font-size: 1.2rem;
+}
+
+html[lang="ko"] .display-title,
+html[lang="ko"] .section-title,
+html[lang="ko"] .font-display,
+html[lang="ko-KR"] .display-title,
+html[lang="ko-KR"] .section-title,
+html[lang="ko-KR"] .font-display,
+html[lang="ko-Kore"] .display-title,
+html[lang="ko-Kore"] .section-title,
+html[lang="ko-Kore"] .font-display,
+html[data-locale="ko"] .display-title,
+html[data-locale="ko"] .section-title,
+html[data-locale="ko"] .font-display {
+  font-family: "Single Day", "Malgun Gothic", sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 400;
+}
+
+html[lang="ja"],
+html[lang="ja-JP"],
+html[lang="ja-Jpan"],
+html[data-locale="ja"] {
+  --font-display: "Shippori Antique B1", "Yu Gothic", sans-serif;
+  /* Latin keeps Nunito Sans; Japanese glyphs fall through to Kosugi Maru */
+  --font-sans: "Nunito Sans", "Kosugi Maru", "Yu Gothic", sans-serif;
+  /* Brand / about Chinese marks stay locked */
+  --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+}
+
+html[lang="ja"] .display-title,
+html[lang="ja"] .section-title,
+html[lang="ja"] .font-display,
+html[lang="ja-JP"] .display-title,
+html[lang="ja-JP"] .section-title,
+html[lang="ja-JP"] .font-display,
+html[lang="ja-Jpan"] .display-title,
+html[lang="ja-Jpan"] .section-title,
+html[lang="ja-Jpan"] .font-display,
+html[data-locale="ja"] .display-title,
+html[data-locale="ja"] .section-title,
+html[data-locale="ja"] .font-display {
+  font-family: "Shippori Antique B1", "Yu Gothic", sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 400;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -385,6 +481,8 @@ body {
   border-radius: var(--radius-panel);
   background: var(--paper);
   box-shadow: 0 18px 40px -28px color-mix(in srgb, var(--ink) 55%, transparent);
+  max-height: min(22rem, calc(100dvh - 5.5rem));
+  overflow-y: auto;
 }
 
 .locale-option {

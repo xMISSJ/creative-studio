@@ -5,7 +5,7 @@
  */
 export const siteConfig = {
   name: 'Little Memo',
-  /** Chinese mark shown with the English name (Long Cang). */
+  /** Chinese mark shown with the English name (Ma Shan Zheng). */
   subtitle: '小忆',
   currency: 'EUR',
   storagePrefix: 'everlune',

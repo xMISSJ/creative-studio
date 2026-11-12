@@ -16,7 +16,7 @@ const siteUrl = process.env.NUXT_PUBLIC_SITE_URL
     ? `https://${process.env.GITHUB_REPOSITORY_OWNER.toLowerCase()}.github.io/${repoName}`
     : 'http://localhost:3000')
 
-const localePrefixes = ['', '/nl', '/es', '/zh', '/ko', '/ja']
+const localePrefixes = ['', '/nl', '/es', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
 const staticPages = ['/', '/shop', '/about', '/faq', '/cart', '/checkout', '/login', '/register', '/account']
 const prerenderRoutes = [
   ...localePrefixes.flatMap((prefix) => [
@@ -73,7 +73,31 @@ export default defineNuxtConfig({
         name: 'Gaegu',
         provider: 'google',
         weights: [400, 700],
-        subsets: ['latin'],
+        subsets: ['latin', 'korean'],
+      },
+      {
+        name: 'Single Day',
+        provider: 'google',
+        weights: [400],
+        subsets: ['latin', 'korean'],
+      },
+      {
+        name: 'Nanum Brush Script',
+        provider: 'google',
+        weights: [400],
+        subsets: ['latin', 'korean'],
+      },
+      {
+        name: 'Shippori Antique B1',
+        provider: 'google',
+        weights: [400],
+        subsets: ['latin', 'japanese'],
+      },
+      {
+        name: 'Kosugi Maru',
+        provider: 'google',
+        weights: [400],
+        subsets: ['latin', 'japanese'],
       },
       {
         name: 'Nunito Sans',
@@ -82,13 +106,13 @@ export default defineNuxtConfig({
         subsets: ['latin'],
       },
       {
-        name: 'Long Cang',
+        name: 'Ma Shan Zheng',
         provider: 'google',
         weights: [400],
         subsets: ['chinese-simplified'],
       },
       {
-        name: 'Ma Shan Zheng',
+        name: 'ZCOOL KuaiLe',
         provider: 'google',
         weights: [400],
         subsets: ['chinese-simplified'],
@@ -105,6 +129,9 @@ export default defineNuxtConfig({
       { code: 'zh', language: 'zh-CN', name: '中文', file: 'zh.json' },
       { code: 'ko', language: 'ko', name: '한국어', file: 'ko.json' },
       { code: 'ja', language: 'ja', name: '日本語', file: 'ja.json' },
+      { code: 'pl', language: 'pl', name: 'Polski', file: 'pl.json' },
+      { code: 'de', language: 'de', name: 'Deutsch', file: 'de.json' },
+      { code: 'ru', language: 'ru', name: 'Русский', file: 'ru.json' },
     ],
     detectBrowserLanguage: {
       useCookie: true,

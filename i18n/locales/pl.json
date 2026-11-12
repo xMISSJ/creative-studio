@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "homeTitle": "{name}",
+    "homeDescription": "{name} to przytulny sklep studia z ręcznie rysowanymi kolorowankami w klimatach klasycznych, natury, fantasy i sezonowych.",
+    "shopTitle": "Sklep",
+    "shopDescription": "Wybierz kolorowanki, gadżety albo sztukę cyfrową od {name}. Motywy i książki czekają w środku.",
+    "aboutTitle": "O nas",
+    "aboutDescription": "Historia stojąca za {name}: kolorowanie, urocze stwory i ciche wspomnienia zatrzymane na stronie.",
+    "faqTitle": "FAQ",
+    "faqDescription": "Odpowiedzi o kolorowankach {name}, terminie wysyłki, gratisach i o tym, jak dotrzeć do studia.",
+    "cartTitle": "Koszyk",
+    "cartDescription": "Książki odłożone z {name}.",
+    "checkoutTitle": "Kasa",
+    "checkoutDescription": "Kasa w {name} jest właśnie dopinana.",
+    "loginTitle": "Zaloguj się",
+    "loginDescription": "Logowanie do konta {name} otworzy się później.",
+    "registerTitle": "Utwórz konto",
+    "registerDescription": "Konta w {name} otworzą się później.",
+    "accountTitle": "Twoje konto",
+    "accountDescription": "Cichy dom dla przyszłych zamówień w {name}."
+  },
+  "nav": {
+    "skip": "Przejdź do treści",
+    "primary": "Główne",
+    "home": "Start",
+    "shop": "Sklep",
+    "faq": "FAQ",
+    "about": "O nas",
+    "cart": "Koszyk",
+    "account": "Konto",
+    "login": "Zaloguj się",
+    "register": "Utwórz konto",
+    "breadcrumb": "Ścieżka"
+  },
+  "theme": {
+    "toLight": "Przełącz na jasny motyw",
+    "toDark": "Przełącz na ciemny motyw",
+    "toSystem": "Użyj motywu systemowego"
+  },
+  "locale": {
+    "label": "Język"
+  },
+  "hero": {
+    "eyebrow": "Kreatywne studio",
+    "title": "Ręcznie rysowane kolorowanki",
+    "lead": "Miękkie kolorowanki, sztuka cyfrowa i urocze gadżety z małego niezależnego studia. Pamiątki wspomnień, które tworzysz i chcesz zatrzymać.",
+    "shop": "Przeglądaj sklep",
+    "art": "Sztuka cyfrowa",
+    "about": "O nas",
+    "point1": "Ręcznie rysowane strony",
+    "point2": "Stworzone do relaksu",
+    "point3": "Pastele z zamysłem",
+    "badge": "Godzina bzu",
+    "scroll": "Wejdź dalej"
+  },
+  "home": {
+    "collectionsEyebrow": "Od czego zacząć",
+    "collectionsTitle": "Znajdź miękkie miejsce do kolorowania",
+    "collectionsLead": "Klasyczne przytulne książki, sceny natury, fantasy cuties i sezonowe tytuły na każdy nastrój.",
+    "shelfEyebrow": "Na biurku",
+    "shelfTitle": "Kilka książek, które trzymam blisko",
+    "shelfLead": "Tytuły, które teraz najbardziej przypominają studio.",
+    "shelfAll": "Zobacz cały sklep",
+    "easelEyebrow": "Świeżo z biurka",
+    "noteEyebrow": "Kartka z biurka",
+    "noteTitle": "Narysowane do siadania",
+    "noteBody": "Rysuję, gdy pokój robi się liliowy, a dzień wreszcie odstawia torbę. {name} to ta godzina, zatrzymana w kolorowance.",
+    "noteLink": "Przeczytaj moją historię",
+    "quote": "Miękkie linie, wolne wieczory i odrobina ukojenia na każdej stronie.",
+    "togetherBody": "To, co zaczęło się od miłości do kolorowania i przytulnych chwil, wyrasta w {name}: kreatywny świat ręcznie rysowanych książek do relaksu, łagodnego kontaktu ze sobą i codziennej radości.",
+    "togetherCta": "O nas",
+    "bestsellerTitle": "Bestseller",
+    "arrivalsTitle": "Nowości",
+    "themeTitle": "Motyw",
+    "shopNow": "Kup teraz",
+    "faq": {
+      "title": "FAQ",
+      "lead": "Masz pytania? Jesteśmy tu, żeby pomóc.",
+      "more": "Otwórz pełne FAQ",
+      "items": [
+        {
+          "q": "Gdzie mogę kupić kolorowanki {name}?",
+          "a": "Właśnie tutaj, w sklepie. Kasa jest jeszcze dopinana, więc na razie możesz przeglądać i zapisywać książki w koszyku."
+        },
+        {
+          "q": "Czy książki {name} są przyjazne dla początkujących?",
+          "a": "Tak. Wiele tytułów ma wyraziste, otwarte kształty, łagodne dla początkujących i wciąż ciekawe dla doświadczonych osób kolorujących."
+        },
+        {
+          "q": "Jak zdobyć darmowe strony do kolorowania?",
+          "a": "Darmowe strony pojawią się z newsletterem i przyszłymi gratisami. Lista nie jest jeszcze otwarta, więc nic nie jest zapisywane."
+        },
+        {
+          "q": "Jak dzielić się gotowymi stronami?",
+          "a": "Oznacz studio, gdy linki społecznościowe ruszą. Do tego czasu koloruj dalej i ciesz się ciszą."
+        },
+        {
+          "q": "Jak skontaktować się z {name} po pomoc?",
+          "a": "Napisz na {email}. Wsparcie otworzy się pełniej razem z kasą."
+        }
+      ]
+    }
+  },
+  "newsletter": {
+    "eyebrow": "Notatki studia",
+    "title": "Dołącz do listy mailowej",
+    "body": "Podaj e-mail, żeby później dostać szczególne upominki. Nic, co wpiszesz, nie jest jeszcze zapisywane ani wysyłane.",
+    "nameLabel": "Imię",
+    "namePlaceholder": "Twoje imię...",
+    "emailLabel": "Adres e-mail",
+    "placeholder": "Twój e-mail...",
+    "submit": "Zapisz się",
+    "thanks": "Dziękuję. Lista nie jest jeszcze otwarta, więc ten adres nie został zapisany."
+  },
+  "shop": {
+    "lead": "Wybierz kąt studia. Kolorowanki są otwarte, reszta jeszcze się rozgrzewa.",
+    "themesTitle": "Motywy",
+    "allThemes": "Wszystkie motywy",
+    "searchLabel": "Szukaj w sklepie",
+    "searchPlaceholder": "Spróbuj cafe, ogród, mini, spooky",
+    "sortLabel": "Sortuj",
+    "sortFeatured": "Kolejność studia",
+    "sortPriceAsc": "Cena, od najniższej",
+    "sortPriceDesc": "Cena, od najwyższej",
+    "sortTitle": "Nazwa",
+    "resultCount": "Wyświetlono {count}",
+    "empty": "Nic jeszcze nie pasuje do tego wyszukiwania. Spróbuj innego słowa albo przejrzyj wszystko.",
+    "loadError": "Sklepu nie udało się teraz otworzyć.",
+    "retry": "Spróbuj ponownie",
+    "loading": "Otwieranie sklepu",
+    "emptyType": "W tym kącie jeszcze nic nie ma. Kolorowanki są już otwarte.",
+    "all": "Wszystko",
+    "back": "Wszystkie kąty sklepu",
+    "openNow": "Otwarte teraz",
+    "comingSoon": "Wkrótce",
+    "comingSoonLead": "Ten kąt jest jeszcze przygotowywany.",
+    "comingSoonTitle": "Wciąż na desce kreślarskiej",
+    "comingSoonBody": "Miękkie gadżety wciąż nabierają kształtu. Kolorowanki i sztuka cyfrowa są otwarte, póki ten kąt kończy się rozgrzewać.",
+    "comingSoonCta": "Przeglądaj kolorowanki",
+    "coloringLead": "Zacznij od motywu albo przewijaj dalej, żeby zobaczyć każdą książkę.",
+    "allBooksTitle": "Każda kolorowanka",
+    "allBooksLead": "Nie wybrano motywu? To w porządku. Cała półka czeka niżej.",
+    "digitalArt": {
+      "badge": "Cyfrowy kąt",
+      "lead": "Przeglądaj gotowe awatary i character art ze studia.",
+      "cta": "Przeglądaj kolorowanki",
+      "bannerAlt": "Senny Shiba Inu zwinięty z miękką pluszową alpaką na łóżku we wzór serc.",
+      "categoriesTitle": "Kategorie sztuki cyfrowej",
+      "avatarsEmpty": "Nie ma tu jeszcze awatarów. Kolejne prace są w drodze.",
+      "charactersEmpty": "W tej grupie jeszcze nic nie ma. Kolejne prace są w drodze."
+    }
+  },
+  "digitalArt": {
+    "categories": {
+      "avatars": {
+        "title": "Awatary",
+        "summary": "Miękkie portrety chibi i ikony ze studia."
+      },
+      "character-art": {
+        "title": "Character Art",
+        "summary": "Ilustracje postaci chibi ze studia."
+      }
+    }
+  },
+  "productTypes": {
+    "coloring-books": {
+      "title": "Kolorowanki",
+      "summary": "Ręcznie rysowane książki i strony do miękkiego kolorowania."
+    },
+    "merchandise": {
+      "title": "Gadżety",
+      "summary": "Pamiątki studia są prawie gotowe, żeby usiąść obok książek."
+    },
+    "digital-art": {
+      "title": "Sztuka cyfrowa",
+      "summary": "Awatary i character art z biurka studia."
+    }
+  },
+  "product": {
+    "shipping": "Wysyłka i płatność otworzą się razem, trochę później. Książki możesz już odkładać w koszyku.",
+    "add": "Dodaj do koszyka",
+    "soldOut": "Ten egzemplarz znalazł już dom",
+    "lowStock": "Zostało tylko {count} w studiu",
+    "inStock": "Gotowe do spakowania",
+    "inCart": "Ostatnia sztuka jest już w koszyku",
+    "added": "Zapisano w koszyku.",
+    "limit": "Na razie to wszystko z tej książki.",
+    "quantity": "Ilość dla {title}",
+    "increase": "Zwiększ ilość {title}",
+    "decrease": "Zmniejsz ilość {title}",
+    "related": "Może ci się też spodobać",
+    "details": "O tej książce",
+    "missingTitle": "Ta książka opuściła sklep",
+    "missingBody": "Mogła zmienić nazwę albo zostać schowana. Reszta sklepu wciąż tu jest."
+  },
+  "cart": {
+    "lead": "Książki odłożone na tym urządzeniu. Zostają w tej przeglądarce, dopóki nie powstanie kasa.",
+    "empty": "Koszyk jest czystym biurkiem. Sklep jest pełen miękkich książek, kiedy tylko zechcesz.",
+    "shop": "Wróć do sklepu",
+    "subtotal": "Suma częściowa",
+    "shippingNote": "Wysyłka dojdzie później, gdy otworzy się kasa.",
+    "view": "Zobacz koszyk",
+    "checkout": "Przejdź do kasy",
+    "close": "Zamknij koszyk",
+    "open": "Otwórz koszyk, zapisano {count}",
+    "remove": "Usuń",
+    "missing": "Tej książki nie ma już w sklepie.",
+    "title": "Twój koszyk"
+  },
+  "checkout": {
+    "eyebrow": "Prawie",
+    "title": "Kasa jest dopinana",
+    "body": "Płatność nie jest jeszcze otwarta, więc nic tu nie da się kupić. Koszyk zostaje na tym urządzeniu do tego czasu.",
+    "back": "Wróć do koszyka",
+    "empty": "Nie ma jeszcze nic do zapakowania."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Częste pytania",
+    "lead": "Kupowanie książek, strony dla początkujących, gratisy, dzielenie się gotową sztuką i kontakt ze studiem: odpowiedzi w jednym miejscu.",
+    "stillEyebrow": "Wciąż ciekawi",
+    "stillTitle": "Wciąż szukasz odpowiedzi?",
+    "stillBody": "Przeglądaj książki, przeczytaj historię studia albo napisz na {email}. Wsparcie rośnie razem z kasą.",
+    "shopCta": "Przeglądaj sklep",
+    "aboutCta": "O nas"
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "O studiu",
+    "lead": "Jestem artystką solo, która wreszcie zbudowała sklep, o jakim zawsze marzyła. Każda strona, odbitka i piksel tutaj są moje.",
+    "story": "Głównie zajmuję się rozwojem kreatywnym. Buduję aplikacje i strony internetowe. Obok tego zawsze robię coś twórczego, gram albo tworzę sztukę. Kocham urocze postacie.",
+    "storyGrief": "W lipcu 2026 mój tata odszedł przez raka wątroby. Żałobę było tak trudno udźwignąć, a wiele spraw wymykało mi się z rąk. Gdzieś w tym czasie zauważyłam ludzi kolorujących na TikToku i Instagramie. Postanowiłam spróbować sama, kupiłam zestaw Ohuhu z 320 elementami i zakochałam się. Kolorowanie dało mi małe poczucie spokoju. Mogłam wybierać kolory, klimat, nastrój. Przez chwilę strona była światem, który mogłam kontrolować. To ja decydowałam o wyniku.",
+    "storyArt": "Z tego uczucia wyszedł cichy, ale zdecydowany pomysł: a gdybym zrobiła własne kolorowanki, z własną sztuką? Między stronami kryją się chwile wspomnień o tacie, zakamuflowane w zwierzętach, stworach i scenach, które odnoszą się do czasu spędzonego razem, bez zbytniej oczywistości.",
+    "storyName": "Chiński znak pod angielską nazwą to {subtitle} (Xiǎo Yì). Wyrósł z {name}: little staje się {xiao}, a memo przechyla się ku {yi}, pamięć. To także mała gra słów. Mój tata nazywał się {dadName} (Sūn Yìdòng); {yi} nie jest tym samym znakiem co jego 义, ale dźwięk jest na tyle bliski, że nazwa zatrzymuje w sobie odrobinę jego.",
+    "alt": "Przytulne biurko z markerami, świecą i otwartą kolorowanką",
+    "shop": "Zobacz książki"
+  },
+  "auth": {
+    "loginEyebrow": "Witaj z powrotem, wkrótce",
+    "loginTitle": "Zaloguj się",
+    "loginLead": "Konta nie są jeszcze otwarte. Ten formularz to wypełniacz i nic, co wpiszesz, nie jest wysyłane.",
+    "registerEyebrow": "Klucz na później",
+    "registerTitle": "Utwórz konto",
+    "registerLead": "Rejestracja czeka razem z kasą. Możesz obejrzeć formularz. Nic nie jest zapisywane.",
+    "name": "Imię",
+    "email": "E-mail",
+    "password": "Hasło",
+    "submitLogin": "Zaloguj się",
+    "submitRegister": "Utwórz konto",
+    "switchToRegister": "Potrzebujesz konta później?",
+    "switchToLogin": "Już planujesz wrócić?",
+    "notice": "Te dane zostają tylko w formularzu. Nie są nigdzie zapisywane ani wysyłane.",
+    "thanks": "Nigdzie nie zapisano, celowo. Konta otworzą się trochę później.",
+    "namePlaceholder": "Twoje imię",
+    "emailPlaceholder": "you{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Twój kąt",
+    "title": "Konto",
+    "lead": "Gdy konta się otworzą, tutaj będą zamówienia, dane i adresy. Nikt nie jest jeszcze zalogowany.",
+    "login": "Zaloguj się",
+    "register": "Utwórz konto",
+    "sections": {
+      "orders": {
+        "title": "Zamówienia",
+        "body": "Dawne paczki zbiorą się tutaj, gdy powstanie kasa."
+      },
+      "profile": {
+        "title": "Profil",
+        "body": "Imię i e-mail da się edytować, gdy konta się otworzą."
+      },
+      "addresses": {
+        "title": "Adresy",
+        "body": "Dane wysyłki usiądą tutaj, gotowe na następną paczkę."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Odwiedź",
+    "studio": "Studio",
+    "account": "Konto",
+    "note": "Skrzynka studia otworzy się razem z kasą. Do tego czasu {email} jest tylko wypełniaczem.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "Ta ścieżka gdzieś zboczyła",
+    "genericTitle": "Coś się potknęło",
+    "body": "Tej strony nie ma w sklepie. Reszta wciąż tu jest.",
+    "genericBody": "Strony nie udało się otworzyć. Możesz wrócić do domu i spróbować innych drzwi.",
+    "home": "Wróć do domu",
+    "shop": "Przeglądaj książki"
+  },
+  "collections": {
+    "classic": {
+      "title": "Klasyka",
+      "summary": "Przytulne codzienne sceny, kawiarnie i ciche pokoje.",
+      "body": "Ręcznie rysowane kolorowanki z miękkimi pokojami, przyjaznymi obowiązkami i stronami pod markery albo kredki."
+    },
+    "nature": {
+      "title": "Natura",
+      "summary": "Ogrody, zwierzęta i łagodne wędrówki na zewnątrz.",
+      "body": "Liście, ścieżki, okrągli przyjaciele i otwarte powietrze, narysowane pod wolne tempo kolorowania."
+    },
+    "fantasy": {
+      "title": "Fantasy",
+      "summary": "Mistyczne cuties, nastroje w świetle księżyca i zabawne wzory.",
+      "body": "Miękka magia, dziwaczne stwory i ozdobne strony na senne kolorowanie."
+    },
+    "holiday-seasonal": {
+      "title": "Święta i sezony",
+      "summary": "Pogoda na kakao, świąteczne nastroje i sezonowo miękkie tytuły.",
+      "body": "Książki na wieczory z kakao, spooky urok i miesiące, które proszą o koc."
+    },
+    "missingTitle": "Tego kąta nie ma w sklepie",
+    "missingBody": "Spróbuj jednej z otwartych kolekcji albo przejdź się po całym sklepie."
+  },
+  "badges": {
+    "new": "Nowość",
+    "limited": "Limitowana",
+    "bestseller": "Bardzo lubiana"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "Miękka kawiarnia pełna ciepłych napojów i cichych kątów.",
+      "description": "Usiądź w kawiarniach z królikami, miejscach w domku na drzewie i zakątkach z książkami, które czekają na twoje kolory. Przytulna pełna książka na wieczory, które potrzebują miękkiego lądowania.",
+      "alt": "Tymczasowa okładka Lilac Cafe, przytulnej kolorowanki o kawiarni",
+      "details": [
+        "Kolorowanka",
+        "Około 45 ręcznie rysowanych stron",
+        "Około 8 × 8 in",
+        "Wyraziste, łatwe do kolorowania linie"
+      ]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "Codzienna miękkość: dziennik, przyjaciele i łagodne pokoje.",
+      "description": "Ciepłe sceny spokojnych hobby i małych radości. Miękkie linie i bliskie detale dla osób, które kolorują, żeby zwolnić.",
+      "alt": "Tymczasowa okładka Quiet Moments, codziennej przytulnej kolorowanki",
+      "details": [
+        "Kolorowanka",
+        "Około 40 ręcznie rysowanych stron",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "Komfort kapibary na każdej stronie.",
+      "description": "Okrągli przyjaciele, miękka pogoda i sceny jak głęboki wydech. Zrobione pod duże markery i bardzo niespieszny nastrój.",
+      "alt": "Tymczasowa okładka Puddle Friends, przytulnej kolorowanki ze zwierzętami",
+      "details": [
+        "Kolorowanka",
+        "Około 45 ręcznie rysowanych stron",
+        "Około 8 × 8 in",
+        "Wyraziste, łatwe do kolorowania linie"
+      ]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "Ogród miękkich ścieżek, kwiatów i sekretnych kątów.",
+      "description": "Sceny natury do wolnego wędrowania ołówkiem. Liście, furtki i małe skarby schowane między roślinami.",
+      "alt": "Tymczasowa okładka Hidden Patch, ogrodowej kolorowanki",
+      "details": [
+        "Kolorowanka",
+        "Około 40 ręcznie rysowanych stron",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "Domowe przedmioty z charakterem i przytulne obowiązki.",
+      "description": "Miotły, gąbki, słoiki z przyprawami i konewki żyjące najmiększym życiem. Wyraziste kontury na zabawną, lekką sesję kolorowania.",
+      "alt": "Tymczasowa okładka Kitchen Cuties, wyrazistej i prostej kolorowanki domowej",
+      "details": [
+        "Wyrazista i prosta kolorowanka",
+        "Około 46 ilustracji",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "Ciche poranki, hobby i wieczory trzymane miękko.",
+      "description": "Codzienne rytuały narysowane jasnymi kształtami i przytulnymi detalami. Łagodna książka do kolorowania bez pośpiechu.",
+      "alt": "Tymczasowa okładka Comfort Days, przytulnej kolorowanki o codzienności",
+      "details": [
+        "Wyrazista i prosta kolorowanka",
+        "Około 46 ilustracji",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "Pogoda na kakao, koce i zimowo ciepłe pokoje.",
+      "description": "Przytulne zwierzęta, sceny przy kominku i kawiarniane smakołyki na chłodniejsze miesiące. Sezonowa książka, która czuje się jak koc.",
+      "alt": "Tymczasowa okładka Soft Season, zimowej przytulnej kolorowanki",
+      "details": [
+        "Sezonowa kolorowanka",
+        "Około 45 ręcznie rysowanych stron",
+        "Około 8 × 8 in",
+        "Wyraziste, łatwe do kolorowania linie"
+      ]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "Spooky, ale głównie przytulnie.",
+      "description": "Mistyczne małe stwory z dziwacznym klimatem i miękkimi krawędziami. Wtedy, gdy chcesz zabawną noc bez strachu.",
+      "alt": "Tymczasowa okładka Moonlit Cuties, spooky-uroczej kolorowanki",
+      "details": [
+        "Sezonowa kolorowanka",
+        "Około 40 ręcznie rysowanych stron",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "Malutka książka wzorów na krótkie przerwy w kolorowaniu.",
+      "description": "Wygodne wzory w kieszonkowym formacie na biurko, pociąg i poczekalnię. Dość małe do torby, dość miękkie na pauzę.",
+      "alt": "Tymczasowa okładka Pocket Patterns, mini kolorowanki",
+      "details": [
+        "Mini kolorowanka",
+        "Około 45 stron wzorów",
+        "Około 3 × 3.5 in",
+        "Oprawa lay-flat"
+      ]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "Urocze wyjazdy, zabytki i postoje na przekąski do pokolorowania.",
+      "description": "Przyjazne zwierzęta odkrywają miasta, ulice i słoneczne postoje. Podróżna książka do kolorowania między celami.",
+      "alt": "Tymczasowa okładka Travel Pockets, kolorowanki z podróżnymi cuties",
+      "details": [
+        "Kolorowanka",
+        "Około 46 ilustracji",
+        "Około 8.5 × 8.5 in",
+        "Strony jednostronne"
+      ]
+    }
+  }
+}

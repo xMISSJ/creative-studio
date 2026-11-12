@@ -26,16 +26,16 @@ const markYi = brand.subtitle.at(1) ?? ''
           <p>{{ t('about.storyArt') }}</p>
           <i18n-t keypath="about.storyName" tag="p" :name="brand.name">
             <template #subtitle>
-              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ brand.subtitle }}</span>
+              <span class="font-about-mark text-[1.15em] leading-none text-ink" lang="zh-Hans">{{ brand.subtitle }}</span>
             </template>
             <template #xiao>
-              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ markXiao }}</span>
+              <span class="font-about-mark text-[1.15em] leading-none text-ink" lang="zh-Hans">{{ markXiao }}</span>
             </template>
             <template #yi>
-              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ markYi }}</span>
+              <span class="font-about-mark text-[1.15em] leading-none text-ink" lang="zh-Hans">{{ markYi }}</span>
             </template>
             <template #dadName>
-              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">孙义栋</span>
+              <span class="font-about-mark text-[1.15em] leading-none text-ink" lang="zh-Hans">孙义栋</span>
             </template>
           </i18n-t>
         </div>

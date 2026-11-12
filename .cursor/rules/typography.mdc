@@ -11,27 +11,51 @@ Titles and the shop name use different CSS tokens. Changing one must never chang
 - `.display-title` / `.section-title`: short page and section titles (uppercase + tracking). Use these for labels like Shop, FAQ, Cart, Themes
 - Product names, cart line titles, and nav links stay in normal case with `font-display` only when needed
 - `--font-logo` / `font-logo`: English brand name only (header logo and entrance brand)
-- `--font-mark` / `font-mark`: Chinese subtitle in the header logo only (currently Long Cang)
-- `--font-about-mark` / `font-about-mark`: Chinese marks on the about page only (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
+- `--font-about-mark` / `font-about-mark`: Chinese marks for brand subtitle 小忆 (header logo) and about-page Chinese (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
+- `--font-mark` / `font-mark`: alias stack for Chinese marks (keep in sync with `--font-about-mark`)
 - `--font-sans`: body copy and UI chrome
 
 When the user asks to change the title font:
 1. Update the display family in `nuxt.config.ts` `fonts.families` and `--font-display` in `app/assets/css/main.css`.
 2. Do not edit `--font-logo`, `font-logo`, or brand markup in `AppLogo.vue` / `HeroBanner.vue`.
-3. Do not edit `--font-mark`, `--font-about-mark`, Long Cang, or Ma Shan Zheng.
+3. Do not edit `--font-mark`, `--font-about-mark`, or Ma Shan Zheng.
 
 When the user asks to change the brand name font:
 1. Update the logo family in `nuxt.config.ts` and `--font-logo` only (English "Little Memo").
 2. Do not edit `--font-display`, title components, `--font-mark`, or `--font-about-mark`.
 
-# Chinese fonts stay locked
+# Locale UI fonts
+
+Chinese (`html[data-locale="zh"]` and related):
+- Titles: **Ma Shan Zheng** via `--font-display`
+- Body / UI chrome: **ZCOOL KuaiLe** via `--font-sans`
+
+Korean (`html[data-locale="ko"]` and related):
+- Titles: **Single Day** via `--font-display`
+- Body / UI chrome: **Nunito Sans** for Latin, **Nanum Brush Script** for Korean glyphs via `--font-sans`
+- Body size is slightly larger than the default locale (`1.2rem`)
+
+Japanese (`html[data-locale="ja"]` and related):
+- Titles: **Shippori Antique B1** via `--font-display`
+- Body / UI chrome: **Nunito Sans** for Latin, **Kosugi Maru** for Japanese glyphs via `--font-sans`
+
+For all CJK locales:
+- English brand name stays `--font-logo` (Gaegu). Do not point logo at locale title fonts.
+- Brand subtitle 小忆 uses `--font-about-mark` (same token as about-page Chinese). Locale title/body overrides must never change `--font-mark` or `--font-about-mark`.
+
+These locale overrides live in `app/assets/css/main.css`. Changing the default (non-CJK) title or body font must not remove locale overrides unless the user asks.
+
+# Chinese mark fonts stay locked
 
 `--font-mark` (brand Chinese subtitle) and `--font-about-mark` (about-page Chinese) are independent of title and English brand font changes.
 
-- Never change Long Cang, Ma Shan Zheng, `--font-mark`, `--font-about-mark`, `font-mark`, `font-about-mark`, or the Chinese spans in `AppLogo.vue` / `about.vue` unless the user explicitly asks to change that specific Chinese font.
-- Changing "the font", "titles", "brand", or "display" does not authorize touching either Chinese font.
+- Never change Ma Shan Zheng for marks, `--font-mark`, `--font-about-mark`, `font-mark`, `font-about-mark`, or the Chinese spans in `AppLogo.vue` / `about.vue` unless the user explicitly asks to change that specific Chinese font.
+- Changing "the font", "titles", "brand", or "display" does not authorize touching either Chinese mark font.
 - Only change brand Chinese when the user clearly asks for the header/logo Chinese subtitle font.
 - Only change about Chinese when the user clearly asks for the about-page Chinese font.
+- Only change Chinese locale title/body fonts when the user clearly asks about Chinese translations / zh locale fonts.
+- Only change Korean locale title/body fonts when the user clearly asks about Korean translations / ko locale fonts.
+- Only change Japanese locale title/body fonts when the user clearly asks about Japanese translations / ja locale fonts.
 
 Never point `--font-display` and `--font-logo` at the same family unless the user explicitly asks for both.
 

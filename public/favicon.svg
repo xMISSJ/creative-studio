@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="10" fill="#C4685A"/>
-  <path d="M18 6a10 10 0 1 0 8 16 7.5 7.5 0 1 1-8-16z" fill="#FFFAF7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Little Memo">
+  <rect width="32" height="32" rx="7" ry="7" fill="#ffffff"/>
+  <g transform="translate(4 4) scale(1)">
+    <path
+      fill="#b2a4d4"
+      d="M21.93 16.08c-1.68 4.09-5.58 6.67-9.93 6.67-.37 0-.75-.02-1.12-.06-4.95-.5-8.97-4.45-9.55-9.39C.66 7.59 4.55 2.37 10.19 1.41c.52-.09 1.02.15 1.29.61.26.45.22 1.01-.1 1.41-1.29 1.58-1.84 3.56-1.56 5.6.44 3.21 3.11 5.81 6.35 6.17 1.4.16 2.81-.09 4.06-.71.47-.23 1.01-.15 1.4.21s.51.91.31 1.39z"
+    />
+  </g>
 </svg>

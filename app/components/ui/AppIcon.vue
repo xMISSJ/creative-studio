@@ -15,7 +15,7 @@ const heartFilled = 'M31.024 18.847c-.255-.298 3.357-3.638 3.733-3.954a18.2 18.2
 <template>
   <svg
     :viewBox="viewBox"
-    class="size-5"
+    class="inline-block size-5 shrink-0"
     fill="none"
     stroke="currentColor"
     stroke-width="1.75"
@@ -23,7 +23,16 @@ const heartFilled = 'M31.024 18.847c-.255-.298 3.357-3.638 3.733-3.954a18.2 18.2
     stroke-linejoin="round"
     aria-hidden="true"
   >
-    <path v-if="name === 'moon'" d="M16 3.5A8.5 8.5 0 1 0 20.5 15 6.5 6.5 0 0 1 16 3.5z" />
+    <path
+      v-if="name === 'moon' && filled"
+      d="M21.93 16.08c-1.68 4.09-5.58 6.67-9.93 6.67-.37 0-.75-.02-1.12-.06-4.95-.5-8.97-4.45-9.55-9.39C.66 7.59 4.55 2.37 10.19 1.41c.52-.09 1.02.15 1.29.61.26.45.22 1.01-.1 1.41-1.29 1.58-1.84 3.56-1.56 5.6.44 3.21 3.11 5.81 6.35 6.17 1.4.16 2.81-.09 4.06-.71.47-.23 1.01-.15 1.4.21s.51.91.31 1.39z"
+      fill="currentColor"
+      stroke="none"
+    />
+    <path
+      v-else-if="name === 'moon'"
+      d="M16 3.5A8.5 8.5 0 1 0 20.5 15 6.5 6.5 0 0 1 16 3.5z"
+    />
     <path v-else-if="name === 'cart'" d="M5 7h15l-1.4 8.2a2 2 0 0 1-2 1.6H8.2a2 2 0 0 1-2-1.6L5 7z" />
     <path v-if="name === 'cart'" d="M8 7 9.2 4.5A1 1 0 0 1 10.1 4h3.8a1 1 0 0 1 .9.5L16 7M9 20.5h.1M16 20.5h.1" />
     <path v-else-if="name === 'user'" d="M12 12a3.2 3.2 0 1 0-3.2-3.2A3.2 3.2 0 0 0 12 12zm-6.2 7.2a6.2 6.2 0 0 1 12.4 0" />
