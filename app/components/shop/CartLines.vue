@@ -42,7 +42,7 @@ watch(data, (payload) => {
           alt=""
           width="96"
           height="120"
-          class="size-20 rounded-2xl object-cover sm:size-24"
+          class="size-20 rounded-md object-cover sm:size-24"
         >
         <div class="min-w-0 flex-1">
           <div class="flex items-start justify-between gap-3">

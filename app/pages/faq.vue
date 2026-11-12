@@ -19,11 +19,11 @@ const items = useFaqItems()
     </section>
 
     <section class="container-page py-12 sm:py-16" :aria-label="t('faq.title')">
-      <div class="faq-panel rise delay-1 mx-auto max-w-2xl rounded-[1.75rem] border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
+      <div class="faq-panel rise delay-1 mx-auto max-w-2xl rounded-md border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
         <FaqAccordion :items="items" />
       </div>
 
-      <aside class="rise delay-2 mx-auto mt-10 max-w-2xl overflow-hidden rounded-[1.75rem] bg-lilac-soft p-7 text-on-soft sm:mt-12 sm:p-9">
+      <aside class="rise delay-2 mx-auto mt-10 max-w-2xl overflow-hidden rounded-md bg-lilac-soft p-7 text-on-soft sm:mt-12 sm:p-9">
         <p class="text-xs font-bold tracking-[0.08em] uppercase opacity-80">{{ t('faq.stillEyebrow') }}</p>
         <h2 class="display-title mt-3 text-2xl sm:text-3xl">
           {{ t('faq.stillTitle') }}

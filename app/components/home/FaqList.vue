@@ -8,7 +8,7 @@ const items = useFaqItems()
     <div class="container-page">
       <h2 id="faq-title" class="section-title">{{ t('home.faq.title') }}</h2>
       <p class="mx-auto mt-5 max-w-xl text-center text-muted">{{ t('home.faq.lead') }}</p>
-      <div class="faq-panel mx-auto mt-10 max-w-2xl rounded-[1.75rem] border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
+      <div class="faq-panel mx-auto mt-10 max-w-2xl rounded-md border border-line bg-paper px-5 py-2 sm:px-8 sm:py-3">
         <FaqAccordion :items="items" />
       </div>
       <p class="mt-8 text-center">

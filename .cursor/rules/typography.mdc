@@ -34,3 +34,7 @@ When the user asks to change the brand name font:
 - Only change about Chinese when the user clearly asks for the about-page Chinese font.
 
 Never point `--font-display` and `--font-logo` at the same family unless the user explicitly asks for both.
+
+# Panel roundness
+
+Cards, panels, mats, FAQ boxes, newsletter, and gallery frames use `--radius-panel` (`0.375rem`, same as Tailwind `rounded-md`). Keep those surfaces on that token or `rounded-md`. Buttons, chips that are pills, badges, and tab pills stay `rounded-full` / `999px`.

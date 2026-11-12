@@ -22,7 +22,7 @@ const { t } = useShopI18n()
             :alt="t(`products.${props.primary.slug}.title`)"
             width="800"
             height="1000"
-            class="aspect-square w-full rounded-[1.2rem] object-cover"
+            class="aspect-square w-full rounded-md object-cover"
             fetchpriority="high"
             decoding="async"
           >
@@ -36,7 +36,7 @@ const { t } = useShopI18n()
           :alt="t(`products.${props.secondary.slug}.title`)"
           width="800"
           height="1000"
-          class="aspect-square w-full rounded-[1.2rem] object-cover"
+          class="aspect-square w-full rounded-md object-cover"
           decoding="async"
         >
       </NuxtLinkLocale>

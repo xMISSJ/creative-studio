@@ -12,7 +12,7 @@ function submit() {
 </script>
 
 <template>
-  <section class="rounded-[2rem] bg-soft-pink px-6 py-10 text-on-soft sm:px-10" :aria-labelledby="'newsletter-title'">
+  <section class="rounded-md bg-soft-pink px-6 py-10 text-on-soft sm:px-10" :aria-labelledby="'newsletter-title'">
     <h2 id="newsletter-title" class="display-title text-center text-3xl sm:text-4xl">
       {{ t('newsletter.title') }}
     </h2>
