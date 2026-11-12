@@ -4,7 +4,7 @@
     "homeDescription": "{name} is a cozy studio shop for hand-drawn coloring books across classic, nature, fantasy, and seasonal themes.",
     "shopTitle": "Shop",
     "shopDescription": "Choose coloring books, merchandise, or digital art from {name}. Themes and books wait inside.",
-    "aboutTitle": "About me",
+    "aboutTitle": "About",
     "aboutDescription": "The story behind {name}: coloring, cute creatures, and quiet memories held on the page.",
     "faqTitle": "FAQ",
     "faqDescription": "Answers about {name} coloring books, shipping timing, freebies, and how to reach the studio.",
@@ -25,16 +25,12 @@
     "home": "Home",
     "shop": "Shop",
     "faq": "FAQ",
-    "about": "About me",
+    "about": "About",
     "cart": "Cart",
     "account": "Account",
     "login": "Log in",
     "register": "Create account",
-    "menu": "Open menu",
-    "close": "Close menu",
-    "breadcrumb": "Breadcrumb",
-    "mobile": "Quick links",
-    "wishlist": "Wishlist"
+    "breadcrumb": "Breadcrumb"
   },
   "theme": {
     "toLight": "Switch to light theme",
@@ -45,11 +41,12 @@
     "label": "Language"
   },
   "hero": {
-    "eyebrow": "A cozy coloring studio",
-    "title": "Let the cuties out!",
-    "lead": "Hand-drawn coloring books for soft evenings, bold lines, and everyday joy.",
-    "shop": "Available now",
-    "about": "About me",
+    "eyebrow": "A creative studio",
+    "title": "Hand-drawn coloring books",
+    "lead": "Soft coloring books, digital art, and cute merch from a tiny independent studio. Keepsakes for the memories you make and mean to keep.",
+    "shop": "Browse the shop",
+    "art": "Digital art",
+    "about": "About",
     "point1": "Hand-drawn pages",
     "point2": "Made for relaxation",
     "point3": "Pastel on purpose",
@@ -66,12 +63,12 @@
     "shelfAll": "See the whole shop",
     "easelEyebrow": "Fresh from the desk",
     "noteEyebrow": "A note from the desk",
-    "noteTitle": "Drawn for the moment you sit down",
+    "noteTitle": "Drawn for sitting down",
     "noteBody": "I draw when the room turns lilac and the day finally puts its bag down. {name} is that hour, kept in a coloring book.",
     "noteLink": "Read my story",
     "quote": "Soft lines, slow evenings, and a little comfort on every page.",
     "togetherBody": "What started with a love for coloring and cozy moments is growing into {name}, a creative world of hand-drawn books made for relaxation, gentle self-connection, and everyday joy.",
-    "togetherCta": "About me",
+    "togetherCta": "About",
     "bestsellerTitle": "Best seller",
     "arrivalsTitle": "New arrivals",
     "themeTitle": "Theme",
@@ -102,25 +99,7 @@
           "a": "Reach out at {email}. Support opens more fully with checkout."
         }
       ]
-    },
-    "values": [
-      {
-        "title": "Great for all skill",
-        "body": "Both beginners and experts can enjoy the books."
-      },
-      {
-        "title": "Made for relaxation",
-        "body": "Bring peace and everyday wellness to your mind."
-      },
-      {
-        "title": "100% human-created",
-        "body": "Every design is created by skilled human artists."
-      },
-      {
-        "title": "Happy customers",
-        "body": "Trusted and loved by coloring fans worldwide."
-      }
-    ]
+    }
   },
   "newsletter": {
     "eyebrow": "Studio notes",
@@ -236,22 +215,23 @@
     "empty": "There is nothing to wrap yet."
   },
   "faq": {
-    "eyebrow": "Soft answers",
-    "title": "Questions for quiet evenings",
-    "lead": "A calm corner for the things people ask most about {name}, from beginner pages to when checkout opens.",
+    "eyebrow": "FAQ",
+    "title": "Common questions",
+    "lead": "Buying books, beginner pages, freebies, sharing finished art, and how to reach the studio: answered in one place.",
     "stillEyebrow": "Still curious",
-    "stillTitle": "Need a gentler nudge?",
+    "stillTitle": "Still looking for an answer?",
     "stillBody": "Browse the books, read the studio story, or write to {email}. Support grows with checkout.",
     "shopCta": "Browse the shop",
-    "aboutCta": "About me"
+    "aboutCta": "About"
   },
   "about": {
-    "eyebrow": "About me",
-    "title": "Cozy moments drawn into little creatures",
-    "lead": "I am an individual artist who has always dreamed of having a webshop of my own. Everything here, from website to products, is made with love by me.",
+    "eyebrow": "About",
+    "title": "About the studio",
+    "lead": "I am a solo artist who finally built the shop I always wanted. Every page, print, and pixel here is made by me.",
     "story": "My main work is creative development. I build applications and websites. Aside from that I am always doing creative stuff, gaming or making art. I love cute characters.",
     "storyGrief": "In July 2026, my dad passed away from liver cancer. The grief was so hard to hold and many things felt out of my hands. Somewhere around that time, I noticed people coloring on TikTok and Instagram. I decided to try it myself, bought a 320-piece Ohuhu set and I fell in love! Coloring gave me a small feeling of peace. I could choose the colors, the vibe, the mood. For a while, the page felt like the world I could control. I decided the outcome.",
     "storyArt": "Out of that feeling came a quiet, but determined idea: what if I made my own coloring books, with my own art? Hiding between the pages are moments of memories of my dad, camouflaged in animals and creatures and scenes that refer to the time we shared together, without making it too obvious.",
+    "storyName": "The Chinese mark under the English name is {subtitle} (Xiǎo Yì). It grew out of {name}: little becomes {xiao}, and memo leans into {yi}, memory. It is also a small wordplay. My dad was {dadName} (Sūn Yìdòng); {yi} is not the same character as his 义, but the sound sits close enough that the name keeps a little of him in it.",
     "alt": "A cozy desk with markers, a candle, and an open coloring book",
     "shop": "See the books"
   },

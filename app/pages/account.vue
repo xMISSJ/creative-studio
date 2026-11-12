@@ -12,15 +12,15 @@ usePageMeta('meta.accountTitle', 'meta.accountDescription')
     </div>
     <div class="mt-10 grid gap-4 md:grid-cols-3">
       <article class="panel p-5">
-        <h2 class="font-display text-2xl">{{ t('account.sections.orders.title') }}</h2>
+        <h2 class="display-title text-2xl">{{ t('account.sections.orders.title') }}</h2>
         <p class="mt-2 text-muted">{{ t('account.sections.orders.body') }}</p>
       </article>
       <article class="panel p-5">
-        <h2 class="font-display text-2xl">{{ t('account.sections.profile.title') }}</h2>
+        <h2 class="display-title text-2xl">{{ t('account.sections.profile.title') }}</h2>
         <p class="mt-2 text-muted">{{ t('account.sections.profile.body') }}</p>
       </article>
       <article class="panel p-5">
-        <h2 class="font-display text-2xl">{{ t('account.sections.addresses.title') }}</h2>
+        <h2 class="display-title text-2xl">{{ t('account.sections.addresses.title') }}</h2>
         <p class="mt-2 text-muted">{{ t('account.sections.addresses.body') }}</p>
       </article>
     </div>

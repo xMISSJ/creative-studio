@@ -15,7 +15,7 @@ const { shopLink } = useShopBrowse()
     >
       <NuxtLinkLocale
         :to="shopLink({ type: type.slug })"
-        class="group flex min-h-[9rem] w-full flex-col justify-between gap-6 px-6 py-6 text-on-soft transition sm:min-h-[8.5rem] sm:flex-row sm:items-end sm:px-8 sm:py-7"
+        class="group flex min-h-[9rem] w-full flex-col justify-between gap-6 rounded-md px-6 py-6 text-on-soft transition sm:min-h-[8.5rem] sm:flex-row sm:items-end sm:px-8 sm:py-7"
         :class="type.accent"
       >
         <div class="min-w-0">
@@ -24,7 +24,7 @@ const { shopLink } = useShopBrowse()
             <template v-else-if="type.ready">{{ t('shop.openNow') }}</template>
             <template v-else>{{ t('shop.comingSoon') }}</template>
           </p>
-          <h2 class="mt-2 font-display text-3xl leading-tight font-bold sm:text-4xl">
+          <h2 class="display-title mt-2 text-3xl sm:text-4xl">
             {{ t(`productTypes.${type.slug}.title`) }}
           </h2>
         </div>

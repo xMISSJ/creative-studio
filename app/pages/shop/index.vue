@@ -111,8 +111,8 @@ function onSort(event: Event) {
     <template v-if="showingDigitalArt">
       <div class="overflow-x-clip">
         <section class="relative overflow-x-clip bg-lilac text-on-soft">
-          <div class="container-page relative z-10 grid gap-5 pt-8 pb-6 sm:gap-8 sm:pt-14 sm:pb-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10 lg:py-16 lg:pb-28">
-            <div class="rise max-w-xl lg:max-w-lg">
+          <div class="container-page relative z-10 max-w-xl pt-8 pb-4 sm:max-w-none sm:pt-14 sm:pb-6 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10 lg:py-16 lg:pb-28">
+            <div class="rise lg:max-w-lg">
               <PageIntro :eyebrow="t('nav.shop')" :title="pageTitle" :lead="pageLead" />
               <div class="mt-5 flex flex-wrap gap-3 sm:mt-8">
                 <NuxtLinkLocale class="btn btn-primary" :to="shopLink({ type: 'coloring-books' })">
@@ -123,33 +123,23 @@ function onSort(event: Event) {
                 </NuxtLinkLocale>
               </div>
             </div>
-
-            <!-- In-flow on small screens so the banner never covers the gallery -->
-            <div class="relative mx-auto w-full max-w-[16.5rem] sm:max-w-md lg:hidden">
-              <img
-                :src="digitalArtBanner"
-                :alt="t('shop.digitalArt.bannerAlt')"
-                width="1774"
-                height="887"
-                class="w-full object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)]"
-                fetchpriority="high"
-                decoding="async"
-              >
-            </div>
           </div>
+
+          <!-- Reserves lilac for the art without leaving a dead gap under the CTAs -->
+          <div class="pointer-events-none h-36 sm:h-44 lg:hidden" aria-hidden="true" />
 
           <img
             :src="digitalArtBanner"
-            alt=""
+            :alt="t('shop.digitalArt.bannerAlt')"
             width="1774"
             height="887"
-            class="pointer-events-none absolute -bottom-20 end-0 z-0 hidden w-[min(46rem,52%)] max-w-none select-none object-contain drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)] lg:block lg:end-[max(0px,calc((100%-72rem)/2))]"
-            aria-hidden="true"
+            class="pointer-events-none absolute -bottom-28 end-[-24%] z-20 w-[min(38rem,132%)] max-w-none select-none object-contain drop-shadow-[0_22px_36px_rgba(58,51,72,0.22)] sm:-bottom-32 sm:end-[-14%] sm:w-[min(44rem,96%)] lg:-bottom-20 lg:end-[max(0px,calc((100%-72rem)/2))] lg:z-0 lg:w-[min(46rem,52%)] lg:drop-shadow-[0_18px_28px_rgba(58,51,72,0.18)]"
+            fetchpriority="high"
             decoding="async"
           >
         </section>
 
-        <section class="container-page relative z-10 py-8 sm:py-12 lg:pt-24">
+        <section class="container-page relative z-10 pt-24 pb-8 sm:pt-28 sm:pb-12 lg:pt-24">
           <ShopDigitalArt />
         </section>
       </div>
@@ -172,7 +162,7 @@ function onSort(event: Event) {
 
         <div class="mt-10">
           <header v-if="activeTheme === 'all'" class="mb-6 max-w-2xl">
-            <h2 class="font-display text-2xl font-bold text-ink sm:text-3xl">{{ t('shop.allBooksTitle') }}</h2>
+            <h2 class="display-title text-2xl text-ink sm:text-3xl">{{ t('shop.allBooksTitle') }}</h2>
             <p class="mt-2 text-muted">{{ t('shop.allBooksLead') }}</p>
           </header>
 

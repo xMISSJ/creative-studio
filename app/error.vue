@@ -24,7 +24,7 @@ function goHome() {
   <NuxtLayout>
     <section class="container-page py-16">
       <p class="font-display text-7xl text-accent" aria-hidden="true">{{ error.statusCode }}</p>
-      <h1 class="mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-6xl">
+      <h1 class="display-title mt-4 max-w-3xl text-4xl sm:text-6xl">
         {{ missing ? t('error.title') : t('error.genericTitle') }}
       </h1>
       <p class="mt-4 max-w-xl text-lg text-muted">

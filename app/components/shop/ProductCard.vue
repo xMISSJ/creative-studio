@@ -11,8 +11,8 @@ const format = useFormatPrice()
 
 <template>
   <article class="group">
-    <NuxtLinkLocale :to="`/shop/${item.slug}`" class="block rounded-[1.25rem] focus-visible:outline">
-      <div class="relative overflow-hidden rounded-[1.25rem] lift">
+    <NuxtLinkLocale :to="`/shop/${item.slug}`" class="block rounded-md focus-visible:outline">
+      <div class="relative overflow-hidden rounded-md lift">
         <img
           :src="item.image"
           alt=""

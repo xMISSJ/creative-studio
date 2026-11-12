@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useShopI18n()
 const { count } = useCart()
-const { menuOpen, toggleMenu, openCart } = useOverlay()
+const { openCart } = useOverlay()
 const route = useRoute()
 
 const links = computed(() => [
@@ -17,30 +17,18 @@ function isCurrent(match: (path: string) => boolean) {
 </script>
 
 <template>
-  <header>
+  <header class="sticky top-0 z-40">
     <div class="border-b border-line bg-paper">
-      <div class="container-page grid h-[4.25rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 lg:h-[4.75rem]">
+      <div class="container-page grid h-[4.75rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 lg:h-[5.25rem]">
         <div class="flex items-center justify-start gap-1">
-          <button
-            type="button"
-            class="icon-btn lg:hidden"
-            :aria-expanded="menuOpen"
-            aria-controls="mobile-menu"
-            :aria-label="t('nav.menu')"
-            @click="toggleMenu"
-          >
-            <AppIcon name="menu" />
-          </button>
-          <LocaleSwitcher variant="header" />
+          <LocaleSwitcher />
         </div>
 
         <AppLogo centered />
 
         <div class="flex items-center justify-end gap-1">
-          <div class="hidden sm:block">
-            <ThemeToggle />
-          </div>
-          <NuxtLinkLocale class="icon-btn hidden sm:inline-grid" to="/account" :aria-label="t('nav.account')">
+          <ThemeToggle />
+          <NuxtLinkLocale class="icon-btn" to="/account" :aria-label="t('nav.account')">
             <AppIcon name="user" />
           </NuxtLinkLocale>
           <button type="button" class="icon-btn relative" :aria-label="t('cart.open', { count })" @click="openCart">
@@ -56,22 +44,22 @@ function isCurrent(match: (path: string) => boolean) {
         </div>
       </div>
     </div>
-  </header>
 
-  <nav
-    class="topbar sticky top-0 z-40 hidden border-b border-line lg:block"
-    :aria-label="t('nav.primary')"
-  >
-    <ul class="container-page flex flex-wrap items-center justify-center gap-1 py-1.5">
-      <li v-for="link in links" :key="link.label">
-        <NuxtLinkLocale
-          :to="link.to"
-          class="nav-link text-[0.95rem]"
-          :aria-current="isCurrent(link.match)"
-        >
-          {{ link.label }}
-        </NuxtLinkLocale>
-      </li>
-    </ul>
-  </nav>
+    <nav
+      class="topbar border-b border-line"
+      :aria-label="t('nav.primary')"
+    >
+      <ul class="container-page flex flex-wrap items-center justify-center gap-1 py-1.5">
+        <li v-for="link in links" :key="link.label">
+          <NuxtLinkLocale
+            :to="link.to"
+            class="nav-link text-[0.95rem]"
+            :aria-current="isCurrent(link.match)"
+          >
+            {{ link.label }}
+          </NuxtLinkLocale>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>

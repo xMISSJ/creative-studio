@@ -21,7 +21,7 @@ const accent = computed(() =>
       :class="accent"
     >
       <p class="text-xs font-bold tracking-[0.08em] uppercase opacity-80">{{ t('shop.comingSoon') }}</p>
-      <h2 class="mt-4 max-w-3xl font-display text-3xl leading-tight font-bold sm:text-4xl">
+      <h2 class="display-title mt-4 max-w-3xl text-3xl sm:text-4xl">
         {{ t('shop.comingSoonTitle') }}
       </h2>
       <p class="mt-4 max-w-2xl text-base leading-relaxed opacity-90 sm:text-lg">
@@ -38,7 +38,7 @@ const accent = computed(() =>
     </div>
 
     <div class="w-full border-y border-line py-6">
-      <p class="font-display text-2xl font-bold text-ink">{{ t(`productTypes.${type}.title`) }}</p>
+      <p class="display-title text-2xl text-ink">{{ t(`productTypes.${type}.title`) }}</p>
       <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted">{{ t(`productTypes.${type}.summary`) }}</p>
     </div>
   </div>

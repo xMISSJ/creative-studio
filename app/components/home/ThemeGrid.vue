@@ -54,7 +54,7 @@ const openCollections = computed(() =>
             />
           </div>
           <div class="mt-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
-            <p class="font-display text-2xl font-bold text-ink sm:text-3xl">
+            <p class="display-title text-2xl text-ink sm:text-3xl">
               {{ t(`collections.${collection.slug}.title`) }}
             </p>
             <p class="max-w-xl text-sm text-muted sm:text-right sm:text-base">

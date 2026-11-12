@@ -4,7 +4,7 @@
     "homeDescription": "{name} is een gezellige studiowinkel voor handgetekende kleurboeken in klassieke, natuur-, fantasy- en seizoensthemas.",
     "shopTitle": "Winkel",
     "shopDescription": "Kies kleurboeken, merchandise of digitale kunst van {name}. Themas en boeken wachten binnen.",
-    "aboutTitle": "Over mij",
+    "aboutTitle": "Over",
     "aboutDescription": "Het verhaal achter {name}: kleuren, schattige wezentjes, en stille herinneringen op de pagina.",
     "faqTitle": "FAQ",
     "faqDescription": "Antwoorden over kleurboeken van {name}, verzending, gratis paginas, en hoe je de studio bereikt.",
@@ -25,16 +25,12 @@
     "home": "Home",
     "shop": "Winkel",
     "faq": "FAQ",
-    "about": "Over mij",
+    "about": "Over",
     "cart": "Winkelwagen",
     "account": "Account",
     "login": "Inloggen",
     "register": "Account maken",
-    "menu": "Menu openen",
-    "close": "Menu sluiten",
-    "breadcrumb": "Kruimelpad",
-    "mobile": "Snelle links",
-    "wishlist": "Verlanglijst"
+    "breadcrumb": "Kruimelpad"
   },
   "theme": {
     "toLight": "Schakel naar het lichte thema",
@@ -45,11 +41,12 @@
     "label": "Taal"
   },
   "hero": {
-    "eyebrow": "Een gezellige kleurstudio",
-    "title": "Laat de cuties los!",
-    "lead": "Handgetekende kleurboeken voor zachte avonden, dikke lijnen en dagelijkse vreugde.",
-    "shop": "Nu beschikbaar",
-    "about": "Over mij",
+    "eyebrow": "Een creatieve studio",
+    "title": "Handgetekende kleurboeken",
+    "lead": "Zachte kleurboeken, digitale kunst en cute merch uit een klein zelfstandig atelier. Souvenirs voor de herinneringen die je maakt en wilt bewaren.",
+    "shop": "Bekijk de shop",
+    "art": "Digitale kunst",
+    "about": "Over",
     "point1": "Handgetekende paginas",
     "point2": "Gemaakt om tot rust te komen",
     "point3": "Met opzet pastel",
@@ -66,12 +63,12 @@
     "shelfAll": "De hele winkel",
     "easelEyebrow": "Vers van het bureau",
     "noteEyebrow": "Een briefje van het bureau",
-    "noteTitle": "Getekend voor het moment dat je gaat zitten",
+    "noteTitle": "Getekend om te gaan zitten",
     "noteBody": "Ik teken als de kamer lila kleurt en de dag eindelijk haar tas neerzet. {name} is dat uur, bewaard in een kleurboek.",
     "noteLink": "Lees mijn verhaal",
     "quote": "Zachte lijnen, trage avonden, en een beetje comfort op elke pagina.",
     "togetherBody": "Wat begon met liefde voor kleuren en knusse momenten groeit uit tot {name}, een creatieve wereld van handgetekende boeken voor ontspanning, zachte zelfzorg en dagelijkse vreugde.",
-    "togetherCta": "Over mij",
+    "togetherCta": "Over",
     "bestsellerTitle": "Bestseller",
     "arrivalsTitle": "Nieuw binnen",
     "themeTitle": "Thema",
@@ -102,25 +99,7 @@
           "a": "Mail naar {email}. Support opent verder samen met afrekenen."
         }
       ]
-    },
-    "values": [
-      {
-        "title": "Voor elk niveau",
-        "body": "Zowel beginners als gevorderden kunnen van de boeken genieten."
-      },
-      {
-        "title": "Gemaakt om te ontspannen",
-        "body": "Breng rust en lichte wellness in je hoofd."
-      },
-      {
-        "title": "100% door mensen gemaakt",
-        "body": "Elk ontwerp komt van vaardige menselijke kunstenaars."
-      },
-      {
-        "title": "Blije fans",
-        "body": "Vertrouwd en geliefd bij kleurfans wereldwijd."
-      }
-    ]
+    }
   },
   "newsletter": {
     "eyebrow": "Studiobriefjes",
@@ -236,22 +215,23 @@
     "empty": "Er is nog niets om in te pakken."
   },
   "faq": {
-    "eyebrow": "Zachte antwoorden",
-    "title": "Vragen voor stille avonden",
-    "lead": "Een kalm hoekje voor wat mensen het meest vragen over {name}, van beginnerspaginas tot wanneer afrekenen opent.",
+    "eyebrow": "FAQ",
+    "title": "Veelgestelde vragen",
+    "lead": "Boeken kopen, beginnerspaginas, gratis downloads, je werk delen en de studio bereiken: hier op een plek beantwoord.",
     "stillEyebrow": "Nog nieuwsgierig",
-    "stillTitle": "Nog een zacht duwtje nodig?",
+    "stillTitle": "Nog op zoek naar een antwoord?",
     "stillBody": "Blader door de boeken, lees het studioverhaal, of mail naar {email}. Support groeit mee met afrekenen.",
     "shopCta": "Naar de winkel",
-    "aboutCta": "Over mij"
+    "aboutCta": "Over"
   },
   "about": {
-    "eyebrow": "Over mij",
-    "title": "Gezellige momenten getekend tot kleine wezentjes",
-    "lead": "Ik ben een individuele kunstenaar die altijd al droomde van een eigen webshop. Alles hier, van website tot producten, maak ik met liefde zelf.",
+    "eyebrow": "Over",
+    "title": "Over de studio",
+    "lead": "Ik ben een solo-kunstenaar die eindelijk de shop bouwde die ik altijd wilde. Elke pagina, print en pixel hier maak ik zelf.",
     "story": "Mijn hoofdwerk is creatieve ontwikkeling. Ik bouw applicaties en websites. Daarnaast doe ik altijd creatieve dingen, gamen of kunst maken. Ik houd van schattige personages.",
     "storyGrief": "In juli 2026 is mijn papa overleden aan leverkanker. De rouw was zo moeilijk vast te houden en veel dingen voelden buiten mijn handen. Ergens rond die tijd zag ik mensen kleuren op TikTok en Instagram. Ik besloot het zelf te proberen, kocht een Ohuhu-set van 320 stuks en werd verliefd! Het inkleuren gaf me een klein gevoel van rust. Ik kon de kleuren, de vibe, de sfeer kiezen. Even voelde de pagina als de wereld die ik kon controleren. Ik bepaalde de uitkomst.",
     "storyArt": "Uit dat gevoel kwam een stil, maar vastberaden idee: wat als ik mijn eigen kleurboeken maak, met mijn eigen kunst? Verborgen tussen de paginas zitten herinneringsmomenten van mijn papa, gecamoufleerd in dieren en wezentjes en scènes die verwijzen naar de tijd die we samen deelden, zonder het te duidelijk te maken.",
+    "storyName": "Het Chinese teken onder de Engelse naam is {subtitle} (Xiǎo Yì). Het groeide uit {name}: little wordt {xiao}, en memo leunt naar {yi}, herinnering. Het is ook een kleine woordspeling. Mijn papa heette {dadName} (Sūn Yìdòng); {yi} is niet hetzelfde teken als zijn 义, maar de klank zit dichtbij genoeg dat de naam een beetje van hem bewaart.",
     "alt": "Een gezellig bureau met markers, een kaars en een open kleurboek",
     "shop": "Bekijk de boeken"
   },

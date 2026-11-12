@@ -1,15 +1,11 @@
 <script setup lang="ts">
-const props = defineProps<{
-  variant?: 'header' | 'menu'
-}>()
-
 const { t, locale, locales } = useShopI18n()
 const switchLocalePath = useSwitchLocalePath()
 const router = useRouter()
 
 const open = ref(false)
 const root = ref<HTMLElement | null>(null)
-const listId = computed(() => (props.variant === 'menu' ? 'locale-list-menu' : 'locale-list-header'))
+const listId = 'locale-list-header'
 
 const flags: Record<string, string> = {
   en: '🇬🇧',
@@ -78,26 +74,22 @@ watch(() => locale.value, close)
 </script>
 
 <template>
-  <div
-    ref="root"
-    class="relative"
-    :class="variant === 'menu' ? 'w-full' : 'hidden sm:block'"
-  >
+  <div ref="root" class="relative">
     <button
       type="button"
-      class="locale-trigger"
-      :class="variant === 'menu' ? 'w-full justify-between' : ''"
+      class="locale-trigger max-sm:px-2.5"
       :aria-expanded="open"
       :aria-controls="listId"
+      :aria-label="t('locale.label')"
       aria-haspopup="listbox"
       @click="toggle"
     >
       <span class="flex min-w-0 items-center gap-2">
         <span class="locale-flag" aria-hidden="true">{{ current?.flag }}</span>
-        <span class="truncate">{{ current?.name }}</span>
+        <span class="hidden truncate sm:inline">{{ current?.name }}</span>
       </span>
       <span
-        class="inline-flex shrink-0 text-muted transition"
+        class="hidden shrink-0 text-muted transition sm:inline-flex"
         :class="open ? 'rotate-180' : ''"
         aria-hidden="true"
       >
@@ -110,8 +102,7 @@ watch(() => locale.value, close)
       :id="listId"
       role="listbox"
       :aria-label="t('locale.label')"
-      class="locale-menu"
-      :class="variant === 'menu' ? 'relative mt-2 w-full' : 'absolute start-0 top-[calc(100%+0.4rem)] z-50 min-w-[13.5rem]'"
+      class="locale-menu absolute start-0 top-[calc(100%+0.4rem)] z-50 min-w-[13.5rem]"
     >
       <li v-for="entry in localeList" :key="entry.code" role="none">
         <button

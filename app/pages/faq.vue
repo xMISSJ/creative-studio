@@ -25,7 +25,7 @@ const items = useFaqItems()
 
       <aside class="rise delay-2 mx-auto mt-10 max-w-2xl overflow-hidden rounded-[1.75rem] bg-lilac-soft p-7 text-on-soft sm:mt-12 sm:p-9">
         <p class="text-xs font-bold tracking-[0.08em] uppercase opacity-80">{{ t('faq.stillEyebrow') }}</p>
-        <h2 class="mt-3 font-display text-2xl leading-tight font-bold sm:text-3xl">
+        <h2 class="display-title mt-3 text-2xl sm:text-3xl">
           {{ t('faq.stillTitle') }}
         </h2>
         <p class="mt-3 max-w-lg text-base leading-relaxed opacity-90">

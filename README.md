@@ -1,8 +1,8 @@
-# Everlune
+# Little Memo
 
-A small Nuxt shop for cozy coloring books. The visible name is **Everlune** until you change it.
+A small Nuxt shop for cozy coloring books. The visible name is **Little Memo** (Chinese mark **小忆**).
 
-Product covers currently use temporary original placeholder art while Everlune covers are still being drawn. Replace the files under `public/art/` and keep the same paths, or update `image` in `server/data/catalog.ts`.
+Product covers currently use temporary original placeholder art while Little Memo covers are still being drawn. Replace the files under `public/art/` and keep the same paths, or update `image` in `server/data/catalog.ts`.
 
 ## Run
 
@@ -20,7 +20,7 @@ pnpm build
 
 ## Change the name
 
-Edit `name` in `site.config.ts`. Sentences use `{name}`, so the locale files do not need a rewrite. Leave `storagePrefix` as-is if you want existing carts and theme choices to remain.
+Edit `name` and `subtitle` in `site.config.ts`. Sentences use `{name}` and `{subtitle}`, so the locale files do not need a rewrite for a rename. Leave `storagePrefix` as-is if you want existing carts and theme choices to remain.
 
 ## Add a book
 

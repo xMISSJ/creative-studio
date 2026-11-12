@@ -1,0 +1,18 @@
+---
+description: Never use em dashes in copy, comments, or docs
+alwaysApply: true
+---
+
+# No em dashes
+
+Do not use the em dash character (`—`, U+2014), including doubled forms (`——`).
+
+Prefer a colon, comma, period, or a short rewrite.
+
+```txt
+❌ studio—answered in one place
+✅ studio: answered in one place
+✅ studio. Answered in one place.
+```
+
+This applies to locale strings, UI copy, code comments, commit messages, and agent replies.

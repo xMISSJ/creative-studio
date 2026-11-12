@@ -1,17 +1,19 @@
 /**
  * Shop identity and stable preferences.
- * Change `name` whenever the studio name changes.
+ * Change `name` / `subtitle` whenever the studio name changes.
  * Keep `storagePrefix` stable so carts and theme choices survive a rename.
  */
 export const siteConfig = {
-  name: 'Everlune',
+  name: 'Little Memo',
+  /** Chinese mark shown with the English name (Long Cang). */
+  subtitle: '小忆',
   currency: 'EUR',
   storagePrefix: 'everlune',
   supportEmail: 'hello@everlune.studio',
   lowStockAt: 5,
 } as const
 
-/** Browser / social title: `Everlune` on home, `Everlune • Page` elsewhere. */
+/** Browser / social title: `Little Memo` on home, `Little Memo • Page` elsewhere. */
 export function formatPageTitle(page?: string | null) {
   const name = siteConfig.name
   if (!page || page === name) return name

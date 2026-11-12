@@ -7,12 +7,12 @@ alwaysApply: true
 
 User-facing text comes from every file in `i18n/locales/`. All locale files stay in lockstep.
 
-- In Vue and composables, call `t()` from `useShopI18n()`. It fills `{name}` and `{email}` from `site.config.ts`.
+- In Vue and composables, call `t()` from `useShopI18n()`. It fills `{name}`, `{subtitle}`, and `{email}` from `site.config.ts`.
 - Internal links use `NuxtLinkLocale` with an unprefixed path such as `/shop`. Plain `NuxtLink` drops the Dutch prefix. The language switcher is the exception: it already receives a localized path from `useSwitchLocalePath()`.
 - Do not use `$t()` and do not pass a variable into `t()`.
 - Product, collection, and badge copy uses the keys already scanned by `pnpm check:i18n`.
 - In message text, write a literal `@` as `{'@'}`. The `@` character is vue-i18n syntax.
-- The shop name stays in `site.config.ts`. Language names stay on the locale objects in `nuxt.config.ts`, written in that language.
+- The shop name and Chinese subtitle stay in `site.config.ts`. Language names stay on the locale objects in `nuxt.config.ts`, written in that language.
 - Prices, stock, and image paths stay in `server/data/catalog.ts`.
 
 ```vue

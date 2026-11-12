@@ -1,11 +1,11 @@
 ---
-description: How to extend the Everlune shop without hardcoding the name
+description: How to extend the Little Memo shop without hardcoding the name
 alwaysApply: true
 ---
 
 # Shop structure
 
-`site.config.ts` is the only place that sets the visible name, currency, support address, and storage prefix. Renaming the shop does not require a translation rewrite. Leave `storagePrefix` unchanged so carts and theme choices survive.
+`site.config.ts` is the only place that sets the visible name, Chinese subtitle, currency, support address, and storage prefix. Renaming the shop does not require a translation rewrite. Leave `storagePrefix` unchanged so carts and theme choices survive.
 
 - Catalog facts (price in cents, stock, image, product `type`, theme `collection`) live in `server/data/catalog.ts` and are served from `server/api/catalog`.
 - Product types (`coloring-books`, `merchandise`, `digital-art`), coloring-book theme slugs, and digital-art category slugs live in `shared/catalog.ts`. Themes only apply to coloring books. Digital-art categories (avatars, character art) are showcase-only for now.

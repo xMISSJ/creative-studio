@@ -22,7 +22,7 @@ const themes = computed(() =>
 <template>
   <section class="mt-8" aria-labelledby="shop-themes-title">
     <div class="flex flex-wrap items-end justify-between gap-3">
-      <h2 id="shop-themes-title" class="font-display text-2xl font-bold text-ink sm:text-3xl">
+      <h2 id="shop-themes-title" class="display-title text-2xl text-ink sm:text-3xl">
         {{ t('shop.themesTitle') }}
       </h2>
       <NuxtLinkLocale
@@ -38,11 +38,11 @@ const themes = computed(() =>
       <li v-for="theme in themes" :key="theme.slug">
         <NuxtLinkLocale
           :to="themeLink(theme.slug)"
-          class="group block rounded-[1.15rem] focus-visible:outline"
+          class="group block rounded-md focus-visible:outline"
           :aria-current="activeTheme === theme.slug ? 'true' : undefined"
         >
           <div
-            class="overflow-hidden rounded-[1.15rem] ring-offset-2 ring-offset-canvas transition"
+            class="overflow-hidden rounded-md ring-offset-2 ring-offset-canvas transition"
             :class="activeTheme === theme.slug ? 'ring-2 ring-accent' : 'ring-0'"
           >
             <img

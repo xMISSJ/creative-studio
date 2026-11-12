@@ -91,7 +91,7 @@ function add() {
           :alt="t(`products.${item.slug}.alt`)"
           width="800"
           height="1000"
-          class="aspect-square w-full rounded-[1.2rem] object-cover"
+          class="aspect-square w-full rounded-md object-cover"
           fetchpriority="high"
         >
       </div>
@@ -114,7 +114,7 @@ function add() {
         <p class="mt-3 min-h-6 text-sm font-bold" role="status">{{ feedback }}</p>
         <p class="mt-2 text-sm text-muted">{{ t('product.shipping') }}</p>
 
-        <h2 class="mt-8 font-display text-2xl">{{ t('product.details') }}</h2>
+        <h2 class="display-title mt-8 text-2xl">{{ t('product.details') }}</h2>
         <ul class="mt-3 list-disc space-y-1 ps-5 text-muted">
           <li v-for="detail in details" :key="detail">{{ detail }}</li>
         </ul>
@@ -122,7 +122,7 @@ function add() {
     </div>
 
     <div v-if="related.length" class="mt-16">
-      <h2 class="font-display text-4xl">{{ t('product.related') }}</h2>
+      <h2 class="display-title text-4xl">{{ t('product.related') }}</h2>
       <ProductGrid class="mt-6" :items="related" />
     </div>
   </section>

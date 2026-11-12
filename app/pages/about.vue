@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const { t } = useShopI18n()
+const { t, brand } = useShopI18n()
 const studioDeskImage = usePublicAsset('/art/studio-desk.jpg')
 usePageMeta('meta.aboutTitle', 'meta.aboutDescription')
+
+const markXiao = brand.subtitle.at(0) ?? ''
+const markYi = brand.subtitle.at(1) ?? ''
 </script>
 
 <template>
@@ -21,6 +24,20 @@ usePageMeta('meta.aboutTitle', 'meta.aboutDescription')
           <p>{{ t('about.story') }}</p>
           <p>{{ t('about.storyGrief') }}</p>
           <p>{{ t('about.storyArt') }}</p>
+          <i18n-t keypath="about.storyName" tag="p" :name="brand.name">
+            <template #subtitle>
+              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ brand.subtitle }}</span>
+            </template>
+            <template #xiao>
+              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ markXiao }}</span>
+            </template>
+            <template #yi>
+              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">{{ markYi }}</span>
+            </template>
+            <template #dadName>
+              <span class="font-about-mark text-[1.45em] leading-none text-ink" lang="zh-Hans">孙义栋</span>
+            </template>
+          </i18n-t>
         </div>
         <div class="mt-10">
           <NuxtLinkLocale class="btn btn-primary" to="/shop">{{ t('about.shop') }}</NuxtLinkLocale>

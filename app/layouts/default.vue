@@ -1,10 +1,9 @@
 <script setup lang="ts">
 const { t } = useShopI18n()
 const route = useRoute()
-const { menuOpen, locked, cart } = useOverlay()
+const { locked, cart } = useOverlay()
 
 watch(() => route.fullPath, () => {
-  menuOpen.value = false
   cart.isOpen.value = false
 })
 
@@ -22,14 +21,12 @@ onBeforeUnmount(() => {
   <div class="relative flex min-h-dvh flex-col overflow-x-clip">
     <a class="skip-link btn" href="#main">{{ t('nav.skip') }}</a>
     <AppHeader />
-    <div class="flex flex-1 flex-col pb-bottom-nav" :inert="locked ? true : undefined">
+    <div class="flex flex-1 flex-col" :inert="locked ? true : undefined">
       <main id="main" class="flex-1">
         <slot />
       </main>
       <AppFooter />
     </div>
     <CartDrawer />
-    <MobileMenu />
-    <BottomNav />
   </div>
 </template>

@@ -19,7 +19,7 @@ useFocusTrap(isOpen, panel)
         class="drawer-panel absolute top-0 right-0 flex h-dvh w-full max-w-md flex-col bg-paper shadow-2xl"
       >
         <div class="flex items-center justify-between border-b border-line px-5 py-4">
-          <h2 id="cart-title" class="font-display text-3xl">{{ t('cart.title') }}</h2>
+          <h2 id="cart-title" class="display-title text-3xl">{{ t('cart.title') }}</h2>
           <button type="button" class="icon-btn" data-autofocus :aria-label="t('cart.close')" @click="close">
             <AppIcon name="close" />
           </button>

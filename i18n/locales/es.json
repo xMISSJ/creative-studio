@@ -4,7 +4,7 @@
     "homeDescription": "{name} es una tienda de estudio cozy con libros para colorear dibujados a mano en temas clasico, naturaleza, fantasia y temporada.",
     "shopTitle": "Tienda",
     "shopDescription": "Elige libros para colorear, merchandise o arte digital de {name}. Los temas y libros esperan dentro.",
-    "aboutTitle": "Sobre mi",
+    "aboutTitle": "Sobre",
     "aboutDescription": "La historia detras de {name}: colorear, criaturas cute y recuerdos quietos en la pagina.",
     "faqTitle": "FAQ",
     "faqDescription": "Respuestas sobre libros para colorear de {name}, envios, regalos y como contactar al estudio.",
@@ -25,16 +25,12 @@
     "home": "Inicio",
     "shop": "Tienda",
     "faq": "FAQ",
-    "about": "Sobre mi",
+    "about": "Sobre",
     "cart": "Carrito",
     "account": "Cuenta",
     "login": "Iniciar sesion",
     "register": "Crear cuenta",
-    "menu": "Abrir menu",
-    "close": "Cerrar menu",
-    "breadcrumb": "Ruta",
-    "mobile": "Enlaces rapidos",
-    "wishlist": "Lista de deseos"
+    "breadcrumb": "Ruta"
   },
   "theme": {
     "toLight": "Cambiar al tema claro",
@@ -45,11 +41,12 @@
     "label": "Idioma"
   },
   "hero": {
-    "eyebrow": "Un estudio cozy para colorear",
-    "title": "Deja salir a los cuties!",
-    "lead": "Libros para colorear dibujados a mano para noches suaves, lineas firmes y alegria diaria.",
-    "shop": "Disponible ahora",
-    "about": "Sobre mi",
+    "eyebrow": "Un estudio creativo",
+    "title": "Libros para colorear dibujados a mano",
+    "lead": "Libros para colorear suaves, arte digital y merch cute de un estudio independiente pequeno. Pequenos tesoros para las memorias que creas y quieres guardar.",
+    "shop": "Explora la tienda",
+    "art": "Arte digital",
+    "about": "Sobre",
     "point1": "Paginas dibujadas a mano",
     "point2": "Hechos para relajarse",
     "point3": "Pastel a proposito",
@@ -66,12 +63,12 @@
     "shelfAll": "Ver toda la tienda",
     "easelEyebrow": "Fresco del escritorio",
     "noteEyebrow": "Una nota del escritorio",
-    "noteTitle": "Dibujado para el momento en que te sientas",
+    "noteTitle": "Dibujado para sentarte",
     "noteBody": "Dibujo cuando la habitacion se pone lila y el dia por fin deja la bolsa. {name} es esa hora, guardada en un libro para colorear.",
     "noteLink": "Leer mi historia",
     "quote": "Lineas suaves, noches lentas y un poco de confort en cada pagina.",
     "togetherBody": "Lo que empezo con amor por colorear y momentos cozy crece en {name}, un mundo creativo de libros dibujados a mano para relajacion, suave conexion personal y alegria diaria.",
-    "togetherCta": "Sobre mi",
+    "togetherCta": "Sobre",
     "bestsellerTitle": "Mas vendidos",
     "arrivalsTitle": "Novedades",
     "themeTitle": "Tema",
@@ -102,25 +99,7 @@
           "a": "Escribe a {email}. El soporte se abre mas completo junto con el pago."
         }
       ]
-    },
-    "values": [
-      {
-        "title": "Para todo nivel",
-        "body": "Principiantes y expertos pueden disfrutar los libros."
-      },
-      {
-        "title": "Hechos para relajarse",
-        "body": "Trae paz y bienestar diario a tu mente."
-      },
-      {
-        "title": "100% creado por humanos",
-        "body": "Cada diseno lo crean artistas humanos con oficio."
-      },
-      {
-        "title": "Fans felices",
-        "body": "Confiado y querido por fans del coloreado en todo el mundo."
-      }
-    ]
+    }
   },
   "newsletter": {
     "eyebrow": "Notas del estudio",
@@ -236,22 +215,23 @@
     "empty": "Todavia no hay nada que empacar."
   },
   "faq": {
-    "eyebrow": "Respuestas suaves",
-    "title": "Preguntas para noches tranquilas",
-    "lead": "Un rincon calmo para lo que mas preguntan sobre {name}, desde paginas para principiantes hasta cuando abre el pago.",
+    "eyebrow": "FAQ",
+    "title": "Preguntas frecuentes",
+    "lead": "Comprar libros, paginas para principiantes, descargas gratis, compartir tu arte terminado y contactar al estudio: respondido en un solo lugar.",
     "stillEyebrow": "Aun con curiosidad",
-    "stillTitle": "Necesitas una guia mas suave?",
+    "stillTitle": "Sigues buscando una respuesta?",
     "stillBody": "Explora los libros, lee la historia del estudio o escribe a {email}. El soporte crece con el pago.",
     "shopCta": "Ver la tienda",
-    "aboutCta": "Sobre mi"
+    "aboutCta": "Sobre"
   },
   "about": {
-    "eyebrow": "Sobre mi",
-    "title": "Momentos cozy dibujados en pequenas criaturas",
-    "lead": "Soy una artista individual que siempre ha sonado con tener su propia tienda online. Todo lo que hay aqui, del sitio a los productos, esta hecho con amor por mi.",
+    "eyebrow": "Sobre",
+    "title": "Sobre el estudio",
+    "lead": "Soy una artista sola que por fin construi la tienda que siempre quise. Cada pagina, print y pixel aqui lo hago yo.",
     "story": "Mi trabajo principal es el desarrollo creativo. Construyo aplicaciones y sitios web. Ademas de eso siempre estoy haciendo cosas creativas, jugando o haciendo arte. Me encantan los personajes cute.",
     "storyGrief": "En julio de 2026 mi papa fallecio de cancer de higado. El duelo fue tan dificil de sostener y muchas cosas se sintieron fuera de mi control. Por esa epoca vi a gente coloreando en TikTok e Instagram. Decidi probarlo yo, compre un set Ohuhu de 320 piezas y me enamore! Colorear me dio una pequena sensacion de paz. Podia elegir los colores, la vibra, el animo. Por un rato, la pagina se sintio como el mundo que yo podia controlar. Yo decidi el resultado.",
     "storyArt": "De ese sentimiento nacio una idea quieta, pero determinada: y si hiciera mis propios libros para colorear, con mi propio arte? Escondidos entre las paginas hay momentos de recuerdos de mi papa, camuflados en animales y criaturas y escenas que remiten al tiempo que compartimos juntos, sin hacerlo demasiado obvio.",
+    "storyName": "La marca china bajo el nombre en ingles es {subtitle} (Xiǎo Yì). Nacio de {name}: little se vuelve {xiao}, y memo se acerca a {yi}, memoria. Tambien es un pequeno juego de palabras. Mi papa se llamaba {dadName} (Sūn Yìdòng); {yi} no es el mismo caracter que su 义, pero el sonido esta lo bastante cerca para que el nombre guarde un poco de el.",
     "alt": "Un escritorio cozy con marcadores, una vela y un libro para colorear abierto",
     "shop": "Ver los libros"
   },

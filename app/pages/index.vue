@@ -25,6 +25,7 @@ const arrivals = computed(() => {
     <p v-else-if="status === 'pending'" class="container-page py-6 text-muted">{{ t('shop.loading') }}</p>
     <template v-else>
       <ProductShelf
+        soft
         :title="t('home.bestsellerTitle')"
         :items="featured"
         :shop-label="t('home.shopNow')"
@@ -34,16 +35,17 @@ const arrivals = computed(() => {
         :items="arrivals"
         :shop-label="t('home.shopNow')"
       />
-      <section class="container-page py-10 sm:py-12">
-        <h2 class="section-title">{{ t('nav.shop') }}</h2>
-        <ShopTypePicker class="mt-8" />
+      <section class="home-band home-band-soft">
+        <div class="container-page">
+          <h2 class="section-title">{{ t('nav.shop') }}</h2>
+          <ShopTypePicker class="mt-10" />
+        </div>
       </section>
     </template>
 
     <FaqList />
-    <ValueProps />
 
-    <div class="container-page py-10">
+    <div class="container-page py-10 sm:py-12">
       <NewsletterPanel />
     </div>
   </div>

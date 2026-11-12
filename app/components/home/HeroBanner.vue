@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t, brand } = useShopI18n()
+const { shopLink } = useShopBrowse()
+const paperTexture = usePublicAsset('/art/watercolor-paper.jpg')
 
 const entrance = ref<HTMLElement | null>(null)
 const entranceHeight = ref('')
@@ -8,15 +10,8 @@ function measureEntrance() {
   if (!import.meta.client || !entrance.value) return
 
   const main = document.getElementById('main')
-  const bottomNav = document.querySelector<HTMLElement>('.bottom-nav')
   const mainTop = main?.getBoundingClientRect().top ?? 0
-  const bottomNavVisible = Boolean(
-    bottomNav
-    && bottomNav.offsetParent !== null
-    && getComputedStyle(bottomNav).display !== 'none',
-  )
-  const bottomNavHeight = bottomNavVisible ? bottomNav.getBoundingClientRect().height : 0
-  const nextHeight = Math.max(window.innerHeight - mainTop - bottomNavHeight, 320)
+  const nextHeight = Math.max(window.innerHeight - mainTop, 320)
 
   entranceHeight.value = `${nextHeight}px`
 }
@@ -42,6 +37,16 @@ onBeforeUnmount(() => {
   >
     <div class="entrance-stage">
       <EntranceInk />
+      <img
+        class="entrance-paper"
+        :src="paperTexture"
+        alt=""
+        width="1600"
+        height="900"
+        decoding="async"
+        draggable="false"
+        aria-hidden="true"
+      >
       <div class="entrance-veil" aria-hidden="true" />
     </div>
 
@@ -49,16 +54,18 @@ onBeforeUnmount(() => {
       <p class="eyebrow entrance-rise">{{ t('hero.eyebrow') }}</p>
       <h1
         id="entrance-brand"
-        class="entrance-brand entrance-rise delay-1 font-logo"
+        class="entrance-brand entrance-rise delay-1"
         translate="no"
       >
-        {{ brand.name }}
+        <span class="entrance-brand-en font-logo">{{ brand.name }}</span>
       </h1>
-      <p class="entrance-title entrance-rise delay-2">{{ t('hero.title') }}</p>
       <p class="entrance-lead entrance-rise delay-2">{{ t('hero.lead') }}</p>
       <div class="entrance-actions entrance-rise delay-3">
         <NuxtLinkLocale class="btn btn-primary" to="/shop">
           {{ t('hero.shop') }}
+        </NuxtLinkLocale>
+        <NuxtLinkLocale class="btn btn-ghost" :to="shopLink({ type: 'digital-art' })">
+          {{ t('hero.art') }}
         </NuxtLinkLocale>
       </div>
     </div>

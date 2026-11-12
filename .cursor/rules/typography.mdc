@@ -1,0 +1,36 @@
+---
+description: Keep title, brand, and Chinese fonts on separate tokens
+alwaysApply: true
+---
+
+# Title vs brand fonts
+
+Titles and the shop name use different CSS tokens. Changing one must never change the other.
+
+- `--font-display` / `font-display`: display family for titles
+- `.display-title` / `.section-title`: short page and section titles (uppercase + tracking). Use these for labels like Shop, FAQ, Cart, Themes
+- Product names, cart line titles, and nav links stay in normal case with `font-display` only when needed
+- `--font-logo` / `font-logo`: English brand name only (header logo and entrance brand)
+- `--font-mark` / `font-mark`: Chinese subtitle in the header logo only (currently Long Cang)
+- `--font-about-mark` / `font-about-mark`: Chinese marks on the about page only (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
+- `--font-sans`: body copy and UI chrome
+
+When the user asks to change the title font:
+1. Update the display family in `nuxt.config.ts` `fonts.families` and `--font-display` in `app/assets/css/main.css`.
+2. Do not edit `--font-logo`, `font-logo`, or brand markup in `AppLogo.vue` / `HeroBanner.vue`.
+3. Do not edit `--font-mark`, `--font-about-mark`, Long Cang, or Ma Shan Zheng.
+
+When the user asks to change the brand name font:
+1. Update the logo family in `nuxt.config.ts` and `--font-logo` only (English "Little Memo").
+2. Do not edit `--font-display`, title components, `--font-mark`, or `--font-about-mark`.
+
+# Chinese fonts stay locked
+
+`--font-mark` (brand Chinese subtitle) and `--font-about-mark` (about-page Chinese) are independent of title and English brand font changes.
+
+- Never change Long Cang, Ma Shan Zheng, `--font-mark`, `--font-about-mark`, `font-mark`, `font-about-mark`, or the Chinese spans in `AppLogo.vue` / `about.vue` unless the user explicitly asks to change that specific Chinese font.
+- Changing "the font", "titles", "brand", or "display" does not authorize touching either Chinese font.
+- Only change brand Chinese when the user clearly asks for the header/logo Chinese subtitle font.
+- Only change about Chinese when the user clearly asks for the about-page Chinese font.
+
+Never point `--font-display` and `--font-logo` at the same family unless the user explicitly asks for both.

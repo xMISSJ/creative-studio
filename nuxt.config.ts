@@ -64,10 +64,15 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: 'Fraunces',
+        name: 'Dongle',
         provider: 'google',
-        weights: [500, 600, 700],
-        styles: ['normal', 'italic'],
+        weights: [400, 700],
+        subsets: ['latin'],
+      },
+      {
+        name: 'Gaegu',
+        provider: 'google',
+        weights: [400, 700],
         subsets: ['latin'],
       },
       {
@@ -75,6 +80,18 @@ export default defineNuxtConfig({
         provider: 'google',
         weights: [400, 500, 600, 700],
         subsets: ['latin'],
+      },
+      {
+        name: 'Long Cang',
+        provider: 'google',
+        weights: [400],
+        subsets: ['chinese-simplified'],
+      },
+      {
+        name: 'Ma Shan Zheng',
+        provider: 'google',
+        weights: [400],
+        subsets: ['chinese-simplified'],
       },
     ],
   },
@@ -100,6 +117,7 @@ export default defineNuxtConfig({
     public: {
       siteUrl,
       name: siteConfig.name,
+      subtitle: siteConfig.subtitle,
       currency: siteConfig.currency,
       storagePrefix: siteConfig.storagePrefix,
       supportEmail: siteConfig.supportEmail,

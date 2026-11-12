@@ -1,12 +1,15 @@
+import { siteConfig } from '~~/site.config'
+
 export function useBrand() {
   const { public: config } = useRuntimeConfig()
 
   return {
-    name: String(config.name),
-    currency: String(config.currency),
-    storagePrefix: String(config.storagePrefix),
-    supportEmail: String(config.supportEmail),
-    lowStockAt: Number(config.lowStockAt),
+    name: String(config.name ?? siteConfig.name),
+    subtitle: String(config.subtitle ?? siteConfig.subtitle),
+    currency: String(config.currency ?? siteConfig.currency),
+    storagePrefix: String(config.storagePrefix ?? siteConfig.storagePrefix),
+    supportEmail: String(config.supportEmail ?? siteConfig.supportEmail),
+    lowStockAt: Number(config.lowStockAt ?? siteConfig.lowStockAt),
   }
 }
 
@@ -15,7 +18,12 @@ export function useShopI18n() {
   const brand = useBrand()
 
   function t(key: string, params: Record<string, unknown> = {}) {
-    return translate(key, { name: brand.name, email: brand.supportEmail, ...params })
+    return translate(key, {
+      name: brand.name,
+      subtitle: brand.subtitle,
+      email: brand.supportEmail,
+      ...params,
+    })
   }
 
   function text(entry: unknown) {

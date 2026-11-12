@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  name: 'moon' | 'cart' | 'user' | 'sun' | 'monitor' | 'menu' | 'close' | 'search' | 'heart' | 'play' | 'chevron' | 'chevronDown'
+  name: 'moon' | 'cart' | 'user' | 'sun' | 'monitor' | 'close' | 'heart' | 'play' | 'chevron' | 'chevronDown'
   filled?: boolean
 }>(), {
   filled: false,
@@ -29,9 +29,7 @@ const heartFilled = 'M31.024 18.847c-.255-.298 3.357-3.638 3.733-3.954a18.2 18.2
     <path v-else-if="name === 'user'" d="M12 12a3.2 3.2 0 1 0-3.2-3.2A3.2 3.2 0 0 0 12 12zm-6.2 7.2a6.2 6.2 0 0 1 12.4 0" />
     <path v-else-if="name === 'sun'" d="M12 8.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zM12 3v1.6M12 19.4V21M3 12h1.6M19.4 12H21M5.6 5.6l1.1 1.1M17.3 17.3l1.1 1.1M18.4 5.6l-1.1 1.1M6.7 17.3l-1.1 1.1" />
     <path v-else-if="name === 'monitor'" d="M4 5.5h16v10H4zM8 19.5h8M12 15.5v4" />
-    <path v-else-if="name === 'menu'" d="M4 7h16M4 12h16M4 17h16" />
     <path v-else-if="name === 'close'" d="M6 6l12 12M18 6 6 18" />
-    <path v-else-if="name === 'search'" d="M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14zM20 20l-3.5-3.5" />
     <path
       v-else-if="name === 'heart' && filled"
       :d="heartFilled"

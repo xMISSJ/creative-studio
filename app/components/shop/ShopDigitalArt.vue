@@ -33,7 +33,7 @@ const characters = computed(() =>
           class="group rise"
           :class="index === 0 ? 'delay-1' : index === 1 ? 'delay-2' : index === 2 ? 'delay-3' : ''"
         >
-          <div class="gallery-mat lift overflow-hidden">
+          <div class="gallery-mat gallery-mat--flush lift overflow-hidden">
             <img
               :src="avatar.image"
               alt=""
@@ -57,12 +57,12 @@ const characters = computed(() =>
       </p>
       <ul
         v-else
-        class="grid list-none gap-3 sm:gap-4"
+        class="grid list-none grid-cols-1 gap-3 sm:gap-4"
         :class="characters.length === 1
           ? 'max-w-xl'
           : characters.length === 2
-            ? 'grid-cols-2'
-            : 'grid-cols-2 lg:grid-cols-3'"
+            ? 'sm:grid-cols-2'
+            : 'sm:grid-cols-2 lg:grid-cols-3'"
       >
         <li
           v-for="(piece, index) in characters"

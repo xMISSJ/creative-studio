@@ -13,7 +13,7 @@ function submit() {
 
 <template>
   <section class="rounded-[2rem] bg-soft-pink px-6 py-10 text-on-soft sm:px-10" :aria-labelledby="'newsletter-title'">
-    <h2 id="newsletter-title" class="text-center font-display text-3xl font-bold sm:text-4xl">
+    <h2 id="newsletter-title" class="display-title text-center text-3xl sm:text-4xl">
       {{ t('newsletter.title') }}
     </h2>
     <p class="mx-auto mt-3 max-w-xl text-center text-current/75">{{ t('newsletter.body') }}</p>

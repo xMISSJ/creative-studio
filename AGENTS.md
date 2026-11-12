@@ -1,10 +1,10 @@
-# Everlune
+# Little Memo
 
-Nuxt shop for cozy coloring books. Pages, cart, and placeholders are meant to grow: accounts and checkout are not wired up yet. Product covers under `public/art/` may still be temporary stand-ins until Everlune art is ready.
+Nuxt shop for cozy coloring books. Pages, cart, and placeholders are meant to grow: accounts and checkout are not wired up yet. Product covers under `public/art/` may still be temporary stand-ins until Little Memo art is ready.
 
 ## Where things live
 
-- `site.config.ts` — shop name, currency, email, storage prefix
+- `site.config.ts` — shop name, Chinese subtitle, currency, email, storage prefix
 - `i18n/locales` — every shopper-facing sentence, in English and Dutch
 - `server/data/catalog.ts` — prices, stock, images, collections
 - `shared/catalog.ts` — collection list and pastel classes
@@ -13,7 +13,7 @@ Nuxt shop for cozy coloring books. Pages, cart, and placeholders are meant to gr
 
 ## Rules that already apply
 
-- Copy goes through `useShopI18n().t()`, which injects the shop name.
+- Copy goes through `useShopI18n().t()`, which injects the shop name and subtitle.
 - Internal links use `NuxtLinkLocale`, so Dutch stays on `/nl`.
 - `pnpm check:i18n` fails the build when a locale, product, or template string drifts.
 - Keep motion subtle and behind `prefers-reduced-motion`.
