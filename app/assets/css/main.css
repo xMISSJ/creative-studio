@@ -179,6 +179,8 @@ html[data-locale="ja"] .font-display {
 
 html {
   overflow-x: clip;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
 }
 
 body {
@@ -190,6 +192,30 @@ body {
   font-size: 1.0625rem;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+/* Shared thin accent scrollbar (page + overflow panels) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--accent) 80%, var(--ink));
 }
 
 ::selection {
@@ -483,26 +509,6 @@ body {
   box-shadow: 0 18px 40px -28px color-mix(in srgb, var(--ink) 55%, transparent);
   max-height: min(22rem, calc(100dvh - 5.5rem));
   overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) transparent;
-}
-
-.locale-menu::-webkit-scrollbar {
-  width: 0.4rem;
-}
-
-.locale-menu::-webkit-scrollbar-track {
-  background: transparent;
-  margin-block: 0.35rem;
-}
-
-.locale-menu::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: var(--accent);
-}
-
-.locale-menu::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in srgb, var(--accent) 80%, var(--ink));
 }
 
 .locale-option {
@@ -656,6 +662,7 @@ body {
   grid-template-rows: 1fr auto;
   align-items: stretch;
   height: calc(100svh - 8.5rem);
+  max-height: 100svh;
   min-height: 22rem;
   padding: 1.25rem 0 0.85rem;
   overflow: hidden;
@@ -667,9 +674,104 @@ body {
 @media (min-width: 768px) {
   .entrance {
     height: calc(100svh - 8.5rem);
+    max-height: 100svh;
     min-height: 28rem;
     padding: 1.75rem 0 1.15rem;
   }
+}
+
+.entrance.has-ink-cursor,
+.entrance.has-ink-cursor * {
+  cursor: none;
+}
+
+.entrance.has-ink-cursor .btn,
+.entrance.has-ink-cursor .entrance-scroll,
+.entrance.has-ink-cursor a,
+.entrance.has-ink-cursor button {
+  cursor: pointer;
+}
+
+.entrance-cursor-trail {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.entrance-cursor-mote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.95) 0%,
+      rgb(255 255 255 / 0.5) 42%,
+      rgb(255 255 255 / 0) 78%
+    );
+  box-shadow: 0 0 10px 1px rgb(255 255 255 / 0.35);
+  will-change: transform, opacity;
+}
+
+.entrance-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 2.4rem;
+  height: 2.4rem;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.entrance-cursor.is-visible {
+  opacity: 1;
+}
+
+.entrance-cursor-bloom,
+.entrance-cursor-ring,
+.entrance-cursor-bead {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.entrance-cursor-bloom {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.7) 0%,
+      rgb(255 255 255 / 0.28) 38%,
+      rgb(255 255 255 / 0) 72%
+    );
+  filter: blur(1px);
+}
+
+.entrance-cursor-ring {
+  width: 0.7rem;
+  height: 0.7rem;
+  background:
+    radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.95) 0%,
+      rgb(255 255 255 / 0.35) 55%,
+      rgb(255 255 255 / 0) 100%
+    );
+  filter: blur(0.4px);
+}
+
+.entrance-cursor-bead {
+  width: 0.22rem;
+  height: 0.22rem;
+  background: #fff;
+  box-shadow: 0 0 10px 2px rgb(255 255 255 / 0.55);
 }
 
 .entrance-stage {
@@ -857,6 +959,19 @@ body {
   }
 }
 
+@keyframes entrance-cursor-breathe {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.22);
+    opacity: 1;
+  }
+}
+
 @keyframes entrance-scroll-pulse {
   0%,
   100% {
@@ -979,6 +1094,19 @@ body {
 
   .entrance-scroll-mark {
     animation: entrance-scroll-pulse 2.4s ease-in-out infinite;
+  }
+
+  .entrance-cursor {
+    transition: opacity 180ms ease;
+  }
+
+  .entrance-cursor.is-drawing .entrance-cursor-bloom {
+    animation: entrance-cursor-breathe 2.8s ease-in-out infinite;
+  }
+
+  .entrance-cursor.is-drawing .entrance-cursor-ring {
+    animation: entrance-cursor-breathe 2.8s ease-in-out infinite;
+    animation-delay: 140ms;
   }
 
   .digital-art-tab-pill {
