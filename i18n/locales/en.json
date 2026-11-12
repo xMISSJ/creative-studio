@@ -106,9 +106,9 @@
     "title": "Join our email list",
     "body": "Enter your email to get special gifts later. Nothing you type is saved or sent yet.",
     "nameLabel": "Name",
-    "namePlaceholder": "Your name...",
+    "namePlaceholder": "Your name",
     "emailLabel": "Email address",
-    "placeholder": "Your email...",
+    "placeholder": "Your email",
     "submit": "Subscribe",
     "thanks": "Thank you. The list is not open yet, so this address was not saved."
   },

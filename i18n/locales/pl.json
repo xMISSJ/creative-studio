@@ -106,9 +106,9 @@
     "title": "Dołącz do listy mailowej",
     "body": "Podaj e-mail, żeby później dostać szczególne upominki. Nic, co wpiszesz, nie jest jeszcze zapisywane ani wysyłane.",
     "nameLabel": "Imię",
-    "namePlaceholder": "Twoje imię...",
+    "namePlaceholder": "Twoje imię",
     "emailLabel": "Adres e-mail",
-    "placeholder": "Twój e-mail...",
+    "placeholder": "Twój e-mail",
     "submit": "Zapisz się",
     "thanks": "Dziękuję. Lista nie jest jeszcze otwarta, więc ten adres nie został zapisany."
   },

@@ -106,9 +106,9 @@
     "title": "メールリストに参加",
     "body": "メールを残すと、あとで特別なギフトが届きます。入力した内容はまだ保存も送信もされません。",
     "nameLabel": "名前",
-    "namePlaceholder": "お名前...",
+    "namePlaceholder": "お名前",
     "emailLabel": "メールアドレス",
-    "placeholder": "メール...",
+    "placeholder": "メール",
     "submit": "登録する",
     "thanks": "ありがとう。リストはまだ開いていないので、このアドレスは保存されませんでした。"
   },

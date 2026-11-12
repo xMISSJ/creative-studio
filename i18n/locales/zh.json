@@ -106,9 +106,9 @@
     "title": "加入我们的邮件名单",
     "body": "留下邮箱，之后会有特别礼物。你输入的内容现在不会被保存或发送。",
     "nameLabel": "姓名",
-    "namePlaceholder": "你的名字...",
+    "namePlaceholder": "你的名字",
     "emailLabel": "电子邮箱",
-    "placeholder": "你的邮箱...",
+    "placeholder": "你的邮箱",
     "submit": "订阅",
     "thanks": "谢谢。名单尚未开放，所以这个地址没有被保存。"
   },

@@ -106,9 +106,9 @@
     "title": "Zur E-Mail-Liste kommen",
     "body": "Gib deine E-Mail ein, um später besondere Geschenke zu bekommen. Was du tippst, wird noch nicht gespeichert oder gesendet.",
     "nameLabel": "Name",
-    "namePlaceholder": "Dein Name...",
+    "namePlaceholder": "Dein Name",
     "emailLabel": "E-Mail-Adresse",
-    "placeholder": "Deine E-Mail...",
+    "placeholder": "Deine E-Mail",
     "submit": "Abonnieren",
     "thanks": "Danke. Die Liste ist noch nicht offen, deshalb wurde diese Adresse nicht gespeichert."
   },

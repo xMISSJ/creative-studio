@@ -24,7 +24,7 @@ const markYi = brand.subtitle.at(1) ?? ''
           <p>{{ t('about.story') }}</p>
           <p>{{ t('about.storyGrief') }}</p>
           <p>{{ t('about.storyArt') }}</p>
-          <i18n-t keypath="about.storyName" tag="p" :name="brand.name">
+          <i18n-t keypath="about.storyName" tag="p" translate="no" :name="brand.name">
             <template #subtitle>
               <span class="font-about-mark text-[1.15em] leading-none text-ink" lang="zh-Hans">{{ brand.subtitle }}</span>
             </template>

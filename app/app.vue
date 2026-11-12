@@ -18,9 +18,14 @@ useHead(() => ({
     ...i18nHead.value.htmlAttrs,
     lang: htmlLang.value,
     'data-locale': locale.value,
+    // Discourage browser auto-translate; the shop already ships real locales.
+    translate: 'no',
   },
   link: [...(i18nHead.value.link || [])],
-  meta: [...(i18nHead.value.meta || [])],
+  meta: [
+    ...(i18nHead.value.meta || []),
+    { name: 'google', content: 'notranslate' },
+  ],
   titleTemplate: (title) => formatPageTitle(title),
 }))
 </script>
