@@ -4,9 +4,9 @@
   "private": true,
   "packageManager": "pnpm@10.28.2",
   "scripts": {
-    "build": "node scripts/check-i18n.mjs && nuxt build",
+    "build": "node scripts/check-i18n.mjs && nuxt build && node scripts/write-seo.mjs",
     "dev": "nuxt dev",
-    "generate": "node scripts/check-i18n.mjs && nuxt generate",
+    "generate": "node scripts/check-i18n.mjs && nuxt generate && node scripts/write-seo.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "check:i18n": "node scripts/check-i18n.mjs"

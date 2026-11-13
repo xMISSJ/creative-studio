@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageMeta('meta.checkoutTitle', 'meta.checkoutDescription')
+usePageMeta('meta.checkoutTitle', 'meta.checkoutDescription', { robots: 'noindex, nofollow' })
 const { t } = useShopI18n()
 const { count, hydrated } = useCart()
 </script>

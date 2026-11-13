@@ -1,10 +1,10 @@
 export function useFormatPrice() {
   const { locale } = useI18n()
-  const brand = useBrand()
+  const { currency, convertFromBase } = useCurrency()
 
   return (cents: number) =>
     new Intl.NumberFormat(locale.value, {
       style: 'currency',
-      currency: brand.currency,
-    }).format(cents / 100)
+      currency: currency.value,
+    }).format(convertFromBase(cents))
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useShopI18n()
-usePageMeta('meta.accountTitle', 'meta.accountDescription')
+usePageMeta('meta.accountTitle', 'meta.accountDescription', { robots: 'noindex, nofollow' })
 </script>
 
 <template>

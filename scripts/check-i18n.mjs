@@ -5,6 +5,9 @@ const root = process.cwd()
 const localeDir = join(root, 'i18n', 'locales')
 const catalogSource = readFileSync(join(root, 'server', 'data', 'catalog.ts'), 'utf8')
 const sharedCatalogSource = readFileSync(join(root, 'shared', 'catalog.ts'), 'utf8')
+const nuxtConfigSource = readFileSync(join(root, 'nuxt.config.ts'), 'utf8')
+const writeSeoSource = readFileSync(join(root, 'scripts', 'write-seo.mjs'), 'utf8')
+
 
 function flatten(value, prefix = '', out = new Set()) {
   if (Array.isArray(value)) {
@@ -34,6 +37,49 @@ if (localeFiles.length < 2) {
   console.error('Add at least two locale files in i18n/locales.')
   process.exit(1)
 }
+
+const configuredLocaleCodes = [...nuxtConfigSource.matchAll(/\{\s*code:\s*'([^']+)'/g)].map((match) => match[1])
+const configuredLocaleFiles = [...nuxtConfigSource.matchAll(/file:\s*'([^']+\.json)'/g)].map((match) => match[1])
+const localeFileCodes = localeFiles.map((file) => file.replace(/\.json$/, ''))
+
+for (const code of localeFileCodes) {
+  if (!configuredLocaleCodes.includes(code)) {
+    problems.push(`Locale "${code}" needs an entry in nuxt.config.ts i18n.locales so the language switcher can show it`)
+  }
+}
+for (const code of configuredLocaleCodes) {
+  if (!localeFileCodes.includes(code)) {
+    problems.push(`nuxt.config.ts lists locale "${code}" but i18n/locales/${code}.json is missing`)
+  }
+}
+for (const file of configuredLocaleFiles) {
+  if (!localeFiles.includes(file)) {
+    problems.push(`nuxt.config.ts references missing locale file ${file}`)
+  }
+}
+
+function readLocalePrefixes(source, label) {
+  const match = source.match(/const localePrefixes = \[([\s\S]*?)\]/)
+  if (!match) {
+    problems.push(`${label} is missing localePrefixes`)
+    return []
+  }
+  return [...match[1].matchAll(/'([^']*)'/g)].map((item) => item[1])
+}
+
+const nuxtPrefixes = readLocalePrefixes(nuxtConfigSource, 'nuxt.config.ts')
+const seoPrefixes = readLocalePrefixes(writeSeoSource, 'scripts/write-seo.mjs')
+for (const code of configuredLocaleCodes) {
+  if (code === 'en') continue
+  const prefix = `/${code}`
+  if (!nuxtPrefixes.includes(prefix)) {
+    problems.push(`nuxt.config.ts localePrefixes is missing "${prefix}" for locale "${code}"`)
+  }
+  if (!seoPrefixes.includes(prefix)) {
+    problems.push(`scripts/write-seo.mjs localePrefixes is missing "${prefix}" for locale "${code}"`)
+  }
+}
+
 
 function findUnsafeSyntax(value, file, prefix = '') {
   if (Array.isArray(value)) {

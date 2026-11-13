@@ -23,8 +23,9 @@ function isCurrent(match: (path: string) => boolean) {
   <header ref="header" class="sticky top-0 z-40">
     <div class="border-b border-line bg-paper">
       <div class="container-page grid h-[4.75rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 lg:h-[5.25rem]">
-        <div class="flex items-center justify-start gap-1">
+        <div class="flex items-center justify-start gap-2.5">
           <LocaleSwitcher />
+          <CurrencySwitcher />
         </div>
 
         <AppLogo centered />

@@ -12,6 +12,7 @@ User-facing text comes from every file in `i18n/locales/`. All locale files stay
 - Do not use `$t()` and do not pass a variable into `t()`.
 - Product, collection, and badge copy uses the keys already scanned by `pnpm check:i18n`.
 - In message text, write a literal `@` as `{'@'}`. The `@` character is vue-i18n syntax.
+- Avoid ASCII apostrophes (`'`) in message text; vue-i18n treats them as syntax. Rephrase, or use a typographic apostrophe (`’`).
 - The shop name and Chinese subtitle stay in `site.config.ts`. Language names stay on the locale objects in `nuxt.config.ts`, written in that language.
 - Prices, stock, and image paths stay in `server/data/catalog.ts`.
 
@@ -22,5 +23,16 @@ User-facing text comes from every file in `i18n/locales/`. All locale files stay
 <!-- A new product needs products.<slug> in every locale -->
 {{ t(`products.${item.slug}.title`) }}
 ```
+
+# Adding a locale
+
+A new language is not done until it appears in the language switcher. `LocaleSwitcher.vue` lists whatever is in `nuxt.config.ts` `i18n.locales`.
+
+For every new locale code (example `fr`):
+
+1. Add `i18n/locales/<code>.json` with the same keys as `en.json`.
+2. Register it in `nuxt.config.ts` `i18n.locales` with `code`, `language`, `name` (in that language), and `file`. This is what feeds the language switcher.
+3. Add `/<code>` to `localePrefixes` in `nuxt.config.ts` and in `scripts/write-seo.mjs`.
+4. Only add locale font overrides in `main.css` when the user asks for that language’s title/body fonts (see typography rules for zh/ko/ja).
 
 Run `pnpm check:i18n` before handing work over. `pnpm build` runs it too.

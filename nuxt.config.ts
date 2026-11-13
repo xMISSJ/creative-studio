@@ -16,7 +16,7 @@ const siteUrl = process.env.NUXT_PUBLIC_SITE_URL
     ? `https://${process.env.GITHUB_REPOSITORY_OWNER.toLowerCase()}.github.io/${repoName}`
     : 'http://localhost:3000')
 
-const localePrefixes = ['', '/nl', '/es', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
+const localePrefixes = ['', '/nl', '/es', '/fr', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
 const staticPages = ['/', '/shop', '/about', '/faq', '/cart', '/checkout', '/login', '/register', '/account']
 const prerenderRoutes = [
   ...localePrefixes.flatMap((prefix) => [
@@ -42,8 +42,19 @@ export default defineNuxtConfig({
     baseURL,
     head: {
       title: siteConfig.name,
-      meta: [{ name: 'theme-color', content: '#faf9fc' }],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: joinBase(baseURL, 'favicon.svg') }],
+      meta: [
+        { name: 'theme-color', content: '#faf9fc' },
+        {
+          name: 'description',
+          content: `${siteConfig.name} is a cozy studio shop for hand-drawn coloring books.`,
+        },
+        { property: 'og:site_name', content: siteConfig.name },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: joinBase(baseURL, 'favicon.svg') },
+        { rel: 'apple-touch-icon', href: joinBase(baseURL, 'art/butterfly-favicon.png') },
+      ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
@@ -132,6 +143,7 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en', name: 'English', file: 'en.json' },
       { code: 'nl', language: 'nl', name: 'Nederlands', file: 'nl.json' },
       { code: 'es', language: 'es', name: 'Español', file: 'es.json' },
+      { code: 'fr', language: 'fr', name: 'Français', file: 'fr.json' },
       { code: 'zh', language: 'zh-CN', name: '中文', file: 'zh.json' },
       { code: 'ko', language: 'ko', name: '한국어', file: 'ko.json' },
       { code: 'ja', language: 'ja', name: '日本語', file: 'ja.json' },

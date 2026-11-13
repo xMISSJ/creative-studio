@@ -7,6 +7,7 @@ const open = ref(false)
 const root = ref<HTMLElement | null>(null)
 const listId = 'locale-list-header'
 
+/** Options come from `nuxt.config.ts` `i18n.locales`. Register new languages there. */
 const localeList = computed(() =>
   locales.value.map((entry) => {
     if (typeof entry === 'string') {

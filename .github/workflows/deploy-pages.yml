@@ -34,7 +34,12 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate static site
-        run: pnpm generate
+        env:
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          export NUXT_PUBLIC_SITE_URL="https://${OWNER}.github.io/${{ github.event.repository.name }}"
+          pnpm generate
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

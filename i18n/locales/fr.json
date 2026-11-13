@@ -1,0 +1,462 @@
+{
+  "meta": {
+    "homeTitle": "{name}",
+    "homeDescription": "{name} est une boutique de studio douillette pour des livres de coloriage dessinés à la main, sur des thèmes classiques, nature, fantasy et saisonniers.",
+    "shopTitle": "Boutique",
+    "shopDescription": "Choisis des livres de coloriage, du merch ou de l’art numérique chez {name}. Les thèmes et les livres t’attendent à l’intérieur.",
+    "aboutTitle": "À propos",
+    "aboutDescription": "L’histoire derrière {name} : le coloriage, des créatures mignonnes et des souvenirs calmes gardés sur la page.",
+    "faqTitle": "FAQ",
+    "faqDescription": "Réponses sur les livres de coloriage {name}, les délais d’envoi, les freebies et comment joindre le studio.",
+    "cartTitle": "Panier",
+    "cartDescription": "Livres mis de côté chez {name}.",
+    "checkoutTitle": "Paiement",
+    "checkoutDescription": "Le paiement chez {name} se prépare encore.",
+    "loginTitle": "Connexion",
+    "loginDescription": "La connexion au compte {name} ouvrira plus tard.",
+    "registerTitle": "Créer un compte",
+    "registerDescription": "Les comptes chez {name} ouvrent plus tard.",
+    "accountTitle": "Ton compte",
+    "accountDescription": "Un coin calme pour de futures commandes chez {name}."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "primary": "Principale",
+    "home": "Accueil",
+    "shop": "Boutique",
+    "faq": "FAQ",
+    "about": "À propos",
+    "cart": "Panier",
+    "account": "Compte",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "breadcrumb": "Fil d’Ariane"
+  },
+  "theme": {
+    "toLight": "Passer au thème clair",
+    "toDark": "Passer au thème sombre",
+    "toSystem": "Utiliser le thème du système"
+  },
+  "locale": {
+    "label": "Langue"
+  },
+  "currency": {
+    "label": "Devise"
+  },
+  "hero": {
+    "eyebrow": "Un studio créatif",
+    "title": "Livres de coloriage dessinés à la main",
+    "lead": "Livres de coloriage doux, art numérique et merch mignon d’un tout petit studio indépendant. Des souvenirs pour les mémoires que tu crées et veux garder.",
+    "shop": "Parcourir la boutique",
+    "art": "Art numérique",
+    "about": "À propos",
+    "point1": "Pages dessinées à la main",
+    "point2": "Faits pour se détendre",
+    "point3": "Pastel exprès",
+    "badge": "Heure lilas",
+    "scroll": "Entre doucement"
+  },
+  "home": {
+    "collectionsEyebrow": "Par où commencer",
+    "collectionsTitle": "Trouve un endroit doux pour colorier",
+    "collectionsLead": "Livres classiques cozy, scènes de nature, cuties fantasy et titres de saison pour chaque humeur.",
+    "shelfEyebrow": "Sur le bureau",
+    "shelfTitle": "Quelques livres que je garde près de moi",
+    "shelfLead": "Les titres qui ressemblent le plus au studio en ce moment.",
+    "shelfAll": "Voir toute la boutique",
+    "easelEyebrow": "Tout frais du bureau",
+    "noteEyebrow": "Une note du bureau",
+    "noteTitle": "Dessiné pour s’asseoir",
+    "noteBody": "Je dessine quand la pièce devient lilas et que la journée pose enfin son sac. {name}, c’est cette heure, gardée dans un livre de coloriage.",
+    "noteLink": "Lire mon histoire",
+    "quote": "Traits doux, soirées lentes et un peu de confort sur chaque page.",
+    "togetherBody": "Ce qui a commencé par amour du coloriage et des moments cozy grandit en {name}, un monde créatif de livres dessinés à la main pour la détente, une douce reconnexion à soi et la joie du quotidien.",
+    "togetherCta": "À propos",
+    "bestsellerTitle": "Best-seller",
+    "arrivalsTitle": "Nouveautés",
+    "themeTitle": "Thème",
+    "shopNow": "Acheter",
+    "faq": {
+      "title": "FAQ",
+      "lead": "Tu as des questions ? On est là pour aider.",
+      "more": "Ouvrir la FAQ complète",
+      "items": [
+        {
+          "q": "Où puis-je acheter les livres de coloriage {name} ?",
+          "a": "Ici même dans la boutique. Le paiement se prépare encore, donc tu peux regarder et garder des livres dans ton panier pour le moment."
+        },
+        {
+          "q": "Les livres {name} conviennent-ils aux débutants ?",
+          "a": "Oui. Beaucoup de titres utilisent des formes ouvertes et nettes, douces pour les débutants et toujours agréables pour qui colorie déjà depuis longtemps."
+        },
+        {
+          "q": "Comment obtenir des pages de coloriage gratuites ?",
+          "a": "Les pages gratuites arriveront avec la newsletter et de futurs freebies. La liste n’est pas encore ouverte, donc rien n’est enregistré."
+        },
+        {
+          "q": "Comment partager des pages déjà coloriées ?",
+          "a": "Identifie le studio quand les liens sociaux seront prêts. En attendant, continue de colorier et profite du calme."
+        },
+        {
+          "q": "Comment contacter {name} pour de l’aide ?",
+          "a": "Écris à {email}. Le support s’ouvre plus pleinement avec le paiement."
+        }
+      ]
+    }
+  },
+  "newsletter": {
+    "eyebrow": "Notes du studio",
+    "title": "Rejoins notre liste email",
+    "body": "Entre ton email pour recevoir des cadeaux plus tard. Rien de ce que tu tapes n’est encore enregistré ni envoyé.",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Ton nom",
+    "emailLabel": "Adresse email",
+    "placeholder": "Ton email",
+    "submit": "S’inscrire",
+    "thanks": "Merci. La liste n’est pas encore ouverte, donc cette adresse n’a pas été enregistrée."
+  },
+  "shop": {
+    "lead": "Choisis un coin du studio. Les livres de coloriage sont ouverts ; le reste se prépare encore.",
+    "themesTitle": "Thèmes",
+    "allThemes": "Tous les thèmes",
+    "searchLabel": "Chercher dans la boutique",
+    "searchPlaceholder": "Essaie café, jardin, mini, spooky",
+    "sortLabel": "Trier",
+    "sortFeatured": "Ordre du studio",
+    "sortPriceAsc": "Prix, croissant",
+    "sortPriceDesc": "Prix, décroissant",
+    "sortTitle": "Nom",
+    "resultCount": "Affichage de {count}",
+    "empty": "Rien ne correspond encore à cette recherche. Essaie un autre mot, ou parcours tout.",
+    "loadError": "La boutique n’a pas pu s’ouvrir pour le moment.",
+    "retry": "Réessayer",
+    "loading": "Ouverture de la boutique",
+    "emptyType": "Rien dans ce coin pour l’instant. Les livres de coloriage sont déjà ouverts.",
+    "all": "Tout",
+    "back": "Tous les coins de la boutique",
+    "openNow": "Ouvert maintenant",
+    "comingSoon": "Bientôt",
+    "comingSoonLead": "Ce coin se prépare encore.",
+    "comingSoonTitle": "Encore sur la planche à dessin",
+    "comingSoonBody": "Le merch doux prend encore forme. Les livres de coloriage et l’art numérique sont ouverts pendant que ce coin finit de se préparer.",
+    "comingSoonCta": "Parcourir les livres de coloriage",
+    "coloringLead": "Commence par un thème, ou continue de défiler pour chaque livre.",
+    "allBooksTitle": "Tous les livres de coloriage",
+    "allBooksLead": "Pas de thème choisi ? Ce n’est pas grave. Toute l’étagère attend plus bas.",
+    "digitalArt": {
+      "badge": "Coin numérique",
+      "lead": "Parcours des avatars et de l’art de personnages terminés du studio.",
+      "cta": "Parcourir les livres de coloriage",
+      "bannerAlt": "Un Shiba Inu endormi blotti avec une peluche alpaga douce sur un lit à motifs de cœurs.",
+      "categoriesTitle": "Catégories d’art numérique",
+      "avatarsEmpty": "Pas d’avatars ici pour l’instant. D’autres pièces arrivent.",
+      "charactersEmpty": "Rien dans ce groupe pour l’instant. D’autres pièces arrivent."
+    }
+  },
+  "digitalArt": {
+    "categories": {
+      "avatars": {
+        "title": "Avatars",
+        "summary": "Portraits chibi doux et icônes du studio."
+      },
+      "character-art": {
+        "title": "Art de personnages",
+        "summary": "Illustrations de personnages chibi du studio."
+      }
+    }
+  },
+  "productTypes": {
+    "coloring-books": {
+      "title": "Livres de coloriage",
+      "summary": "Livres et pages dessinés à la main pour un coloriage doux."
+    },
+    "merchandise": {
+      "title": "Merchandise",
+      "summary": "Les souvenirs du studio sont presque prêts à s’asseoir à côté des livres."
+    },
+    "digital-art": {
+      "title": "Art numérique",
+      "summary": "Avatars et art de personnages du bureau du studio."
+    }
+  },
+  "product": {
+    "shipping": "L’envoi et le paiement ouvrent ensemble, un peu plus tard. Tu peux quand même mettre des livres de côté dans ton panier.",
+    "add": "Ajouter au panier",
+    "soldOut": "Celui-ci a trouvé une maison",
+    "lowStock": "Plus que {count} au studio",
+    "inStock": "Prêt à emballer",
+    "inCart": "Le dernier de ceux-ci est déjà dans ton panier",
+    "added": "Enregistré dans ton panier.",
+    "limit": "C’est tout pour ce livre pour le moment.",
+    "quantity": "Quantité pour {title}",
+    "increase": "Augmenter la quantité de {title}",
+    "decrease": "Diminuer la quantité de {title}",
+    "related": "Tu pourrais aussi aimer",
+    "details": "À propos de ce livre",
+    "missingTitle": "Ce livre a quitté la boutique",
+    "missingBody": "Il a peut-être été renommé ou rangé. Le reste de la boutique est toujours là."
+  },
+  "cart": {
+    "lead": "Livres que tu as mis de côté sur cet appareil. Ils restent dans ce navigateur jusqu’à ce que le paiement existe.",
+    "empty": "Ton panier est un bureau vide. La boutique est pleine de livres doux dès que tu veux.",
+    "shop": "Retour à la boutique",
+    "subtotal": "Sous-total",
+    "shippingNote": "L’envoi s’ajoute plus tard, quand le paiement ouvrira.",
+    "view": "Voir le panier",
+    "checkout": "Continuer vers le paiement",
+    "close": "Fermer le panier",
+    "open": "Ouvrir le panier, {count} enregistrés",
+    "remove": "Retirer",
+    "missing": "Ce livre n’est plus dans la boutique.",
+    "title": "Ton panier"
+  },
+  "checkout": {
+    "eyebrow": "Presque",
+    "title": "Le paiement se prépare",
+    "body": "Le paiement n’est pas encore ouvert, donc rien ici ne peut être acheté. Ton panier reste sur cet appareil jusque-là.",
+    "back": "Retour au panier",
+    "empty": "Il n’y a encore rien à emballer."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions fréquentes",
+    "lead": "Acheter des livres, pages pour débutants, freebies, partager ton art terminé et joindre le studio : répondu au même endroit.",
+    "stillEyebrow": "Toujours curieux",
+    "stillTitle": "Tu cherches encore une réponse ?",
+    "stillBody": "Parcours les livres, lis l’histoire du studio ou écris à {email}. Le support grandit avec le paiement.",
+    "shopCta": "Parcourir la boutique",
+    "aboutCta": "À propos"
+  },
+  "about": {
+    "eyebrow": "Notre histoire",
+    "title": "À propos du studio",
+    "lead": "Je suis une artiste solo qui a enfin construit la boutique que je voulais toujours. Chaque page, print et pixel ici est fait par moi.",
+    "story": "Mon travail principal est le développement créatif. Je construis des applications et des sites web. À côté de ça, je fais toujours des choses créatives, je joue ou je fais de l’art. J’adore les personnages mignons.",
+    "storyGrief": "En juillet 2026, mon père est décédé d’un cancer du foie. Le deuil était si dur à porter et beaucoup de choses semblaient hors de mes mains. Vers cette époque, j’ai vu des gens colorier sur TikTok et Instagram. J’ai décidé d’essayer moi-même, j’ai acheté un set Ohuhu de 320 pièces et je suis tombée amoureuse ! Colorier m’a donné un petit sentiment de paix. Je pouvais choisir les couleurs, l’ambiance, l’humeur. Pendant un moment, la page semblait être le monde que je pouvais contrôler. Je décidais du résultat.",
+    "storyArt": "De ce sentiment est née une idée calme, mais déterminée : et si je faisais mes propres livres de coloriage, avec mon propre art ? Cachés entre les pages, il y a des moments de souvenirs de mon père, camouflés dans des animaux, des créatures et des scènes qui renvoient au temps que nous avons partagé, sans le rendre trop évident.",
+    "storyHidden": "Pour les autres, ce ne sera qu’une scène ou un dessin mignon. Pour les personnes qui nous connaissaient, mon père et moi, elles reconnaîtront l’autre partie de l’histoire.",
+    "nameTitle": "Pourquoi Little Memo",
+    "nameOrigin": "La marque chinoise sous le nom anglais est {subtitle} (Xiǎo Yì). Elle est née de {name} : little devient {xiao}, et memo devient {yi}, mémoire.",
+    "nameShorten": "{yi} est une façon raccourcie de dire mémoire en chinois. Je l’ai raccourci parce que memo est aussi raccourci en anglais. Le chinois a beaucoup de façons de parler d’une mémoire ou d’un souvenir :",
+    "nameWords": [
+      "Souvenirs ; se remémorer",
+      "Mémoire ; recollection",
+      "Se rappeler ; regarder en arrière vers le passé",
+      "Souvenir ; nostalgie",
+      "Souvenirs chéris ; nostalgie",
+      "Nostalgie ; se souvenir des anciens temps"
+    ],
+    "nameDad": "Dans chacun de ces mots, {yi} est la partie la plus importante. {yi} sonne comme {yiChar}. Mon père était {dadName} (Sūn Yìdòng). Même si {yi} n’est pas le même caractère que son {yiChar}, ça sonne pareil, et cela garde son nom tranquillement caché dans le mot.",
+    "nameMemo": "Memo vient des mots anglais memory et memorandum : un rappel écrit. Je voulais ce mot parce qu’il se sent comme un rappel de mon père. Dans les livres de coloriage que je crée, je glisse un petit rappel de lui dans les scènes et les dessins. Je veux que ce site soit cela aussi : toujours un petit rappel de lui.",
+    "nameClose": "À travers {subtitle} ({name}), je veux partager mon amour de l’art, et toujours garder un petit rappel de mon père.",
+    "dadAlt": "Une photo de moi avec mon père",
+    "dadCaption": "Moi et Papa",
+    "shop": "Voir les livres"
+  },
+  "auth": {
+    "loginEyebrow": "Bienvenue, bientôt",
+    "loginTitle": "Connexion",
+    "loginLead": "Les comptes ne sont pas encore ouverts. Ce formulaire est un espace réservé, et rien de ce que tu tapes n’est envoyé.",
+    "registerEyebrow": "Une clé pour plus tard",
+    "registerTitle": "Créer un compte",
+    "registerLead": "L’inscription attend avec le paiement. Tu peux regarder le formulaire. Rien n’est enregistré.",
+    "name": "Nom",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submitLogin": "Connexion",
+    "submitRegister": "Créer un compte",
+    "switchToRegister": "Besoin d’un compte plus tard ?",
+    "switchToLogin": "Tu comptes déjà revenir ?",
+    "notice": "Ces détails restent uniquement dans le formulaire. Ils ne sont ni stockés ni envoyés nulle part.",
+    "thanks": "Enregistré nulle part, exprès. Les comptes ouvrent un peu plus tard.",
+    "namePlaceholder": "Ton nom",
+    "emailPlaceholder": "toi{'@'}example.com"
+  },
+  "account": {
+    "eyebrow": "Ton coin",
+    "title": "Compte",
+    "lead": "Quand les comptes ouvriront, ici vivront les commandes, les détails et les adresses. Rien n’est encore connecté.",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "sections": {
+      "orders": {
+        "title": "Commandes",
+        "body": "Les colis passés se rassembleront ici après que le paiement existe."
+      },
+      "profile": {
+        "title": "Profil",
+        "body": "Ton nom et ton email seront modifiables une fois les comptes ouverts."
+      },
+      "addresses": {
+        "title": "Adresses",
+        "body": "Les détails d’envoi resteront ici, prêts pour le prochain colis."
+      }
+    }
+  },
+  "footer": {
+    "visit": "Visiter",
+    "studio": "Studio",
+    "account": "Compte",
+    "note": "La boîte du studio s’ouvre avec le paiement. Jusque-là, {email} n’est qu’un espace réservé.",
+    "rights": "© {year} {name}"
+  },
+  "error": {
+    "title": "Ce chemin s’est égaré",
+    "genericTitle": "Quelque chose a trébuché",
+    "body": "Cette page n’est pas dans la boutique. Le reste y est encore.",
+    "genericBody": "La page n’a pas pu s’ouvrir. Tu peux rentrer à l’accueil et essayer une autre porte.",
+    "home": "Retour à l’accueil",
+    "shop": "Parcourir les livres"
+  },
+  "collections": {
+    "classic": {
+      "title": "Classique",
+      "summary": "Scènes du quotidien cozy, cafés et pièces calmes.",
+      "body": "Livres de coloriage dessinés à la main avec des pièces douces, des tâches amicales et des pages faites pour marqueurs ou crayons."
+    },
+    "nature": {
+      "title": "Nature",
+      "summary": "Jardins, animaux et douces balades en plein air.",
+      "body": "Feuilles, chemins, amis ronds et grand air dessinés pour un rythme de coloriage lent."
+    },
+    "fantasy": {
+      "title": "Fantasy",
+      "summary": "Cuties mystiques, ambiances au clair de lune et motifs ludiques.",
+      "body": "Magie douce, créatures farfelues et pages ornementales pour une session rêveuse."
+    },
+    "holiday-seasonal": {
+      "title": "Fêtes et saisons",
+      "summary": "Temps cacao, ambiances festives et titres doux de saison.",
+      "body": "Livres pour les soirées cacao, la mignonnerie spooky et les mois qui demandent une couverture."
+    },
+    "missingTitle": "Ce coin n’est pas dans la boutique",
+    "missingBody": "Essaie une des collections ouvertes, ou parcours toute la boutique."
+  },
+  "badges": {
+    "new": "Nouveau",
+    "limited": "Limité",
+    "bestseller": "Très aimé"
+  },
+  "products": {
+    "lilac-cafe": {
+      "title": "Lilac Cafe",
+      "summary": "Un café doux plein de boissons chaudes et de coins calmes.",
+      "description": "Installe-toi dans des cafés lapin, des sièges de cabane et des coins lecture qui attendent tes couleurs. Un livre complet cozy pour les soirées qui ont besoin d’un atterrissage doux.",
+      "alt": "Couverture temporaire pour Lilac Cafe, un livre de coloriage café cozy",
+      "details": [
+        "Livre de coloriage",
+        "Environ 45 pages dessinées à la main",
+        "Environ 8 × 8 in",
+        "Traits nets et faciles à colorier"
+      ]
+    },
+    "quiet-moments": {
+      "title": "Quiet Moments",
+      "summary": "Douceur du quotidien : journal, amis et pièces gentilles.",
+      "description": "Scènes chaleureuses de hobbies calmes et de petites joies. Traits doux et détails familiers pour qui colorie pour ralentir.",
+      "alt": "Couverture temporaire pour Quiet Moments, un livre de coloriage cozy du quotidien",
+      "details": [
+        "Livre de coloriage",
+        "Environ 40 pages dessinées à la main",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    },
+    "puddle-friends": {
+      "title": "Puddle Friends",
+      "summary": "Du confort capybara sur chaque page.",
+      "description": "Amis ronds, temps doux et scènes qui ressemblent à une grande expiration. Fait pour les gros marqueurs et une humeur très lente.",
+      "alt": "Couverture temporaire pour Puddle Friends, un livre de coloriage d’animaux cozy",
+      "details": [
+        "Livre de coloriage",
+        "Environ 45 pages dessinées à la main",
+        "Environ 8 × 8 in",
+        "Traits nets et faciles à colorier"
+      ]
+    },
+    "hidden-patch": {
+      "title": "Hidden Patch",
+      "summary": "Un jardin de chemins doux, de fleurs et de coins secrets.",
+      "description": "Scènes de nature dessinées pour une balade lente au crayon. Feuilles, portes et petits trésors glissés entre les plantes.",
+      "alt": "Couverture temporaire pour Hidden Patch, un livre de coloriage jardin",
+      "details": [
+        "Livre de coloriage",
+        "Environ 40 pages dessinées à la main",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    },
+    "kitchen-cuties": {
+      "title": "Kitchen Cuties",
+      "summary": "Objets de maison avec des personnalités et des tâches cozy.",
+      "description": "Balais, éponges, pots d’épices et arrosoirs vivant leur vie la plus douce. Contours nets pour une session ludique et facile.",
+      "alt": "Couverture temporaire pour Kitchen Cuties, un livre de coloriage maison bold and easy",
+      "details": [
+        "Livre de coloriage bold and easy",
+        "Environ 46 illustrations",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    },
+    "comfort-days": {
+      "title": "Comfort Days",
+      "summary": "Matins calmes, hobbies et soirées gardées douces.",
+      "description": "Rituels du quotidien dessinés avec des formes claires et des détails cozy. Un livre gentil pour colorier sans se presser.",
+      "alt": "Couverture temporaire pour Comfort Days, un livre de coloriage cozy de la vie quotidienne",
+      "details": [
+        "Livre de coloriage bold and easy",
+        "Environ 46 illustrations",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    },
+    "soft-season": {
+      "title": "Soft Season",
+      "summary": "Temps cacao, couvertures et pièces chaudes d’hiver.",
+      "description": "Animaux câlins, scènes au coin du feu et douceurs de café pour les mois plus froids. Un livre de saison qui se sent comme une couverture.",
+      "alt": "Couverture temporaire pour Soft Season, un livre de coloriage cozy d’hiver",
+      "details": [
+        "Livre de coloriage saisonnier",
+        "Environ 45 pages dessinées à la main",
+        "Environ 8 × 8 in",
+        "Traits nets et faciles à colorier"
+      ]
+    },
+    "moonlit-cuties": {
+      "title": "Moonlit Cuties",
+      "summary": "Un peu spooky, surtout confortable.",
+      "description": "Petites créatures mystiques avec des vibes farfelues et des bords doux. Parfait quand tu veux une nuit ludique sans la peur.",
+      "alt": "Couverture temporaire pour Moonlit Cuties, un livre de coloriage spooky-cute",
+      "details": [
+        "Livre de coloriage saisonnier",
+        "Environ 40 pages dessinées à la main",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    },
+    "pocket-patterns": {
+      "title": "Pocket Patterns",
+      "summary": "Un petit livre de motifs pour de courtes pauses coloriage.",
+      "description": "Motifs confortables en format poche pour bureaux, trains et salles d’attente. Assez petit pour un sac, assez doux pour une pause.",
+      "alt": "Couverture temporaire pour Pocket Patterns, un mini livre de coloriage",
+      "details": [
+        "Mini livre de coloriage",
+        "Environ 45 pages de motifs",
+        "Environ 3 × 3.5 in",
+        "Reliure à plat"
+      ]
+    },
+    "travel-pockets": {
+      "title": "Travel Pockets",
+      "summary": "Voyages mignons, landmarks et pauses snack à colorier.",
+      "description": "Animaux amicaux qui explorent villes, rues et arrêts ensoleillés. Un livre voyageur pour colorier entre deux destinations.",
+      "alt": "Couverture temporaire pour Travel Pockets, un livre de coloriage voyage cuties",
+      "details": [
+        "Livre de coloriage",
+        "Environ 46 illustrations",
+        "Environ 8.5 × 8.5 in",
+        "Pages simples face"
+      ]
+    }
+  }
+}

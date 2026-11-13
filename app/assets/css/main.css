@@ -303,7 +303,7 @@ body {
 
 .soft-rule {
   position: relative;
-  padding-bottom: 0.45em;
+  padding-bottom: 0.12em;
 }
 
 .soft-rule::after {
@@ -327,7 +327,7 @@ body {
 
 .section-title {
   position: relative;
-  color: var(--accent);
+  color: var(--ink);
   font-family: var(--font-display);
   font-size: clamp(2.35rem, 6vw, 3.15rem);
   font-weight: 700;
@@ -335,7 +335,7 @@ body {
   line-height: 1.05;
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 0.55em;
+  padding-bottom: 0.12em;
 }
 
 .section-title::after {

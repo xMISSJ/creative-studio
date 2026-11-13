@@ -7,6 +7,7 @@ export const siteConfig = {
   name: 'Little Memo',
   /** Chinese mark shown with the English name (Ma Shan Zheng). */
   subtitle: '小忆',
+  /** Catalog / checkout base currency. Display can switch via the currency dropdown. */
   currency: 'EUR',
   storagePrefix: 'everlune',
   supportEmail: 'hello@everlune.studio',

@@ -5,7 +5,7 @@ const { t } = useShopI18n()
 <template>
   <section id="home-studio" class="container-page py-10 sm:py-12">
     <div class="home-panel text-center">
-      <h2 class="section-title text-ink">{{ t('home.noteTitle') }}</h2>
+      <h2 class="section-title">{{ t('home.noteTitle') }}</h2>
       <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
         {{ t('home.togetherBody') }}
       </p>

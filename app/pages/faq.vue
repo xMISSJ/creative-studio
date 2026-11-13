@@ -2,6 +2,19 @@
 const { t } = useShopI18n()
 usePageMeta('meta.faqTitle', 'meta.faqDescription')
 const items = useFaqItems()
+
+useJsonLd('faq-schema', () => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.value.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+}))
 </script>
 
 <template>

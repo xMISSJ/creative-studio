@@ -40,6 +40,9 @@
   "locale": {
     "label": "Taal"
   },
+  "currency": {
+    "label": "Valuta"
+  },
   "hero": {
     "eyebrow": "Een creatieve studio",
     "title": "Handgetekende kleurboeken",
@@ -225,7 +228,7 @@
     "aboutCta": "Over"
   },
   "about": {
-    "eyebrow": "Over",
+    "eyebrow": "Het verhaal",
     "title": "Over de studio",
     "lead": "Ik ben een solo-kunstenaar die eindelijk de shop bouwde die ik altijd wilde. Elke pagina, print en pixel hier maak ik zelf.",
     "story": "Mijn hoofdwerk is creatieve ontwikkeling. Ik bouw applicaties en websites. Daarnaast doe ik altijd creatieve dingen, gamen of kunst maken. Ik houd van schattige personages.",
@@ -233,8 +236,8 @@
     "storyArt": "Uit dat gevoel kwam een stil, maar vastberaden idee: wat als ik mijn eigen kleurboeken maak, met mijn eigen kunst? Verborgen tussen de paginas zitten herinneringsmomenten van mijn vader, gecamoufleerd in dieren en wezentjes en scènes die verwijzen naar de tijd die we samen deelden, zonder het te duidelijk te maken.",
     "storyHidden": "Voor anderen is het gewoon een schattig tafereel of een tekening. Voor de mensen die ons en mijn vader kenden, herkennen zij het andere deel van het verhaal.",
     "nameTitle": "Waarom Little Memo",
-    "nameOrigin": "Het Chinese teken onder de Engelse naam is {subtitle} (Xiǎo Yì). Het groeide uit {name}: little wordt {xiao}, en memo leunt naar {yi}, herinnering.",
-    "nameShorten": "{yi} is een verkorte vorm van herinnering in het Chinees. Ik verkortte het omdat memo in het Engels ook verkort is. Chinees heeft veel manieren om over een herinnering of nagedachtenis te spreken:",
+    "nameOrigin": "Het Chinese teken onder de Engelse naam is {subtitle} (Xiǎo Yì). Het groeide uit {name}: little wordt {xiao}, en memo wordt {yi}, herinnering.",
+    "nameShorten": "{yi} is een verkorte manier om herinnering te zeggen in het Chinees. Ik verkortte het omdat memo in het Engels ook verkort is. Chinees heeft veel manieren om over een herinnering of nagedachtenis te spreken:",
     "nameWords": [
       "Herinneringen; terugdenken",
       "Geheugen; herinnering",
@@ -243,8 +246,8 @@
       "Gekoesterde herinneringen; nostalgie",
       "Nostalgie; oude tijden herinneren"
     ],
-    "nameDad": "In elk van deze woorden is {yi} het belangrijkste deel. {yi} klinkt als {yiChar}. Mijn vader heette {dadName} (Sūn Yìdòng). Ook al is {yi} niet hetzelfde teken als zijn {yiChar}, het klinkt hetzelfde, waardoor zijn naam in het woord verstopt blijft.",
-    "nameMemo": "Memo komt van de Engelse woorden memory en memorandum. Een memorandum is een geschreven herinnering. Ik wilde memo gebruiken omdat het een herinnering aan mijn vader is. In de kleurboeken die ik maak, wil ik een kleine herinnering aan hem in de scènes en tekeningen. Ik wil dat deze website ook altijd een kleine herinnering aan hem is.",
+    "nameDad": "In elk van deze woorden is {yi} het belangrijkste deel. {yi} klinkt als {yiChar}. Mijn vader heette {dadName} (Sūn Yìdòng). Ook al is {yi} niet hetzelfde teken als zijn {yiChar}, het klinkt hetzelfde, en zo blijft zijn naam stil verstopt in het woord.",
+    "nameMemo": "Memo komt van de Engelse woorden memory en memorandum: een geschreven herinnering. Ik wilde dat woord omdat het voelt als een herinnering aan mijn vader. In de kleurboeken die ik maak, stop ik een kleine herinnering aan hem in de scènes en tekeningen. Ik wil dat deze website dat ook is: altijd een kleine herinnering aan hem.",
     "nameClose": "Via {subtitle} ({name}) wil ik mijn liefde voor kunst delen, en altijd een kleine herinnering aan mijn vader bewaren.",
     "dadAlt": "Een foto van mij met mijn vader",
     "dadCaption": "Ik en vader",

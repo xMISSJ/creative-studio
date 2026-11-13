@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { formatPageTitle } from '~~/site.config'
-
 const route = useRoute()
+const localePath = useLocalePath()
 const { t, tm, text, locale, brand } = useShopI18n()
 const format = useFormatPrice()
 const cart = useCart()
+const { page, shareImage } = useAbsoluteUrl()
 const { data } = await useCatalog()
 
 const slug = computed(() => String(route.params.slug))
@@ -52,13 +52,70 @@ const feedback = computed(() => {
 })
 
 const pageTitle = computed(() => (item.value ? t(`products.${item.value.slug}.title`) : t('product.missingTitle')))
+const pageDescription = computed(() => (
+  item.value
+    ? t(`products.${item.value.slug}.description`)
+    : t('product.missingBody')
+))
+const productPath = computed(() => localePath(`/shop/${slug.value}`))
+const productUrl = computed(() => page(productPath.value))
 
-useSeoMeta({
-  title: () => formatPageTitle(pageTitle.value),
-  ogTitle: () => formatPageTitle(pageTitle.value),
-  description: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
-  ogDescription: () => (item.value ? t(`products.${item.value.slug}.summary`) : t('product.missingBody')),
+usePageMetaValues(pageTitle, pageDescription, {
   robots: () => (item.value ? undefined : 'noindex'),
+  image: () => item.value?.image,
+})
+
+useJsonLd('product-schema', () => {
+  if (!item.value) return null
+  const title = t(`products.${item.value.slug}.title`)
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: title,
+      description: t(`products.${item.value.slug}.description`),
+      image: [shareImage(item.value.image)],
+      sku: item.value.slug,
+      brand: {
+        '@type': 'Brand',
+        name: brand.name,
+      },
+      offers: {
+        '@type': 'Offer',
+        url: productUrl.value,
+        priceCurrency: brand.currency,
+        price: (item.value.price / 100).toFixed(2),
+        availability: item.value.stock > 0
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
+        itemCondition: 'https://schema.org/NewCondition',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: t('nav.home'),
+          item: page(localePath('/')),
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: t('nav.shop'),
+          item: page(localePath('/shop')),
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: title,
+          item: productUrl.value,
+        },
+      ],
+    },
+  ]
 })
 
 function add() {

@@ -40,6 +40,9 @@
   "locale": {
     "label": "Idioma"
   },
+  "currency": {
+    "label": "Moneda"
+  },
   "hero": {
     "eyebrow": "Un estudio creativo",
     "title": "Libros para colorear dibujados a mano",
@@ -225,7 +228,7 @@
     "aboutCta": "Sobre"
   },
   "about": {
-    "eyebrow": "Sobre",
+    "eyebrow": "La historia",
     "title": "Sobre el estudio",
     "lead": "Soy una artista sola que por fin construi la tienda que siempre quise. Cada pagina, print y pixel aqui lo hago yo.",
     "story": "Mi trabajo principal es el desarrollo creativo. Construyo aplicaciones y sitios web. Ademas de eso siempre estoy haciendo cosas creativas, jugando o haciendo arte. Me encantan los personajes cute.",
@@ -233,8 +236,8 @@
     "storyArt": "De ese sentimiento nacio una idea quieta, pero determinada: y si hiciera mis propios libros para colorear, con mi propio arte? Escondidos entre las paginas hay momentos de recuerdos de mi papa, camuflados en animales y criaturas y escenas que remiten al tiempo que compartimos juntos, sin hacerlo demasiado obvio.",
     "storyHidden": "Para otros sera solo una escena o dibujo adorable. Para las personas que nos conocieron a nosotros y a mi papa, reconoceran la otra parte de la historia.",
     "nameTitle": "Por que Little Memo",
-    "nameOrigin": "La marca china bajo el nombre en ingles es {subtitle} (Xiǎo Yì). Nacio de {name}: little se vuelve {xiao}, y memo se acerca a {yi}, memoria.",
-    "nameShorten": "{yi} es una forma acortada de memoria en chino. La acorte porque memo tambien esta acortado en ingles. El chino tiene muchas formas de hablar de una memoria o un recuerdo:",
+    "nameOrigin": "La marca china bajo el nombre en ingles es {subtitle} (Xiǎo Yì). Nacio de {name}: little se vuelve {xiao}, y memo se vuelve {yi}, memoria.",
+    "nameShorten": "{yi} es una forma acortada de decir memoria en chino. La acorte porque memo tambien esta acortado en ingles. El chino tiene muchas formas de hablar de una memoria o un recuerdo:",
     "nameWords": [
       "Recuerdos; rememorar",
       "Memoria; recuerdo",
@@ -243,8 +246,8 @@
       "Recuerdos queridos; nostalgia",
       "Nostalgia; recordar tiempos viejos"
     ],
-    "nameDad": "En cada una de estas palabras, {yi} es la parte mas importante. {yi} suena como {yiChar}. Mi papa se llamaba {dadName} (Sūn Yìdòng). Aunque {yi} no es el mismo caracter que su {yiChar}, suena igual, y asi su nombre queda escondido en la palabra.",
-    "nameMemo": "Memo viene de las palabras inglesas memory y memorandum. Un memorandum es un recordatorio escrito. Quise usar memo porque es un recordatorio de mi papa. En los libros para colorear que creo, quiero un pequeno recordatorio de el en las escenas y dibujos. Quiero que este sitio tambien sea siempre un pequeno recordatorio de el.",
+    "nameDad": "En cada una de estas palabras, {yi} es la parte mas importante. {yi} suena como {yiChar}. Mi papa se llamaba {dadName} (Sūn Yìdòng). Aunque {yi} no es el mismo caracter que su {yiChar}, suena igual, y asi su nombre queda calladamente escondido en la palabra.",
+    "nameMemo": "Memo viene de las palabras inglesas memory y memorandum: un recordatorio escrito. Quise esa palabra porque se siente como un recordatorio de mi papa. En los libros para colorear que creo, guardo un pequeno recordatorio de el en las escenas y dibujos. Quiero que este sitio sea eso tambien: siempre un pequeno recordatorio de el.",
     "nameClose": "A traves de {subtitle} ({name}), quiero compartir mi amor por el arte, y siempre guardar un pequeno recordatorio de mi papa.",
     "dadAlt": "Una foto mia con mi papa",
     "dadCaption": "Yo y papa",

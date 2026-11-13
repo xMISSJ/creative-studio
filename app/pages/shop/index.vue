@@ -2,7 +2,6 @@
 const route = useRoute()
 const router = useRouter()
 const { t, locale } = useShopI18n()
-usePageMeta('meta.shopTitle', 'meta.shopDescription')
 
 const { data, status, error, refresh } = await useCatalog()
 // Prefetch on the shop page so GH Pages static HTML hydrates with showcase data
@@ -97,6 +96,12 @@ const pageLead = computed(() => {
   return t('shop.coloringLead')
 })
 
+const metaDescription = computed(() => {
+  if (!activeType.value) return t('meta.shopDescription')
+  return pageLead.value
+})
+usePageMetaValues(pageTitle, metaDescription)
+
 function onSort(event: Event) {
   const value = (event.target as HTMLSelectElement).value
   const query = { ...route.query }
@@ -146,7 +151,11 @@ function onSort(event: Event) {
     </template>
 
     <section v-else class="container-page py-12">
-      <PageIntro :eyebrow="t('nav.shop')" :title="pageTitle" :lead="pageLead" />
+      <PageIntro
+        :eyebrow="activeType ? t('nav.shop') : undefined"
+        :title="pageTitle"
+        :lead="pageLead"
+      />
 
       <template v-if="!activeType">
         <ShopTypePicker class="mt-10" />

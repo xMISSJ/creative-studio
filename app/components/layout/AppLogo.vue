@@ -4,7 +4,6 @@ defineProps<{
 }>()
 
 const { brand } = useShopI18n()
-const butterfly = usePublicAsset('/art/butterfly.png')
 
 const nameParts = computed(() => {
   const name = brand.name
@@ -34,15 +33,7 @@ const nameParts = computed(() => {
     >
       <span class="whitespace-nowrap font-logo text-[1.65rem] font-bold tracking-tight text-ink [word-spacing:-0.2em] sm:text-[1.85rem]">
         <template v-if="nameParts.letter">
-          {{ nameParts.before }}<span class="relative inline-block">{{ nameParts.letter }}<img
-            :src="butterfly"
-            alt=""
-            width="173"
-            height="137"
-            class="pointer-events-none absolute bottom-[68%] left-1/2 w-[0.64em] max-w-none -translate-x-[calc(50%-2px)] translate-y-[1px] select-none"
-            decoding="async"
-            aria-hidden="true"
-          ></span>{{ nameParts.after }}
+          {{ nameParts.before }}<span class="relative inline-block">{{ nameParts.letter }}<ButterflyPerch /></span>{{ nameParts.after }}
         </template>
         <template v-else>
           {{ brand.name }}
