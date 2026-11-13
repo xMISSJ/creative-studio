@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * Single perched butterfly for the entrance brand "o".
- * Flap: JEFworks mirrored wing + rotate3d Y hinge, with a real body.
+ * Flap: the near wing folds in farther than the far wing.
  */
 </script>
 

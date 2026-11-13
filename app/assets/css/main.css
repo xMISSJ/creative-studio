@@ -865,17 +865,17 @@ body {
   --bf-tilt: 38deg;
   --bf-flutter: 3.8s;
   position: absolute;
-  bottom: 52%;
-  left: 50%;
+  bottom: 64%;
+  left: 62%;
   z-index: 1;
   display: block;
-  width: 1.05em;
-  height: 1.05em;
+  width: 1.16em;
+  height: 1.16em;
   color: color-mix(in srgb, var(--entrance-button) 86%, var(--entrance-ink) 14%);
   pointer-events: none;
   user-select: none;
-  transform: translate3d(-50%, 0.31em, 0);
-  perspective: 520px;
+  transform: translate3d(calc(-50% + 0.18em), 0.60em, 0);
+  perspective: 280px;
   filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--entrance-ink) 14%, transparent));
 }
 
@@ -885,9 +885,9 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  /* Header mark only tips a little up-right. Pivot on the tail so it stays on the o. */
-  transform-origin: 50% 70%;
-  transform: rotate(12deg);
+  /* Mirrored side view: tipped up-left, tail stays on the o. */
+  transform-origin: 50% 72%;
+  transform: scaleX(-1) rotate(32deg) rotateY(-58deg);
 }
 
 .entrance-butterfly-figure {
@@ -914,11 +914,11 @@ body {
 }
 
 .entrance-butterfly__wing--left {
-  transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 24deg);
+  transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 42deg);
 }
 
 .entrance-butterfly__wing--right {
-  transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 24deg);
+  transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 42deg);
 }
 
 .entrance-butterfly__wing use {
@@ -1115,14 +1115,14 @@ body {
   }
 }
 
-/* JEFworks flap: Y-axis hinge, mirrored right wing. Softened for a perched mark. */
+/* Shallow inward fold. The far wing stops sooner so it does not tuck as far into the body. */
 @keyframes entrance-butterfly-flutter-left {
   0%,
   100% {
     transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 42deg);
   }
   50% {
-    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -48deg);
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 2deg);
   }
 }
 
@@ -1132,7 +1132,7 @@ body {
     transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 42deg);
   }
   50% {
-    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -48deg);
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 36deg);
   }
 }
 

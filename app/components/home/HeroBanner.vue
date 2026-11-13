@@ -17,49 +17,82 @@ const brandParts = computed(() => {
 })
 
 type TrailMote = {
-  id: number
+  el: HTMLSpanElement
   x: number
   y: number
   size: number
   strength: number
-  opacity: number
   born: number
   driftX: number
   driftY: number
   wobble: number
+  alive: boolean
 }
 
 const entrance = ref<HTMLElement | null>(null)
-const cursorX = ref(0)
-const cursorY = ref(0)
-const cursorVisible = ref(false)
-const cursorOnControl = ref(false)
+const cursorEl = ref<HTMLElement | null>(null)
+const trailLayer = ref<HTMLElement | null>(null)
 const finePointer = ref(false)
-const trail = ref<TrailMote[]>([])
 
 let pointerQuery: MediaQueryList | null = null
 let motionQuery: MediaQueryList | null = null
+let originObserver: ResizeObserver | null = null
 let reducedMotion = false
-let moteId = 0
+let originX = 0
+let originY = 0
+let originDirty = true
+let cursorX = 0
+let cursorY = 0
+let drawing = false
+let hasPointer = false
+let lastClientX = 0
+let lastClientY = 0
 let lastSpawnX = 0
 let lastSpawnY = 0
 let lastSpawnAt = 0
 let trailRaf = 0
 let trailRunning = false
+const motes: TrailMote[] = []
 
-const TRAIL_LIFE_MS = 1500
-const TRAIL_MAX = 28
-const TRAIL_MAX_DIST = 95
-const SPAWN_GAP_PX = 6
-const SPAWN_MIN_MS = 18
+const TRAIL_LIFE_MS = 900
+const TRAIL_MAX = 24
+const TRAIL_MAX_DIST = 52
+const SPAWN_GAP_PX = 4
 
 function isEntranceControl(target: EventTarget | null) {
   if (!(target instanceof Element) || !entrance.value) return false
   return Boolean(target.closest('a, button, .btn, input, textarea, select, summary'))
 }
 
+function measureOrigin() {
+  if (!entrance.value) return
+  const rect = entrance.value.getBoundingClientRect()
+  originX = rect.left
+  originY = rect.top
+  originDirty = false
+}
+
+function placeCursor(x: number, y: number, visible: boolean) {
+  const el = cursorEl.value
+  if (!el) return
+  el.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
+  el.classList.toggle('is-visible', visible)
+  el.classList.toggle('is-drawing', visible)
+}
+
+function placeMote(mote: TrailMote, opacity: number) {
+  mote.el.style.opacity = String(opacity)
+  mote.el.style.transform = `translate3d(${mote.x}px, ${mote.y}px, 0) translate(-50%, -50%) scale(${0.65 + opacity * 0.55})`
+}
+
+function hideMote(mote: TrailMote) {
+  mote.alive = false
+  mote.el.style.opacity = '0'
+}
+
 function clearTrail() {
-  trail.value = []
+  for (const mote of motes) hideMote(mote)
+  lastSpawnAt = 0
 }
 
 function stopTrailLoop() {
@@ -71,32 +104,33 @@ function stopTrailLoop() {
 function tickTrail(now: number) {
   if (!trailRunning) return
 
-  const cx = cursorX.value
-  const cy = cursorY.value
-  const next: TrailMote[] = []
+  let alive = 0
+  for (const mote of motes) {
+    if (!mote.alive) continue
 
-  for (const mote of trail.value) {
     const age = (now - mote.born) / TRAIL_LIFE_MS
-    if (age >= 1) continue
+    if (age >= 1) {
+      hideMote(mote)
+      continue
+    }
 
-    const dist = Math.hypot(mote.x - cx, mote.y - cy)
-    if (dist > TRAIL_MAX_DIST) continue
+    const dist = Math.hypot(mote.x - cursorX, mote.y - cursorY)
+    if (dist > TRAIL_MAX_DIST) {
+      hideMote(mote)
+      continue
+    }
 
     const fade = 1 - age
     const reach = 1 - dist / TRAIL_MAX_DIST
-    // Keep fade timing, but taper so the ribbon stays short behind the tip.
-    const opacity = mote.strength * Math.pow(fade, 0.7) * (0.25 + 0.75 * reach)
+    const opacity = mote.strength * Math.pow(fade, 1.15) * Math.pow(reach, 1.4)
     const lift = age * age
-    next.push({
-      ...mote,
-      x: mote.x + mote.driftX + Math.sin((now * 0.003) + mote.wobble) * 0.1,
-      y: mote.y + mote.driftY - lift * 0.06,
-      opacity,
-    })
+    mote.x += mote.driftX + Math.sin((now * 0.003) + mote.wobble) * 0.1
+    mote.y += mote.driftY - lift * 0.06
+    placeMote(mote, opacity)
+    alive += 1
   }
-  trail.value = next
 
-  if (next.length > 0 || (cursorVisible.value && !cursorOnControl.value)) {
+  if (alive > 0 || drawing) {
     trailRaf = requestAnimationFrame(tickTrail)
     return
   }
@@ -110,70 +144,131 @@ function ensureTrailLoop() {
   trailRaf = requestAnimationFrame(tickTrail)
 }
 
+function takeMote() {
+  const idle = motes.find(mote => !mote.alive)
+  if (idle) return idle
+
+  if (motes.length >= TRAIL_MAX) {
+    let oldest = motes[0]!
+    for (const mote of motes) {
+      if (mote.born < oldest.born) oldest = mote
+    }
+    return oldest
+  }
+
+  const el = document.createElement('span')
+  el.className = 'entrance-cursor-mote'
+  el.style.opacity = '0'
+  trailLayer.value?.append(el)
+  const mote: TrailMote = {
+    el,
+    x: 0,
+    y: 0,
+    size: 6,
+    strength: 1,
+    born: 0,
+    driftX: 0,
+    driftY: 0,
+    wobble: 0,
+    alive: false,
+  }
+  motes.push(mote)
+  return mote
+}
+
+function stampMote(x: number, y: number, born: number, scatter: number) {
+  const mote = takeMote()
+  mote.alive = true
+  mote.x = x + (Math.random() - 0.5) * scatter
+  mote.y = y + (Math.random() - 0.5) * scatter
+  mote.born = born
+  mote.size = 4 + Math.random() * 7
+  mote.strength = 0.62 + Math.random() * 0.28
+  mote.driftX = (Math.random() - 0.5) * 0.12
+  mote.driftY = -0.06 - Math.random() * 0.12
+  mote.wobble = Math.random() * Math.PI * 2
+  mote.el.style.width = `${mote.size}px`
+  mote.el.style.height = `${mote.size}px`
+  placeMote(mote, mote.strength)
+}
+
 function spawnTrail(x: number, y: number) {
-  if (reducedMotion || cursorOnControl.value) return
+  if (reducedMotion || !drawing || !trailLayer.value) return
 
   const now = performance.now()
   const dx = x - lastSpawnX
   const dy = y - lastSpawnY
-  const dist = Math.hypot(dx, dy)
+  const dist = lastSpawnAt === 0 ? 0 : Math.hypot(dx, dy)
 
-  if (dist < SPAWN_GAP_PX && now - lastSpawnAt < SPAWN_MIN_MS) return
+  if (lastSpawnAt !== 0 && dist < SPAWN_GAP_PX) return
+
+  const steps = dist > SPAWN_GAP_PX ? Math.min(4, Math.ceil(dist / SPAWN_GAP_PX)) : 1
+  for (let i = 0; i < steps; i++) {
+    const t = steps === 1 ? 1 : (i + 1) / steps
+    const px = lastSpawnAt === 0 ? x : lastSpawnX + dx * t
+    const py = lastSpawnAt === 0 ? y : lastSpawnY + dy * t
+    stampMote(px, py, now, i === steps - 1 ? 0 : 2)
+  }
 
   lastSpawnX = x
   lastSpawnY = y
   lastSpawnAt = now
 
-  const count = dist > 20 ? 2 : 1
-  const next = trail.value.slice(-(TRAIL_MAX - count))
-
-  for (let i = 0; i < count; i++) {
-    next.push({
-      id: ++moteId,
-      x: x + (Math.random() - 0.5) * 10,
-      y: y + (Math.random() - 0.5) * 10,
-      size: 4 + Math.random() * 7,
-      strength: 0.58 + Math.random() * 0.28,
-      opacity: 0.75,
-      born: now - i * 12,
-      driftX: (Math.random() - 0.5) * 0.16,
-      driftY: -0.08 - Math.random() * 0.18,
-      wobble: Math.random() * Math.PI * 2,
-    })
+  for (const mote of motes) {
+    if (!mote.alive) continue
+    if (Math.hypot(mote.x - x, mote.y - y) > TRAIL_MAX_DIST) hideMote(mote)
   }
 
-  trail.value = next
   ensureTrailLoop()
 }
 
 function onPointerMove(event: PointerEvent) {
   if (!finePointer.value || !entrance.value) return
+  if (originDirty) measureOrigin()
 
-  const rect = entrance.value.getBoundingClientRect()
-  const x = event.clientX - rect.left
-  const y = event.clientY - rect.top
-  const onControl = isEntranceControl(event.target)
+  lastClientX = event.clientX
+  lastClientY = event.clientY
+  hasPointer = true
 
-  cursorX.value = x
-  cursorY.value = y
-  cursorVisible.value = true
-  cursorOnControl.value = onControl
+  const x = event.clientX - originX
+  const y = event.clientY - originY
+  drawing = !isEntranceControl(event.target)
+  cursorX = x
+  cursorY = y
+  placeCursor(x, y, drawing)
 
-  if (onControl) return
+  if (!drawing) {
+    lastSpawnAt = 0
+    return
+  }
   spawnTrail(x, y)
 }
 
 function onPointerLeave() {
-  cursorVisible.value = false
-  cursorOnControl.value = false
+  hasPointer = false
+  drawing = false
+  lastSpawnAt = 0
+  placeCursor(cursorX, cursorY, false)
   ensureTrailLoop()
+}
+
+function onViewportChange() {
+  originDirty = true
+  if (!hasPointer || !finePointer.value) return
+  measureOrigin()
+  const x = lastClientX - originX
+  const y = lastClientY - originY
+  cursorX = x
+  cursorY = y
+  placeCursor(x, y, drawing)
 }
 
 function onPointerChange() {
   finePointer.value = pointerQuery?.matches ?? false
   if (!finePointer.value) {
-    cursorVisible.value = false
-    cursorOnControl.value = false
+    drawing = false
+    hasPointer = false
+    placeCursor(cursorX, cursorY, false)
     clearTrail()
     stopTrailLoop()
   }
@@ -194,12 +289,31 @@ onMounted(() => {
   onMotionChange()
   pointerQuery.addEventListener('change', onPointerChange)
   motionQuery.addEventListener('change', onMotionChange)
+
+  const node = entrance.value
+  if (!node) return
+  measureOrigin()
+  // pointermove is once per frame. pointerrawupdate follows every mouse poll
+  // (often 1000Hz in desktop Chrome) and the sparkle paints late.
+  node.addEventListener('pointermove', onPointerMove, { passive: true })
+  node.addEventListener('pointerleave', onPointerLeave)
+  window.addEventListener('scroll', onViewportChange, { passive: true, capture: true })
+  window.addEventListener('resize', onViewportChange)
+  originObserver = new ResizeObserver(onViewportChange)
+  originObserver.observe(node)
 })
 
 onBeforeUnmount(() => {
   pointerQuery?.removeEventListener('change', onPointerChange)
   motionQuery?.removeEventListener('change', onMotionChange)
+  entrance.value?.removeEventListener('pointermove', onPointerMove)
+  entrance.value?.removeEventListener('pointerleave', onPointerLeave)
+  window.removeEventListener('scroll', onViewportChange, true)
+  window.removeEventListener('resize', onViewportChange)
+  originObserver?.disconnect()
   stopTrailLoop()
+  for (const mote of motes) mote.el.remove()
+  motes.length = 0
 })
 </script>
 
@@ -209,8 +323,6 @@ onBeforeUnmount(() => {
     class="entrance"
     :class="{ 'has-ink-cursor': finePointer }"
     aria-labelledby="entrance-brand"
-    @pointermove="onPointerMove"
-    @pointerleave="onPointerLeave"
   >
     <div class="entrance-stage">
       <EntranceInk />
@@ -227,27 +339,12 @@ onBeforeUnmount(() => {
       <div class="entrance-veil" aria-hidden="true" />
     </div>
 
-    <div class="entrance-cursor-trail" aria-hidden="true">
-      <span
-        v-for="mote in trail"
-        :key="mote.id"
-        class="entrance-cursor-mote"
-        :style="{
-          width: `${mote.size}px`,
-          height: `${mote.size}px`,
-          opacity: mote.opacity,
-          transform: `translate3d(${mote.x}px, ${mote.y}px, 0) translate(-50%, -50%) scale(${0.65 + mote.opacity * 0.55})`,
-        }"
-      />
-    </div>
+    <div ref="trailLayer" class="entrance-cursor-trail" aria-hidden="true" />
 
     <div
+      ref="cursorEl"
       class="entrance-cursor"
       aria-hidden="true"
-      :class="{ 'is-visible is-drawing': cursorVisible && !cursorOnControl }"
-      :style="{
-        transform: `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`,
-      }"
     >
       <span class="entrance-cursor-bloom" />
       <span class="entrance-cursor-ring" />

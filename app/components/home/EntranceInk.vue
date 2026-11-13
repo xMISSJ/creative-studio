@@ -8,6 +8,18 @@ const reducedMotion = ref(false)
 
 let gl: WebGLRenderingContext | null = null
 let program: WebGLProgram | null = null
+let uniforms: {
+  res: WebGLUniformLocation | null
+  time: WebGLUniformLocation | null
+  fill: WebGLUniformLocation | null
+  mouse: WebGLUniformLocation | null
+  paper: WebGLUniformLocation | null
+  lilac: WebGLUniformLocation | null
+  soft: WebGLUniformLocation | null
+  glow: WebGLUniformLocation | null
+  blush: WebGLUniformLocation | null
+  ink: WebGLUniformLocation | null
+} | null = null
 let raf = 0
 let start = 0
 let visible = true
@@ -201,12 +213,12 @@ function createProgram(ctx: WebGLRenderingContext) {
 
 function resize() {
   if (!canvas.value || !gl) return
-  // Coarse pointers (phones) stay at 1x: less buffer thrash / scroll flash on Safari.
-  const coarse = window.matchMedia('(pointer: coarse)').matches
-  const dpr = coarse ? 1 : Math.min(window.devicePixelRatio || 1, 1.75)
+  // CSS pixels only. A retina buffer on a full Chrome window misses frames,
+  // and the sparkle (same thread) falls behind the pointer. Safari also
+  // flashes if this buffer is resized mid-scroll, so size stays here.
   const rect = canvas.value.getBoundingClientRect()
-  const width = Math.max(1, Math.floor(rect.width * dpr))
-  const height = Math.max(1, Math.floor(rect.height * dpr))
+  const width = Math.max(1, Math.floor(rect.width))
+  const height = Math.max(1, Math.floor(rect.height))
   // Ignore 1px layout jitter from sticky chrome / subpixel scroll.
   if (
     Math.abs(canvas.value.width - width) < 2
@@ -219,12 +231,40 @@ function resize() {
   gl.viewport(0, 0, width, height)
 }
 
-function setPointer(clientX: number, clientY: number) {
+const bounds = { left: 0, top: 0, width: 1, height: 1, ready: false }
+let boundsDirty = true
+let inkClientX = 0
+let inkClientY = 0
+let inkHasPointer = false
+
+function measureBounds() {
   if (!canvas.value) return
   const rect = canvas.value.getBoundingClientRect()
   if (rect.width <= 0 || rect.height <= 0) return
-  mouse.tx = (clientX - rect.left) / rect.width
-  mouse.ty = 1 - (clientY - rect.top) / rect.height
+  bounds.left = rect.left
+  bounds.top = rect.top
+  bounds.width = rect.width
+  bounds.height = rect.height
+  bounds.ready = true
+  boundsDirty = false
+}
+
+function setPointer(clientX: number, clientY: number) {
+  inkClientX = clientX
+  inkClientY = clientY
+  inkHasPointer = true
+  if (boundsDirty) measureBounds()
+  if (!bounds.ready) return
+  mouse.tx = (clientX - bounds.left) / bounds.width
+  mouse.ty = 1 - (clientY - bounds.top) / bounds.height
+  mouse.x = mouse.tx
+  mouse.y = mouse.ty
+}
+
+function onInkScroll() {
+  boundsDirty = true
+  if (!inkHasPointer) return
+  setPointer(inkClientX, inkClientY)
 }
 
 function onPointerMove(event: PointerEvent) {
@@ -251,8 +291,8 @@ function frame(now: number) {
   if (!start) start = now
   const elapsed = (now - start) / 1000
 
-  mouse.x += (mouse.tx - mouse.x) * 0.075
-  mouse.y += (mouse.ty - mouse.y) * 0.075
+  mouse.x = mouse.tx
+  mouse.y = mouse.ty
 
   if (!reducedMotion.value) {
     fill.value += (fill.target - fill.value) * 0.035
@@ -263,18 +303,19 @@ function frame(now: number) {
 
   // Size only via ResizeObserver / boot. Per-frame resize clears the buffer (Safari scroll flash).
 
+  if (!uniforms) return
   gl.useProgram(program)
-  gl.uniform2f(gl.getUniformLocation(program, 'u_res'), canvas.value.width, canvas.value.height)
-  gl.uniform1f(gl.getUniformLocation(program, 'u_time'), reducedMotion.value ? 0 : elapsed)
-  gl.uniform1f(gl.getUniformLocation(program, 'u_fill'), fill.value)
-  gl.uniform2f(gl.getUniformLocation(program, 'u_mouse'), mouse.x, mouse.y)
+  gl.uniform2f(uniforms.res, canvas.value.width, canvas.value.height)
+  gl.uniform1f(uniforms.time, reducedMotion.value ? 0 : elapsed)
+  gl.uniform1f(uniforms.fill, fill.value)
+  gl.uniform2f(uniforms.mouse, mouse.x, mouse.y)
 
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_paper'), WASH.paper)
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_lilac'), WASH.lilac)
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_soft'), WASH.soft)
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_glow'), WASH.glow)
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_blush'), WASH.blush)
-  gl.uniform3fv(gl.getUniformLocation(program, 'u_ink'), WASH.ink)
+  gl.uniform3fv(uniforms.paper, WASH.paper)
+  gl.uniform3fv(uniforms.lilac, WASH.lilac)
+  gl.uniform3fv(uniforms.soft, WASH.soft)
+  gl.uniform3fv(uniforms.glow, WASH.glow)
+  gl.uniform3fv(uniforms.blush, WASH.blush)
+  gl.uniform3fv(uniforms.ink, WASH.ink)
 
   gl.drawArrays(gl.TRIANGLES, 0, 6)
 }
@@ -301,6 +342,18 @@ function boot() {
   ]), ctx.STATIC_DRAW)
 
   ctx.useProgram(program)
+  uniforms = {
+    res: ctx.getUniformLocation(program, 'u_res'),
+    time: ctx.getUniformLocation(program, 'u_time'),
+    fill: ctx.getUniformLocation(program, 'u_fill'),
+    mouse: ctx.getUniformLocation(program, 'u_mouse'),
+    paper: ctx.getUniformLocation(program, 'u_paper'),
+    lilac: ctx.getUniformLocation(program, 'u_lilac'),
+    soft: ctx.getUniformLocation(program, 'u_soft'),
+    glow: ctx.getUniformLocation(program, 'u_glow'),
+    blush: ctx.getUniformLocation(program, 'u_blush'),
+    ink: ctx.getUniformLocation(program, 'u_ink'),
+  }
   const loc = ctx.getAttribLocation(program, 'a_pos')
   ctx.enableVertexAttribArray(loc)
   ctx.vertexAttribPointer(loc, 2, ctx.FLOAT, false, 0, 0)
@@ -322,9 +375,13 @@ onMounted(() => {
   if (host) {
     host.addEventListener('pointermove', onPointerMove, { passive: true })
     host.addEventListener('touchmove', onTouchMove, { passive: true })
+    window.addEventListener('scroll', onInkScroll, { passive: true, capture: true })
   }
   if (stage) {
-    resizeObserver = new ResizeObserver(() => resize())
+    resizeObserver = new ResizeObserver(() => {
+      boundsDirty = true
+      resize()
+    })
     resizeObserver.observe(stage)
     intersectionObserver = new IntersectionObserver((entries) => {
       visible = entries.some((entry) => entry.isIntersecting)
@@ -341,11 +398,13 @@ onBeforeUnmount(() => {
   motionQuery?.removeEventListener('change', onMotionChange)
   host?.removeEventListener('pointermove', onPointerMove)
   host?.removeEventListener('touchmove', onTouchMove)
+  window.removeEventListener('scroll', onInkScroll, true)
   resizeObserver?.disconnect()
   intersectionObserver?.disconnect()
   if (gl && program) gl.deleteProgram(program)
   gl = null
   program = null
+  uniforms = null
 })
 </script>
 

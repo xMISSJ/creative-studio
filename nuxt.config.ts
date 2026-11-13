@@ -29,7 +29,7 @@ const prerenderRoutes = [
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-11-10',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@nuxtjs/i18n', '@nuxtjs/color-mode', '@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
   components: [
