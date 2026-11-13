@@ -9,8 +9,8 @@ export const siteConfig = {
   subtitle: '小忆',
   /** Catalog / checkout base currency. Display can switch via the currency dropdown. */
   currency: 'EUR',
-  storagePrefix: 'everlune',
-  supportEmail: 'hello@everlune.studio',
+  storagePrefix: 'little-memo',
+  supportEmail: 'hello@littlememo.studio',
   lowStockAt: 5,
 } as const
 

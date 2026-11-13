@@ -761,9 +761,13 @@ body {
 }
 
 .entrance.has-ink-cursor .btn,
+.entrance.has-ink-cursor .btn *,
 .entrance.has-ink-cursor .entrance-scroll,
+.entrance.has-ink-cursor .entrance-scroll *,
 .entrance.has-ink-cursor a,
-.entrance.has-ink-cursor button {
+.entrance.has-ink-cursor a *,
+.entrance.has-ink-cursor button,
+.entrance.has-ink-cursor button * {
   cursor: pointer;
 }
 
