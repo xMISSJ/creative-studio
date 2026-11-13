@@ -12,11 +12,21 @@ function motionAwareBehavior(): ScrollBehavior {
   return prefersReducedMotion() ? 'auto' : 'smooth'
 }
 
+function stickyHeaderOffset() {
+  const header = document.querySelector('header')
+  if (header) {
+    return Math.max(0, Math.round(header.getBoundingClientRect().height))
+  }
+  return Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0
+}
+
 function hashScrollMargin(hash: string) {
   const el = document.getElementById(hash.slice(1))
-  if (!el) return 0
-  return (Number.parseFloat(getComputedStyle(el).scrollMarginTop) || 0)
-    + (Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0)
+  const elementMargin = el
+    ? (Number.parseFloat(getComputedStyle(el).scrollMarginTop) || 0)
+    : 0
+  // Live header height (not scroll-padding alone) so a resized bar cannot leave targets under the nav.
+  return stickyHeaderOffset() + elementMargin
 }
 
 function position(

@@ -4,7 +4,7 @@ const items = useFaqItems()
 </script>
 
 <template>
-  <section id="faq" class="home-band scroll-mt-28" aria-labelledby="faq-title">
+  <section id="faq" class="home-band" aria-labelledby="faq-title">
     <div class="container-page">
       <h2 id="faq-title" class="section-title">{{ t('home.faq.title') }}</h2>
       <p class="mx-auto mt-5 max-w-xl text-center text-muted">{{ t('home.faq.lead') }}</p>

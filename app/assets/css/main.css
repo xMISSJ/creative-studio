@@ -24,6 +24,8 @@
   --warn: #d45b7a;
   --soft-pink: #efeaf7;
   --radius-panel: 0.375rem;
+  /* Fallback until AppHeader measures the sticky bar (mobile + desktop). */
+  --header-offset: 8.5rem;
   color-scheme: light;
 }
 
@@ -73,6 +75,7 @@
   --font-logo: "Gaegu", "Segoe Print", cursive;
   --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-marker: "Caveat", "Segoe Print", cursive;
 }
 
 html[lang="zh-CN"],
@@ -84,6 +87,7 @@ html[data-locale="zh"] {
   /* Brand / about Chinese marks stay on Ma Shan Zheng; never inherit locale body font */
   --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-marker: "Caveat", "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
 }
 
 html[lang="zh-CN"] .display-title,
@@ -114,6 +118,7 @@ html[data-locale="ko"] {
   /* Brand / about Chinese marks stay locked */
   --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-marker: "Caveat", "Single Day", "Nanum Brush Script", "Malgun Gothic", cursive;
 }
 
 html[lang="ko"] body,
@@ -151,6 +156,7 @@ html[data-locale="ja"] {
   /* Brand / about Chinese marks stay locked */
   --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
+  --font-marker: "Caveat", "Shippori Antique B1", "Kosugi Maru", "Yu Gothic", cursive;
 }
 
 html[lang="ja"] .display-title,
@@ -179,6 +185,7 @@ html[data-locale="ja"] .font-display {
 
 html {
   overflow-x: clip;
+  scroll-padding-top: var(--header-offset);
   scrollbar-width: thin;
   scrollbar-color: var(--accent) transparent;
 }
@@ -656,12 +663,14 @@ body {
   --entrance-lilac: #efeaf7;
   --entrance-canvas: #faf9fc;
   --entrance-button: #7d6ba8;
+  --entrance-chrome: var(--header-offset);
   position: relative;
   isolation: isolate;
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: stretch;
-  height: calc(100svh - 8.5rem);
+  /* svh stays fixed while mobile Safari chrome opens/closes; avoid dvh/visualViewport height. */
+  height: calc(100svh - var(--entrance-chrome));
   max-height: 100svh;
   min-height: 22rem;
   padding: 1.25rem 0 0.85rem;
@@ -673,7 +682,7 @@ body {
 
 @media (min-width: 768px) {
   .entrance {
-    height: calc(100svh - 8.5rem);
+    height: calc(100svh - var(--entrance-chrome));
     max-height: 100svh;
     min-height: 28rem;
     padding: 1.75rem 0 1.15rem;
@@ -779,6 +788,9 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: auto;
+  /* Own layer: stops Safari scroll flash from WebGL + blend/filter paper. */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .entrance-ink {
@@ -786,6 +798,7 @@ body {
   width: 100%;
   height: 100%;
   background: var(--entrance-lilac);
+  transform: translateZ(0);
 }
 
 .entrance-paper {
@@ -803,6 +816,17 @@ body {
   opacity: 0.28;
   filter: saturate(0.35) contrast(1.05);
   mix-blend-mode: soft-light;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Soft-light + filter thrash on iOS scroll; keep tooth via opacity only. */
+  .entrance-paper {
+    filter: none;
+    mix-blend-mode: normal;
+    opacity: 0.18;
+  }
 }
 
 .entrance-veil {
@@ -824,6 +848,110 @@ body {
     );
 }
 
+/* Entrance brand butterfly: perched on the "o", JEFworks flap + body. */
+.entrance-brand-o {
+  position: relative;
+  display: inline-block;
+}
+
+.entrance-butterfly-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.entrance-butterfly {
+  --bf-tilt: 38deg;
+  --bf-flutter: 3.8s;
+  position: absolute;
+  bottom: 52%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 1.05em;
+  height: 1.05em;
+  color: color-mix(in srgb, var(--entrance-button) 86%, var(--entrance-ink) 14%);
+  pointer-events: none;
+  user-select: none;
+  transform: translate3d(-50%, 0.31em, 0);
+  perspective: 520px;
+  filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--entrance-ink) 14%, transparent));
+}
+
+.entrance-butterfly-tilt {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* Header mark only tips a little up-right. Pivot on the tail so it stays on the o. */
+  transform-origin: 50% 70%;
+  transform: rotate(12deg);
+}
+
+.entrance-butterfly-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+}
+
+/* Both wings sit on the same box; right wing is mirrored around the body hinge. */
+.entrance-butterfly__wing {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: visible;
+  fill: currentColor;
+  transform-style: preserve-3d;
+  transform-origin: 100% 50%;
+}
+
+.entrance-butterfly__wing--left {
+  transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 24deg);
+}
+
+.entrance-butterfly__wing--right {
+  transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 24deg);
+}
+
+.entrance-butterfly__wing use {
+  fill: currentColor;
+}
+
+.entrance-butterfly__body {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: currentColor;
+  color: currentColor;
+  transform: translate3d(0, 0, 1px);
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.entrance-butterfly__antenna {
+  transform-box: fill-box;
+}
+
+.entrance-butterfly__antenna--left {
+  transform-origin: right bottom;
+}
+
+.entrance-butterfly__antenna--right {
+  transform-origin: left bottom;
+}
+
 .entrance-copy {
   position: relative;
   z-index: 1;
@@ -831,7 +959,8 @@ body {
   justify-self: center;
   width: min(44rem, calc(100% - 2rem));
   max-height: 100%;
-  overflow: hidden;
+  /* Visible so the brand butterfly on the "o" is not clipped. */
+  overflow: visible;
   text-align: center;
   color: var(--entrance-ink);
   pointer-events: none;
@@ -876,6 +1005,7 @@ body {
   margin-top: 0.55rem;
   color: var(--entrance-ink);
   line-height: 0.9;
+  overflow: visible;
 }
 
 .entrance-brand-en {
@@ -883,6 +1013,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.03em;
   word-spacing: -0.2em;
+  overflow: visible;
 }
 
 .entrance-lead {
@@ -981,6 +1112,36 @@ body {
   50% {
     transform: scaleY(0.55);
     opacity: 1;
+  }
+}
+
+/* JEFworks flap: Y-axis hinge, mirrored right wing. Softened for a perched mark. */
+@keyframes entrance-butterfly-flutter-left {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 42deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -48deg);
+  }
+}
+
+@keyframes entrance-butterfly-flutter-right {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 42deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -48deg);
+  }
+}
+
+@keyframes entrance-butterfly-antenna {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(6deg);
   }
 }
 
@@ -1094,6 +1255,22 @@ body {
 
   .entrance-scroll-mark {
     animation: entrance-scroll-pulse 2.4s ease-in-out infinite;
+  }
+
+  .entrance-butterfly__wing--left {
+    animation: entrance-butterfly-flutter-left var(--bf-flutter) ease-in-out infinite;
+  }
+
+  .entrance-butterfly__wing--right {
+    animation: entrance-butterfly-flutter-right var(--bf-flutter) ease-in-out infinite;
+  }
+
+  .entrance-butterfly__antenna--left {
+    animation: entrance-butterfly-antenna 5.2s ease-in-out infinite alternate;
+  }
+
+  .entrance-butterfly__antenna--right {
+    animation: entrance-butterfly-antenna 5.8s ease-in-out -0.8s infinite alternate;
   }
 
   .entrance-cursor {

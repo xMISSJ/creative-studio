@@ -117,6 +117,12 @@ export default defineNuxtConfig({
         weights: [400],
         subsets: ['chinese-simplified'],
       },
+      {
+        name: 'Caveat',
+        provider: 'google',
+        weights: [500, 600],
+        subsets: ['latin', 'cyrillic'],
+      },
     ],
   },
   i18n: {

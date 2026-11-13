@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t, brand } = useShopI18n()
-const logoMark = usePublicAsset('/logo-black-outline.png')
+const logoMark = usePublicAsset('/art/logo-black-outline.png')
 const year = new Date().getFullYear()
 </script>
 

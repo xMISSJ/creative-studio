@@ -14,6 +14,7 @@ Titles and the shop name use different CSS tokens. Changing one must never chang
 - `--font-about-mark` / `font-about-mark`: Chinese marks for brand subtitle 小忆 (header logo) and about-page Chinese spans in non-zh locales (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
 - `--font-mark` / `font-mark`: alias stack for Chinese marks (keep in sync with `--font-about-mark`)
 - `--font-sans`: body copy and UI chrome
+- `--font-marker` / `font-marker`: clean handwritten polaroid captions (Caveat); Latin/Cyrillic, CJK glyphs fall through to the next family
 
 When the user asks to change the title font:
 1. Update the display family in `nuxt.config.ts` `fonts.families` and `--font-display` in `app/assets/css/main.css`.

@@ -3,6 +3,9 @@ const { t } = useShopI18n()
 const { count } = useCart()
 const { openCart } = useOverlay()
 const route = useRoute()
+const header = ref<HTMLElement | null>(null)
+
+useStickyHeaderOffset(header)
 
 const links = computed(() => [
   { to: '/', label: t('nav.home'), match: (path: string) => path === '/' || /^\/[a-z]{2}\/?$/.test(path) },
@@ -17,7 +20,7 @@ function isCurrent(match: (path: string) => boolean) {
 </script>
 
 <template>
-  <header class="sticky top-0 z-40">
+  <header ref="header" class="sticky top-0 z-40">
     <div class="border-b border-line bg-paper">
       <div class="container-page grid h-[4.75rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 lg:h-[5.25rem]">
         <div class="flex items-center justify-start gap-1">

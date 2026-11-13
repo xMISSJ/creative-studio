@@ -201,15 +201,22 @@ function createProgram(ctx: WebGLRenderingContext) {
 
 function resize() {
   if (!canvas.value || !gl) return
-  const dpr = Math.min(window.devicePixelRatio || 1, 1.75)
+  // Coarse pointers (phones) stay at 1x: less buffer thrash / scroll flash on Safari.
+  const coarse = window.matchMedia('(pointer: coarse)').matches
+  const dpr = coarse ? 1 : Math.min(window.devicePixelRatio || 1, 1.75)
   const rect = canvas.value.getBoundingClientRect()
   const width = Math.max(1, Math.floor(rect.width * dpr))
   const height = Math.max(1, Math.floor(rect.height * dpr))
-  if (canvas.value.width !== width || canvas.value.height !== height) {
-    canvas.value.width = width
-    canvas.value.height = height
-    gl.viewport(0, 0, width, height)
+  // Ignore 1px layout jitter from sticky chrome / subpixel scroll.
+  if (
+    Math.abs(canvas.value.width - width) < 2
+    && Math.abs(canvas.value.height - height) < 2
+  ) {
+    return
   }
+  canvas.value.width = width
+  canvas.value.height = height
+  gl.viewport(0, 0, width, height)
 }
 
 function setPointer(clientX: number, clientY: number) {
@@ -254,7 +261,7 @@ function frame(now: number) {
     fill.value = 0.88
   }
 
-  resize()
+  // Size only via ResizeObserver / boot. Per-frame resize clears the buffer (Safari scroll flash).
 
   gl.useProgram(program)
   gl.uniform2f(gl.getUniformLocation(program, 'u_res'), canvas.value.width, canvas.value.height)

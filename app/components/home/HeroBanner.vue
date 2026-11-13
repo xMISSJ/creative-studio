@@ -3,6 +3,19 @@ const { t, brand } = useShopI18n()
 const { shopLink } = useShopBrowse()
 const paperTexture = usePublicAsset('/art/watercolor-paper.jpg')
 
+const brandParts = computed(() => {
+  const name = brand.name
+  const index = name.toLowerCase().indexOf('o')
+  if (index === -1) {
+    return { before: name, letter: '', after: '' }
+  }
+  return {
+    before: name.slice(0, index),
+    letter: name.slice(index, index + 1),
+    after: name.slice(index + 1),
+  }
+})
+
 type TrailMote = {
   id: number
   x: number
@@ -17,7 +30,6 @@ type TrailMote = {
 }
 
 const entrance = ref<HTMLElement | null>(null)
-const entranceHeight = ref('')
 const cursorX = ref(0)
 const cursorY = ref(0)
 const cursorVisible = ref(false)
@@ -34,48 +46,12 @@ let lastSpawnY = 0
 let lastSpawnAt = 0
 let trailRaf = 0
 let trailRunning = false
-let measureRaf = 0
-let headerObserver: ResizeObserver | null = null
 
 const TRAIL_LIFE_MS = 1500
 const TRAIL_MAX = 28
 const TRAIL_MAX_DIST = 95
 const SPAWN_GAP_PX = 6
 const SPAWN_MIN_MS = 18
-
-function viewportHeight() {
-  return Math.round(window.visualViewport?.height ?? window.innerHeight)
-}
-
-function headerChrome() {
-  const header = document.querySelector('header')
-  if (header) return Math.max(0, Math.round(header.getBoundingClientRect().height))
-
-  // Scroll-independent fallback: main's offset from the document top.
-  const main = document.getElementById('main')
-  if (!main) return 0
-  return Math.max(0, Math.round(main.getBoundingClientRect().top + window.scrollY))
-}
-
-function measureEntrance() {
-  if (!import.meta.client || !entrance.value) return
-
-  const viewport = viewportHeight()
-  const chrome = headerChrome()
-  // Fill the first screen under the sticky header; never taller than the viewport.
-  const nextHeight = Math.min(Math.max(viewport - chrome, 320), viewport)
-  const next = `${nextHeight}px`
-
-  if (entranceHeight.value !== next) entranceHeight.value = next
-}
-
-function scheduleMeasure() {
-  if (measureRaf) return
-  measureRaf = requestAnimationFrame(() => {
-    measureRaf = 0
-    measureEntrance()
-  })
-}
 
 function isEntranceControl(target: EventTarget | null) {
   if (!(target instanceof Element) || !entrance.value) return false
@@ -212,22 +188,6 @@ function onMotionChange() {
 }
 
 onMounted(() => {
-  measureEntrance()
-  // Remeasure after layout/fonts settle so a slow first paint cannot lock in a bad height.
-  scheduleMeasure()
-  requestAnimationFrame(() => scheduleMeasure())
-  void document.fonts?.ready?.then(() => scheduleMeasure())
-
-  window.addEventListener('resize', scheduleMeasure)
-  window.visualViewport?.addEventListener('resize', scheduleMeasure)
-  window.addEventListener('orientationchange', scheduleMeasure)
-
-  const header = document.querySelector('header')
-  if (header) {
-    headerObserver = new ResizeObserver(() => scheduleMeasure())
-    headerObserver.observe(header)
-  }
-
   pointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
   motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
   onPointerChange()
@@ -237,13 +197,6 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  cancelAnimationFrame(measureRaf)
-  measureRaf = 0
-  headerObserver?.disconnect()
-  headerObserver = null
-  window.removeEventListener('resize', scheduleMeasure)
-  window.visualViewport?.removeEventListener('resize', scheduleMeasure)
-  window.removeEventListener('orientationchange', scheduleMeasure)
   pointerQuery?.removeEventListener('change', onPointerChange)
   motionQuery?.removeEventListener('change', onMotionChange)
   stopTrailLoop()
@@ -255,7 +208,6 @@ onBeforeUnmount(() => {
     ref="entrance"
     class="entrance"
     :class="{ 'has-ink-cursor': finePointer }"
-    :style="entranceHeight ? { height: entranceHeight } : undefined"
     aria-labelledby="entrance-brand"
     @pointermove="onPointerMove"
     @pointerleave="onPointerLeave"
@@ -309,7 +261,14 @@ onBeforeUnmount(() => {
         class="entrance-brand entrance-rise delay-1"
         translate="no"
       >
-        <span class="entrance-brand-en font-logo">{{ brand.name }}</span>
+        <span class="entrance-brand-en font-logo">
+          <template v-if="brandParts.letter">
+            {{ brandParts.before }}<span class="entrance-brand-o">{{ brandParts.letter }}<EntranceButterflies /></span>{{ brandParts.after }}
+          </template>
+          <template v-else>
+            {{ brand.name }}
+          </template>
+        </span>
       </h1>
       <p class="entrance-lead entrance-rise delay-2">{{ t('hero.lead') }}</p>
       <div class="entrance-actions entrance-rise delay-3">

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t, brand, locale } = useShopI18n()
 const studioDeskImage = usePublicAsset('/art/studio-desk.jpg')
+const dadAndMeImage = usePublicAsset('/about/dad-and-me.JPEG')
 usePageMeta('meta.aboutTitle', 'meta.aboutDescription')
 
 const markXiao = brand.subtitle.at(0) ?? ''
@@ -73,17 +74,18 @@ const memoryWords = computed(() =>
               </template>
             </i18n-t>
             <ul
-              class="space-y-3 rounded-md border border-line bg-paper px-5 py-5 sm:px-6"
-              :class="showWordMeanings ? 'w-full' : 'w-fit max-w-full'"
               translate="no"
+              :class="showWordMeanings
+                ? 'w-full space-y-3 rounded-md border border-line bg-paper px-5 py-5 sm:px-6'
+                : 'flex w-full flex-wrap justify-between gap-x-4 gap-y-4 rounded-md border border-line bg-paper px-5 py-5 sm:flex-nowrap sm:gap-x-3 sm:px-6'"
             >
               <li
                 v-for="word in memoryWords"
                 :key="word.chars"
-                class="grid gap-1 text-base leading-snug sm:items-baseline sm:gap-4"
+                class="text-base leading-snug"
                 :class="showWordMeanings
-                  ? 'sm:grid-cols-[4.5rem_6.5rem_1fr]'
-                  : 'grid-cols-[auto_auto] gap-x-5'"
+                  ? 'grid gap-1 sm:grid-cols-[4.5rem_6.5rem_1fr] sm:items-baseline sm:gap-4'
+                  : 'flex min-w-0 flex-col items-center gap-1 text-center'"
               >
                 <span :class="markClass" lang="zh-Hans">{{ word.chars }}</span>
                 <span class="font-sans text-sm tracking-wide text-ink/70">{{ word.pinyin }}</span>
@@ -101,6 +103,22 @@ const memoryWords = computed(() =>
                 <span :class="markClass" lang="zh-Hans">孙义栋</span>
               </template>
             </i18n-t>
+
+            <figure class="about-memory-photo relative z-20 mx-auto my-2 w-[min(100%,14rem)] rotate-2 sm:float-right sm:mx-0 sm:mb-2 sm:ml-8 sm:mt-0 sm:w-44 sm:rotate-3">
+              <div class="rounded-md border border-line bg-paper p-2.5 pb-3 shadow-[0_18px_40px_-22px_rgba(40,30,50,0.45)]">
+                <img
+                  :src="dadAndMeImage"
+                  :alt="t('about.dadAlt')"
+                  width="800"
+                  height="1000"
+                  class="aspect-[4/5] w-full rounded-sm object-cover"
+                >
+                <figcaption class="mt-2.5 px-1 text-center font-marker text-[1.35rem] font-medium leading-snug text-ink">
+                  {{ t('about.dadCaption') }}
+                </figcaption>
+              </div>
+            </figure>
+
             <p>{{ t('about.nameMemo') }}</p>
             <i18n-t keypath="about.nameClose" tag="p" translate="no">
               <template #subtitle>
@@ -113,7 +131,7 @@ const memoryWords = computed(() =>
           </div>
         </div>
 
-        <div class="mt-10">
+        <div class="mt-10 clear-both">
           <NuxtLinkLocale class="btn btn-primary" to="/shop">{{ t('about.shop') }}</NuxtLinkLocale>
         </div>
       </div>

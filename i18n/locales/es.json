@@ -247,6 +247,8 @@
     "nameMemo": "Memo viene de las palabras inglesas memory y memorandum. Un memorandum es un recordatorio escrito. Quise usar memo porque es un recordatorio de mi papa. En los libros para colorear que creo, quiero un pequeno recordatorio de el en las escenas y dibujos. Quiero que este sitio tambien sea siempre un pequeno recordatorio de el.",
     "nameClose": "A traves de {subtitle} ({name}), quiero compartir mi amor por el arte, y siempre guardar un pequeno recordatorio de mi papa.",
     "alt": "Un escritorio cozy con marcadores, una vela y un libro para colorear abierto",
+    "dadAlt": "Una foto mia con mi papa",
+    "dadCaption": "Yo y papa",
     "shop": "Ver los libros"
   },
   "auth": {
