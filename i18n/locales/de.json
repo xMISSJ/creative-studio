@@ -231,7 +231,21 @@
     "story": "Meine Hauptarbeit ist kreative Entwicklung. Ich baue Anwendungen und Websites. Daneben mache ich immer Kreatives, spiele oder zeichne. Ich liebe niedliche Charaktere.",
     "storyGrief": "Im Juli 2026 ist mein Papa an Leberkrebs verstorben. Die Trauer war so schwer zu halten, und vieles fühlte sich außerhalb meiner Hände an. Irgendwann um diese Zeit sah ich Menschen auf TikTok und Instagram ausmalen. Ich wollte es selbst versuchen, kaufte ein Ohuhu-Set mit 320 Teilen und verliebte mich. Ausmalen gab mir ein kleines Gefühl von Frieden. Ich konnte die Farben, die Stimmung und den Mood wählen. Eine Weile fühlte sich die Seite wie die Welt an, die ich steuern konnte. Ich entschied das Ergebnis.",
     "storyArt": "Aus diesem Gefühl kam eine stille, aber entschlossene Idee: was wäre, wenn ich eigene Malbücher mit eigener Kunst mache? Zwischen den Seiten verstecken sich Erinnerungsmomente an meinen Papa, getarnt in Tieren, Wesen und Szenen, die auf die Zeit verweisen, die wir zusammen hatten, ohne es zu offensichtlich zu machen.",
-    "storyName": "Das chinesische Zeichen unter dem englischen Namen ist {subtitle} (Xiǎo Yì). Es wuchs aus {name}: little wird zu {xiao}, und memo neigt sich zu {yi}, Erinnerung. Es ist auch ein kleines Wortspiel. Mein Papa hieß {dadName} (Sūn Yìdòng); {yi} ist nicht dasselbe Zeichen wie sein 义, aber der Klang liegt nah genug, dass der Name ein wenig von ihm behält.",
+    "storyHidden": "Für andere ist es einfach eine niedliche Szene oder Zeichnung. Für die Menschen, die uns und meinen Papa kannten, erkennen sie den anderen Teil der Geschichte.",
+    "nameTitle": "Warum Little Memo",
+    "nameOrigin": "Das chinesische Zeichen unter dem englischen Namen ist {subtitle} (Xiǎo Yì). Es wuchs aus {name}: little wird zu {xiao}, und memo neigt sich zu {yi}, Erinnerung.",
+    "nameShorten": "{yi} ist eine verkürzte Form von Erinnerung im Chinesischen. Ich habe es verkürzt, weil memo im Englischen auch verkürzt ist. Chinesisch hat viele Wege, von einer Erinnerung oder einem Gedenken zu sprechen:",
+    "nameWords": [
+      "Erinnerungen; nachdenken",
+      "Gedächtnis; Erinnerung",
+      "Sich erinnern; auf die Vergangenheit zurückblicken",
+      "Gedenken; Sehnsucht",
+      "Gehegte Erinnerungen; Nostalgie",
+      "Nostalgie; alte Zeiten erinnern"
+    ],
+    "nameDad": "In jedem dieser Wörter ist {yi} der wichtigste Teil. {yi} klingt wie {yiChar}. Mein Papa hieß {dadName} (Sūn Yìdòng). Auch wenn {yi} nicht dasselbe Zeichen ist wie sein {yiChar}, klingt es gleich, und so bleibt sein Name im Wort verborgen.",
+    "nameMemo": "Memo kommt von den englischen Wörtern memory und memorandum. Ein Memorandum ist eine geschriebene Erinnerung. Ich wollte memo verwenden, weil es eine Erinnerung an meinen Papa ist. In den Malbüchern, die ich mache, möchte ich eine kleine Erinnerung an ihn in den Szenen und Zeichnungen. Ich möchte, dass diese Website immer auch eine kleine Erinnerung an ihn ist.",
+    "nameClose": "Mit {subtitle} ({name}) möchte ich meine Liebe zur Kunst teilen und immer eine kleine Erinnerung an meinen Papa bewahren.",
     "alt": "Ein gemütlicher Schreibtisch mit Markern, einer Kerze und einem offenen Malbuch",
     "shop": "Die Bücher ansehen"
   },

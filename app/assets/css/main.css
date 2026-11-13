@@ -80,7 +80,7 @@ html[lang="zh"],
 html[lang="zh-Hans"],
 html[data-locale="zh"] {
   --font-display: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
-  --font-sans: "ZCOOL KuaiLe", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-sans: "ZCOOL KuaiLe", "Nunito Sans", "Microsoft YaHei", "PingFang SC", sans-serif;
   /* Brand / about Chinese marks stay on Ma Shan Zheng; never inherit locale body font */
   --font-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;
   --font-about-mark: "Ma Shan Zheng", "KaiTi", "STKaiti", cursive;

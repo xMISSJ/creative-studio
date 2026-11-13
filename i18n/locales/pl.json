@@ -231,7 +231,21 @@
     "story": "Głównie zajmuję się rozwojem kreatywnym. Buduję aplikacje i strony internetowe. Obok tego zawsze robię coś twórczego, gram albo tworzę sztukę. Kocham urocze postacie.",
     "storyGrief": "W lipcu 2026 mój tata odszedł przez raka wątroby. Żałobę było tak trudno udźwignąć, a wiele spraw wymykało mi się z rąk. Gdzieś w tym czasie zauważyłam ludzi kolorujących na TikToku i Instagramie. Postanowiłam spróbować sama, kupiłam zestaw Ohuhu z 320 elementami i zakochałam się. Kolorowanie dało mi małe poczucie spokoju. Mogłam wybierać kolory, klimat, nastrój. Przez chwilę strona była światem, który mogłam kontrolować. To ja decydowałam o wyniku.",
     "storyArt": "Z tego uczucia wyszedł cichy, ale zdecydowany pomysł: a gdybym zrobiła własne kolorowanki, z własną sztuką? Między stronami kryją się chwile wspomnień o tacie, zakamuflowane w zwierzętach, stworach i scenach, które odnoszą się do czasu spędzonego razem, bez zbytniej oczywistości.",
-    "storyName": "Chiński znak pod angielską nazwą to {subtitle} (Xiǎo Yì). Wyrósł z {name}: little staje się {xiao}, a memo przechyla się ku {yi}, pamięć. To także mała gra słów. Mój tata nazywał się {dadName} (Sūn Yìdòng); {yi} nie jest tym samym znakiem co jego 义, ale dźwięk jest na tyle bliski, że nazwa zatrzymuje w sobie odrobinę jego.",
+    "storyHidden": "Dla innych to po prostu urocza scena lub rysunek. Dla ludzi, którzy znali nas i mojego tatę, rozpoznają oni drugą część historii.",
+    "nameTitle": "Dlaczego Little Memo",
+    "nameOrigin": "Chiński znak pod angielską nazwą to {subtitle} (Xiǎo Yì). Wyrósł z {name}: little staje się {xiao}, a memo przechyla się ku {yi}, pamięć.",
+    "nameShorten": "{yi} to skrócona forma pamięci w chińskim. Skróciłam ją, bo memo w angielskim też jest skrótem. Chiński ma wiele sposobów, by mówić o pamięci lub wspomnieniu:",
+    "nameWords": [
+      "Wspomnienia; wspominać",
+      "Pamięć; przypomnienie",
+      "Przywoływać; spoglądać wstecz",
+      "Pamięć; tęsknota",
+      "Drogie wspomnienia; nostalgia",
+      "Nostalgia; wspominanie dawnych czasów"
+    ],
+    "nameDad": "W każdym z tych słów {yi} jest najważniejszą częścią. {yi} brzmi jak {yiChar}. Mój tata nazywał się {dadName} (Sūn Yìdòng). Choć {yi} nie jest tym samym znakiem co jego {yiChar}, brzmi tak samo, więc jego imię zostaje ukryte w tym słowie.",
+    "nameMemo": "Memo pochodzi od angielskich słów memory i memorandum. Memorandum to pisemne przypomnienie. Chciałam użyć memo, bo to przypomnienie o tacie. W kolorowankach, które tworzę, chcę małe przypomnienie o nim w scenach i rysunkach. Chcę, żeby ta strona też zawsze była małym przypomnieniem o nim.",
+    "nameClose": "Przez {subtitle} ({name}) chcę dzielić miłość do sztuki i zawsze zachować małe przypomnienie o moim tacie.",
     "alt": "Przytulne biurko z markerami, świecą i otwartą kolorowanką",
     "shop": "Zobacz książki"
   },

@@ -11,7 +11,7 @@ Titles and the shop name use different CSS tokens. Changing one must never chang
 - `.display-title` / `.section-title`: short page and section titles (uppercase + tracking). Use these for labels like Shop, FAQ, Cart, Themes
 - Product names, cart line titles, and nav links stay in normal case with `font-display` only when needed
 - `--font-logo` / `font-logo`: English brand name only (header logo and entrance brand)
-- `--font-about-mark` / `font-about-mark`: Chinese marks for brand subtitle 小忆 (header logo) and about-page Chinese (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
+- `--font-about-mark` / `font-about-mark`: Chinese marks for brand subtitle 小忆 (header logo) and about-page Chinese spans in non-zh locales (小忆, 孙义栋, and related characters; currently Ma Shan Zheng)
 - `--font-mark` / `font-mark`: alias stack for Chinese marks (keep in sync with `--font-about-mark`)
 - `--font-sans`: body copy and UI chrome
 
@@ -41,7 +41,17 @@ Japanese (`html[data-locale="ja"]` and related):
 
 For all CJK locales:
 - English brand name stays `--font-logo` (Gaegu). Do not point logo at locale title fonts.
-- Brand subtitle 小忆 uses `--font-about-mark` (same token as about-page Chinese). Locale title/body overrides must never change `--font-mark` or `--font-about-mark`.
+- Brand subtitle 小忆 in the header/logo uses `--font-about-mark`. Locale title/body overrides must never change `--font-mark` or `--font-about-mark`.
+
+# Inline brand names in body copy
+
+In running body copy (for example the about page), do not switch fonts for brand references:
+
+- English **Little Memo**: keep `--font-sans`. Emphasize with `font-bold` and ink only. Never use `font-logo` inline in paragraphs.
+- Chinese characters in zh locale (小忆, 忆, 义, 孙义栋, memory-word list items, and similar): keep the Chinese body font (`--font-sans` / ZCOOL KuaiLe). Emphasize with `font-bold` and ink only. Do not use `font-about-mark` / Ma Shan Zheng for those spans.
+- Other locales still use `font-about-mark` for about-page Chinese spans so non-Chinese readers see the mark style.
+
+Header/logo treatment stays separate: `AppLogo.vue` English name uses `font-logo`, and the brand subtitle 小忆 stays on `font-about-mark` in every locale, including zh.
 
 These locale overrides live in `app/assets/css/main.css`. Changing the default (non-CJK) title or body font must not remove locale overrides unless the user asks.
 

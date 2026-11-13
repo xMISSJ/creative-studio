@@ -231,7 +231,21 @@
     "story": "My main work is creative development. I build applications and websites. Aside from that I am always doing creative stuff, gaming or making art. I love cute characters.",
     "storyGrief": "In July 2026, my dad passed away from liver cancer. The grief was so hard to hold and many things felt out of my hands. Somewhere around that time, I noticed people coloring on TikTok and Instagram. I decided to try it myself, bought a 320-piece Ohuhu set and I fell in love! Coloring gave me a small feeling of peace. I could choose the colors, the vibe, the mood. For a while, the page felt like the world I could control. I decided the outcome.",
     "storyArt": "Out of that feeling came a quiet, but determined idea: what if I made my own coloring books, with my own art? Hiding between the pages are moments of memories of my dad, camouflaged in animals and creatures and scenes that refer to the time we shared together, without making it too obvious.",
-    "storyName": "The Chinese mark under the English name is {subtitle} (Xiǎo Yì). It grew out of {name}: little becomes {xiao}, and memo leans into {yi}, memory. It is also a small wordplay. My dad was {dadName} (Sūn Yìdòng); {yi} is not the same character as his 义, but the sound sits close enough that the name keeps a little of him in it.",
+    "storyHidden": "For others it will just be a cute scene or drawing. For the people who knew us and my dad, they will recognize the other part of the story.",
+    "nameTitle": "Why Little Memo",
+    "nameOrigin": "The Chinese mark under the English name is {subtitle} (Xiǎo Yì). It grew out of {name}: little becomes {xiao}, and memo leans into {yi}, memory.",
+    "nameShorten": "{yi} is a shortened form of memory in Chinese. I shortened it because memo is shortened in English too. Chinese has many ways to speak of a memory or remembrance:",
+    "nameWords": [
+      "Memories; to reminisce",
+      "Memory; recollection",
+      "To recall; look back on the past",
+      "Remembrance; longing",
+      "Cherished memories; nostalgia",
+      "Nostalgia; remembering old times"
+    ],
+    "nameDad": "In each of these words, {yi} is the most important part. {yi} sounds like {yiChar}. My dad was {dadName} (Sūn Yìdòng). Even though {yi} is not the same character as his {yiChar}, it sounds the same, which keeps his name hidden in the word.",
+    "nameMemo": "Memo comes from the English words memory and memorandum. A memorandum is a written reminder. I wanted to use memo because it is a reminder of my dad. In the coloring books I create, I want a little reminder of him in the scenes and drawings. I want this website to always be a little reminder of him too.",
+    "nameClose": "Through {subtitle} ({name}), I want to share my love for art, and always keep a little reminder of my dad.",
     "alt": "A cozy desk with markers, a candle, and an open coloring book",
     "shop": "See the books"
   },
