@@ -52,12 +52,15 @@ let lastSpawnY = 0
 let lastSpawnAt = 0
 let trailRaf = 0
 let trailRunning = false
+let trailDirty = false
+let cursorVisible = false
+let supportsRawUpdate = false
 const motes: TrailMote[] = []
 
-const TRAIL_LIFE_MS = 900
-const TRAIL_MAX = 24
-const TRAIL_MAX_DIST = 52
-const SPAWN_GAP_PX = 4
+const TRAIL_LIFE_MS = 1400
+const TRAIL_MAX = 40
+const TRAIL_MAX_DIST = 130
+const SPAWN_GAP_PX = 5
 
 function isEntranceControl(target: EventTarget | null) {
   if (!(target instanceof Element) || !entrance.value) return false
@@ -75,7 +78,10 @@ function measureOrigin() {
 function placeCursor(x: number, y: number, visible: boolean) {
   const el = cursorEl.value
   if (!el) return
+  // Transform only: keep this path cheap so pointerrawupdate can track the OS tip.
   el.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
+  if (visible === cursorVisible) return
+  cursorVisible = visible
   el.classList.toggle('is-visible', visible)
   el.classList.toggle('is-drawing', visible)
 }
@@ -103,6 +109,12 @@ function stopTrailLoop() {
 
 function tickTrail(now: number) {
   if (!trailRunning) return
+
+  // Trail work stays on the frame loop so high-rate pointer updates only move the bead.
+  if (drawing && trailDirty) {
+    spawnTrail(cursorX, cursorY)
+    trailDirty = false
+  }
 
   let alive = 0
   for (const mote of motes) {
@@ -182,10 +194,10 @@ function stampMote(x: number, y: number, born: number, scatter: number) {
   mote.x = x + (Math.random() - 0.5) * scatter
   mote.y = y + (Math.random() - 0.5) * scatter
   mote.born = born
-  mote.size = 4 + Math.random() * 7
+  mote.size = 7 + Math.random() * 10
   mote.strength = 0.62 + Math.random() * 0.28
-  mote.driftX = (Math.random() - 0.5) * 0.12
-  mote.driftY = -0.06 - Math.random() * 0.12
+  mote.driftX = (Math.random() - 0.5) * 0.14
+  mote.driftY = -0.06 - Math.random() * 0.14
   mote.wobble = Math.random() * Math.PI * 2
   mote.el.style.width = `${mote.size}px`
   mote.el.style.height = `${mote.size}px`
@@ -218,35 +230,42 @@ function spawnTrail(x: number, y: number) {
     if (!mote.alive) continue
     if (Math.hypot(mote.x - x, mote.y - y) > TRAIL_MAX_DIST) hideMote(mote)
   }
+}
 
+function syncPointerPosition(clientX: number, clientY: number) {
+  if (originDirty) measureOrigin()
+  lastClientX = clientX
+  lastClientY = clientY
+  hasPointer = true
+  cursorX = clientX - originX
+  cursorY = clientY - originY
+  placeCursor(cursorX, cursorY, drawing)
+  if (!drawing) return
+  trailDirty = true
   ensureTrailLoop()
+}
+
+function onPointerRawUpdate(event: PointerEvent) {
+  // High-rate path (Chrome/Edge): position only. Hit-testing stays on pointermove.
+  if (!finePointer.value || !entrance.value) return
+  syncPointerPosition(event.clientX, event.clientY)
 }
 
 function onPointerMove(event: PointerEvent) {
   if (!finePointer.value || !entrance.value) return
-  if (originDirty) measureOrigin()
 
-  lastClientX = event.clientX
-  lastClientY = event.clientY
-  hasPointer = true
+  const nextDrawing = !isEntranceControl(event.target)
+  if (!nextDrawing) lastSpawnAt = 0
+  drawing = nextDrawing
 
-  const x = event.clientX - originX
-  const y = event.clientY - originY
-  drawing = !isEntranceControl(event.target)
-  cursorX = x
-  cursorY = y
-  placeCursor(x, y, drawing)
-
-  if (!drawing) {
-    lastSpawnAt = 0
-    return
-  }
-  spawnTrail(x, y)
+  // Safari/Firefox: this is the only position signal. Chrome also gets pointerrawupdate.
+  syncPointerPosition(event.clientX, event.clientY)
 }
 
 function onPointerLeave() {
   hasPointer = false
   drawing = false
+  trailDirty = false
   lastSpawnAt = 0
   placeCursor(cursorX, cursorY, false)
   ensureTrailLoop()
@@ -293,8 +312,11 @@ onMounted(() => {
   const node = entrance.value
   if (!node) return
   measureOrigin()
-  // pointermove is once per frame. pointerrawupdate follows every mouse poll
-  // (often 1000Hz in desktop Chrome) and the sparkle paints late.
+  // pointerrawupdate tracks the OS poll rate; trail stays on rAF so sparkles do not stall the bead.
+  supportsRawUpdate = 'onpointerrawupdate' in window
+  if (supportsRawUpdate) {
+    node.addEventListener('pointerrawupdate', onPointerRawUpdate as EventListener, { passive: true })
+  }
   node.addEventListener('pointermove', onPointerMove, { passive: true })
   node.addEventListener('pointerleave', onPointerLeave)
   window.addEventListener('scroll', onViewportChange, { passive: true, capture: true })
@@ -306,6 +328,9 @@ onMounted(() => {
 onBeforeUnmount(() => {
   pointerQuery?.removeEventListener('change', onPointerChange)
   motionQuery?.removeEventListener('change', onMotionChange)
+  if (supportsRawUpdate) {
+    entrance.value?.removeEventListener('pointerrawupdate', onPointerRawUpdate as EventListener)
+  }
   entrance.value?.removeEventListener('pointermove', onPointerMove)
   entrance.value?.removeEventListener('pointerleave', onPointerLeave)
   window.removeEventListener('scroll', onViewportChange, true)

@@ -201,6 +201,46 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Lilac arrow on the page; system hand on controls (fine pointers only). */
+:root {
+  --cursor-sparkle: url("/cursors/pointer.svg") 4 2, auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body {
+    cursor: var(--cursor-sparkle);
+  }
+
+  a,
+  button,
+  .btn,
+  summary,
+  label[for],
+  select,
+  .chip,
+  .nav-link,
+  .digital-art-tab-pill,
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"] {
+    cursor: pointer;
+  }
+
+  input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+
+  :disabled,
+  [aria-disabled="true"],
+  .btn:disabled {
+    cursor: not-allowed;
+  }
+}
+
 /* Shared thin accent scrollbar (page + overflow panels) */
 * {
   scrollbar-width: thin;
@@ -340,6 +380,17 @@ body {
   background: color-mix(in srgb, var(--paper) 94%, transparent);
   backdrop-filter: blur(16px);
   box-shadow: 0 8px 24px -20px color-mix(in srgb, var(--ink) 35%, transparent);
+}
+
+/* Keep locale menu above the nav row when it overflows the glass bar. */
+.header-glass {
+  position: relative;
+  z-index: 2;
+}
+
+.topbar {
+  position: relative;
+  z-index: 1;
 }
 
 .mat {
@@ -488,9 +539,9 @@ body {
 .locale-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.35rem;
   min-height: 2.75rem;
-  padding: 0.4rem 0.85rem 0.4rem 0.7rem;
+  padding: 0.4rem 0.7rem 0.4rem 0.95rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper);
@@ -499,6 +550,11 @@ body {
   font-size: 0.92rem;
   font-weight: 700;
   box-shadow: 0 8px 20px -18px color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.locale-trigger svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .locale-trigger:hover {
@@ -540,17 +596,6 @@ body {
   background: var(--soft-pink);
 }
 
-.locale-flag {
-  display: inline-grid;
-  place-items: center;
-  width: 1.55rem;
-  height: 1.55rem;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--canvas) 70%, var(--paper));
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
 .price {
   color: var(--accent);
   font-weight: 400;
@@ -565,7 +610,6 @@ body {
 }
 
 .faq-item summary {
-  cursor: pointer;
   list-style: none;
   display: flex;
   align-items: center;
@@ -721,7 +765,7 @@ body {
       rgb(255 255 255 / 0.5) 42%,
       rgb(255 255 255 / 0) 78%
     );
-  box-shadow: 0 0 10px 1px rgb(255 255 255 / 0.35);
+  box-shadow: 0 0 14px 2px rgb(255 255 255 / 0.4);
   will-change: transform, opacity;
 }
 

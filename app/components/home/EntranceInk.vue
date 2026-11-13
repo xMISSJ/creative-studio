@@ -373,6 +373,10 @@ onMounted(() => {
   const stage = canvas.value?.parentElement ?? null
   host = canvas.value?.closest('.entrance') ?? stage
   if (host) {
+    // Raw updates keep the wash bloom on the latest tip without extra GPU work.
+    if ('onpointerrawupdate' in window) {
+      host.addEventListener('pointerrawupdate', onPointerMove as EventListener, { passive: true })
+    }
     host.addEventListener('pointermove', onPointerMove, { passive: true })
     host.addEventListener('touchmove', onTouchMove, { passive: true })
     window.addEventListener('scroll', onInkScroll, { passive: true, capture: true })
@@ -396,6 +400,9 @@ onBeforeUnmount(() => {
   disposed = true
   cancelAnimationFrame(raf)
   motionQuery?.removeEventListener('change', onMotionChange)
+  if ('onpointerrawupdate' in window) {
+    host?.removeEventListener('pointerrawupdate', onPointerMove as EventListener)
+  }
   host?.removeEventListener('pointermove', onPointerMove)
   host?.removeEventListener('touchmove', onTouchMove)
   window.removeEventListener('scroll', onInkScroll, true)

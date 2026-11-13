@@ -7,28 +7,15 @@ const open = ref(false)
 const root = ref<HTMLElement | null>(null)
 const listId = 'locale-list-header'
 
-const flags: Record<string, string> = {
-  en: '🇬🇧',
-  nl: '🇳🇱',
-  es: '🇪🇸',
-  zh: '🇨🇳',
-  ko: '🇰🇷',
-  ja: '🇯🇵',
-  pl: '🇵🇱',
-  de: '🇩🇪',
-  ru: '🇷🇺',
-}
-
 const localeList = computed(() =>
   locales.value.map((entry) => {
     if (typeof entry === 'string') {
-      return { code: entry, language: entry, name: entry, flag: flags[entry] ?? '🌐' }
+      return { code: entry, language: entry, name: entry }
     }
     return {
       code: entry.code,
       language: entry.language ?? entry.code,
       name: entry.name ?? entry.code,
-      flag: flags[entry.code] ?? '🌐',
     }
   }),
 )
@@ -80,19 +67,16 @@ watch(() => locale.value, close)
   <div ref="root" class="relative">
     <button
       type="button"
-      class="locale-trigger max-sm:px-2.5"
+      class="locale-trigger"
       :aria-expanded="open"
       :aria-controls="listId"
       :aria-label="t('locale.label')"
       aria-haspopup="listbox"
       @click="toggle"
     >
-      <span class="flex min-w-0 items-center gap-2">
-        <span class="locale-flag" aria-hidden="true">{{ current?.flag }}</span>
-        <span class="hidden truncate sm:inline">{{ current?.name }}</span>
-      </span>
+      <span class="min-w-0 truncate">{{ current?.name }}</span>
       <span
-        class="hidden shrink-0 text-muted transition sm:inline-flex"
+        class="shrink-0 text-muted transition"
         :class="open ? 'rotate-180' : ''"
         aria-hidden="true"
       >
@@ -116,7 +100,6 @@ watch(() => locale.value, close)
           :lang="entry.language"
           @click="choose(entry.code)"
         >
-          <span class="locale-flag" aria-hidden="true">{{ entry.flag }}</span>
           <span class="truncate">{{ entry.name }}</span>
           <span
             v-if="entry.code === locale"
