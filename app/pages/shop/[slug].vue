@@ -128,9 +128,9 @@ function add() {
   <section class="container-page py-10">
     <nav :aria-label="t('nav.breadcrumb')">
       <ol class="flex flex-wrap items-center gap-2 text-sm text-muted">
-        <li><NuxtLinkLocale class="link" to="/">{{ t('nav.home') }}</NuxtLinkLocale></li>
+        <li><NuxtLinkLocale class="link link-hit" to="/">{{ t('nav.home') }}</NuxtLinkLocale></li>
         <li aria-hidden="true">/</li>
-        <li><NuxtLinkLocale class="link" to="/shop">{{ t('nav.shop') }}</NuxtLinkLocale></li>
+        <li><NuxtLinkLocale class="link link-hit" to="/shop">{{ t('nav.shop') }}</NuxtLinkLocale></li>
         <li v-if="item" aria-hidden="true">/</li>
         <li v-if="item" aria-current="page">{{ t(`products.${item.slug}.title`) }}</li>
       </ol>

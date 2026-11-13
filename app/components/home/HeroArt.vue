@@ -19,7 +19,7 @@ const { t } = useShopI18n()
         <NuxtLinkLocale :to="`/shop/${props.primary.slug}`" class="mat block">
           <img
             :src="props.primary.image"
-            :alt="t(`products.${props.primary.slug}.title`)"
+            :alt="t(`products.${props.primary.slug}.alt`)"
             width="800"
             height="1000"
             class="aspect-square w-full rounded-md object-cover"
@@ -33,7 +33,7 @@ const { t } = useShopI18n()
       <NuxtLinkLocale :to="`/shop/${props.secondary.slug}`" class="mat block">
         <img
           :src="props.secondary.image"
-          :alt="t(`products.${props.secondary.slug}.title`)"
+          :alt="t(`products.${props.secondary.slug}.alt`)"
           width="800"
           height="1000"
           class="aspect-square w-full rounded-md object-cover"

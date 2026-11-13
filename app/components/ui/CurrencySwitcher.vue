@@ -4,50 +4,32 @@ const { currencies, currency, current, setCurrency } = useCurrency()
 
 const open = ref(false)
 const root = ref<HTMLElement | null>(null)
+const trigger = ref<HTMLElement | null>(null)
 const listId = 'currency-list-header'
 
-function close() {
-  open.value = false
-}
+const { locked } = useOverlay()
+const { close } = useListbox({ open, root, trigger })
 
 function toggle() {
   open.value = !open.value
 }
 
 function choose(code: string) {
-  close()
+  close(false)
+  trigger.value?.focus()
   setCurrency(code)
 }
 
-function onDocPointer(event: PointerEvent) {
-  if (!open.value || !root.value) return
-  if (!root.value.contains(event.target as Node)) close()
-}
-
-function onKey(event: KeyboardEvent) {
-  if (!open.value) return
-  if (event.key === 'Escape') {
-    event.preventDefault()
-    close()
-  }
-}
-
-onMounted(() => {
-  document.addEventListener('pointerdown', onDocPointer)
-  document.addEventListener('keydown', onKey)
+watch(currency, () => close(false))
+watch(locked, (value) => {
+  if (value) close(false)
 })
-
-onBeforeUnmount(() => {
-  document.removeEventListener('pointerdown', onDocPointer)
-  document.removeEventListener('keydown', onKey)
-})
-
-watch(currency, close)
 </script>
 
 <template>
   <div ref="root" class="relative">
     <button
+      ref="trigger"
       type="button"
       class="locale-trigger"
       :aria-expanded="open"

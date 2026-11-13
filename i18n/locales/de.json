@@ -113,7 +113,9 @@
     "emailLabel": "E-Mail-Adresse",
     "placeholder": "Deine E-Mail",
     "submit": "Abonnieren",
-    "thanks": "Danke. Die Liste ist noch nicht offen, deshalb wurde diese Adresse nicht gespeichert."
+    "thanks": "Danke. Die Liste ist noch nicht offen, deshalb wurde diese Adresse nicht gespeichert.",
+    "emailError": "Gib deine E-Mail-Adresse ein.",
+    "emailInvalid": "Gib eine gültige E-Mail-Adresse ein."
   },
   "shop": {
     "lead": "Wähle eine Ecke des Studios. Malbücher sind offen, der Rest wärmt noch auf.",
@@ -270,7 +272,12 @@
     "notice": "Diese Angaben bleiben nur im Formular. Sie werden nirgends gespeichert oder gesendet.",
     "thanks": "Absichtlich nirgends gespeichert. Konten öffnen etwas später.",
     "namePlaceholder": "Dein Name",
-    "emailPlaceholder": "you{'@'}example.com"
+    "emailPlaceholder": "you{'@'}example.com",
+    "nameError": "Gib deinen Namen ein.",
+    "emailError": "Gib deine E-Mail-Adresse ein.",
+    "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
+    "passwordError": "Gib dein Passwort ein.",
+    "passwordShort": "Verwende mindestens 8 Zeichen."
   },
   "account": {
     "eyebrow": "Deine Ecke",

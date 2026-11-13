@@ -66,7 +66,7 @@ watch(data, (payload) => {
               :title="t(`products.${line.slug}.title`)"
               @update:model-value="setQty(line.slug, $event, line.item?.stock ?? 0)"
             />
-            <button type="button" class="link" @click="remove(line.slug)">{{ t('cart.remove') }}</button>
+            <button type="button" class="link link-hit" @click="remove(line.slug)">{{ t('cart.remove') }}</button>
           </div>
         </div>
       </li>

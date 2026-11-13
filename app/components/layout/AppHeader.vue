@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useShopI18n()
-const { count } = useCart()
+const { count, isOpen } = useCart()
 const { openCart } = useOverlay()
 const route = useRoute()
 const header = ref<HTMLElement | null>(null)
@@ -35,7 +35,14 @@ function isCurrent(match: (path: string) => boolean) {
           <NuxtLinkLocale class="icon-btn" to="/account" :aria-label="t('nav.account')">
             <AppIcon name="user" />
           </NuxtLinkLocale>
-          <button type="button" class="icon-btn relative" :aria-label="t('cart.open', { count })" @click="openCart">
+          <button
+            type="button"
+            class="icon-btn relative"
+            :aria-label="t('cart.open', { count })"
+            :aria-expanded="isOpen"
+            aria-controls="cart-drawer"
+            @click="openCart"
+          >
             <AppIcon name="cart" />
             <span
               v-if="count > 0"

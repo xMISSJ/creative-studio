@@ -113,7 +113,9 @@
     "emailLabel": "E-mailadres",
     "placeholder": "Je e-mail",
     "submit": "Abonneren",
-    "thanks": "Dank je. De lijst is nog niet open, dus dit adres is niet bewaard."
+    "thanks": "Dank je. De lijst is nog niet open, dus dit adres is niet bewaard.",
+    "emailError": "Vul je e-mailadres in.",
+    "emailInvalid": "Vul een geldig e-mailadres in."
   },
   "shop": {
     "lead": "Kies een hoekje van de studio. Kleurboeken zijn open; de rest warmt nog op.",
@@ -270,7 +272,12 @@
     "notice": "Deze gegevens blijven alleen in het formulier. Ze worden nergens opgeslagen of naartoe gestuurd.",
     "thanks": "Met opzet nergens bewaard. Accounts komen iets later.",
     "namePlaceholder": "Je naam",
-    "emailPlaceholder": "jij{'@'}example.com"
+    "emailPlaceholder": "jij{'@'}example.com",
+    "nameError": "Vul je naam in.",
+    "emailError": "Vul je e-mailadres in.",
+    "emailInvalid": "Vul een geldig e-mailadres in.",
+    "passwordError": "Vul je wachtwoord in.",
+    "passwordShort": "Gebruik minstens 8 tekens."
   },
   "account": {
     "eyebrow": "Jouw hoekje",

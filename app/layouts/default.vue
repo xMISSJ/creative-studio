@@ -19,13 +19,15 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative flex min-h-dvh flex-col overflow-x-clip">
-    <a class="skip-link btn" href="#main">{{ t('nav.skip') }}</a>
-    <AppHeader />
     <div class="flex flex-1 flex-col" :inert="locked ? true : undefined">
-      <main id="main" class="flex-1">
-        <slot />
-      </main>
-      <AppFooter />
+      <a class="skip-link btn" href="#main">{{ t('nav.skip') }}</a>
+      <AppHeader />
+      <div class="flex flex-1 flex-col">
+        <main id="main" class="flex-1">
+          <slot />
+        </main>
+        <AppFooter />
+      </div>
     </div>
     <CartDrawer />
   </div>

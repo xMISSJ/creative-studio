@@ -113,7 +113,9 @@
     "emailLabel": "Adresse email",
     "placeholder": "Ton email",
     "submit": "S’inscrire",
-    "thanks": "Merci. La liste n’est pas encore ouverte, donc cette adresse n’a pas été enregistrée."
+    "thanks": "Merci. La liste n’est pas encore ouverte, donc cette adresse n’a pas été enregistrée.",
+    "emailError": "Entre ton adresse e-mail.",
+    "emailInvalid": "Entre une adresse e-mail valide."
   },
   "shop": {
     "lead": "Choisis un coin du studio. Les livres de coloriage sont ouverts ; le reste se prépare encore.",
@@ -270,7 +272,12 @@
     "notice": "Ces détails restent uniquement dans le formulaire. Ils ne sont ni stockés ni envoyés nulle part.",
     "thanks": "Enregistré nulle part, exprès. Les comptes ouvrent un peu plus tard.",
     "namePlaceholder": "Ton nom",
-    "emailPlaceholder": "toi{'@'}example.com"
+    "emailPlaceholder": "toi{'@'}example.com",
+    "nameError": "Entre ton nom.",
+    "emailError": "Entre ton adresse e-mail.",
+    "emailInvalid": "Entre une adresse e-mail valide.",
+    "passwordError": "Entre ton mot de passe.",
+    "passwordShort": "Utilise au moins 8 caractères."
   },
   "account": {
     "eyebrow": "Ton coin",

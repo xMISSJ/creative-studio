@@ -113,7 +113,9 @@
     "emailLabel": "Email address",
     "placeholder": "Your email",
     "submit": "Subscribe",
-    "thanks": "Thank you. The list is not open yet, so this address was not saved."
+    "thanks": "Thank you. The list is not open yet, so this address was not saved.",
+    "emailError": "Enter your email address.",
+    "emailInvalid": "Enter a valid email address."
   },
   "shop": {
     "lead": "Pick a corner of the studio. Coloring books are open; the rest is warming up.",
@@ -270,7 +272,12 @@
     "notice": "These details stay in the form only. They are not stored or sent anywhere.",
     "thanks": "Saved nowhere, on purpose. Accounts open a little later.",
     "namePlaceholder": "Your name",
-    "emailPlaceholder": "you{'@'}example.com"
+    "emailPlaceholder": "you{'@'}example.com",
+    "nameError": "Enter your name.",
+    "emailError": "Enter your email address.",
+    "emailInvalid": "Enter a valid email address.",
+    "passwordError": "Enter your password.",
+    "passwordShort": "Use at least 8 characters."
   },
   "account": {
     "eyebrow": "Your corner",

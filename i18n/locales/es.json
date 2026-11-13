@@ -113,7 +113,9 @@
     "emailLabel": "Correo electronico",
     "placeholder": "Tu email",
     "submit": "Suscribirme",
-    "thanks": "Gracias. La lista todavia no esta abierta, asi que esta direccion no se guardo."
+    "thanks": "Gracias. La lista todavia no esta abierta, asi que esta direccion no se guardo.",
+    "emailError": "Escribe tu email.",
+    "emailInvalid": "Escribe un email valido."
   },
   "shop": {
     "lead": "Elige un rincon del estudio. Los libros para colorear estan abiertos; el resto se esta calentando.",
@@ -270,7 +272,12 @@
     "notice": "Estos datos se quedan solo en el formulario. No se guardan ni se envian a ningun lado.",
     "thanks": "No se guardo nada, a proposito. Las cuentas abren un poco mas tarde.",
     "namePlaceholder": "Tu nombre",
-    "emailPlaceholder": "tu{'@'}example.com"
+    "emailPlaceholder": "tu{'@'}example.com",
+    "nameError": "Escribe tu nombre.",
+    "emailError": "Escribe tu email.",
+    "emailInvalid": "Escribe un email valido.",
+    "passwordError": "Escribe tu contraseña.",
+    "passwordShort": "Usa al menos 8 caracteres."
   },
   "account": {
     "eyebrow": "Tu rincon",

@@ -113,7 +113,9 @@
     "emailLabel": "이메일 주소",
     "placeholder": "이메일을 입력하세요",
     "submit": "구독하기",
-    "thanks": "감사합니다. 목록이 아직 열려 있지 않아 이 주소는 저장되지 않았어요."
+    "thanks": "감사합니다. 목록이 아직 열려 있지 않아 이 주소는 저장되지 않았어요.",
+    "emailError": "이메일을 입력해 주세요.",
+    "emailInvalid": "올바른 이메일을 입력해 주세요."
   },
   "shop": {
     "lead": "스튜디오의 한 코너를 골라 보세요. 컬러링북은 열려 있고, 나머지는 아직 데워지는 중이에요.",
@@ -270,7 +272,12 @@
     "notice": "이 내용은 양식에만 남아요. 저장되거나 어디에도 전송되지 않아요.",
     "thanks": "일부러 어디에도 저장하지 않았어요. 계정은 조금 뒤에 열려요.",
     "namePlaceholder": "이름",
-    "emailPlaceholder": "you{'@'}example.com"
+    "emailPlaceholder": "you{'@'}example.com",
+    "nameError": "이름을 입력해 주세요.",
+    "emailError": "이메일을 입력해 주세요.",
+    "emailInvalid": "올바른 이메일을 입력해 주세요.",
+    "passwordError": "비밀번호를 입력해 주세요.",
+    "passwordShort": "8자 이상 사용해 주세요."
   },
   "account": {
     "eyebrow": "내 코너",

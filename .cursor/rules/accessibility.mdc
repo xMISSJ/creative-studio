@@ -1,15 +1,28 @@
 ---
-description: Accessibility, motion, and color contrast for the shop
+description: Accessibility, motion, contrast, and keyboard patterns for the shop
 alwaysApply: true
 ---
 
 # Access and motion
 
+Bake accessibility into every UI change. Do not ship structure, color, or interaction work without checking this list.
+
+## Structure and names
+
 - Keep one `h1` per page. Use landmarks that already exist: header, main, footer, nav.
-- Label every control. Use `aria-expanded`, dialogs, and the focus trap for the cart and mobile menu.
+- Label every control. Icon-only controls need `aria-label`.
 - Do not remove the skip link or the route announcer.
-- Text sits on `ink`, `muted`, or `on-soft`. Pastel fills use `text-on-soft`. Buttons use the cream-on-coral pair.
-- Interactive targets stay at least 44px. Inputs stay at 16px or larger.
-- Motion is hover, a short page fade, and a slow hero drift. New animation goes inside `prefers-reduced-motion: no-preference`.
-- Do not start an animation at `opacity: 0` outside that media query.
-- Images that repeat a nearby title use an empty alt. The product page uses `products.<slug>.alt`.
+- Dialogs (cart): `role="dialog"`, `aria-modal`, labelled title, focus trap (`useFocusTrap`), Escape, restore focus. Put the rest of the page `inert` while open. Wire `aria-expanded` / `aria-controls` on the opener.
+- Custom listboxes (locale, currency): use `useListbox` (Arrow/Home/End, focus option on open, Escape restores trigger focus).
+
+## Color and targets
+
+- Text sits on `ink`, `muted`, or `on-soft`. Pastel fills use `text-on-soft`.
+- Light-mode `--accent` / `--button` stay at AA contrast on paper (~`#7d6ba8`). White labels use `--on-button`. Do not lighten those tokens without rechecking contrast.
+- Interactive targets stay at least 44px (`.btn`, `.icon-btn`, `.nav-link`, `.chip`, `.link-hit`, `.footer-link`). Inputs stay at 16px or larger.
+
+## Forms, media, motion
+
+- Forms: visible or `sr-only` labels; on validation use `aria-invalid`, `aria-describedby`, and `role="alert"` error text in every locale.
+- Images that repeat a nearby title use an empty alt. Product / art pages use `products.<slug>.alt` (or equivalent descriptive alt).
+- Motion is hover, a short page fade, and a slow hero drift. New animation and any start-at-`opacity: 0` state go inside `prefers-reduced-motion: no-preference`.

@@ -113,7 +113,9 @@
     "emailLabel": "メールアドレス",
     "placeholder": "メール",
     "submit": "登録する",
-    "thanks": "ありがとう。リストはまだ開いていないので、このアドレスは保存されませんでした。"
+    "thanks": "ありがとう。リストはまだ開いていないので、このアドレスは保存されませんでした。",
+    "emailError": "メールアドレスを入力してください。",
+    "emailInvalid": "有効なメールアドレスを入力してください。"
   },
   "shop": {
     "lead": "スタジオのコーナーを選んでね。塗り絵本は開いていて、ほかはまだ温まっているところ。",
@@ -270,7 +272,12 @@
     "notice": "これらの内容はフォームの中だけに残ります。保存も送信もされません。",
     "thanks": "わざとどこにも保存しませんでした。アカウントは少しあとに開きます。",
     "namePlaceholder": "お名前",
-    "emailPlaceholder": "you{'@'}example.com"
+    "emailPlaceholder": "you{'@'}example.com",
+    "nameError": "お名前を入力してください。",
+    "emailError": "メールアドレスを入力してください。",
+    "emailInvalid": "有効なメールアドレスを入力してください。",
+    "passwordError": "パスワードを入力してください。",
+    "passwordShort": "8文字以上にしてください。"
   },
   "account": {
     "eyebrow": "あなたのコーナー",

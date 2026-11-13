@@ -8,8 +8,9 @@
   --ink: #3a3a3a;
   --muted: #5b5b5b;
   --line: #e8e4f0;
-  --accent: #b2a4d4;
-  --button: #b2a4d4;
+  /* Deep lilac (~4.6:1 on white) for AA text and white-on-button labels. */
+  --accent: #7d6ba8;
+  --button: #7d6ba8;
   --on-button: #ffffff;
   --lilac: #efeaf7;
   --lilac-mist: #efeaf7;
@@ -19,7 +20,7 @@
   --sage: #e8f0e6;
   --peach: #fff0e0;
   --on-soft: #3a3a3a;
-  --mark: #b2a4d4;
+  --mark: #7d6ba8;
   --on-mark: #ffffff;
   --warn: #d45b7a;
   --soft-pink: #efeaf7;
@@ -36,7 +37,7 @@
   --muted: #b9b1c5;
   --line: #3a3548;
   --accent: #cbbce8;
-  --button: #b2a4d4;
+  --button: #7d6ba8;
   --on-button: #ffffff;
   --lilac: #2b2538;
   --lilac-mist: #2f293d;
@@ -523,10 +524,31 @@ body {
   text-underline-offset: 0.18em;
 }
 
+.link-hit {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.15rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.35rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
 .shop-now {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
+  min-height: 2.75rem;
   color: var(--accent);
   font-weight: 700;
 }
@@ -625,7 +647,7 @@ body {
 }
 
 .faq-item[open] summary {
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .faq-mark {
@@ -1086,7 +1108,7 @@ body {
   align-items: center;
   gap: 0.45rem;
   min-height: 2.75rem;
-  color: var(--entrance-cream);
+  color: var(--entrance-ink);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1098,8 +1120,7 @@ body {
   width: 1.5px;
   height: 1.6rem;
   border-radius: 999px;
-  background: var(--entrance-cream);
-  transform-origin: top center;
+  background: var(--entrance-ink);
 }
 
 @keyframes rise {
@@ -1143,18 +1164,6 @@ body {
 
   50% {
     transform: translate(-50%, -50%) scale(1.22);
-    opacity: 1;
-  }
-}
-
-@keyframes entrance-scroll-pulse {
-  0%,
-  100% {
-    transform: scaleY(1);
-    opacity: 0.55;
-  }
-  50% {
-    transform: scaleY(0.55);
     opacity: 1;
   }
 }
@@ -1229,38 +1238,38 @@ body {
   border-radius: inherit;
 }
 
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 220ms ease, transform 220ms ease;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(8px);
-}
-
-.drawer-enter-active,
-.drawer-leave-active {
-  transition: opacity 200ms ease;
-}
-
-.drawer-enter-active .drawer-panel,
-.drawer-leave-active .drawer-panel {
-  transition: transform 240ms cubic-bezier(0.22, 0.8, 0.3, 1);
-}
-
-.drawer-enter-from,
-.drawer-leave-to {
-  opacity: 0;
-}
-
-.drawer-enter-from .drawer-panel,
-.drawer-leave-to .drawer-panel {
-  transform: translateX(16px);
-}
-
 @media (prefers-reduced-motion: no-preference) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  .drawer-enter-active,
+  .drawer-leave-active {
+    transition: opacity 200ms ease;
+  }
+
+  .drawer-enter-active .drawer-panel,
+  .drawer-leave-active .drawer-panel {
+    transition: transform 240ms cubic-bezier(0.22, 0.8, 0.3, 1);
+  }
+
+  .drawer-enter-from,
+  .drawer-leave-to {
+    opacity: 0;
+  }
+
+  .drawer-enter-from .drawer-panel,
+  .drawer-leave-to .drawer-panel {
+    transform: translateX(16px);
+  }
+
   .rise {
     animation: rise 680ms cubic-bezier(0.22, 0.8, 0.3, 1) both;
   }
@@ -1295,10 +1304,6 @@ body {
 
   .drift {
     animation: drift 8s ease-in-out infinite;
-  }
-
-  .entrance-scroll-mark {
-    animation: entrance-scroll-pulse 2.4s ease-in-out infinite;
   }
 
   .entrance-butterfly__wing--left {
@@ -1445,25 +1450,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-enter-active,
-  .page-leave-active,
-  .drawer-enter-active,
-  .drawer-leave-active,
-  .drawer-enter-active .drawer-panel,
-  .drawer-leave-active .drawer-panel {
-    transition: none;
-  }
-
-  .page-enter-from,
-  .page-leave-to,
-  .drawer-enter-from,
-  .drawer-leave-to,
-  .drawer-enter-from .drawer-panel,
-  .drawer-leave-to .drawer-panel {
-    opacity: 1;
-    transform: none;
-  }
-
   .animate-pulse {
     animation: none !important;
   }

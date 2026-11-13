@@ -18,5 +18,6 @@ Nuxt shop for cozy coloring books. Pages, cart, and placeholders are meant to gr
 - `pnpm check:i18n` fails the build when a locale, product, or template string drifts.
 - Keep motion subtle and behind `prefers-reduced-motion`.
 - Do not pretend a placeholder form saved or sent anything.
+- Accessibility and SEO are always in scope for UI/page work (landmarks, labels, contrast, meta helpers, JSON-LD). See `.cursor/rules/accessibility.mdc`, `.cursor/rules/seo.mdc`, and the `web-quality` skill.
 
-Read `.cursor/rules` for the short versions of these conventions.
+Read `.cursor/rules` for the short versions of these conventions. Use `.cursor/skills/web-quality` for a full a11y/SEO checklist when building or reviewing UI.

@@ -1,0 +1,24 @@
+---
+description: SEO, meta, and structured data conventions for shop pages
+alwaysApply: true
+---
+
+# SEO and page meta
+
+Every new or changed page must ship discoverable, honest meta. Prefer the existing helpers over one-off `useHead` / `useSeoMeta` calls.
+
+## Required on pages
+
+- Call `usePageMeta('meta.*Title', 'meta.*Description')` or `usePageMetaValues(...)` so title, description, Open Graph, Twitter, and canonical URL stay in sync.
+- Add matching `meta.*` keys in **every** locale file. Run `pnpm check:i18n`.
+- Private or placeholder flows (cart, checkout, login, register, account) set `robots: 'noindex, nofollow'`.
+- Product / collection pages pass a specific `image` when a cover exists; otherwise the default OG image is fine.
+- Use `useJsonLd` for Schema.org when the page type warrants it (site graph in `app.vue`, FAQ, product). Keep JSON-LD accurate; do not invent prices, availability, or reviews.
+
+## Content and links
+
+- One clear `h1` that matches the topic of the title/description.
+- Internal links use `NuxtLinkLocale` with unprefixed paths (`/shop`, not `/nl/shop`).
+- Meaningful link text; avoid bare “click here”. Decorative images stay `alt=""`.
+- Do not block indexing of public shop, about, FAQ, or collection pages.
+- Share copy and titles stay human; no keyword stuffing. Brand name comes from `site.config.ts` via `useShopI18n().t()`.

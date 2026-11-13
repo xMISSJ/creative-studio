@@ -113,7 +113,9 @@
     "emailLabel": "Adres e-mail",
     "placeholder": "Twój e-mail",
     "submit": "Zapisz się",
-    "thanks": "Dziękuję. Lista nie jest jeszcze otwarta, więc ten adres nie został zapisany."
+    "thanks": "Dziękuję. Lista nie jest jeszcze otwarta, więc ten adres nie został zapisany.",
+    "emailError": "Podaj swój e-mail.",
+    "emailInvalid": "Podaj prawidłowy e-mail."
   },
   "shop": {
     "lead": "Wybierz kąt studia. Kolorowanki są otwarte, reszta jeszcze się rozgrzewa.",
@@ -270,7 +272,12 @@
     "notice": "Te dane zostają tylko w formularzu. Nie są nigdzie zapisywane ani wysyłane.",
     "thanks": "Nigdzie nie zapisano, celowo. Konta otworzą się trochę później.",
     "namePlaceholder": "Twoje imię",
-    "emailPlaceholder": "you{'@'}example.com"
+    "emailPlaceholder": "you{'@'}example.com",
+    "nameError": "Podaj swoje imię.",
+    "emailError": "Podaj swój e-mail.",
+    "emailInvalid": "Podaj prawidłowy e-mail.",
+    "passwordError": "Podaj hasło.",
+    "passwordShort": "Użyj co najmniej 8 znaków."
   },
   "account": {
     "eyebrow": "Twój kąt",
