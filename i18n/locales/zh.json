@@ -152,6 +152,9 @@
       "bannerAlt": "一只困倦的柴犬蜷在心形图案小床上，依着柔软的羊驼玩偶。",
       "categoriesTitle": "数字艺术分类",
       "avatarsEmpty": "这里还没有头像。更多作品正在路上。",
+      "avatarsGalleryHint": "滑动或拖动浏览头像",
+      "avatarsGalleryPrev": "上一组头像",
+      "avatarsGalleryNext": "下一组头像",
       "charactersEmpty": "这一组还没有作品。更多作品正在路上。"
     }
   },

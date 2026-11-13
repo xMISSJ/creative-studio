@@ -5,6 +5,8 @@ withDefaults(defineProps<{
 }>(), {
   numbered: true,
 })
+
+const butterfly = usePublicAsset('/art/butterfly.png')
 </script>
 
 <template>
@@ -16,9 +18,15 @@ withDefaults(defineProps<{
     >
       <summary>
         <span>{{ numbered ? `${index + 1}. ` : '' }}{{ item.q }}</span>
-        <span class="faq-mark text-accent" aria-hidden="true">
-          <AppIcon name="heart" class="faq-heart faq-heart-outline" />
-          <AppIcon name="heart" filled class="faq-heart faq-heart-filled" />
+        <span class="faq-mark" aria-hidden="true">
+          <img
+            :src="butterfly"
+            alt=""
+            width="173"
+            height="137"
+            class="faq-butterfly"
+            decoding="async"
+          >
         </span>
       </summary>
       <div class="faq-answer">

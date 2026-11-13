@@ -152,6 +152,9 @@
       "bannerAlt": "A sleepy Shiba Inu curled up with a soft alpaca plush on a heart-patterned bed.",
       "categoriesTitle": "Digital art categories",
       "avatarsEmpty": "No avatars here yet. More pieces are on the way.",
+      "avatarsGalleryHint": "Swipe or drag to browse avatars",
+      "avatarsGalleryPrev": "Previous avatars",
+      "avatarsGalleryNext": "Next avatars",
       "charactersEmpty": "Nothing in this group yet. More pieces are on the way."
     }
   },

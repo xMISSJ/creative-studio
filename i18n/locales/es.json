@@ -152,6 +152,9 @@
       "bannerAlt": "Un Shiba Inu dormido acurrucado con un peluche de alpaca suave en una camita con corazones.",
       "categoriesTitle": "Categorias de arte digital",
       "avatarsEmpty": "Aun no hay avatares aqui. Llegan mas piezas.",
+      "avatarsGalleryHint": "Desliza o arrastra para recorrer los avatares",
+      "avatarsGalleryPrev": "Avatares anteriores",
+      "avatarsGalleryNext": "Avatares siguientes",
       "charactersEmpty": "Aun no hay nada en este grupo. Llegan mas piezas."
     }
   },

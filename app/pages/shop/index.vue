@@ -50,6 +50,13 @@ const sort = computed(() => {
   return 'featured'
 })
 
+const sortOptions = computed(() => [
+  { value: 'featured', label: t('shop.sortFeatured') },
+  { value: 'price-asc', label: t('shop.sortPriceAsc') },
+  { value: 'price-desc', label: t('shop.sortPriceDesc') },
+  { value: 'title', label: t('shop.sortTitle') },
+])
+
 const filtered = computed(() => {
   if (!showingColoringBooks.value || !activeType.value) return []
   const q = search.value.trim().toLocaleLowerCase(locale.value)
@@ -102,8 +109,7 @@ const metaDescription = computed(() => {
 })
 usePageMetaValues(pageTitle, metaDescription)
 
-function onSort(event: Event) {
-  const value = (event.target as HTMLSelectElement).value
+function setSort(value: string) {
   const query = { ...route.query }
   if (value === 'featured') delete query.sort
   else query.sort = value
@@ -181,13 +187,18 @@ function onSort(event: Event) {
               <input id="shop-search" v-model="search" class="field" type="search" name="q" :placeholder="t('shop.searchPlaceholder')">
             </div>
             <div>
-              <label class="mb-2 block font-bold" for="shop-sort">{{ t('shop.sortLabel') }}</label>
-              <select id="shop-sort" class="field" :value="sort" @change="onSort">
-                <option value="featured">{{ t('shop.sortFeatured') }}</option>
-                <option value="price-asc">{{ t('shop.sortPriceAsc') }}</option>
-                <option value="price-desc">{{ t('shop.sortPriceDesc') }}</option>
-                <option value="title">{{ t('shop.sortTitle') }}</option>
-              </select>
+              <p id="shop-sort-label" class="mb-2 block font-bold">{{ t('shop.sortLabel') }}</p>
+              <AppListbox
+                :model-value="sort"
+                :options="sortOptions"
+                labelled-by="shop-sort-label"
+                :label="t('shop.sortLabel')"
+                list-id="shop-sort-list"
+                class="w-full"
+                trigger-class="w-full justify-between"
+                menu-class="w-full min-w-[12rem]"
+                @update:model-value="setSort"
+              />
             </div>
           </div>
 

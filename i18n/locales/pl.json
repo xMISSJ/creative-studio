@@ -152,6 +152,9 @@
       "bannerAlt": "Senny Shiba Inu zwinięty z miękką pluszową alpaką na łóżku we wzór serc.",
       "categoriesTitle": "Kategorie sztuki cyfrowej",
       "avatarsEmpty": "Nie ma tu jeszcze awatarów. Kolejne prace są w drodze.",
+      "avatarsGalleryHint": "Przesuń lub przeciągnij, by przeglądać awatary",
+      "avatarsGalleryPrev": "Poprzednie awatary",
+      "avatarsGalleryNext": "Następne awatary",
       "charactersEmpty": "W tej grupie jeszcze nic nie ma. Kolejne prace są w drodze."
     }
   },

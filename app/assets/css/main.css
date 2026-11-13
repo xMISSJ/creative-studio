@@ -659,26 +659,15 @@ body {
   line-height: 1;
 }
 
-.faq-mark svg,
-.faq-heart {
-  grid-area: 1 / 1;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.faq-heart-outline {
+.faq-butterfly {
+  width: 1.35rem;
+  height: auto;
   opacity: 0.55;
+  object-fit: contain;
+  user-select: none;
 }
 
-.faq-heart-filled {
-  opacity: 0;
-}
-
-.faq-item[open] .faq-heart-outline {
-  opacity: 0;
-}
-
-.faq-item[open] .faq-heart-filled {
+.faq-item[open] .faq-butterfly {
   opacity: 1;
 }
 
@@ -1251,6 +1240,275 @@ body {
   border-radius: inherit;
 }
 
+.clothesline {
+  position: relative;
+  margin-inline: calc(-1 * clamp(0.75rem, 3vw, 1.25rem));
+  /* Mobile-first: no side-arrow gutter */
+  padding-inline: 0.35rem;
+}
+
+.clothesline--desktop {
+  padding-inline: 2.75rem;
+}
+
+.clothesline-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 10px 24px -18px color-mix(in srgb, var(--ink) 45%, transparent);
+  transform: translateY(-50%);
+}
+
+.clothesline-nav--prev {
+  inset-inline-start: 0;
+}
+
+.clothesline-nav--next {
+  inset-inline-end: 0;
+}
+
+.clothesline-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.clothesline-nav svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.clothesline-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0.25rem;
+  z-index: 3;
+  width: clamp(2rem, 10vw, 3.25rem);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.clothesline--desktop .clothesline-fade {
+  width: clamp(4.5rem, 14vw, 7rem);
+}
+
+.clothesline-fade.is-visible {
+  opacity: 1;
+}
+
+.clothesline-fade--start {
+  inset-inline-start: 0.35rem;
+  background: linear-gradient(
+    to right,
+    var(--canvas) 0%,
+    color-mix(in srgb, var(--canvas) 92%, transparent) 28%,
+    color-mix(in srgb, var(--canvas) 55%, transparent) 58%,
+    transparent 100%
+  );
+}
+
+.clothesline-fade--end {
+  inset-inline-end: 0.35rem;
+  background: linear-gradient(
+    to left,
+    var(--canvas) 0%,
+    color-mix(in srgb, var(--canvas) 92%, transparent) 28%,
+    color-mix(in srgb, var(--canvas) 55%, transparent) 58%,
+    transparent 100%
+  );
+}
+
+.clothesline--desktop .clothesline-fade--start {
+  inset-inline-start: 2.75rem;
+}
+
+.clothesline--desktop .clothesline-fade--end {
+  inset-inline-end: 2.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clothesline-fade {
+    transition: none;
+  }
+}
+
+.clothesline-track {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  outline: none;
+  touch-action: pan-x;
+  /* Narrower soft clip on mobile so cards stay readable */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.clothesline-track::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+  background: transparent;
+}
+
+.clothesline--desktop .clothesline-track {
+  /* Desktop drag path: no scrollbar chrome */
+  overflow: hidden;
+  touch-action: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 12%,
+    #000 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 12%,
+    #000 88%,
+    transparent 100%
+  );
+}
+
+.clothesline-track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.clothesline-track:focus-visible {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: var(--radius-panel);
+}
+
+.clothesline-rail {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  /* Extra vertical room so sag + tilt do not clip square cards */
+  padding: 1.25rem 1rem 3.5rem;
+}
+
+.clothesline--desktop .clothesline-rail {
+  padding: 1.5rem 1.75rem 4.5rem;
+}
+
+.clothesline-wire {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  pointer-events: none;
+  color: color-mix(in srgb, var(--ink) 28%, var(--line));
+  overflow: visible;
+}
+
+.clothesline-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 0 0;
+  width: max-content;
+  min-width: 100%;
+  justify-content: center;
+}
+
+.clothesline--desktop .clothesline-list {
+  gap: 1.75rem;
+}
+
+.clothesline-pin {
+  position: relative;
+  flex: 0 0 auto;
+  /* Mobile: ~2 cards in view */
+  width: clamp(10.5rem, 44vw, 13.5rem);
+  padding-top: 0.55rem;
+  --pin-y: 24px;
+  --pin-rot: 0deg;
+  transform: translateY(var(--pin-y)) rotate(var(--pin-rot));
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+
+.clothesline--desktop .clothesline-pin {
+  width: clamp(8.75rem, 20vw, 11rem);
+}
+
+.clothesline-peg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid color-mix(in srgb, var(--ink) 55%, var(--line));
+  border-radius: 0.2rem;
+  background: var(--paper);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 12%, transparent);
+  transform: translate(-50%, 0);
+}
+
+.clothesline-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+  box-shadow: 0 18px 36px -26px color-mix(in srgb, var(--ink) 55%, transparent);
+}
+
+.clothesline-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: color-mix(in srgb, var(--lilac-mist) 70%, var(--paper));
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .clothesline-pin {
+    transition: transform 160ms cubic-bezier(0.22, 0.8, 0.3, 1);
+  }
+
+  .clothesline-pin:hover,
+  .clothesline-pin:focus-within {
+    z-index: 3;
+    transform: translateY(calc(var(--pin-y) - 6px)) rotate(var(--pin-rot)) scale(1.03);
+  }
+
+  .clothesline-pin:hover .clothesline-card,
+  .clothesline-pin:focus-within .clothesline-card {
+    box-shadow: 0 22px 40px -22px color-mix(in srgb, var(--ink) 50%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clothesline-pin {
+    --pin-y: 12px !important;
+    transition: none;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .page-enter-active,
   .page-leave-active {
@@ -1418,7 +1676,7 @@ body {
     transition: transform 220ms cubic-bezier(0.22, 0.8, 0.3, 1);
   }
 
-  .faq-heart {
+  .faq-butterfly {
     transition:
       opacity 220ms ease,
       transform 220ms cubic-bezier(0.22, 0.8, 0.3, 1);
@@ -1432,7 +1690,7 @@ body {
     transform: scale(1.08);
   }
 
-  .faq-item[open] .faq-heart-filled {
+  .faq-item[open] .faq-butterfly {
     transform: scale(1.05);
   }
 

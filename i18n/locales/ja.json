@@ -152,6 +152,9 @@
       "bannerAlt": "ハート柄のベッドで、やわらかいアルパカのぬいぐるみと丸くねむる柴犬。",
       "categoriesTitle": "デジタルアートのカテゴリ",
       "avatarsEmpty": "まだアバターがありません。これから増えていきます。",
+      "avatarsGalleryHint": "スワイプまたはドラッグでアバターを見られます",
+      "avatarsGalleryPrev": "前のアバター",
+      "avatarsGalleryNext": "次のアバター",
       "charactersEmpty": "このグループにはまだ作品がありません。これから増えていきます。"
     }
   },

@@ -26,26 +26,7 @@ const characters = computed(() =>
       <p v-if="!avatars.length" class="text-muted">
         {{ t('shop.digitalArt.avatarsEmpty') }}
       </p>
-      <ul v-else class="grid list-none grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-        <li
-          v-for="(avatar, index) in avatars"
-          :key="avatar.slug"
-          class="group rise"
-          :class="index === 0 ? 'delay-1' : index === 1 ? 'delay-2' : index === 2 ? 'delay-3' : ''"
-        >
-          <div class="gallery-mat gallery-mat--flush lift overflow-hidden">
-            <img
-              :src="avatar.image"
-              alt=""
-              width="400"
-              height="400"
-              class="aspect-square w-full object-contain"
-              loading="lazy"
-              decoding="async"
-            >
-          </div>
-        </li>
-      </ul>
+      <AvatarClothesline v-else :avatars="avatars" />
     </section>
 
     <section
