@@ -405,7 +405,17 @@ onBeforeUnmount(() => {
 
     <a class="entrance-scroll entrance-rise delay-3" href="#home-studio">
       <span>{{ t('hero.scroll') }}</span>
-      <span class="entrance-scroll-mark" aria-hidden="true" />
+      <svg
+        class="entrance-scroll-mark"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M29.604 10.528 17.531 23.356a2.1 2.1 0 0 1-3.062 0L2.396 10.528c-.907-.964-.224-2.546 1.1-2.546h25.008c1.324 0 2.007 1.582 1.1 2.546"
+          fill="currentColor"
+        />
+      </svg>
     </a>
   </section>
 </template>

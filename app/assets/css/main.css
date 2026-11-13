@@ -1108,7 +1108,7 @@ body {
   align-items: center;
   gap: 0.45rem;
   min-height: 2.75rem;
-  color: var(--entrance-ink);
+  color: color-mix(in srgb, var(--entrance-button) 86%, var(--entrance-ink) 14%);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1117,10 +1117,19 @@ body {
 }
 
 .entrance-scroll-mark {
-  width: 1.5px;
-  height: 1.6rem;
-  border-radius: 999px;
-  background: var(--entrance-ink);
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+@keyframes entrance-scroll-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }
 
 @keyframes rise {
@@ -1304,6 +1313,10 @@ body {
 
   .drift {
     animation: drift 8s ease-in-out infinite;
+  }
+
+  .entrance-scroll-mark {
+    animation: entrance-scroll-drift 2.6s ease-in-out infinite;
   }
 
   .entrance-butterfly__wing--left {
