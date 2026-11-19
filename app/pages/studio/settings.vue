@@ -13,7 +13,7 @@ const { data, refresh } = await useFetch('/api/admin/catalog', { key: 'admin-cat
 
 const cardPrice = ref('')
 const pending = ref(false)
-const messageKey = ref<'none' | 'saved' | 'failed'>('none')
+const messageKey = ref<'none' | 'saved' | 'failed' | 'auth'>('none')
 
 watch(() => data.value?.settings?.customCardPriceCents, (cents) => {
   if (typeof cents === 'number') cardPrice.value = (cents / 100).toFixed(2)
@@ -22,17 +22,24 @@ watch(() => data.value?.settings?.customCardPriceCents, (cents) => {
 async function save() {
   pending.value = true
   messageKey.value = 'none'
+  const cents = Math.round(Number(String(cardPrice.value).replace(',', '.')) * 100)
+  if (!Number.isFinite(cents) || cents < 0) {
+    messageKey.value = 'failed'
+    pending.value = false
+    return
+  }
   try {
     await $fetch('/api/admin/settings', {
       method: 'PUT',
-      body: {
-        customCardPriceCents: Math.round(Number(cardPrice.value.replace(',', '.')) * 100),
-      },
+      body: { customCardPriceCents: cents },
     })
     await refresh()
     messageKey.value = 'saved'
-  } catch {
-    messageKey.value = 'failed'
+  } catch (error: unknown) {
+    const status = typeof error === 'object' && error && 'statusCode' in error
+      ? Number((error as { statusCode?: number }).statusCode)
+      : 0
+    messageKey.value = status === 401 ? 'auth' : 'failed'
   } finally {
     pending.value = false
   }
@@ -59,6 +66,7 @@ async function save() {
       </div>
 
       <p v-if="messageKey === 'saved'" class="text-sm text-muted" role="status">{{ t('studio.saved') }}</p>
+      <p v-else-if="messageKey === 'auth'" class="text-sm text-accent" role="alert">{{ t('studio.saveAuth') }}</p>
       <p v-else-if="messageKey === 'failed'" class="text-sm text-accent" role="alert">{{ t('studio.saveFailed') }}</p>
 
       <button type="submit" class="btn btn-primary" :disabled="pending">

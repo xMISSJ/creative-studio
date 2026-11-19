@@ -645,7 +645,7 @@
     "refresh": "Refresh",
     "loading": "Loading…",
     "loadFailed": "Could not load studio data.",
-    "saveFailed": "Could not save. Check that you are in local pnpm dev and still signed in.",
+    "saveFailed": "Could not save. If you changed .env, restart pnpm dev, then log in again.",
     "saved": "Saved into the project files.",
     "save": "Save",
     "saving": "Saving…",
@@ -684,6 +684,7 @@
     "showPassword": "Show password",
     "hidePassword": "Hide password",
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
-    "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier."
+    "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
+    "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
   }
 }
