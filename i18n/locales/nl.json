@@ -17,7 +17,9 @@
     "registerTitle": "Account maken",
     "registerDescription": "Accounts bij {name} openen later.",
     "accountTitle": "Je account",
-    "accountDescription": "Een stil plekje voor toekomstige bestellingen bij {name}."
+    "accountDescription": "Een stil plekje voor toekomstige bestellingen bij {name}.",
+    "cardsTitle": "Kaarten",
+    "cardsDescription": "Ontwerp een platte of vouwkaart met kunst van {name}. Printen opent later; je ontwerp blijft op dit apparaat."
   },
   "nav": {
     "skip": "Ga naar de inhoud",
@@ -30,7 +32,8 @@
     "account": "Account",
     "login": "Inloggen",
     "register": "Account maken",
-    "breadcrumb": "Kruimelpad"
+    "breadcrumb": "Kruimelpad",
+    "cards": "Kaarten"
   },
   "theme": {
     "toLight": "Schakel naar het lichte thema",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "Vorige avatars",
       "avatarsGalleryNext": "Volgende avatars",
       "charactersEmpty": "In deze groep ligt nog niets. Er komen meer stukken aan."
-    }
+    },
+    "comingSoonCardsCta": "Open de kaartenstudio"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "Enkelzijdige paginas"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "Kaartenstudio",
+    "title": "Ontwerp een kaart",
+    "lead": "Kies een platte of vouwkaart, plaats studio-art, voeg een korte tekst toe en bewaar die in je winkelwagen. Printen opent later.",
+    "toolsLabel": "Kaarthulpmiddelen",
+    "formatsTitle": "Kaarttype",
+    "formats": {
+      "flat": "Tweezijdig",
+      "fold": "Vouwkaart"
+    },
+    "formatsShort": {
+      "flat": "plat",
+      "fold": "vouw"
+    },
+    "sizesTitle": "Formaat",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Vierkant"
+    },
+    "papersTitle": "Papier",
+    "papers": {
+      "cream": "Crème",
+      "blush": "Blush",
+      "sage": "Salie",
+      "peach": "Perzik",
+      "lilac": "Lila"
+    },
+    "facesTitle": "Zijden",
+    "faces": {
+      "front": "Voor",
+      "back": "Achter",
+      "inside-left": "Binnen links",
+      "inside-right": "Binnen rechts",
+      "inside-top": "Binnen boven",
+      "inside-bottom": "Binnen onder"
+    },
+    "stickersTitle": "Kunst",
+    "backgroundsTitle": "Achtergronden",
+    "clearBackground": "Geen patroon",
+    "addText": "Tekst toevoegen",
+    "defaultText": "Hallo",
+    "clearFace": "Deze zijde wissen",
+    "propertiesTitle": "Geselecteerd",
+    "emptySelection": "Kies een sticker of tekst op de kaart om te bewerken.",
+    "selectionText": "Tekst",
+    "selectionSticker": "Sticker",
+    "textLabel": "Bericht",
+    "textColorLabel": "Tekstkleur",
+    "textColors": {
+      "ink": "Inkt",
+      "muted": "Zacht",
+      "accent": "Accent"
+    },
+    "sizeLabel": "Grootte",
+    "rotateLabel": "Draaien",
+    "remove": "Verwijderen",
+    "stageLabel": "Kaartvoorbeeld, {face}",
+    "stageHint": "Sleep kunst om te verplaatsen. Gebruik de hoekgreep om te vergroten of verkleinen.",
+    "resizeHandle": "Formaat wijzigen",
+    "addToCart": "In winkelwagen",
+    "printingLater": "Printen opent later. Je ontwerp blijft in deze browserwinkelwagen tot checkout bestaat.",
+    "added": "Kaart opgeslagen in je winkelwagen.",
+    "cartTitle": "Eigen {format}kaart · {size}",
+    "cartSummary": "{paper} papier",
+    "editAgain": "Open studio",
+    "assets": {
+      "heart": "Hart",
+      "star": "Ster",
+      "flower": "Bloem",
+      "leaf": "Blad",
+      "bunny": "Konijn",
+      "cloud": "Wolk",
+      "moon": "Maan",
+      "dots-bg": "Stippenachtergrond",
+      "stripes-bg": "Strepenachtergrond"
+    },
+    "foldDirectionsTitle": "Vouw opent",
+    "foldDirectionsLead": "Kies welke kant de kaart opent. De stippellijn is de vouw.",
+    "foldDirections": {
+      "right": {
+        "label": "Naar rechts",
+        "closed": "Dicht als een boek, rug links.",
+        "open": "Opent naar rechts in twee binnenpagina’s."
+      },
+      "left": {
+        "label": "Naar links",
+        "closed": "Dicht als een boek, rug rechts.",
+        "open": "Opent naar links in twee binnenpagina’s."
+      },
+      "down": {
+        "label": "Naar beneden",
+        "closed": "Dicht als een tent, vouw bovenaan.",
+        "open": "Opent naar beneden in een boven- en onderpagina."
+      },
+      "up": {
+        "label": "Naar boven",
+        "closed": "Dicht als een tent, vouw onderaan.",
+        "open": "Opent naar boven in een boven- en onderpagina."
+      }
+    },
+    "foldGuideTitle": "Zo vouwt hij",
+    "foldGuideLabel": "Vouwdiagram",
+    "foldClosed": "Dicht",
+    "foldOpen": "Open",
+    "foldLabel": "Vouw",
+    "spreadHint": "Binnenkant open. Bewerk beide pagina’s; de middenlijn is de vouw.",
+    "spreadLabel": "Voorbeeld open vouwkaart",
+    "facesShort": {
+      "front": "Voor",
+      "back": "Achter",
+      "inside-left": "Links",
+      "inside-right": "Rechts",
+      "inside-top": "Boven",
+      "inside-bottom": "Onder"
+    },
+    "outsideHint": "Voor- en achterkant samen. Klik een zijde om te bewerken.",
+    "outsideFoldHint": "Buitenkant van de kaart (voor en achter). De layout volgt de vouwrichting; open Binnen om de verbonden pagina’s te bewerken.",
+    "outsideLabel": "Voor- en achterkant voorbeeld",
+    "sessionsTitle": "Kaartweergave",
+    "sessions": {
+      "outside": "Buiten",
+      "inside": "Binnen"
+    },
+    "textSizeLabel": "Tekstgrootte",
+    "setupLabel": "Kaartinstellingen",
+    "artTrayLabel": "Kunstlade"
   }
 }

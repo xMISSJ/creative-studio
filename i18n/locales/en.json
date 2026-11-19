@@ -17,13 +17,16 @@
     "registerTitle": "Create an account",
     "registerDescription": "Accounts at {name} open later.",
     "accountTitle": "Your account",
-    "accountDescription": "A quiet home for future orders at {name}."
+    "accountDescription": "A quiet home for future orders at {name}.",
+    "cardsTitle": "Cards",
+    "cardsDescription": "Design a flat or fold card with art from {name}. Printing opens later; your draft stays on this device."
   },
   "nav": {
     "skip": "Skip to content",
     "primary": "Primary",
     "home": "Home",
     "shop": "Shop",
+    "cards": "Cards",
     "faq": "FAQ",
     "about": "About",
     "cart": "Cart",
@@ -142,6 +145,7 @@
     "comingSoonTitle": "Still on the drawing board",
     "comingSoonBody": "Soft merch is still taking shape. Coloring books and digital art are open while this corner finishes warming up.",
     "comingSoonCta": "Browse coloring books",
+    "comingSoonCardsCta": "Open the card studio",
     "coloringLead": "Start with a theme, or keep scrolling for every book.",
     "allBooksTitle": "Every coloring book",
     "allBooksLead": "No theme picked? That is fine. The whole shelf is waiting below.",
@@ -200,6 +204,134 @@
     "details": "About this book",
     "missingTitle": "This book has left the shop",
     "missingBody": "It may have been renamed or tucked away. The rest of the shop is still here."
+  },
+  "cards": {
+    "eyebrow": "Card studio",
+    "title": "Design a card",
+    "lead": "Pick a flat or fold card, place studio art, add a short message, and save it to your cart. Printing opens later.",
+    "toolsLabel": "Card tools",
+    "setupLabel": "Card setup",
+    "artTrayLabel": "Art tray",
+    "formatsTitle": "Card type",
+    "formats": {
+      "flat": "Two-sided",
+      "fold": "Folded"
+    },
+    "formatsShort": {
+      "flat": "flat",
+      "fold": "fold"
+    },
+    "foldDirectionsTitle": "Fold opens",
+    "foldDirectionsLead": "Choose which way the card opens. The dashed edge is the fold.",
+    "foldDirections": {
+      "right": {
+        "label": "To the right",
+        "closed": "Closed like a book, spine on the left.",
+        "open": "Opens to the right into two inside pages."
+      },
+      "left": {
+        "label": "To the left",
+        "closed": "Closed like a book, spine on the right.",
+        "open": "Opens to the left into two inside pages."
+      },
+      "down": {
+        "label": "Downward",
+        "closed": "Closed like a tent, fold along the top.",
+        "open": "Opens downward into a top and bottom page."
+      },
+      "up": {
+        "label": "Upward",
+        "closed": "Closed like a tent, fold along the bottom.",
+        "open": "Opens upward into a top and bottom page."
+      }
+    },
+    "foldGuideTitle": "How it folds",
+    "foldGuideLabel": "Fold diagram",
+    "foldClosed": "Closed",
+    "foldOpen": "Open",
+    "foldLabel": "Fold",
+    "outsideHint": "Front and back together. Click a side to edit it.",
+    "outsideFoldHint": "Outside of the card (front and back). Layout follows the fold direction; open Inside to edit the joined pages.",
+    "spreadHint": "Inside open. Edit both pages; the center line is the fold.",
+    "spreadLabel": "Open fold card preview",
+    "outsideLabel": "Front and back preview",
+    "sessionsTitle": "Card view",
+    "sessions": {
+      "outside": "Outside",
+      "inside": "Inside"
+    },
+    "sizesTitle": "Size",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Square"
+    },
+    "papersTitle": "Paper",
+    "papers": {
+      "cream": "Cream",
+      "blush": "Blush",
+      "sage": "Sage",
+      "peach": "Peach",
+      "lilac": "Lilac"
+    },
+    "facesTitle": "Sides",
+    "faces": {
+      "front": "Front",
+      "back": "Back",
+      "inside-left": "Inside left",
+      "inside-right": "Inside right",
+      "inside-top": "Inside top",
+      "inside-bottom": "Inside bottom"
+    },
+    "facesShort": {
+      "front": "Front",
+      "back": "Back",
+      "inside-left": "Left",
+      "inside-right": "Right",
+      "inside-top": "Top",
+      "inside-bottom": "Bottom"
+    },
+    "stickersTitle": "Art",
+    "backgroundsTitle": "Backgrounds",
+    "clearBackground": "No pattern",
+    "addText": "Add text",
+    "defaultText": "Hello",
+    "clearFace": "Clear this side",
+    "propertiesTitle": "Selected",
+    "emptySelection": "Pick a sticker or text on the card to edit it.",
+    "selectionText": "Text",
+    "selectionSticker": "Sticker",
+    "textLabel": "Message",
+    "textColorLabel": "Text color",
+    "textColors": {
+      "ink": "Ink",
+      "muted": "Soft",
+      "accent": "Accent"
+    },
+    "sizeLabel": "Size",
+    "textSizeLabel": "Text size",
+    "rotateLabel": "Rotate",
+    "remove": "Remove",
+    "stageLabel": "Card preview, {face}",
+    "stageHint": "Drag art to move it. Use the corner handle to resize.",
+    "resizeHandle": "Resize",
+    "addToCart": "Add to cart",
+    "printingLater": "Printing opens later. Your design stays in this browser cart until checkout exists.",
+    "added": "Card saved to your cart.",
+    "cartTitle": "Custom {format} card · {size}",
+    "cartSummary": "{paper} paper",
+    "editAgain": "Open studio",
+    "assets": {
+      "heart": "Heart",
+      "star": "Star",
+      "flower": "Flower",
+      "leaf": "Leaf",
+      "bunny": "Bunny",
+      "cloud": "Cloud",
+      "moon": "Moon",
+      "dots-bg": "Dots background",
+      "stripes-bg": "Stripes background"
+    }
   },
   "cart": {
     "lead": "Books you have set aside on this device. They stay in this browser until checkout exists.",

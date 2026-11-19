@@ -17,7 +17,9 @@
     "registerTitle": "アカウントを作る",
     "registerDescription": "{name} のアカウントは後で開きます。",
     "accountTitle": "あなたのアカウント",
-    "accountDescription": "これから先の {name} の注文のための静かな場所。"
+    "accountDescription": "これから先の {name} の注文のための静かな場所。",
+    "cardsTitle": "カード",
+    "cardsDescription": "{name}のアートで平面または折りたたみカードをデザイン。印刷はあとで開き、下書きはこの端末に残ります。"
   },
   "nav": {
     "skip": "本文へスキップ",
@@ -30,7 +32,8 @@
     "account": "アカウント",
     "login": "ログイン",
     "register": "アカウント作成",
-    "breadcrumb": "パンくず"
+    "breadcrumb": "パンくず",
+    "cards": "カード"
   },
   "theme": {
     "toLight": "ライトテーマに切り替え",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "前のアバター",
       "avatarsGalleryNext": "次のアバター",
       "charactersEmpty": "このグループにはまだ作品がありません。これから増えていきます。"
-    }
+    },
+    "comingSoonCardsCta": "カードスタジオを開く"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "片面ページ"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "カードスタジオ",
+    "title": "カードを作る",
+    "lead": "片面または折りたたみカードを選び、スタジオのアートを置き、短いメッセージを加えてカートに保存します。印刷はあとで開きます。",
+    "toolsLabel": "カードツール",
+    "formatsTitle": "カードの種類",
+    "formats": {
+      "flat": "両面",
+      "fold": "折りたたみ"
+    },
+    "formatsShort": {
+      "flat": "平面",
+      "fold": "折り"
+    },
+    "sizesTitle": "サイズ",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "スクエア"
+    },
+    "papersTitle": "用紙",
+    "papers": {
+      "cream": "クリーム",
+      "blush": "ブラッシュ",
+      "sage": "セージ",
+      "peach": "ピーチ",
+      "lilac": "ライラック"
+    },
+    "facesTitle": "面",
+    "faces": {
+      "front": "表",
+      "back": "裏",
+      "inside-left": "内側左",
+      "inside-right": "内側右",
+      "inside-top": "内側上",
+      "inside-bottom": "内側下"
+    },
+    "stickersTitle": "アート",
+    "backgroundsTitle": "背景",
+    "clearBackground": "模様なし",
+    "addText": "テキストを追加",
+    "defaultText": "こんにちは",
+    "clearFace": "この面をクリア",
+    "propertiesTitle": "選択中",
+    "emptySelection": "カード上のステッカーやテキストを選んで編集します。",
+    "selectionText": "テキスト",
+    "selectionSticker": "ステッカー",
+    "textLabel": "メッセージ",
+    "textColorLabel": "文字色",
+    "textColors": {
+      "ink": "インク",
+      "muted": "やわらか",
+      "accent": "アクセント"
+    },
+    "sizeLabel": "サイズ",
+    "rotateLabel": "回転",
+    "remove": "削除",
+    "stageLabel": "カードプレビュー、{face}",
+    "stageHint": "アートをドラッグして移動。角のハンドルでリサイズ。",
+    "resizeHandle": "リサイズ",
+    "addToCart": "カートに入れる",
+    "printingLater": "印刷はあとで開きます。デザインはこのブラウザのカートに、チェックアウトまで残ります。",
+    "added": "カードをカートに保存しました。",
+    "cartTitle": "カスタム{format}カード · {size}",
+    "cartSummary": "{paper}の紙",
+    "editAgain": "スタジオを開く",
+    "assets": {
+      "heart": "ハート",
+      "star": "星",
+      "flower": "花",
+      "leaf": "葉",
+      "bunny": "うさぎ",
+      "cloud": "雲",
+      "moon": "月",
+      "dots-bg": "ドット背景",
+      "stripes-bg": "ストライプ背景"
+    },
+    "foldDirectionsTitle": "開く方向",
+    "foldDirectionsLead": "カードの開き方を選びます。点線が折り目です。",
+    "foldDirections": {
+      "right": {
+        "label": "右へ",
+        "closed": "本のように閉じ、背は左。",
+        "open": "右へ開き、内側が2ページになります。"
+      },
+      "left": {
+        "label": "左へ",
+        "closed": "本のように閉じ、背は右。",
+        "open": "左へ開き、内側が2ページになります。"
+      },
+      "down": {
+        "label": "下へ",
+        "closed": "テントのように閉じ、折り目は上。",
+        "open": "下へ開き、上下のページになります。"
+      },
+      "up": {
+        "label": "上へ",
+        "closed": "テントのように閉じ、折り目は下。",
+        "open": "上へ開き、上下のページになります。"
+      }
+    },
+    "foldGuideTitle": "折り方",
+    "foldGuideLabel": "折り図",
+    "foldClosed": "閉じ",
+    "foldOpen": "開き",
+    "foldLabel": "折り目",
+    "spreadHint": "内側を開いた状態。両ページを編集。中央線が折り目です。",
+    "spreadLabel": "開いた折りカードのプレビュー",
+    "facesShort": {
+      "front": "表",
+      "back": "裏",
+      "inside-left": "左",
+      "inside-right": "右",
+      "inside-top": "上",
+      "inside-bottom": "下"
+    },
+    "outsideHint": "表と裏を一緒に表示。編集する面をクリックします。",
+    "outsideFoldHint": "カードの外側（表と裏）。折り方向に合わせて並びます。内側を開いてつながったページを編集します。",
+    "outsideLabel": "表裏プレビュー",
+    "sessionsTitle": "カード表示",
+    "sessions": {
+      "outside": "外側",
+      "inside": "内側"
+    },
+    "textSizeLabel": "文字サイズ",
+    "setupLabel": "カード設定",
+    "artTrayLabel": "アートトレイ"
   }
 }

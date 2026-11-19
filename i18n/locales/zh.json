@@ -17,7 +17,9 @@
     "registerTitle": "创建账户",
     "registerDescription": "{name} 的账户稍后开放。",
     "accountTitle": "你的账户",
-    "accountDescription": "未来在 {name} 查看订单的安静角落。"
+    "accountDescription": "未来在 {name} 查看订单的安静角落。",
+    "cardsTitle": "卡片",
+    "cardsDescription": "用{name}的画作设计平卡或折卡。印刷稍后开放；草稿留在本机。"
   },
   "nav": {
     "skip": "跳到内容",
@@ -30,7 +32,8 @@
     "account": "账户",
     "login": "登录",
     "register": "创建账户",
-    "breadcrumb": "面包屑"
+    "breadcrumb": "面包屑",
+    "cards": "卡片"
   },
   "theme": {
     "toLight": "切换到浅色主题",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "上一组头像",
       "avatarsGalleryNext": "下一组头像",
       "charactersEmpty": "这一组还没有作品。更多作品正在路上。"
-    }
+    },
+    "comingSoonCardsCta": "打开卡片工作室"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "单面印刷"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "卡片工作室",
+    "title": "设计一张卡",
+    "lead": "选择单页或折叠卡，放上工作室画作，写一句短讯，再存进购物车。印刷稍后开放。",
+    "toolsLabel": "卡片工具",
+    "formatsTitle": "卡片类型",
+    "formats": {
+      "flat": "双面",
+      "fold": "折叠"
+    },
+    "formatsShort": {
+      "flat": "平卡",
+      "fold": "折卡"
+    },
+    "sizesTitle": "尺寸",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "方形"
+    },
+    "papersTitle": "纸色",
+    "papers": {
+      "cream": "奶油",
+      "blush": "腮红",
+      "sage": "鼠尾草",
+      "peach": "蜜桃",
+      "lilac": "丁香"
+    },
+    "facesTitle": "面",
+    "faces": {
+      "front": "正面",
+      "back": "背面",
+      "inside-left": "内左",
+      "inside-right": "内右",
+      "inside-top": "内上",
+      "inside-bottom": "内下"
+    },
+    "stickersTitle": "画作",
+    "backgroundsTitle": "背景",
+    "clearBackground": "无图案",
+    "addText": "添加文字",
+    "defaultText": "你好",
+    "clearFace": "清空这一面",
+    "propertiesTitle": "已选",
+    "emptySelection": "在卡片上点选贴纸或文字来编辑。",
+    "selectionText": "文字",
+    "selectionSticker": "贴纸",
+    "textLabel": "留言",
+    "textColorLabel": "文字颜色",
+    "textColors": {
+      "ink": "墨色",
+      "muted": "柔和",
+      "accent": "强调"
+    },
+    "sizeLabel": "大小",
+    "rotateLabel": "旋转",
+    "remove": "移除",
+    "stageLabel": "卡片预览，{face}",
+    "stageHint": "拖动画作移动。用角落手柄缩放。",
+    "resizeHandle": "缩放",
+    "addToCart": "加入购物车",
+    "printingLater": "印刷稍后开放。设计会留在此浏览器购物车，直到结账上线。",
+    "added": "卡片已存进购物车。",
+    "cartTitle": "定制{format}卡 · {size}",
+    "cartSummary": "{paper}纸",
+    "editAgain": "打开工作室",
+    "assets": {
+      "heart": "心形",
+      "star": "星星",
+      "flower": "花朵",
+      "leaf": "叶子",
+      "bunny": "兔子",
+      "cloud": "云朵",
+      "moon": "月亮",
+      "dots-bg": "圆点背景",
+      "stripes-bg": "条纹背景"
+    },
+    "foldDirectionsTitle": "卡片打开方向",
+    "foldDirectionsLead": "选择卡片打开的方向。虚线是折痕。",
+    "foldDirections": {
+      "right": {
+        "label": "向右开",
+        "closed": "合上如书，书脊在左。",
+        "open": "向右打开成两个内页。"
+      },
+      "left": {
+        "label": "向左开",
+        "closed": "合上如书，书脊在右。",
+        "open": "向左打开成两个内页。"
+      },
+      "down": {
+        "label": "向下开",
+        "closed": "合上如帐篷，折痕在上。",
+        "open": "向下打开成上、下两页。"
+      },
+      "up": {
+        "label": "向上开",
+        "closed": "合上如帐篷，折痕在下。",
+        "open": "向上打开成上、下两页。"
+      }
+    },
+    "foldGuideTitle": "怎么折",
+    "foldGuideLabel": "折叠示意",
+    "foldClosed": "合上",
+    "foldOpen": "打开",
+    "foldLabel": "折痕",
+    "spreadHint": "内侧打开。可编辑两页；中间线是折痕。",
+    "spreadLabel": "打开折卡预览",
+    "facesShort": {
+      "front": "正",
+      "back": "背",
+      "inside-left": "左",
+      "inside-right": "右",
+      "inside-top": "上",
+      "inside-bottom": "下"
+    },
+    "outsideHint": "正面与背面一起显示。点一侧即可编辑。",
+    "outsideFoldHint": "卡片外侧（正面与背面）。布局跟随折叠方向；打开内侧可编辑相连的页面。",
+    "outsideLabel": "正反面预览",
+    "sessionsTitle": "卡片视图",
+    "sessions": {
+      "outside": "外侧",
+      "inside": "内侧"
+    },
+    "textSizeLabel": "文字大小",
+    "setupLabel": "卡片设置",
+    "artTrayLabel": "画作托盘"
   }
 }

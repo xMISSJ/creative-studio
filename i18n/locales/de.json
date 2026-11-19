@@ -17,7 +17,9 @@
     "registerTitle": "Konto erstellen",
     "registerDescription": "Konten bei {name} öffnen später.",
     "accountTitle": "Dein Konto",
-    "accountDescription": "Ein stilles Zuhause für künftige Bestellungen bei {name}."
+    "accountDescription": "Ein stilles Zuhause für künftige Bestellungen bei {name}.",
+    "cardsTitle": "Karten",
+    "cardsDescription": "Gestalte eine flache oder faltbare Karte mit Kunst von {name}. Drucken öffnet später; dein Entwurf bleibt auf diesem Gerät."
   },
   "nav": {
     "skip": "Zum Inhalt springen",
@@ -30,7 +32,8 @@
     "account": "Konto",
     "login": "Anmelden",
     "register": "Konto erstellen",
-    "breadcrumb": "Brotkrumen"
+    "breadcrumb": "Brotkrumen",
+    "cards": "Karten"
   },
   "theme": {
     "toLight": "Zum hellen Theme wechseln",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "Vorherige Avatare",
       "avatarsGalleryNext": "Nächste Avatare",
       "charactersEmpty": "In dieser Gruppe ist noch nichts. Mehr Stücke sind unterwegs."
-    }
+    },
+    "comingSoonCardsCta": "Kartenstudio öffnen"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "Einseitig bedruckte Seiten"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "Kartenstudio",
+    "title": "Eine Karte gestalten",
+    "lead": "Wähle eine flache oder faltbare Karte, platziere Studio-Kunst, füge eine kurze Nachricht hinzu und speichere sie im Warenkorb. Drucken öffnet später.",
+    "toolsLabel": "Kartenwerkzeuge",
+    "formatsTitle": "Kartentyp",
+    "formats": {
+      "flat": "Zweiseitig",
+      "fold": "Faltkarte"
+    },
+    "formatsShort": {
+      "flat": "flach",
+      "fold": "Falt"
+    },
+    "sizesTitle": "Größe",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Quadrat"
+    },
+    "papersTitle": "Papier",
+    "papers": {
+      "cream": "Creme",
+      "blush": "Blush",
+      "sage": "Salbei",
+      "peach": "Pfirsich",
+      "lilac": "Flieder"
+    },
+    "facesTitle": "Seiten",
+    "faces": {
+      "front": "Vorderseite",
+      "back": "Rückseite",
+      "inside-left": "Innen links",
+      "inside-right": "Innen rechts",
+      "inside-top": "Innen oben",
+      "inside-bottom": "Innen unten"
+    },
+    "stickersTitle": "Kunst",
+    "backgroundsTitle": "Hintergründe",
+    "clearBackground": "Kein Muster",
+    "addText": "Text hinzufügen",
+    "defaultText": "Hallo",
+    "clearFace": "Diese Seite leeren",
+    "propertiesTitle": "Auswahl",
+    "emptySelection": "Wähle einen Sticker oder Text auf der Karte zum Bearbeiten.",
+    "selectionText": "Text",
+    "selectionSticker": "Sticker",
+    "textLabel": "Nachricht",
+    "textColorLabel": "Textfarbe",
+    "textColors": {
+      "ink": "Tinte",
+      "muted": "Sanft",
+      "accent": "Akzent"
+    },
+    "sizeLabel": "Größe",
+    "rotateLabel": "Drehen",
+    "remove": "Entfernen",
+    "stageLabel": "Kartenvorschau, {face}",
+    "stageHint": "Ziehe Kunst zum Verschieben. Nutze den Eckgriff zum Vergrößern oder Verkleinern.",
+    "resizeHandle": "Größe ändern",
+    "addToCart": "In den Warenkorb",
+    "printingLater": "Drucken öffnet später. Dein Entwurf bleibt in diesem Browser-Warenkorb, bis der Checkout da ist.",
+    "added": "Karte im Warenkorb gespeichert.",
+    "cartTitle": "Eigene {format}karte · {size}",
+    "cartSummary": "{paper}-Papier",
+    "editAgain": "Studio öffnen",
+    "assets": {
+      "heart": "Herz",
+      "star": "Stern",
+      "flower": "Blume",
+      "leaf": "Blatt",
+      "bunny": "Häschen",
+      "cloud": "Wolke",
+      "moon": "Mond",
+      "dots-bg": "Punkte-Hintergrund",
+      "stripes-bg": "Streifen-Hintergrund"
+    },
+    "foldDirectionsTitle": "Karte öffnet",
+    "foldDirectionsLead": "Wähle, wohin die Karte öffnet. Die gestrichelte Linie ist die Faltung.",
+    "foldDirections": {
+      "right": {
+        "label": "Nach rechts",
+        "closed": "Geschlossen wie ein Buch, Rücken links.",
+        "open": "Öffnet nach rechts in zwei Innenseiten."
+      },
+      "left": {
+        "label": "Nach links",
+        "closed": "Geschlossen wie ein Buch, Rücken rechts.",
+        "open": "Öffnet nach links in zwei Innenseiten."
+      },
+      "down": {
+        "label": "Nach unten",
+        "closed": "Geschlossen wie ein Zelt, Faltung oben.",
+        "open": "Öffnet nach unten in eine obere und untere Seite."
+      },
+      "up": {
+        "label": "Nach oben",
+        "closed": "Geschlossen wie ein Zelt, Faltung unten.",
+        "open": "Öffnet nach oben in eine obere und untere Seite."
+      }
+    },
+    "foldGuideTitle": "So faltet sie sich",
+    "foldGuideLabel": "Faltdiagramm",
+    "foldClosed": "Zu",
+    "foldOpen": "Auf",
+    "foldLabel": "Faltung",
+    "spreadHint": "Innen offen. Bearbeite beide Seiten; die Mittellinie ist die Faltung.",
+    "spreadLabel": "Vorschau offene Faltkarte",
+    "facesShort": {
+      "front": "Vorne",
+      "back": "Hinten",
+      "inside-left": "Links",
+      "inside-right": "Rechts",
+      "inside-top": "Oben",
+      "inside-bottom": "Unten"
+    },
+    "outsideHint": "Vorder- und Rückseite zusammen. Klicke eine Seite zum Bearbeiten.",
+    "outsideFoldHint": "Außenseite der Karte (Vorne und Hinten). Das Layout folgt der Faltrichtung; öffne Innen, um die verbundenen Seiten zu bearbeiten.",
+    "outsideLabel": "Vorschau Vorder- und Rückseite",
+    "sessionsTitle": "Kartenansicht",
+    "sessions": {
+      "outside": "Außen",
+      "inside": "Innen"
+    },
+    "textSizeLabel": "Textgröße",
+    "setupLabel": "Karteneinstellungen",
+    "artTrayLabel": "Kunstfach"
   }
 }

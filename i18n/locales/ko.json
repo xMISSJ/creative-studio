@@ -17,7 +17,9 @@
     "registerTitle": "계정 만들기",
     "registerDescription": "{name} 계정은 나중에 열립니다.",
     "accountTitle": "내 계정",
-    "accountDescription": "앞으로 {name} 주문을 위한 조용한 공간."
+    "accountDescription": "앞으로 {name} 주문을 위한 조용한 공간.",
+    "cardsTitle": "카드",
+    "cardsDescription": "{name} 아트로 평면 또는 접는 카드를 디자인하세요. 인쇄는 나중에 열리고, 초안은 이 기기에 남습니다."
   },
   "nav": {
     "skip": "본문으로 건너뛰기",
@@ -30,7 +32,8 @@
     "account": "계정",
     "login": "로그인",
     "register": "계정 만들기",
-    "breadcrumb": "경로"
+    "breadcrumb": "경로",
+    "cards": "카드"
   },
   "theme": {
     "toLight": "라이트 테마로 전환",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "이전 아바타",
       "avatarsGalleryNext": "다음 아바타",
       "charactersEmpty": "이 그룹에는 아직 없어요. 더 많은 작품이 올 거예요."
-    }
+    },
+    "comingSoonCardsCta": "카드 스튜디오 열기"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "단면 페이지"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "카드 스튜디오",
+    "title": "카드 만들기",
+    "lead": "단면 또는 접는 카드를 고르고 스튜디오 아트를 올리고 짧은 문구를 넣은 뒤 장바구니에 담으세요. 인쇄는 나중에 열립니다.",
+    "toolsLabel": "카드 도구",
+    "formatsTitle": "카드 종류",
+    "formats": {
+      "flat": "양면",
+      "fold": "접는 카드"
+    },
+    "formatsShort": {
+      "flat": "평면",
+      "fold": "접기"
+    },
+    "sizesTitle": "크기",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "정사각"
+    },
+    "papersTitle": "종이",
+    "papers": {
+      "cream": "크림",
+      "blush": "블러시",
+      "sage": "세이지",
+      "peach": "피치",
+      "lilac": "라일락"
+    },
+    "facesTitle": "면",
+    "faces": {
+      "front": "앞면",
+      "back": "뒷면",
+      "inside-left": "안쪽 왼쪽",
+      "inside-right": "안쪽 오른쪽",
+      "inside-top": "안쪽 위",
+      "inside-bottom": "안쪽 아래"
+    },
+    "stickersTitle": "아트",
+    "backgroundsTitle": "배경",
+    "clearBackground": "무늬 없음",
+    "addText": "텍스트 추가",
+    "defaultText": "안녕",
+    "clearFace": "이 면 지우기",
+    "propertiesTitle": "선택됨",
+    "emptySelection": "카드에서 스티커나 텍스트를 골라 편집하세요.",
+    "selectionText": "텍스트",
+    "selectionSticker": "스티커",
+    "textLabel": "메시지",
+    "textColorLabel": "글자 색",
+    "textColors": {
+      "ink": "잉크",
+      "muted": "부드러운",
+      "accent": "포인트"
+    },
+    "sizeLabel": "크기",
+    "rotateLabel": "회전",
+    "remove": "제거",
+    "stageLabel": "카드 미리보기, {face}",
+    "stageHint": "아트를 드래그해 옮기세요. 모서리 핸들로 크기를 바꿉니다.",
+    "resizeHandle": "크기 조절",
+    "addToCart": "장바구니에 담기",
+    "printingLater": "인쇄는 나중에 열립니다. 디자인은 결제 전까지 이 브라우저 장바구니에 남습니다.",
+    "added": "카드가 장바구니에 저장됐어요.",
+    "cartTitle": "맞춤 {format} 카드 · {size}",
+    "cartSummary": "{paper} 종이",
+    "editAgain": "스튜디오 열기",
+    "assets": {
+      "heart": "하트",
+      "star": "별",
+      "flower": "꽃",
+      "leaf": "잎",
+      "bunny": "토끼",
+      "cloud": "구름",
+      "moon": "달",
+      "dots-bg": "점 배경",
+      "stripes-bg": "줄무늬 배경"
+    },
+    "foldDirectionsTitle": "카드가 열리는 방향",
+    "foldDirectionsLead": "열리는 방향을 고르세요. 점선이 접히는 선입니다.",
+    "foldDirections": {
+      "right": {
+        "label": "오른쪽으로",
+        "closed": "책처럼 닫힘, 왼쪽이 등.",
+        "open": "오른쪽으로 열려 안쪽 두 면이 됩니다."
+      },
+      "left": {
+        "label": "왼쪽으로",
+        "closed": "책처럼 닫힘, 오른쪽이 등.",
+        "open": "왼쪽으로 열려 안쪽 두 면이 됩니다."
+      },
+      "down": {
+        "label": "아래로",
+        "closed": "텐트처럼 닫힘, 위쪽에 접힘.",
+        "open": "아래로 열려 위·아래 면이 됩니다."
+      },
+      "up": {
+        "label": "위로",
+        "closed": "텐트처럼 닫힘, 아래쪽에 접힘.",
+        "open": "위로 열려 위·아래 면이 됩니다."
+      }
+    },
+    "foldGuideTitle": "접히는 방식",
+    "foldGuideLabel": "접기 안내",
+    "foldClosed": "닫힘",
+    "foldOpen": "열림",
+    "foldLabel": "접힘",
+    "spreadHint": "안쪽이 열려 있습니다. 두 면을 편집하세요. 가운데 선이 접힘입니다.",
+    "spreadLabel": "열린 접는 카드 미리보기",
+    "facesShort": {
+      "front": "앞",
+      "back": "뒤",
+      "inside-left": "왼",
+      "inside-right": "오",
+      "inside-top": "위",
+      "inside-bottom": "아래"
+    },
+    "outsideHint": "앞면과 뒷면을 함께 봅니다. 편집할 면을 클릭하세요.",
+    "outsideFoldHint": "카드 바깥면(앞·뒤). 접는 방향에 맞춰 배치됩니다. 안쪽을 열어 이어진 페이지를 편집하세요.",
+    "outsideLabel": "앞·뒷면 미리보기",
+    "sessionsTitle": "카드 보기",
+    "sessions": {
+      "outside": "바깥",
+      "inside": "안쪽"
+    },
+    "textSizeLabel": "글자 크기",
+    "setupLabel": "카드 설정",
+    "artTrayLabel": "아트 트레이"
   }
 }

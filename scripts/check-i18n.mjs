@@ -179,6 +179,16 @@ const dynamicPatterns = [
   /^productTypes\.\$\{[^}]+\}\.(title|summary)$/,
   /^digitalArt\.categories\.\$\{[^}]+\}\.(title|summary)$/,
   /^badges\.\$\{[^}]+\}$/,
+  /^cards\.faces\.\$\{[^}]+\}$/,
+  /^cards\.facesShort\.\$\{[^}]+\}$/,
+  /^cards\.sessions\.\$\{[^}]+\}$/,
+  /^cards\.formats\.\$\{[^}]+\}$/,
+  /^cards\.formatsShort\.\$\{[^}]+\}$/,
+  /^cards\.foldDirections\.\$\{[^}]+\}\.(label|closed|open)$/,
+  /^cards\.sizes\.\$\{[^}]+\}$/,
+  /^cards\.papers\.\$\{[^}]+\}$/,
+  /^cards\.assets\.\$\{[^}]+\}$/,
+  /^cards\.textColors\.\$\{[^}]+\}$/,
 ]
 
 function hasMessage(key) {

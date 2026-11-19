@@ -11,7 +11,9 @@ const slug = computed(() => String(route.params.slug))
 const item = computed(() => data.value?.items.find((entry) => entry.slug === slug.value))
 const qty = ref(1)
 
-const inCart = computed(() => cart.items.value.find((line) => line.slug === slug.value)?.qty ?? 0)
+const inCart = computed(() =>
+  cart.items.value.find((line) => line.kind === 'product' && line.slug === slug.value)?.qty ?? 0,
+)
 const remaining = computed(() => Math.max(0, (item.value?.stock ?? 0) - inCart.value))
 
 watch(item, () => {
@@ -47,7 +49,7 @@ const stockMessage = computed(() => {
 })
 
 const feedback = computed(() => {
-  if (!item.value || cart.notice.value?.slug !== item.value.slug) return ''
+  if (!item.value || cart.notice.value?.kind !== 'product' || cart.notice.value.key !== item.value.slug) return ''
   return cart.notice.value.type === 'added' ? t('product.added') : t('product.limit')
 })
 

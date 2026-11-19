@@ -17,7 +17,9 @@
     "registerTitle": "Crear una cuenta",
     "registerDescription": "Las cuentas en {name} abren mas tarde.",
     "accountTitle": "Tu cuenta",
-    "accountDescription": "Un rincon tranquilo para futuros pedidos en {name}."
+    "accountDescription": "Un rincon tranquilo para futuros pedidos en {name}.",
+    "cardsTitle": "Tarjetas",
+    "cardsDescription": "Diseña una tarjeta plana o plegable con arte de {name}. La impresión abre más adelante; tu borrador se queda en este dispositivo."
   },
   "nav": {
     "skip": "Saltar al contenido",
@@ -30,7 +32,8 @@
     "account": "Cuenta",
     "login": "Iniciar sesion",
     "register": "Crear cuenta",
-    "breadcrumb": "Ruta"
+    "breadcrumb": "Ruta",
+    "cards": "Tarjetas"
   },
   "theme": {
     "toLight": "Cambiar al tema claro",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "Avatares anteriores",
       "avatarsGalleryNext": "Avatares siguientes",
       "charactersEmpty": "Aun no hay nada en este grupo. Llegan mas piezas."
-    }
+    },
+    "comingSoonCardsCta": "Abrir el estudio de tarjetas"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "Paginas de una sola cara"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "Estudio de tarjetas",
+    "title": "Diseña una tarjeta",
+    "lead": "Elige una tarjeta plana o plegable, coloca arte del estudio, añade un mensaje corto y guárdala en el carrito. La impresión abre más adelante.",
+    "toolsLabel": "Herramientas de tarjeta",
+    "formatsTitle": "Tipo de tarjeta",
+    "formats": {
+      "flat": "Dos caras",
+      "fold": "Plegable"
+    },
+    "formatsShort": {
+      "flat": "plana",
+      "fold": "plegable"
+    },
+    "sizesTitle": "Tamaño",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Cuadrada"
+    },
+    "papersTitle": "Papel",
+    "papers": {
+      "cream": "Crema",
+      "blush": "Rubor",
+      "sage": "Salvia",
+      "peach": "Melocotón",
+      "lilac": "Lila"
+    },
+    "facesTitle": "Caras",
+    "faces": {
+      "front": "Frente",
+      "back": "Dorso",
+      "inside-left": "Interior izquierdo",
+      "inside-right": "Interior derecho",
+      "inside-top": "Interior superior",
+      "inside-bottom": "Interior inferior"
+    },
+    "stickersTitle": "Arte",
+    "backgroundsTitle": "Fondos",
+    "clearBackground": "Sin patrón",
+    "addText": "Añadir texto",
+    "defaultText": "Hola",
+    "clearFace": "Vaciar esta cara",
+    "propertiesTitle": "Seleccionado",
+    "emptySelection": "Elige un sticker o texto en la tarjeta para editarlo.",
+    "selectionText": "Texto",
+    "selectionSticker": "Sticker",
+    "textLabel": "Mensaje",
+    "textColorLabel": "Color del texto",
+    "textColors": {
+      "ink": "Tinta",
+      "muted": "Suave",
+      "accent": "Acento"
+    },
+    "sizeLabel": "Tamaño",
+    "rotateLabel": "Rotar",
+    "remove": "Quitar",
+    "stageLabel": "Vista previa de la tarjeta, {face}",
+    "stageHint": "Arrastra el arte para moverlo. Usa la esquina para cambiar el tamaño.",
+    "resizeHandle": "Cambiar tamaño",
+    "addToCart": "Añadir al carrito",
+    "printingLater": "La impresión abre más adelante. Tu diseño se queda en este carrito del navegador hasta que exista el pago.",
+    "added": "Tarjeta guardada en tu carrito.",
+    "cartTitle": "Tarjeta {format} personalizada · {size}",
+    "cartSummary": "Papel {paper}",
+    "editAgain": "Abrir estudio",
+    "assets": {
+      "heart": "Corazón",
+      "star": "Estrella",
+      "flower": "Flor",
+      "leaf": "Hoja",
+      "bunny": "Conejito",
+      "cloud": "Nube",
+      "moon": "Luna",
+      "dots-bg": "Fondo de puntos",
+      "stripes-bg": "Fondo de rayas"
+    },
+    "foldDirectionsTitle": "La tarjeta abre",
+    "foldDirectionsLead": "Elige hacia dónde abre. La línea discontinua es el pliegue.",
+    "foldDirections": {
+      "right": {
+        "label": "A la derecha",
+        "closed": "Cerrada como un libro, lomo a la izquierda.",
+        "open": "Abre a la derecha en dos páginas interiores."
+      },
+      "left": {
+        "label": "A la izquierda",
+        "closed": "Cerrada como un libro, lomo a la derecha.",
+        "open": "Abre a la izquierda en dos páginas interiores."
+      },
+      "down": {
+        "label": "Hacia abajo",
+        "closed": "Cerrada como una tienda, pliegue arriba.",
+        "open": "Abre hacia abajo en una página superior e inferior."
+      },
+      "up": {
+        "label": "Hacia arriba",
+        "closed": "Cerrada como una tienda, pliegue abajo.",
+        "open": "Abre hacia arriba en una página superior e inferior."
+      }
+    },
+    "foldGuideTitle": "Cómo se pliega",
+    "foldGuideLabel": "Diagrama de pliegue",
+    "foldClosed": "Cerrada",
+    "foldOpen": "Abierta",
+    "foldLabel": "Pliegue",
+    "spreadHint": "Interior abierto. Edita ambas páginas; la línea central es el pliegue.",
+    "spreadLabel": "Vista previa de tarjeta plegable abierta",
+    "facesShort": {
+      "front": "Frente",
+      "back": "Dorso",
+      "inside-left": "Izq.",
+      "inside-right": "Der.",
+      "inside-top": "Arriba",
+      "inside-bottom": "Abajo"
+    },
+    "outsideHint": "Frente y dorso juntos. Haz clic en un lado para editarlo.",
+    "outsideFoldHint": "Exterior de la tarjeta (frente y dorso). El diseño sigue la dirección del pliegue; abre Interior para editar las páginas unidas.",
+    "outsideLabel": "Vista previa de frente y dorso",
+    "sessionsTitle": "Vista de la tarjeta",
+    "sessions": {
+      "outside": "Exterior",
+      "inside": "Interior"
+    },
+    "textSizeLabel": "Tamaño del texto",
+    "setupLabel": "Ajustes de tarjeta",
+    "artTrayLabel": "Bandeja de arte"
   }
 }

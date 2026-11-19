@@ -17,7 +17,9 @@
     "registerTitle": "Créer un compte",
     "registerDescription": "Les comptes chez {name} ouvrent plus tard.",
     "accountTitle": "Ton compte",
-    "accountDescription": "Un coin calme pour de futures commandes chez {name}."
+    "accountDescription": "Un coin calme pour de futures commandes chez {name}.",
+    "cardsTitle": "Cartes",
+    "cardsDescription": "Créez une carte plate ou pliée avec l’art de {name}. L’impression arrivera plus tard ; votre brouillon reste sur cet appareil."
   },
   "nav": {
     "skip": "Aller au contenu",
@@ -30,7 +32,8 @@
     "account": "Compte",
     "login": "Connexion",
     "register": "Créer un compte",
-    "breadcrumb": "Fil d’Ariane"
+    "breadcrumb": "Fil d’Ariane",
+    "cards": "Cartes"
   },
   "theme": {
     "toLight": "Passer au thème clair",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "Avatars précédents",
       "avatarsGalleryNext": "Avatars suivants",
       "charactersEmpty": "Rien dans ce groupe pour l’instant. D’autres pièces arrivent."
-    }
+    },
+    "comingSoonCardsCta": "Ouvrir le studio cartes"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "Pages simples face"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "Studio cartes",
+    "title": "Créer une carte",
+    "lead": "Choisissez une carte plate ou pliée, placez l’art du studio, ajoutez un court message et enregistrez-la dans le panier. L’impression arrivera plus tard.",
+    "toolsLabel": "Outils carte",
+    "formatsTitle": "Type de carte",
+    "formats": {
+      "flat": "Deux faces",
+      "fold": "Pliée"
+    },
+    "formatsShort": {
+      "flat": "plate",
+      "fold": "pliée"
+    },
+    "sizesTitle": "Format",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Carrée"
+    },
+    "papersTitle": "Papier",
+    "papers": {
+      "cream": "Crème",
+      "blush": "Blush",
+      "sage": "Sauge",
+      "peach": "Pêche",
+      "lilac": "Lilas"
+    },
+    "facesTitle": "Faces",
+    "faces": {
+      "front": "Recto",
+      "back": "Verso",
+      "inside-left": "Intérieur gauche",
+      "inside-right": "Intérieur droit",
+      "inside-top": "Intérieur haut",
+      "inside-bottom": "Intérieur bas"
+    },
+    "stickersTitle": "Art",
+    "backgroundsTitle": "Fonds",
+    "clearBackground": "Sans motif",
+    "addText": "Ajouter du texte",
+    "defaultText": "Bonjour",
+    "clearFace": "Vider cette face",
+    "propertiesTitle": "Sélection",
+    "emptySelection": "Choisissez un sticker ou un texte sur la carte pour le modifier.",
+    "selectionText": "Texte",
+    "selectionSticker": "Sticker",
+    "textLabel": "Message",
+    "textColorLabel": "Couleur du texte",
+    "textColors": {
+      "ink": "Encre",
+      "muted": "Doux",
+      "accent": "Accent"
+    },
+    "sizeLabel": "Taille",
+    "rotateLabel": "Rotation",
+    "remove": "Retirer",
+    "stageLabel": "Aperçu de la carte, {face}",
+    "stageHint": "Faites glisser l’art pour le déplacer. Utilisez la poignée d’angle pour redimensionner.",
+    "resizeHandle": "Redimensionner",
+    "addToCart": "Ajouter au panier",
+    "printingLater": "L’impression ouvrira plus tard. Votre création reste dans ce panier du navigateur jusqu’au paiement.",
+    "added": "Carte enregistrée dans votre panier.",
+    "cartTitle": "Carte {format} personnalisée · {size}",
+    "cartSummary": "Papier {paper}",
+    "editAgain": "Ouvrir le studio",
+    "assets": {
+      "heart": "Cœur",
+      "star": "Étoile",
+      "flower": "Fleur",
+      "leaf": "Feuille",
+      "bunny": "Lapin",
+      "cloud": "Nuage",
+      "moon": "Lune",
+      "dots-bg": "Fond à pois",
+      "stripes-bg": "Fond rayé"
+    },
+    "foldDirectionsTitle": "La carte s’ouvre",
+    "foldDirectionsLead": "Choisissez le sens d’ouverture. Le trait pointillé est le pli.",
+    "foldDirections": {
+      "right": {
+        "label": "Vers la droite",
+        "closed": "Fermée comme un livre, dos à gauche.",
+        "open": "S’ouvre vers la droite en deux pages intérieures."
+      },
+      "left": {
+        "label": "Vers la gauche",
+        "closed": "Fermée comme un livre, dos à droite.",
+        "open": "S’ouvre vers la gauche en deux pages intérieures."
+      },
+      "down": {
+        "label": "Vers le bas",
+        "closed": "Fermée comme une tente, pli en haut.",
+        "open": "S’ouvre vers le bas en une page haut et bas."
+      },
+      "up": {
+        "label": "Vers le haut",
+        "closed": "Fermée comme une tente, pli en bas.",
+        "open": "S’ouvre vers le haut en une page haut et bas."
+      }
+    },
+    "foldGuideTitle": "Comment elle se plie",
+    "foldGuideLabel": "Schéma de pli",
+    "foldClosed": "Fermée",
+    "foldOpen": "Ouverte",
+    "foldLabel": "Pli",
+    "spreadHint": "Intérieur ouvert. Modifiez les deux pages ; la ligne centrale est le pli.",
+    "spreadLabel": "Aperçu de carte pliée ouverte",
+    "facesShort": {
+      "front": "Recto",
+      "back": "Verso",
+      "inside-left": "Gauche",
+      "inside-right": "Droite",
+      "inside-top": "Haut",
+      "inside-bottom": "Bas"
+    },
+    "outsideHint": "Recto et verso ensemble. Cliquez une face pour la modifier.",
+    "outsideFoldHint": "Extérieur de la carte (recto et verso). La mise en page suit le sens du pli ; ouvrez Intérieur pour modifier les pages jointes.",
+    "outsideLabel": "Aperçu recto et verso",
+    "sessionsTitle": "Vue de la carte",
+    "sessions": {
+      "outside": "Extérieur",
+      "inside": "Intérieur"
+    },
+    "textSizeLabel": "Taille du texte",
+    "setupLabel": "Réglages de la carte",
+    "artTrayLabel": "Plateau d’art"
   }
 }

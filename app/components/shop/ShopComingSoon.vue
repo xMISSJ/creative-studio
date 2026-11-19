@@ -28,7 +28,14 @@ const accent = computed(() =>
         {{ t('shop.comingSoonBody') }}
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <NuxtLinkLocale class="btn btn-primary" :to="shopLink({ type: 'coloring-books' })">
+        <NuxtLinkLocale
+          v-if="type === 'merchandise'"
+          class="btn btn-primary"
+          to="/cards"
+        >
+          {{ t('shop.comingSoonCardsCta') }}
+        </NuxtLinkLocale>
+        <NuxtLinkLocale class="btn" :class="type === 'merchandise' ? 'btn-ghost border-on-soft/25 text-on-soft' : 'btn-primary'" :to="shopLink({ type: 'coloring-books' })">
           {{ t('shop.comingSoonCta') }}
         </NuxtLinkLocale>
         <NuxtLinkLocale class="btn btn-ghost border-on-soft/25 text-on-soft" :to="shopHomeLink()">

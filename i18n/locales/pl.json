@@ -17,7 +17,9 @@
     "registerTitle": "Utwórz konto",
     "registerDescription": "Konta w {name} otworzą się później.",
     "accountTitle": "Twoje konto",
-    "accountDescription": "Cichy dom dla przyszłych zamówień w {name}."
+    "accountDescription": "Cichy dom dla przyszłych zamówień w {name}.",
+    "cardsTitle": "Kartki",
+    "cardsDescription": "Zaprojektuj kartkę płaską lub składaną ze sztuką {name}. Druk później; szkic zostaje na tym urządzeniu."
   },
   "nav": {
     "skip": "Przejdź do treści",
@@ -30,7 +32,8 @@
     "account": "Konto",
     "login": "Zaloguj się",
     "register": "Utwórz konto",
-    "breadcrumb": "Ścieżka"
+    "breadcrumb": "Ścieżka",
+    "cards": "Kartki"
   },
   "theme": {
     "toLight": "Przełącz na jasny motyw",
@@ -156,7 +159,8 @@
       "avatarsGalleryPrev": "Poprzednie awatary",
       "avatarsGalleryNext": "Następne awatary",
       "charactersEmpty": "W tej grupie jeszcze nic nie ma. Kolejne prace są w drodze."
-    }
+    },
+    "comingSoonCardsCta": "Otwórz studio kartek"
   },
   "digitalArt": {
     "categories": {
@@ -468,5 +472,133 @@
         "Strony jednostronne"
       ]
     }
+  },
+  "cards": {
+    "eyebrow": "Studio kartek",
+    "title": "Zaprojektuj kartkę",
+    "lead": "Wybierz kartkę płaską lub składaną, dodaj sztukę ze studia, krótki tekst i zapisz ją w koszyku. Druk otworzy się później.",
+    "toolsLabel": "Narzędzia kartki",
+    "formatsTitle": "Typ kartki",
+    "formats": {
+      "flat": "Dwustronna",
+      "fold": "Składana"
+    },
+    "formatsShort": {
+      "flat": "płaska",
+      "fold": "składana"
+    },
+    "sizesTitle": "Rozmiar",
+    "sizes": {
+      "a6": "A6",
+      "a5": "A5",
+      "square": "Kwadrat"
+    },
+    "papersTitle": "Papier",
+    "papers": {
+      "cream": "Kremowy",
+      "blush": "Róż",
+      "sage": "Szałwia",
+      "peach": "Brzoskwinia",
+      "lilac": "Lila"
+    },
+    "facesTitle": "Strony",
+    "faces": {
+      "front": "Przód",
+      "back": "Tył",
+      "inside-left": "Wewnątrz lewa",
+      "inside-right": "Wewnątrz prawa",
+      "inside-top": "Wewnątrz góra",
+      "inside-bottom": "Wewnątrz dół"
+    },
+    "stickersTitle": "Sztuka",
+    "backgroundsTitle": "Tła",
+    "clearBackground": "Bez wzoru",
+    "addText": "Dodaj tekst",
+    "defaultText": "Cześć",
+    "clearFace": "Wyczyść tę stronę",
+    "propertiesTitle": "Wybrane",
+    "emptySelection": "Wybierz naklejkę lub tekst na kartce, aby edytować.",
+    "selectionText": "Tekst",
+    "selectionSticker": "Naklejka",
+    "textLabel": "Wiadomość",
+    "textColorLabel": "Kolor tekstu",
+    "textColors": {
+      "ink": "Atrament",
+      "muted": "Delikatny",
+      "accent": "Akcent"
+    },
+    "sizeLabel": "Rozmiar",
+    "rotateLabel": "Obrót",
+    "remove": "Usuń",
+    "stageLabel": "Podgląd kartki, {face}",
+    "stageHint": "Przeciągnij sztukę, aby przesunąć. Użyj uchwytu w rogu, aby zmienić rozmiar.",
+    "resizeHandle": "Zmień rozmiar",
+    "addToCart": "Dodaj do koszyka",
+    "printingLater": "Druk otworzy się później. Twój projekt zostaje w koszyku tej przeglądarki, aż pojawi się kasa.",
+    "added": "Kartka zapisana w koszyku.",
+    "cartTitle": "Własna kartka {format} · {size}",
+    "cartSummary": "Papier {paper}",
+    "editAgain": "Otwórz studio",
+    "assets": {
+      "heart": "Serce",
+      "star": "Gwiazda",
+      "flower": "Kwiat",
+      "leaf": "Liść",
+      "bunny": "Królik",
+      "cloud": "Chmura",
+      "moon": "Księżyc",
+      "dots-bg": "Tło w kropki",
+      "stripes-bg": "Tło w paski"
+    },
+    "foldDirectionsTitle": "Kartka otwiera się",
+    "foldDirectionsLead": "Wybierz kierunek otwierania. Przerywana linia to zgięcie.",
+    "foldDirections": {
+      "right": {
+        "label": "W prawo",
+        "closed": "Zamknięta jak książka, grzbiet po lewej.",
+        "open": "Otwiera się w prawo na dwie strony wewnętrzne."
+      },
+      "left": {
+        "label": "W lewo",
+        "closed": "Zamknięta jak książka, grzbiet po prawej.",
+        "open": "Otwiera się w lewo na dwie strony wewnętrzne."
+      },
+      "down": {
+        "label": "W dół",
+        "closed": "Zamknięta jak namiot, zgięcie u góry.",
+        "open": "Otwiera się w dół na stronę górną i dolną."
+      },
+      "up": {
+        "label": "W górę",
+        "closed": "Zamknięta jak namiot, zgięcie u dołu.",
+        "open": "Otwiera się w górę na stronę górną i dolną."
+      }
+    },
+    "foldGuideTitle": "Jak się składa",
+    "foldGuideLabel": "Schemat zgięcia",
+    "foldClosed": "Zamknięta",
+    "foldOpen": "Otwarta",
+    "foldLabel": "Zgięcie",
+    "spreadHint": "Środek otwarty. Edytuj obie strony; środkowa linia to zgięcie.",
+    "spreadLabel": "Podgląd otwartej kartki składanej",
+    "facesShort": {
+      "front": "Przód",
+      "back": "Tył",
+      "inside-left": "Lewa",
+      "inside-right": "Prawa",
+      "inside-top": "Góra",
+      "inside-bottom": "Dół"
+    },
+    "outsideHint": "Przód i tył razem. Kliknij stronę, aby edytować.",
+    "outsideFoldHint": "Zewnętrzna strona kartki (przód i tył). Układ podąża za kierunkiem zgięcia; otwórz Wewnątrz, aby edytować połączone strony.",
+    "outsideLabel": "Podgląd przodu i tyłu",
+    "sessionsTitle": "Widok kartki",
+    "sessions": {
+      "outside": "Zewnątrz",
+      "inside": "Wewnątrz"
+    },
+    "textSizeLabel": "Rozmiar tekstu",
+    "setupLabel": "Ustawienia kartki",
+    "artTrayLabel": "Tacka ze sztuką"
   }
 }

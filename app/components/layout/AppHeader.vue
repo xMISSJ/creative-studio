@@ -10,6 +10,7 @@ useStickyHeaderOffset(header)
 const links = computed(() => [
   { to: '/', label: t('nav.home'), match: (path: string) => path === '/' || /^\/[a-z]{2}\/?$/.test(path) },
   { to: '/shop', label: t('nav.shop'), match: (path: string) => path.includes('/shop') || path.includes('/collections/') },
+  { to: '/cards', label: t('nav.cards'), match: (path: string) => path.includes('/cards') },
   { to: '/faq', label: t('nav.faq'), match: (path: string) => path.includes('/faq') },
   { to: '/about', label: t('nav.about'), match: (path: string) => path.includes('/about') },
 ])

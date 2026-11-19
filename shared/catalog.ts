@@ -1,3 +1,5 @@
+import type { CardDesign } from './card-editor'
+
 export const productTypes = [
   { slug: 'coloring-books', accent: 'bg-lilac-mist', ready: true },
   { slug: 'merchandise', accent: 'bg-lilac-soft', ready: false },
@@ -69,10 +71,21 @@ export interface CatalogPayload {
   productTypes: ProductTypeSlug[]
 }
 
-export interface CartLine {
+export interface ProductCartLine {
+  kind: 'product'
   slug: string
   qty: number
 }
+
+export interface CustomCardCartLine {
+  kind: 'custom-card'
+  id: string
+  qty: number
+  design: CardDesign
+  price: number
+}
+
+export type CartLine = ProductCartLine | CustomCardCartLine
 
 export function accentFor(slug: string) {
   return collections.find((entry) => entry.slug === slug)?.accent

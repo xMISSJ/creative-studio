@@ -28,6 +28,7 @@ const year = new Date().getFullYear()
       <nav class="mt-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm" :aria-label="t('footer.visit')">
         <NuxtLinkLocale class="footer-link" to="/about">{{ t('nav.about') }}</NuxtLinkLocale>
         <NuxtLinkLocale class="footer-link" to="/shop">{{ t('nav.shop') }}</NuxtLinkLocale>
+        <NuxtLinkLocale class="footer-link" to="/cards">{{ t('nav.cards') }}</NuxtLinkLocale>
         <NuxtLinkLocale class="footer-link" to="/faq">{{ t('nav.faq') }}</NuxtLinkLocale>
         <NuxtLinkLocale class="footer-link" to="/account">{{ t('nav.account') }}</NuxtLinkLocale>
         <NuxtLinkLocale class="footer-link" to="/login">{{ t('nav.login') }}</NuxtLinkLocale>
