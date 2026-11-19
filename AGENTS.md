@@ -6,7 +6,10 @@ Nuxt shop for cozy coloring books. Pages, cart, and placeholders are meant to gr
 
 - `site.config.ts` — shop name, Chinese subtitle, currency, email, storage prefix
 - `i18n/locales` — every shopper-facing sentence, in English and Dutch
-- `server/data/catalog.ts` — prices, stock, images, collections
+- `data/shop-catalog.json` — local catalog seed / dev writes (edit via `/studio`)
+- Cloudflare D1 (`DB`) + R2 (`MEDIA`) — live catalog and uploads when deployed to Cloudflare Pages
+- `/studio` — admin-only login for catalog, art uploads, and settings
+- `wrangler.toml` — Cloudflare Pages, D1, and R2 bindings
 - `shared/catalog.ts` — collection list and pastel classes
 - `app/composables/useCart.ts` — browser cart; swap this when accounts exist
 - `app/pages` — home, shop, product, collection, cart, checkout, about, login, register, account

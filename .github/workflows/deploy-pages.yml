@@ -36,6 +36,7 @@ jobs:
       - name: Generate static site
         env:
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          NITRO_PRESET: github_pages
         run: |
           OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           export NUXT_PUBLIC_SITE_URL="https://${OWNER}.github.io/${{ github.event.repository.name }}"

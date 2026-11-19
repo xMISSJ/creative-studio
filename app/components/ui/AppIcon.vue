@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  name: 'moon' | 'cart' | 'user' | 'sun' | 'monitor' | 'close' | 'heart' | 'play' | 'chevron' | 'chevronDown'
+  name: 'moon' | 'cart' | 'user' | 'sun' | 'monitor' | 'close' | 'heart' | 'play' | 'chevron' | 'chevronDown' | 'eye' | 'eyeOff'
   filled?: boolean
 }>(), {
   filled: false,
@@ -63,5 +63,15 @@ const heartFilled = 'M31.024 18.847c-.255-.298 3.357-3.638 3.733-3.954a18.2 18.2
     <path v-else-if="name === 'play'" d="M9 7.5v9l8-4.5z" fill="currentColor" stroke="none" />
     <path v-else-if="name === 'chevron'" d="M9 6l6 6-6 6" />
     <path v-else-if="name === 'chevronDown'" d="M6 9l6 6 6-6" />
+    <g v-else-if="name === 'eye'">
+      <path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z" />
+      <circle cx="12" cy="12" r="2.75" />
+    </g>
+    <g v-else-if="name === 'eyeOff'">
+      <path d="M4 4l16 16" />
+      <path d="M9.9 5.6A10.4 10.4 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a16.6 16.6 0 0 1-3.2 3.6" />
+      <path d="M6.7 6.8C4.3 8.4 2.5 12 2.5 12S6 18.5 12 18.5c1.2 0 2.3-.2 3.3-.6" />
+      <path d="M10.2 10.3a2.75 2.75 0 0 0 3.5 3.5" />
+    </g>
   </svg>
 </template>

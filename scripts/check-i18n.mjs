@@ -3,7 +3,8 @@ import { join, relative } from 'node:path'
 
 const root = process.cwd()
 const localeDir = join(root, 'i18n', 'locales')
-const catalogSource = readFileSync(join(root, 'server', 'data', 'catalog.ts'), 'utf8')
+const catalogJsonPath = join(root, 'data', 'shop-catalog.json')
+const catalogJson = JSON.parse(readFileSync(catalogJsonPath, 'utf8'))
 const sharedCatalogSource = readFileSync(join(root, 'shared', 'catalog.ts'), 'utf8')
 const nuxtConfigSource = readFileSync(join(root, 'nuxt.config.ts'), 'utf8')
 const writeSeoSource = readFileSync(join(root, 'scripts', 'write-seo.mjs'), 'utf8')
@@ -107,8 +108,9 @@ for (const file of localeFiles.slice(1)) {
   for (const key of keys) if (!baseKeys.has(key)) problems.push(`${baseFile} is missing ${key}`)
 }
 
-const slugs = [...catalogSource.matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
-const collections = [...new Set([...catalogSource.matchAll(/collection:\s*'([^']+)'/g)].map((match) => match[1]))]
+const catalogItems = Array.isArray(catalogJson.items) ? catalogJson.items : []
+const slugs = catalogItems.map((item) => item.slug).filter(Boolean)
+const collections = [...new Set(catalogItems.map((item) => item.collection).filter(Boolean))]
 const productTypesBlock = sharedCatalogSource.match(/export const productTypes = \[([\s\S]*?)\] as const/)
 const productTypeSlugs = productTypesBlock
   ? [...productTypesBlock[1].matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
@@ -122,11 +124,11 @@ const digitalArtCharacterGroupSlugs = digitalArtCharacterGroupsBlock
   ? [...digitalArtCharacterGroupsBlock[1].matchAll(/slug:\s*'([^']+)'/g)].map((match) => match[1])
   : []
 
-for (const type of [...new Set([...catalogSource.matchAll(/type:\s*'([^']+)'/g)].map((match) => match[1]))]) {
+for (const type of [...new Set(catalogItems.map((item) => item.type).filter(Boolean))]) {
   if (!productTypeSlugs.includes(type)) problems.push(`Catalog type "${type}" is missing from shared/catalog.ts productTypes`)
 }
-const badges = [...new Set([...catalogSource.matchAll(/badge:\s*'([^']+)'/g)].map((match) => match[1]))]
-const images = [...catalogSource.matchAll(/image:\s*'([^']+)'/g)].map((match) => match[1])
+const badges = [...new Set(catalogItems.map((item) => item.badge).filter(Boolean))]
+const images = catalogItems.map((item) => item.image).filter(Boolean)
 
 for (const slug of slugs) {
   for (const key of ['title', 'summary', 'description', 'alt']) {
@@ -165,6 +167,7 @@ for (const badge of badges) {
 }
 
 for (const image of images) {
+  if (image.startsWith('https://') || image.startsWith('/api/media/')) continue
   if (!existsSync(join(root, 'public', image))) problems.push(`Missing artwork file public${image}`)
 }
 

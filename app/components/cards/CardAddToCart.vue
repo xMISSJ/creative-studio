@@ -11,12 +11,14 @@ const emit = defineEmits<{
 
 const { t } = useShopI18n()
 const format = useFormatPrice()
+const { data: catalog } = await useCatalog()
+const priceCents = computed(() => catalog.value?.settings?.customCardPriceCents ?? customCardPriceCents)
 </script>
 
 <template>
   <div class="card-studio-cart">
     <div class="min-w-0">
-      <p class="text-lg font-extrabold text-ink">{{ format(customCardPriceCents) }}</p>
+      <p class="text-lg font-extrabold text-ink">{{ format(priceCents) }}</p>
       <p class="mt-0.5 text-sm leading-snug text-muted">{{ t('cards.printingLater') }}</p>
     </div>
     <button

@@ -1,6 +1,8 @@
 import tailwindcss from '@tailwindcss/vite'
-import { catalog } from './server/data/catalog'
+import shopCatalog from './data/shop-catalog.json'
 import { siteConfig } from './site.config'
+
+const catalog = shopCatalog.items
 
 function joinBase(base: string, path: string) {
   const normalizedBase = base.endsWith('/') ? base : `${base}/`
@@ -59,11 +61,22 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   nitro: {
-    preset: 'github_pages',
-    prerender: {
-      crawlLinks: true,
-      routes: prerenderRoutes,
+    // GitHub Pages CI sets NITRO_PRESET=github_pages. Default is Cloudflare Pages for live studio.
+    preset: process.env.NITRO_PRESET || 'cloudflare_pages',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
     },
+    prerender: process.env.NITRO_PRESET === 'github_pages'
+      ? {
+          crawlLinks: true,
+          routes: prerenderRoutes,
+        }
+      : {
+          // Keep catalog/media APIs dynamic so D1/R2 edits show live.
+          crawlLinks: false,
+          routes: [],
+        },
   },
   colorMode: {
     classSuffix: '',
@@ -159,6 +172,8 @@ export default defineNuxtConfig({
     baseUrl: siteUrl,
   },
   runtimeConfig: {
+    adminPassword: '',
+    adminSessionSecret: '',
     public: {
       siteUrl,
       name: siteConfig.name,

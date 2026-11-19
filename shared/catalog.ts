@@ -65,10 +65,15 @@ export interface CatalogItem {
   sort: number
 }
 
+export interface ShopSettings {
+  customCardPriceCents: number
+}
+
 export interface CatalogPayload {
   items: CatalogItem[]
   collections: CollectionSlug[]
   productTypes: ProductTypeSlug[]
+  settings: ShopSettings
 }
 
 export interface ProductCartLine {

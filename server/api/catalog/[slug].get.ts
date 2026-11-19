@@ -1,12 +1,9 @@
 import { getCatalogItem } from '../../data/catalog'
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const slug = getRouterParam(event, 'slug')
-  const item = slug ? getCatalogItem(slug) : undefined
-
-  if (!item) {
-    throw createError({ statusCode: 404, statusMessage: 'Not found' })
-  }
-
+  if (!slug) throw createError({ statusCode: 400, statusMessage: 'Missing slug' })
+  const item = await getCatalogItem(slug, event)
+  if (!item) throw createError({ statusCode: 404, statusMessage: 'Product not found' })
   return item
 })

@@ -67,6 +67,7 @@ export function useCart() {
   const hydrated = useState('cart-hydrated', () => false)
   const brand = useBrand()
   const storageKey = `${brand.storagePrefix}:cart`
+  const { data: catalog } = useCatalog()
 
   onMounted(() => {
     if (hydrated.value) return
@@ -113,6 +114,7 @@ export function useCart() {
   }
 
   function addCustomCard(design: CardDesign, qty = 1) {
+    const price = catalog.value?.settings?.customCardPriceCents ?? customCardPriceCents
     const safeQty = Math.min(99, Math.max(1, Math.floor(qty)))
     const id = newCardId()
     const line: CustomCardCartLine = {
@@ -120,7 +122,7 @@ export function useCart() {
       id,
       qty: safeQty,
       design: structuredClone(design),
-      price: customCardPriceCents,
+      price,
     }
     items.value.push(line)
     notice.value = { type: 'added', key: id, kind: 'custom-card' }

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS admin_rate_limits (
+  key TEXT PRIMARY KEY NOT NULL,
+  count INTEGER NOT NULL DEFAULT 0,
+  reset_at INTEGER NOT NULL
+);

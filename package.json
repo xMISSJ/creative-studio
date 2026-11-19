@@ -5,11 +5,16 @@
   "packageManager": "pnpm@10.28.2",
   "scripts": {
     "build": "node scripts/check-i18n.mjs && nuxt build && node scripts/write-seo.mjs",
+    "build:cf": "node scripts/check-i18n.mjs && node scripts/nuxt-with-preset.mjs cloudflare_pages build && node scripts/write-seo.mjs",
     "dev": "nuxt dev",
-    "generate": "node scripts/check-i18n.mjs && nuxt generate && node scripts/write-seo.mjs",
+    "generate": "node scripts/check-i18n.mjs && node scripts/nuxt-with-preset.mjs github_pages generate && node scripts/write-seo.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "check:i18n": "node scripts/check-i18n.mjs"
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "seed:d1": "node scripts/seed-d1.mjs --apply",
+    "seed:d1:remote": "node scripts/seed-d1.mjs --remote",
+    "cf:migrate": "npx wrangler d1 migrations apply little-memo-shop --remote",
+    "deploy:cf": "pnpm build:cf && npx wrangler pages deploy"
   },
   "dependencies": {
     "@nuxt/fonts": "^1.2.0",
@@ -25,5 +30,9 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261119.1",
+    "wrangler": "^4.165.0"
   }
 }

@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS catalog_items (
+  slug TEXT PRIMARY KEY NOT NULL,
+  price INTEGER NOT NULL,
+  type TEXT NOT NULL,
+  collection TEXT NOT NULL,
+  image TEXT NOT NULL,
+  featured INTEGER NOT NULL DEFAULT 0,
+  stock INTEGER NOT NULL DEFAULT 0,
+  badge TEXT,
+  sort INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS shop_settings (
+  key TEXT PRIMARY KEY NOT NULL,
+  value TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS digital_art (
+  id TEXT PRIMARY KEY NOT NULL,
+  kind TEXT NOT NULL,
+  slug TEXT NOT NULL,
+  group_slug TEXT,
+  image TEXT NOT NULL,
+  sort INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS idx_digital_art_kind ON digital_art (kind, sort);

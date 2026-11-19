@@ -1,0 +1,23 @@
+# Cloudflare Pages + D1 + R2 for the live studio CMS.
+# 1) Create resources once:
+#    npx wrangler d1 create little-memo-shop
+#    npx wrangler r2 bucket create little-memo-media
+# 2) Paste the D1 database_id below.
+# 3) npx wrangler d1 migrations apply little-memo-shop --remote
+# 4) pnpm seed:d1:remote
+# 5) Set secrets in the Pages project:
+#    NUXT_ADMIN_PASSWORD, NUXT_ADMIN_SESSION_SECRET
+
+name = "little-memo"
+compatibility_date = "2025-07-17"
+pages_build_output_dir = ".output/public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "little-memo-shop"
+database_id = "f9261dc6-07b4-4dbb-a8dd-0f1ac1369ddb"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "little-memo-media"
