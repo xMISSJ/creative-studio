@@ -119,7 +119,10 @@
           "a": "Escribe a {email}. El soporte se abre mas completo junto con el pago."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "En la mesa de dibujo",
+    "deskMomentLead": "Amigos suaves, pegatinas y un cuaderno abierto. Un vistazo al ambiente del estudio detrás de los libros.",
+    "deskMomentAlt": "Lindos animalitos dibujando juntos alrededor de una mesa con rotuladores, pegatinas y un bloc de dibujo"
   },
   "newsletter": {
     "eyebrow": "Notas del estudio",

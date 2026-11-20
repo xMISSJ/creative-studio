@@ -19,6 +19,8 @@ function previewConfig(event?: H3Event) {
 }
 
 export function isPreviewGateEnabled(event?: H3Event) {
+  // Local `pnpm dev` stays ungated even when NUXT_PREVIEW_CODE is in .env.
+  if (import.meta.dev) return false
   return Boolean(previewConfig(event).code)
 }
 

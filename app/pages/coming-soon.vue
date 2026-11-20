@@ -10,7 +10,9 @@ const { data: gate, refresh } = await useFetch<{ enabled: boolean, unlocked: boo
   key: 'preview-gate-status',
 })
 
-if (gate.value && (!gate.value.enabled || gate.value.unlocked)) {
+// Client-only so Cloudflare can prerender this page as static HTML.
+// Server redirects would collapse the prerender into `/` when the gate is off at build time.
+if (import.meta.client && gate.value && (!gate.value.enabled || gate.value.unlocked)) {
   await navigateTo('/')
 }
 
@@ -48,7 +50,7 @@ async function onSubmit() {
 
 <template>
   <div class="coming-soon relative flex min-h-dvh flex-col overflow-hidden bg-canvas text-ink">
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,var(--lilac-glow),transparent_42%),radial-gradient(circle_at_85%_10%,var(--blush),transparent_36%),radial-gradient(circle_at_70%_80%,var(--sage),transparent_40%)] opacity-80" aria-hidden="true" />
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,var(--lilac-glow),transparent_42%),radial-gradient(circle_at_85%_10%,var(--lilac-soft),transparent_36%),radial-gradient(circle_at_70%_80%,var(--lilac),transparent_40%)] opacity-80" aria-hidden="true" />
 
     <main id="main" class="relative z-10 mx-auto flex w-full max-w-xl flex-1 flex-col justify-center px-5 py-12 sm:px-8">
       <div class="rounded-md border border-line bg-paper/95 p-6 shadow-[0_18px_40px_-28px_rgba(58,51,72,0.45)] sm:p-9">
@@ -56,10 +58,7 @@ async function onSubmit() {
           <AppLogo centered />
         </div>
 
-        <p class="mt-8 text-center text-xs font-bold tracking-[0.18em] text-accent uppercase">
-          {{ t('comingSoon.eyebrow') }}
-        </p>
-        <h1 class="display-title mt-2 text-center text-4xl sm:text-5xl">
+        <h1 class="display-title mt-8 text-center text-4xl sm:text-5xl">
           {{ t('comingSoon.title') }}
         </h1>
         <p class="mt-4 text-center text-base leading-relaxed text-muted">

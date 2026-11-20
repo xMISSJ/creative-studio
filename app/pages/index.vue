@@ -43,9 +43,11 @@ const arrivals = computed(() => {
       </section>
     </template>
 
+    <DeskMoment />
+
     <FaqList />
 
-    <div class="container-page py-10 sm:py-12">
+    <div class="container-page py-16 sm:py-20">
       <NewsletterPanel />
     </div>
   </div>

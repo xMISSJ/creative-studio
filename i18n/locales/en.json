@@ -119,7 +119,10 @@
           "a": "Reach out at {email}. Support opens more fully with checkout."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "At the drawing table",
+    "deskMomentLead": "Soft friends, sticky notes, and an open sketchbook. A little peek at the studio mood behind the books.",
+    "deskMomentAlt": "Cute animal friends drawing together around a table of markers, stickers, and a sketchbook"
   },
   "newsletter": {
     "eyebrow": "Studio notes",

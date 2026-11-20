@@ -119,7 +119,10 @@
           "a": "Mail naar {email}. Support opent verder samen met afrekenen."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "Aan de tekentafel",
+    "deskMomentLead": "Zachte vriendjes, stickers en een open schetsboek. Een kijkje in de studiostemming achter de boeken.",
+    "deskMomentAlt": "Lieve dierenvriendjes die samen tekenen aan een tafel met stiften, stickers en een schetsboek"
   },
   "newsletter": {
     "eyebrow": "Studiobriefjes",

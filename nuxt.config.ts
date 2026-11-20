@@ -20,11 +20,13 @@ const siteUrl = process.env.NUXT_PUBLIC_SITE_URL
 
 const localePrefixes = ['', '/nl', '/es', '/fr', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
 const staticPages = ['/', '/shop', '/about', '/faq', '/cards', '/cart', '/checkout', '/login', '/register', '/account']
+const comingSoonRoutes = localePrefixes.map((prefix) => (prefix ? `${prefix}/coming-soon` : '/coming-soon'))
 const prerenderRoutes = [
   ...localePrefixes.flatMap((prefix) => [
     ...staticPages.map((path) => (path === '/' ? (prefix || '/') : `${prefix}${path}`)),
     ...catalog.map((item) => `${prefix}/shop/${item.slug}`),
   ]),
+  ...comingSoonRoutes,
   '/api/catalog',
   '/api/digital-art',
 ]
@@ -66,6 +68,25 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
+      pages: {
+        routes: {
+          // Stay under Cloudflare’s 100 exclude-rule limit with patterns, not every file.
+          exclude: [
+            '/_nuxt/*',
+            '/_i18n/*',
+            '/art/*',
+            '/cursors/*',
+            '/coming-soon',
+            '/coming-soon/*',
+            '/*/coming-soon',
+            '/*/coming-soon/*',
+            '/favicon.ico',
+            '/favicon.svg',
+            '/robots.txt',
+            '/sitemap.xml',
+          ],
+        },
+      },
     },
     prerender: process.env.NITRO_PRESET === 'github_pages'
       ? {
@@ -73,9 +94,10 @@ export default defineNuxtConfig({
           routes: prerenderRoutes,
         }
       : {
-          // Keep catalog/media APIs dynamic so D1/R2 edits show live.
+          // Keep shop/catalog SSR dynamic for D1/R2. Prerender the gated landing so
+          // Cloudflare can serve it as static HTML (avoids intermittent Worker 1102).
           crawlLinks: false,
-          routes: [],
+          routes: comingSoonRoutes,
         },
   },
   colorMode: {
@@ -170,7 +192,16 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
     baseUrl: siteUrl,
+    experimental: {
+      // Serve locale JSON as static hashed files instead of a Nitro route (CF Worker).
+      prerenderMessages: true,
+      // Fewer duplicated locale routes → smaller Cloudflare Worker route table.
+      compactRoutes: true,
+      // Short browser cache on the messages endpoint fallback; hashed static files are immutable.
+      httpCacheDuration: 60,
+    },
   },
+
   runtimeConfig: {
     adminPassword: '',
     adminSessionSecret: '',

@@ -119,7 +119,10 @@
           "a": "Schreib an {email}. Der Support wird mit der Kasse vollständiger."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "Am Zeichentisch",
+    "deskMomentLead": "Sanfte Freunde, Sticker und ein offenes Skizzenbuch. Ein kleiner Blick in die Studiostimmung hinter den Büchern.",
+    "deskMomentAlt": "Süße Tierfreunde, die gemeinsam an einem Tisch mit Stiften, Stickern und einem Skizzenbuch zeichnen"
   },
   "newsletter": {
     "eyebrow": "Studio-Notizen",

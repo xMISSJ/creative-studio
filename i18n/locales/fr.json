@@ -119,7 +119,10 @@
           "a": "Écris à {email}. Le support s’ouvre plus pleinement avec le paiement."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "À la table à dessin",
+    "deskMomentLead": "Des amis tout doux, des stickers et un carnet ouvert. Un petit aperçu de l’ambiance du studio derrière les livres.",
+    "deskMomentAlt": "De mignons animaux amis qui dessinent ensemble autour d’une table de feutres, stickers et carnet de croquis"
   },
   "newsletter": {
     "eyebrow": "Notes du studio",

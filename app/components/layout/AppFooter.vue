@@ -5,7 +5,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="mt-16 border-t border-line bg-paper">
+  <footer class="border-t border-line bg-paper">
     <div class="container-page py-12">
       <div class="flex flex-col items-center gap-4 text-center">
         <NuxtLinkLocale

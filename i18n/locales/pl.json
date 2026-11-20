@@ -119,7 +119,10 @@
           "a": "Napisz na {email}. Wsparcie otworzy się pełniej razem z kasą."
         }
       ]
-    }
+    },
+    "deskMomentTitle": "Przy stole do rysowania",
+    "deskMomentLead": "Miękkie przyjaciółki, naklejki i otwarty szkicownik. Mały wgląd w nastrój studia za książkami.",
+    "deskMomentAlt": "Urocze zwierzątka rysujące razem przy stole z markerami, naklejkami i szkicownikiem"
   },
   "newsletter": {
     "eyebrow": "Notatki studia",
