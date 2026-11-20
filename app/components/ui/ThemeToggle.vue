@@ -2,13 +2,34 @@
 const colorMode = useColorMode()
 const { t } = useShopI18n()
 
-const isDark = computed(() => colorMode.preference === 'dark' || colorMode.value === 'dark')
+type ThemePreference = 'system' | 'light' | 'dark'
 
-const label = computed(() => (isDark.value ? t('theme.toLight') : t('theme.toDark')))
-const icon = computed(() => (isDark.value ? 'moon' : 'sun'))
+const preference = computed<ThemePreference>(() => {
+  const value = colorMode.preference
+  if (value === 'dark' || value === 'light' || value === 'system') return value
+  return 'system'
+})
+
+const nextPreference = computed<ThemePreference>(() => {
+  if (preference.value === 'system') return 'light'
+  if (preference.value === 'light') return 'dark'
+  return 'system'
+})
+
+const label = computed(() => {
+  if (nextPreference.value === 'light') return t('theme.toLight')
+  if (nextPreference.value === 'dark') return t('theme.toDark')
+  return t('theme.toSystem')
+})
+
+const icon = computed(() => {
+  if (preference.value === 'system') return 'monitor'
+  if (preference.value === 'dark') return 'moon'
+  return 'sun'
+})
 
 function cycle() {
-  colorMode.preference = isDark.value ? 'light' : 'dark'
+  colorMode.preference = nextPreference.value
 }
 </script>
 

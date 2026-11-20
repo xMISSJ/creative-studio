@@ -102,7 +102,8 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
-    preference: 'light',
+    // Follow OS / browser light-dark (Windows, macOS, iOS, Android).
+    preference: 'system',
     fallback: 'light',
     storage: 'cookie',
     storageKey: `${siteConfig.storagePrefix}-theme`,
