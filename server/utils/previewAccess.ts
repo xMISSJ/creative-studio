@@ -21,6 +21,8 @@ function previewConfig(event?: H3Event) {
 export function isPreviewGateEnabled(event?: H3Event) {
   // Local `pnpm dev` stays ungated even when NUXT_PREVIEW_CODE is in .env.
   if (import.meta.dev) return false
+  // Prerender must stay open so `/_i18n` message files are real JSON, not redirects to /coming-soon.
+  if (import.meta.prerender) return false
   return Boolean(previewConfig(event).code)
 }
 
@@ -107,6 +109,8 @@ export function previewComingSoonPath(pathname: string) {
 export function isPreviewExemptPath(pathname: string) {
   const path = pathname.split('?')[0] || '/'
   if (path.startsWith('/_nuxt') || path.startsWith('/__nuxt')) return true
+  // Locale JSON (lazy + prerenderMessages). Gating this shows raw keys like comingSoon.title.
+  if (path.startsWith('/_i18n')) return true
   if (path.startsWith('/api/preview')) return true
   if (path.startsWith('/api/admin')) return true
   if (
