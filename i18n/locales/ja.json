@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "近日公開",
+    "comingSoonDescription": "{name} はまもなく準備完了です。スタジオが開くまでの静かな近日公開ページです。"
   },
   "nav": {
     "skip": "本文へスキップ",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "近日公開",
+    "lead": "手描きの塗り絵本のためのあたたかいスタジオショップが準備中です。ページ、印刷、細かなところをまだ整えています。",
+    "lookTitle": "それでものぞいてみたい？",
+    "lookLead": "共有されたシークレットコードを入力すると、公開前にサイトを見られます。",
+    "codeLabel": "シークレットコード",
+    "codeMissing": "シークレットコードを入力してください。",
+    "codeWrong": "そのコードは正しくありません。",
+    "codeNetwork": "コードを確認できませんでした。しばらくしてからもう一度お試しください。",
+    "checking": "確認中…",
+    "submit": "スタジオへ入る",
+    "footer": "ご質問は後ほど {email} まで。"
   }
 }

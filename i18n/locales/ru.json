@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "Скоро",
+    "comingSoonDescription": "{name} почти готов. Тихая страница «скоро», пока студия заканчивает открытие."
   },
   "nav": {
     "skip": "К содержанию",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "Скоро",
+    "lead": "Уютный студийный магазин с раскрасками ручной работы готовится. Мы ещё доделываем страницы, печать и мелкие детали.",
+    "lookTitle": "Всё равно хотите взглянуть?",
+    "lookLead": "Введите секретный код, которым с вами поделились, чтобы заглянуть на сайт до публичного открытия.",
+    "codeLabel": "Секретный код",
+    "codeMissing": "Введите секретный код.",
+    "codeWrong": "Этот код неверный.",
+    "codeNetwork": "Не удалось проверить код. Попробуйте чуть позже.",
+    "checking": "Проверка…",
+    "submit": "Войти в студию",
+    "footer": "Вопросы позже можно отправить на {email}."
   }
 }

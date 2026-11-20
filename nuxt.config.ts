@@ -174,6 +174,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     adminPassword: '',
     adminSessionSecret: '',
+    /** When set, the public shop shows /coming-soon until visitors enter this code. */
+    previewCode: '',
     public: {
       siteUrl,
       name: siteConfig.name,
@@ -185,3 +187,4 @@ export default defineNuxtConfig({
     },
   },
 })
+

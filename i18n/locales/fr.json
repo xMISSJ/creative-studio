@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "Bientôt",
+    "comingSoonDescription": "{name} est presque prêt. Une page bientôt discrète pendant que le studio s’ouvre."
   },
   "nav": {
     "skip": "Aller au contenu",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "Bientôt",
+    "lead": "Une boutique studio douillette pour des livres de coloriage dessinés à la main se prépare. Pages, impression et petits détails sont encore en cours.",
+    "lookTitle": "Envie de jeter un œil quand même ?",
+    "lookLead": "Entrez le code secret partagé avec vous pour voir le site avant l’ouverture publique.",
+    "codeLabel": "Code secret",
+    "codeMissing": "Entrez le code secret.",
+    "codeWrong": "Ce code n’est pas le bon.",
+    "codeNetwork": "Impossible de vérifier le code. Réessayez dans un instant.",
+    "checking": "Vérification…",
+    "submit": "Entrer dans le studio",
+    "footer": "Les questions pourront aller à {email}."
   }
 }

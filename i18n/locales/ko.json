@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "곧 만나요",
+    "comingSoonDescription": "{name}가 거의 준비됐어요. 스튜디오가 문을 여는 동안의 조용한 예고 페이지예요."
   },
   "nav": {
     "skip": "본문으로 건너뛰기",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "곧 만나요",
+    "lead": "손그림 컬러링북을 위한 포근한 스튜디오 숍이 준비 중이에요. 페이지, 인쇄, 작은 디테일을 아직 다듬고 있어요.",
+    "lookTitle": "그래도 먼저 볼래요?",
+    "lookLead": "공유받은 비밀 코드를 입력하면 공개 오픈 전에 사이트를 볼 수 있어요.",
+    "codeLabel": "비밀 코드",
+    "codeMissing": "비밀 코드를 입력해 주세요.",
+    "codeWrong": "코드가 맞지 않아요.",
+    "codeNetwork": "코드를 확인할 수 없어요. 잠시 후 다시 시도해 주세요.",
+    "checking": "확인 중…",
+    "submit": "스튜디오 들어가기",
+    "footer": "질문은 나중에 {email}로 보내 주세요."
   }
 }

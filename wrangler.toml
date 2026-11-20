@@ -6,7 +6,7 @@
 # 3) npx wrangler d1 migrations apply little-memo-shop --remote
 # 4) pnpm seed:d1:remote
 # 5) Set secrets in the Pages project:
-#    NUXT_ADMIN_PASSWORD, NUXT_ADMIN_SESSION_SECRET
+#    NUXT_ADMIN_PASSWORD, NUXT_ADMIN_SESSION_SECRET, NUXT_PREVIEW_CODE
 
 name = "little-memo"
 compatibility_date = "2025-07-17"

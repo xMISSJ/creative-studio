@@ -5,6 +5,7 @@ export interface CloudflareEnv {
   MEDIA?: R2Bucket
   NUXT_ADMIN_PASSWORD?: string
   NUXT_ADMIN_SESSION_SECRET?: string
+  NUXT_PREVIEW_CODE?: string
 }
 
 export function getCloudflareEnv(event?: H3Event): CloudflareEnv | undefined {

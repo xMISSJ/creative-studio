@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "Binnenkort",
+    "comingSoonDescription": "{name} is bijna klaar. Een rustige binnenkort-pagina terwijl de studio opengaat."
   },
   "nav": {
     "skip": "Ga naar de inhoud",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "Binnenkort",
+    "lead": "Een warme studiowinkel voor handgetekende kleurboeken warmt op. We werken nog aan pagina’s, drukwerk en kleine details.",
+    "lookTitle": "Toch even kijken?",
+    "lookLead": "Voer de geheime code in die je hebt gekregen om de site te bekijken vóór de openbare opening.",
+    "codeLabel": "Geheime code",
+    "codeMissing": "Voer de geheime code in.",
+    "codeWrong": "Die code klopt niet.",
+    "codeNetwork": "De code kon niet worden gecontroleerd. Probeer het zo opnieuw.",
+    "checking": "Bezig…",
+    "submit": "Naar de studio",
+    "footer": "Vragen kunnen later naar {email}."
   }
 }

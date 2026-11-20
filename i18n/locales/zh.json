@@ -31,7 +31,9 @@
     "studioArtTitle": "Studio art",
     "studioArtDescription": "Upload and review digital art files for {name}.",
     "studioSettingsTitle": "Studio settings",
-    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}."
+    "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
+    "comingSoonTitle": "即将到来",
+    "comingSoonDescription": "{name} 即将就绪。在工作室收尾开张时，这里是一页安静的预告。"
   },
   "nav": {
     "skip": "跳到内容",
@@ -686,5 +688,19 @@
     "uploadTooLarge": "That file is too large. Use an image under 2 MB.",
     "uploadQuota": "Media storage limit reached. Kept under the 10 GB free tier.",
     "saveAuth": "Your studio session expired. Log in again at /studio/login, then save."
+  },
+  "comingSoon": {
+    "eyebrow": "{name}",
+    "title": "即将到来",
+    "lead": "一家温暖的手绘涂色书店正在准备中。我们还在完善页面、印刷与小细节。",
+    "lookTitle": "还是想先看看？",
+    "lookLead": "输入与你分享的暗号，即可在公开开业前预览网站。",
+    "codeLabel": "暗号",
+    "codeMissing": "请输入暗号。",
+    "codeWrong": "暗号不正确。",
+    "codeNetwork": "暂时无法核对暗号，请稍后再试。",
+    "checking": "核对中…",
+    "submit": "进入工作室",
+    "footer": "之后有问题可以写给 {email}。"
   }
 }
