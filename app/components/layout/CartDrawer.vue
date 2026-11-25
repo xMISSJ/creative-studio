@@ -24,7 +24,7 @@ useFocusTrap(isOpen, panel)
             <AppIcon name="close" />
           </button>
         </div>
-        <div class="flex-1 overflow-y-auto px-5 py-4">
+        <div class="flex-1 overflow-y-auto px-5 py-4" data-lenis-prevent>
           <CartLines />
         </div>
         <div v-if="hydrated && count > 0" class="grid gap-2 border-t border-line px-5 pt-4 pb-safe">

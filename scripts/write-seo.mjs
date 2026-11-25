@@ -14,7 +14,7 @@ const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL
     : 'http://localhost:3000')).replace(/\/$/, '')
 
 const localePrefixes = ['', '/nl', '/es', '/fr', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
-const indexablePages = ['/', '/shop', '/about', '/faq', '/cards']
+const indexablePages = ['/', '/shop', '/about', '/faq', '/terms', '/returns', '/cards']
 const privatePages = ['/cart', '/checkout', '/login', '/register', '/account']
 
 function joinBase(path) {

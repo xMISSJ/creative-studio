@@ -9,7 +9,7 @@ const art = usePublicAsset('/art/characters-drawing-desk.png')
       <h2 id="home-desk-moment-title" class="section-title">
         {{ t('home.deskMomentTitle') }}
       </h2>
-      <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
         {{ t('home.deskMomentLead') }}
       </p>
       <div class="mt-6">

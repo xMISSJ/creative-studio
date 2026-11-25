@@ -19,7 +19,7 @@ const siteUrl = process.env.NUXT_PUBLIC_SITE_URL
     : 'http://localhost:3000')
 
 const localePrefixes = ['', '/nl', '/es', '/fr', '/zh', '/ko', '/ja', '/pl', '/de', '/ru']
-const staticPages = ['/', '/shop', '/about', '/faq', '/cards', '/cart', '/checkout', '/login', '/register', '/account']
+const staticPages = ['/', '/shop', '/about', '/faq', '/terms', '/returns', '/cards', '/cart', '/checkout', '/login', '/register', '/account']
 const comingSoonRoutes = localePrefixes.map((prefix) => (prefix ? `${prefix}/coming-soon` : '/coming-soon'))
 const prerenderRoutes = [
   ...localePrefixes.flatMap((prefix) => [

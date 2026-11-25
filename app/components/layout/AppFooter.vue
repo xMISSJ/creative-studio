@@ -34,6 +34,18 @@ const year = new Date().getFullYear()
         <NuxtLinkLocale class="footer-link" to="/login">{{ t('nav.login') }}</NuxtLinkLocale>
       </nav>
 
+      <nav
+        class="mt-4 flex flex-col items-center gap-1 border-t border-line pt-4 text-sm sm:mt-5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-4 sm:gap-y-1 sm:pt-5"
+        :aria-label="t('footer.legal')"
+      >
+        <p class="text-xs font-bold tracking-[0.08em] text-muted uppercase sm:sr-only">
+          {{ t('footer.legal') }}
+        </p>
+        <NuxtLinkLocale class="footer-link" to="/terms">{{ t('nav.terms') }}</NuxtLinkLocale>
+        <span class="hidden text-line sm:inline" aria-hidden="true">·</span>
+        <NuxtLinkLocale class="footer-link" to="/returns">{{ t('nav.returns') }}</NuxtLinkLocale>
+      </nav>
+
       <p class="mt-8 text-center text-sm text-muted">{{ t('footer.rights', { year }) }}</p>
       <p class="mt-2 text-center text-sm text-muted" translate="no">{{ brand.supportEmail }}</p>
     </div>

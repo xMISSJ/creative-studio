@@ -8,8 +8,9 @@ function prefersReducedMotion() {
     && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-function motionAwareBehavior(): ScrollBehavior {
-  return prefersReducedMotion() ? 'auto' : 'smooth'
+/** Cross-page hash targets after the new page mounts. */
+function hashBehavior(): ScrollBehavior {
+  return prefersReducedMotion() ? 'instant' : 'smooth'
 }
 
 function stickyHeaderOffset() {
@@ -29,31 +30,39 @@ function hashScrollMargin(hash: string) {
   return stickyHeaderOffset() + elementMargin
 }
 
+/** Hard jump to top so route changes feel like a new page (not a glide). */
+function jumpToTop() {
+  if (!import.meta.client) {
+    return
+  }
+  const lenis = useNuxtApp().$lenis
+  if (lenis) {
+    lenis.scrollTo(0, { immediate: true, force: true })
+    return
+  }
+  window.scrollTo({ left: 0, top: 0, behavior: 'instant' })
+}
+
 function position(
   to: RouteLocationNormalized,
   savedPosition: { left: number, top: number } | null,
   behavior: ScrollBehavior,
 ) {
   if (savedPosition) {
-    return { ...savedPosition, behavior }
+    return { ...savedPosition, behavior: 'instant' as ScrollBehavior }
   }
   if (to.hash) {
     return { el: to.hash, top: hashScrollMargin(to.hash), behavior }
   }
-  return { left: 0, top: 0, behavior }
+  return { left: 0, top: 0, behavior: 'instant' as ScrollBehavior }
 }
 
 const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
   const nuxtApp = useNuxtApp()
-  const behavior = motionAwareBehavior()
+  const samePath = to.path.replace(/\/$/, '') === from.path.replace(/\/$/, '')
 
-  if (to.path.replace(/\/$/, '') === from.path.replace(/\/$/, '')) {
-    if (from.hash && !to.hash) {
-      return savedPosition ? { ...savedPosition, behavior } : { left: 0, top: 0, behavior }
-    }
-    if (to.hash) {
-      return { el: to.hash, top: hashScrollMargin(to.hash), behavior }
-    }
+  if (samePath) {
+    // In-page anchors: Lenis `anchors: true` handles the ease; do not double-scroll.
     return false
   }
 
@@ -66,9 +75,10 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
   }
 
   if (from === START_LOCATION) {
-    return position(to, savedPosition, behavior)
+    return position(to, savedPosition, 'instant')
   }
 
+  // Wait until the leaving page is gone (out-in), then jump like a new page load.
   return new Promise((resolve) => {
     const doScroll = () => {
       requestAnimationFrame(() => {
@@ -76,7 +86,10 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
           resolve(false)
           return
         }
-        resolve(position(to, savedPosition, behavior))
+        if (!savedPosition && !to.hash) {
+          jumpToTop()
+        }
+        resolve(position(to, savedPosition, to.hash ? hashBehavior() : 'instant'))
       })
     }
 

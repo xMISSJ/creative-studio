@@ -26,9 +26,28 @@ export function useShopI18n() {
     })
   }
 
+  const brandParams = () => ({
+    name: brand.name,
+    subtitle: brand.subtitle,
+    email: brand.supportEmail,
+  })
+
+  function fillBrand(value: string) {
+    return value
+      .replaceAll('{name}', brand.name)
+      .replaceAll('{subtitle}', brand.subtitle)
+      .replaceAll('{email}', brand.supportEmail)
+  }
+
   function text(entry: unknown) {
-    if (typeof entry === 'string') return entry
-    if (entry && typeof entry === 'object') return rt(entry as Parameters<typeof rt>[0])
+    if (typeof entry === 'string') return fillBrand(entry)
+    if (entry && typeof entry === 'object') {
+      try {
+        return fillBrand(rt(entry as Parameters<typeof rt>[0], brandParams()))
+      } catch {
+        return fillBrand(rt(entry as Parameters<typeof rt>[0]))
+      }
+    }
     return ''
   }
 

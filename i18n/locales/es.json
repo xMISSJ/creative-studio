@@ -33,7 +33,11 @@
     "studioSettingsTitle": "Studio settings",
     "studioSettingsDescription": "Shop-wide prices and studio settings for {name}.",
     "comingSoonTitle": "Pronto",
-    "comingSoonDescription": "{name} casi está listo. Una página de pronto tranquila mientras el estudio termina de abrir."
+    "comingSoonDescription": "{name} casi está listo. Una página de pronto tranquila mientras el estudio termina de abrir.",
+    "termsTitle": "Términos",
+    "termsDescription": "Términos y condiciones para usar el sitio y la tienda de {name}.",
+    "returnsTitle": "Devoluciones",
+    "returnsDescription": "Política de devoluciones de {name}: qué puede volver sin usar, y qué pedidos a medida o digitales no."
   },
   "nav": {
     "skip": "Saltar al contenido",
@@ -47,7 +51,9 @@
     "login": "Iniciar sesion",
     "register": "Crear cuenta",
     "breadcrumb": "Ruta",
-    "cards": "Tarjetas"
+    "cards": "Tarjetas",
+    "terms": "Términos y condiciones",
+    "returns": "Política de devoluciones"
   },
   "theme": {
     "toLight": "Cambiar al tema claro",
@@ -88,7 +94,7 @@
     "noteLink": "Leer mi historia",
     "quote": "Lineas suaves, noches lentas y un poco de confort en cada pagina.",
     "togetherBody": "Lo que empezo con amor por colorear y momentos cozy crece en {name}, un mundo creativo de libros dibujados a mano para relajacion, suave conexion personal y alegria diaria.",
-    "togetherCta": "Sobre",
+    "togetherCta": "Lee nuestra historia",
     "bestsellerTitle": "Mas vendidos",
     "arrivalsTitle": "Novedades",
     "themeTitle": "Tema",
@@ -121,7 +127,7 @@
       ]
     },
     "deskMomentTitle": "En la mesa de dibujo",
-    "deskMomentLead": "Amigos suaves, pegatinas y un cuaderno abierto. Un vistazo al ambiente del estudio detrás de los libros.",
+    "deskMomentLead": "Personajes lindos y originales, dibujados con amor y cuidado en un iPad. {name} es el lugar donde estos personajes cobran vida. ¿Qué inspiró a {name}? ¡Lee nuestra historia en la página acerca de!",
     "deskMomentAlt": "Lindos animalitos dibujando juntos alrededor de una mesa con rotuladores, pegatinas y un bloc de dibujo"
   },
   "newsletter": {
@@ -330,7 +336,8 @@
     "studio": "Estudio",
     "account": "Cuenta",
     "note": "El buzon del estudio abre con el pago. Hasta entonces, {email} es solo un marcador.",
-    "rights": "© {year} {name}"
+    "rights": "© {year} {name}",
+    "legal": "Políticas"
   },
   "error": {
     "title": "Este camino se desvio",
@@ -706,5 +713,218 @@
     "checking": "Comprobando…",
     "submit": "Entrar al estudio",
     "footer": "Las preguntas pueden ir más tarde a {email}."
+  },
+  "terms": {
+    "eyebrow": "Studio house rules",
+    "title": "Terms and conditions",
+    "lead": "A cozy, plain-language guide to using {name}. The shop is still opening, so a few parts look ahead to checkout and accounts.",
+    "updated": "Last updated: November 2026",
+    "sections": [
+      {
+        "title": "A warm hello",
+        "paragraphs": [
+          "Thanks for visiting {name}. These terms cover the website, the books and art we share, and the Service you use when you browse or buy. “We,” “our,” and “{name}” mean the studio behind this site.",
+          "By using the site you agree to these terms. If something feels unclear, write to {email} and we will try to explain it gently.",
+          "We may update this page as the studio grows. The current version always lives here. Keeping using the site after a change means you accept the new wording."
+        ]
+      },
+      {
+        "title": "Who can use the shop",
+        "paragraphs": [
+          "You confirm you are of legal age where you live, or that a parent or guardian is helping if someone younger is browsing with you.",
+          "Please use the site kindly and lawfully. Do not break copyright rules, send harmful code, or use the Service for anything unauthorized. Serious misuse may end access."
+        ]
+      },
+      {
+        "title": "How the studio runs the site",
+        "paragraphs": [
+          "We may refuse service when we need to. Content you send us (other than payment details) may travel without encryption. When checkout is live, payment details go through secure tools.",
+          "Please do not copy, resell, or scrape the Service as a product of your own without written permission from us."
+        ]
+      },
+      {
+        "title": "Art, pages, and personal use",
+        "paragraphs": [
+          "Every coloring page, cover, and piece of digital art here is made by hand in the studio. Buying a book or digital file means you may enjoy it for personal, non-commercial use: color at home, on a tablet, or print a page for yourself.",
+          "Resale, redistribution, mass sharing of files, or commercial use (including selling colored pages as products, or using the art for branding) is not included unless we agree in writing.",
+          "Freebies and samples, when we offer them, are for personal enjoyment too. Please do not treat them as stock art for client work or resale."
+        ]
+      },
+      {
+        "title": "Sharing finished coloring",
+        "paragraphs": [
+          "We love seeing finished pages. You are welcome to share photos of your colored work on social media and tag the studio when you like.",
+          "Sharing a photo of your colored page is different from uploading or selling the blank line art or digital files. Please keep the original files for yourself."
+        ]
+      },
+      {
+        "title": "Information on the site",
+        "paragraphs": [
+          "We try to keep descriptions, stock notes, and studio updates clear. Still, details can be incomplete or change while the shop finishes opening. Use the site as a helpful guide, not the only source for important decisions.",
+          "Placeholder flows (cart, checkout, accounts, newsletter) are honest about not saving or charging yet. When those doors open for real, the rules on this page still apply unless we post newer ones."
+        ]
+      },
+      {
+        "title": "Prices, stock, and product pictures",
+        "paragraphs": [
+          "Prices and availability may change without prior notice. Some items may be online-only or limited.",
+          "We show colors and covers as fairly as we can, but screens differ. We cannot promise a perfect match on every device.",
+          "Returns and exchanges will follow the return rules we post when paid checkout is open. Until then, reach out at {email} if something feels wrong."
+        ]
+      },
+      {
+        "title": "Orders and accounts (when they open)",
+        "paragraphs": [
+          "Once checkout is live, we may refuse or limit orders if needed (for example unusual quantity or obvious misuse). We may try to contact you by email if an order changes.",
+          "Please keep contact and payment details accurate so we can finish orders and reach you."
+        ]
+      },
+      {
+        "title": "Optional tools and outside links",
+        "paragraphs": [
+          "We may point to third-party tools or sites we do not fully control. Those services have their own terms. Use them at your own risk and read their policies before you share data or buy there."
+        ]
+      },
+      {
+        "title": "Notes you send us",
+        "paragraphs": [
+          "If you send ideas, feedback, or other notes, you allow us to use and share them to improve the studio, unless we agree otherwise in writing. Please do not send anything unlawful, harmful, or that belongs to someone else without permission.",
+          "We may remove public comments that cross those lines."
+        ]
+      },
+      {
+        "title": "Personal information",
+        "paragraphs": [
+          "A fuller privacy notice will live on this site. Until then, questions about personal data can go to {email}."
+        ]
+      },
+      {
+        "title": "Fixes and limits",
+        "paragraphs": [
+          "We may correct errors in prices, descriptions, or availability without prior notice.",
+          "The Service is provided “as is” and “as available.” We do not promise perfect uptime. To the fullest extent the law allows, we are not liable for indirect or consequential loss from using the site. Where the law says we must remain liable, that duty stays."
+        ]
+      },
+      {
+        "title": "Please do not",
+        "paragraphs": [
+          "Use the site in ways that hurt people, break the law, attack the Service, scrape it abusively, or strip away our security. Breaking these house rules may end access."
+        ],
+        "items": [
+          "Unlawful or harmful purposes",
+          "Infringing copyright or other rights",
+          "Harassment or hate",
+          "Malware or phishing",
+          "Collecting personal data without consent",
+          "Reselling or redistributing studio files without permission"
+        ]
+      },
+      {
+        "title": "If parts of these terms cannot apply",
+        "paragraphs": [
+          "If one sentence cannot be enforced where you live, the rest of the terms still stand, read as narrowly as needed."
+        ]
+      },
+      {
+        "title": "Ending use",
+        "paragraphs": [
+          "You can stop using the site anytime. We may end access if these terms are broken. Amounts owed for completed paid orders remain due."
+        ]
+      },
+      {
+        "title": "Governing law",
+        "paragraphs": [
+          "These terms follow the laws of the Netherlands, unless mandatory consumer rules in your country say otherwise. We can adjust this if the studio legal home changes."
+        ]
+      },
+      {
+        "title": "Questions",
+        "paragraphs": [
+          "Questions about these terms can go to {email}."
+        ]
+      }
+    ]
+  },
+  "returns": {
+    "eyebrow": "After your order",
+    "title": "Return policy",
+    "lead": "A clear guide to what {name} can take back, and what has to stay with you once it is made or opened.",
+    "updated": "Last updated: November 2026",
+    "sections": [
+      {
+        "title": "A soft start",
+        "paragraphs": [
+          "Thank you for supporting {name}. We want returns to feel fair for you and workable for a small studio.",
+          "Checkout is still opening, so these rules describe how returns will work once paid orders ship. If something arrives damaged or wrong, write to {email} and we will help as best we can."
+        ]
+      },
+      {
+        "title": "What you may return",
+        "paragraphs": [
+          "These items may be returned if they are unused and in new, resellable condition:"
+        ],
+        "items": [
+          "Coloring books that are still blank (no colored pages, no torn sheets, no writing)",
+          "Non-custom cards from the shop (standard designs, unused)",
+          "Other ready-made merchandise in original unused condition"
+        ],
+        "after": "If we cannot put the item back on the shelf as new, we usually cannot accept the return. A book with even one colored page, bent covers, or opened seal that stops resale is not returnable."
+      },
+      {
+        "title": "What we cannot take back",
+        "paragraphs": [
+          "Some things are made just for you, or cannot be sold again once they leave the studio. Those are not returnable:"
+        ],
+        "items": [
+          "Personalized or custom cards (time is already spent on your design, and we cannot resell that piece)",
+          "Custom or made-to-order studio services where work has already begun",
+          "Digital art files and other instant digital downloads (they cannot be “sent back”)",
+          "Any item that has been used, colored, assembled, or damaged after delivery in a way that blocks resale"
+        ],
+        "after": "Please check product pages carefully before you order custom or digital items."
+      },
+      {
+        "title": "Damaged or wrong on arrival",
+        "paragraphs": [
+          "If a physical order arrives damaged, incomplete, or clearly wrong, contact us at {email} as soon as you can, with your order details and a few clear photos.",
+          "We will look for a replacement, a refund, or another fair fix. Print or shipping damage is different from wear after you start coloring."
+        ]
+      },
+      {
+        "title": "Digital products",
+        "paragraphs": [
+          "Digital coloring pages, digital art, and other downloads are delivered for personal use and cannot be returned once the files are provided.",
+          "If a download fails or a file is broken, tell us at {email} before asking about money back. We would rather repair access first."
+        ]
+      },
+      {
+        "title": "How to ask for a return",
+        "paragraphs": [
+          "When paid checkout is live, email {email} with your order reference, what you bought, and why you want to return it.",
+          "Please wait for our reply before you ship anything back. We will share the address and steps if the return is approved.",
+          "Return shipping costs may sit with the buyer unless the item was our mistake or arrived damaged. We will say which case applies when we answer you."
+        ]
+      },
+      {
+        "title": "Timing",
+        "paragraphs": [
+          "For unused physical goods that qualify, please start the return request within 14 days of delivery, unless we post a different window later.",
+          "Custom work and digital files stay non-returnable even inside that window."
+        ]
+      },
+      {
+        "title": "Refunds",
+        "paragraphs": [
+          "Approved returns are refunded to the original payment method after we receive and check the item. Processing can take a short while once the parcel is back with us.",
+          "We do not refund custom studio time that was already used to make a personalized piece."
+        ]
+      },
+      {
+        "title": "Questions",
+        "paragraphs": [
+          "Questions about returns can go to {email}. We are a small studio and will answer as soon as we can."
+        ]
+      }
+    ]
   }
 }

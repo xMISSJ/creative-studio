@@ -321,6 +321,7 @@ onBeforeUnmount(() => {
       class="clothesline-track"
       role="region"
       tabindex="0"
+      data-lenis-prevent
       :aria-label="t('shop.digitalArt.avatarsGalleryHint')"
       :class="{ 'is-dragging': dragging }"
       @scroll.passive="onScroll"
