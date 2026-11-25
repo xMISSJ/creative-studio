@@ -32,8 +32,8 @@ function submit() {
       class="pointer-events-none absolute top-0 left-1/2 z-20 w-60 -translate-x-1/2 -translate-y-[42%] object-contain sm:w-64 md:w-72"
       :src="art"
       :alt="t('newsletter.artAlt')"
-      width="919"
-      height="653"
+      width="394"
+      height="280"
       decoding="async"
       loading="lazy"
     >
