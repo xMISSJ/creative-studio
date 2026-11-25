@@ -541,6 +541,19 @@ body {
   color: var(--accent);
 }
 
+.footer-meta-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.35rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.footer-meta-link:hover {
+  color: var(--accent);
+}
+
 .shop-now {
   display: inline-flex;
   align-items: center;

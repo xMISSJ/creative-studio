@@ -52,8 +52,8 @@
     "register": "创建账户",
     "breadcrumb": "面包屑",
     "cards": "卡片",
-    "terms": "条款与条件",
-    "returns": "退货政策"
+    "terms": "条款",
+    "returns": "退货"
   },
   "theme": {
     "toLight": "切换到浅色主题",
