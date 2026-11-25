@@ -52,8 +52,8 @@
     "login": "Log in",
     "register": "Create account",
     "breadcrumb": "Breadcrumb",
-    "terms": "Terms",
-    "returns": "Returns"
+    "terms": "Terms & Conditions",
+    "returns": "Return Policy"
   },
   "theme": {
     "toLight": "Switch to light theme",

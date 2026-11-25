@@ -26,7 +26,7 @@ const year = new Date().getFullYear()
       </div>
 
       <nav
-        class="mt-8 flex flex-wrap items-center justify-center gap-x-1 gap-y-0 text-sm sm:mt-9"
+        class="mt-4 flex flex-wrap items-center justify-center gap-x-1 gap-y-0 text-sm sm:mt-5"
         :aria-label="t('footer.visit')"
       >
         <NuxtLinkLocale class="footer-link" to="/about">{{ t('nav.about') }}</NuxtLinkLocale>
@@ -37,17 +37,17 @@ const year = new Date().getFullYear()
         <NuxtLinkLocale class="footer-link" to="/login">{{ t('nav.login') }}</NuxtLinkLocale>
       </nav>
 
-      <div class="mx-auto mt-8 max-w-lg border-t border-line pt-6 text-center sm:mt-9 sm:pt-7">
+      <div class="mx-auto -mt-3 flex max-w-lg flex-col items-center text-center text-sm text-muted sm:-mt-4">
         <nav
-          class="flex flex-wrap items-center justify-center gap-x-1 text-sm"
+          class="flex flex-wrap items-center justify-center gap-x-1"
           :aria-label="t('footer.legal')"
         >
           <NuxtLinkLocale class="footer-meta-link" to="/terms">{{ t('nav.terms') }}</NuxtLinkLocale>
-          <span class="text-line" aria-hidden="true">·</span>
+          <span class="px-1 text-muted" aria-hidden="true">·</span>
           <NuxtLinkLocale class="footer-meta-link" to="/returns">{{ t('nav.returns') }}</NuxtLinkLocale>
         </nav>
-        <p class="mt-3 text-sm text-muted">{{ t('footer.rights', { year }) }}</p>
-        <p class="mt-1 text-sm text-muted" translate="no">{{ brand.supportEmail }}</p>
+        <p class="mt-5 sm:mt-6">{{ t('footer.rights', { year }) }}</p>
+        <p class="mt-1" translate="no">{{ brand.supportEmail }}</p>
       </div>
     </div>
   </footer>
