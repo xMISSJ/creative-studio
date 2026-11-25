@@ -47,7 +47,7 @@ const arrivals = computed(() => {
 
     <FaqList />
 
-    <div class="container-page py-16 sm:py-20">
+    <div class="container-page overflow-visible pt-24 pb-16 sm:pt-28 sm:pb-20">
       <NewsletterPanel />
     </div>
   </div>

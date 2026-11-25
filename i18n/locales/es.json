@@ -135,7 +135,8 @@
     "submit": "Suscribirme",
     "thanks": "Gracias. La lista todavia no esta abierta, asi que esta direccion no se guardo.",
     "emailError": "Escribe tu email.",
-    "emailInvalid": "Escribe un email valido."
+    "emailInvalid": "Escribe un email valido.",
+    "artAlt": "Una gaviota alegre con gorra de capitán entregando una carta sellada con un corazón"
   },
   "shop": {
     "lead": "Elige un rincon del estudio. Los libros para colorear estan abiertos; el resto se esta calentando.",

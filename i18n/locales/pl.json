@@ -135,7 +135,8 @@
     "submit": "Zapisz się",
     "thanks": "Dziękuję. Lista nie jest jeszcze otwarta, więc ten adres nie został zapisany.",
     "emailError": "Podaj swój e-mail.",
-    "emailInvalid": "Podaj prawidłowy e-mail."
+    "emailInvalid": "Podaj prawidłowy e-mail.",
+    "artAlt": "Wesoła mewa w kapitanskiej czapce dostarczająca list z serduszkową pieczęcią"
   },
   "shop": {
     "lead": "Wybierz kąt studia. Kolorowanki są otwarte, reszta jeszcze się rozgrzewa.",

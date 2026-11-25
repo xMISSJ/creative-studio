@@ -6,14 +6,16 @@ definePageMeta({
 const { t } = useShopI18n()
 usePageMeta('meta.comingSoonTitle', 'meta.comingSoonDescription', { robots: 'noindex, nofollow' })
 
+const localePath = useLocalePath()
+
 const { data: gate, refresh } = await useFetch<{ enabled: boolean, unlocked: boolean }>('/api/preview/status', {
   key: 'preview-gate-status',
 })
 
-// Client-only so Cloudflare can prerender this page as static HTML.
-// Server redirects would collapse the prerender into `/` when the gate is off at build time.
+// Client fallback: Nitro already redirects unlocked visitors when the Worker
+// handles /coming-soon. Kept for SPA navigations and static hosts.
 if (import.meta.client && gate.value && (!gate.value.enabled || gate.value.unlocked)) {
-  await navigateTo('/')
+  await navigateTo(localePath('/'))
 }
 
 const code = ref('')
@@ -36,7 +38,7 @@ async function onSubmit() {
     })
     code.value = ''
     await refresh()
-    await navigateTo('/')
+    await navigateTo(localePath('/'))
   } catch (error: unknown) {
     const status = typeof error === 'object' && error && 'statusCode' in error
       ? Number((error as { statusCode?: number }).statusCode)

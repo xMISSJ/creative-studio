@@ -135,7 +135,8 @@
     "submit": "Subscribe",
     "thanks": "Thank you. The list is not open yet, so this address was not saved.",
     "emailError": "Enter your email address.",
-    "emailInvalid": "Enter a valid email address."
+    "emailInvalid": "Enter a valid email address.",
+    "artAlt": "A cheerful seagull in a captain hat delivering a heart-sealed letter"
   },
   "shop": {
     "lead": "Pick a corner of the studio. Coloring books are open; the rest is warming up.",

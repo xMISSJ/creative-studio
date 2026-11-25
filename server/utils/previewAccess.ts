@@ -105,6 +105,12 @@ export function previewComingSoonPath(pathname: string) {
   return match ? `/${match[1]}/coming-soon` : '/coming-soon'
 }
 
+/** Locale home for sending unlocked visitors off /coming-soon. */
+export function previewHomePath(pathname: string) {
+  const match = pathname.match(localePrefixRe)
+  return match ? `/${match[1]}` : '/'
+}
+
 /** Paths that stay reachable while the public shop is locked. */
 export function isPreviewExemptPath(pathname: string) {
   const path = pathname.split('?')[0] || '/'

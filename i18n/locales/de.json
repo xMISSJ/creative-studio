@@ -135,7 +135,8 @@
     "submit": "Abonnieren",
     "thanks": "Danke. Die Liste ist noch nicht offen, deshalb wurde diese Adresse nicht gespeichert.",
     "emailError": "Gib deine E-Mail-Adresse ein.",
-    "emailInvalid": "Gib eine gültige E-Mail-Adresse ein."
+    "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
+    "artAlt": "Eine fröhliche Möwe mit Kapitänsmütze, die einen Brief mit Herzsiegel liefert"
   },
   "shop": {
     "lead": "Wähle eine Ecke des Studios. Malbücher sind offen, der Rest wärmt noch auf.",

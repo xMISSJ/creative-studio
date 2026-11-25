@@ -76,10 +76,8 @@ export default defineNuxtConfig({
             '/_i18n/*',
             '/art/*',
             '/cursors/*',
-            '/coming-soon',
-            '/coming-soon/*',
-            '/*/coming-soon',
-            '/*/coming-soon/*',
+            // /coming-soon stays on the Worker so unlocked cookies redirect
+            // home before the gate page can paint.
             '/favicon.ico',
             '/favicon.svg',
             '/robots.txt',

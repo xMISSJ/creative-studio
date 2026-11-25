@@ -135,7 +135,8 @@
     "submit": "S’inscrire",
     "thanks": "Merci. La liste n’est pas encore ouverte, donc cette adresse n’a pas été enregistrée.",
     "emailError": "Entre ton adresse e-mail.",
-    "emailInvalid": "Entre une adresse e-mail valide."
+    "emailInvalid": "Entre une adresse e-mail valide.",
+    "artAlt": "Une mouette joyeuse avec une casquette de capitaine qui livre une lettre scellée d’un cœur"
   },
   "shop": {
     "lead": "Choisis un coin du studio. Les livres de coloriage sont ouverts ; le reste se prépare encore.",
