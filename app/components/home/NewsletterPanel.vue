@@ -25,11 +25,11 @@ function submit() {
 
 <template>
   <section
-    class="newsletter-panel relative z-10 overflow-visible rounded-md bg-soft-pink px-6 pt-24 pb-10 text-on-soft sm:px-10 sm:pt-28 sm:pb-12"
+    class="newsletter-panel relative z-10 overflow-visible rounded-md bg-soft-pink px-6 pt-32 pb-10 text-on-soft sm:px-10 sm:pt-36 sm:pb-12"
     aria-labelledby="newsletter-title"
   >
     <img
-      class="pointer-events-none absolute top-0 left-1/2 z-20 w-[10.5rem] -translate-x-1/2 -translate-y-[42%] object-contain sm:w-44 md:w-52"
+      class="pointer-events-none absolute top-0 left-1/2 z-20 w-60 -translate-x-1/2 -translate-y-[42%] object-contain sm:w-64 md:w-72"
       :src="art"
       :alt="t('newsletter.artAlt')"
       width="919"

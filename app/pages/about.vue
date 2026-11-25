@@ -135,7 +135,7 @@ const memoryWords = computed(() =>
           <NuxtLinkLocale class="btn btn-primary" to="/shop">{{ t('about.shop') }}</NuxtLinkLocale>
         </div>
       </div>
-      <div class="mt-20 overflow-visible pt-8 sm:mt-24 sm:pt-10">
+      <div class="mt-20 overflow-visible pt-12 sm:mt-24 sm:pt-14">
         <NewsletterPanel />
       </div>
     </section>
